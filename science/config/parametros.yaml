@@ -26,7 +26,8 @@ periodo:
 sentinel2:
   stac: "https://earth-search.aws.element84.com/v1"
   coleccion: "sentinel-2-c1-l2a"   # reprocesada: escala 0.0001 y offset -0.1 en toda la serie (sin salto de 2022)
-  nubes_max_escena: 40
+  nubes_max_escena: 25           # época seca: casi todas despejadas; las nubladas se descartarían igual
+  escenas_por_tesela: 8           # las más despejadas de cada tesela y temporada (la mediana no necesita más)
   resolucion_m: 20
   scl_validos: [4, 5, 6, 7]        # vegetación, suelo, agua, sin clasificar (fuera: sombras, nubes, cirros, nieve)
   agua_buffer_m: 250               # franja alrededor del eje del río donde se buscan píxeles de agua (MNDWI > 0)

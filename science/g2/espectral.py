@@ -36,6 +36,8 @@ GDAL = dict(
     CPL_VSIL_CURL_ALLOWED_EXTENSIONS=".tif",
     GDAL_HTTP_MULTIPLEX="YES",
     VSI_CACHE="TRUE",
+    VSI_CACHE_SIZE=str(256 * 1024 * 1024),
+    GDAL_CACHEMAX=512,
 )
 
 
@@ -67,32 +69,43 @@ def _mediana(v: np.ndarray) -> float | None:
 
 
 class Lector:
-    """Lee una ventana del tramo en las bandas de una escena, en una grilla común de 20 m."""
+    """Abre una escena una sola vez y lee la ventana de cada tramo en una grilla común de 20 m.
+    Los tramos vecinos comparten mosaicos del COG: con los archivos abiertos, GDAL los reutiliza."""
 
     def __init__(self, item, prm, zonas):
         self.item, self.prm, self.zonas = item, prm, zonas
 
+    def __enter__(self):
+        a = self.item.assets
+        self.env = rasterio.Env(**GDAL)
+        self.env.__enter__()
+        self.s20 = rasterio.open(a["swir16"].href)
+        self.scl = rasterio.open(a["scl"].href)
+        # Bandas de 10 m: primera vista reducida del COG (20 m, ya promediada por el productor).
+        self.b10 = {k: rasterio.open(a[k].href, overview_level=0) for k in ("blue", "green", "red", "nir")}
+        return self
+
+    def __exit__(self, *exc):
+        for d in (self.s20, self.scl, *self.b10.values()):
+            d.close()
+        self.env.__exit__(*exc)
+
     def leer(self, tid: str):
         agua, tierra, caja = self.zonas[tid]
         a = self.item.assets
-        with rasterio.Env(**GDAL):
-            with rasterio.open(a["swir16"].href) as s20:
-                w20 = from_bounds(*caja, transform=s20.transform).round_offsets().round_lengths()
-                w20 = w20.intersection(Window(0, 0, s20.width, s20.height))
-                if w20.width < 3 or w20.height < 3:
-                    return None
-                tr = s20.window_transform(w20)
-                forma = (int(w20.height), int(w20.width))
-                limites = rasterio.windows.bounds(w20, s20.transform)
-                datos = {"swir16": s20.read(1, window=w20).astype("float32")}
-            with rasterio.open(a["scl"].href) as s:
-                scl = s.read(1, window=from_bounds(*limites, transform=s.transform).round_offsets().round_lengths(), out_shape=forma, resampling=Resampling.nearest)
-            for k in ("blue", "green", "red", "nir"):
-                # Bandas de 10 m: se abre la primera vista reducida del COG (20 m, ya promediada por el
-                # productor) para descargar ~4 veces menos datos.
-                with rasterio.open(a[k].href, overview_level=0) as s:
-                    w = from_bounds(*limites, transform=s.transform).round_offsets().round_lengths()
-                    datos[k] = s.read(1, window=w, out_shape=forma, resampling=Resampling.nearest).astype("float32")
+        s20 = self.s20
+        w20 = from_bounds(*caja, transform=s20.transform).round_offsets().round_lengths()
+        w20 = w20.intersection(Window(0, 0, s20.width, s20.height))
+        if w20.width < 3 or w20.height < 3:
+            return None
+        tr = s20.window_transform(w20)
+        forma = (int(w20.height), int(w20.width))
+        limites = rasterio.windows.bounds(w20, s20.transform)
+        datos = {"swir16": s20.read(1, window=w20).astype("float32")}
+        scl = self.scl.read(1, window=from_bounds(*limites, transform=self.scl.transform).round_offsets().round_lengths(), out_shape=forma, resampling=Resampling.nearest)
+        for k, d in self.b10.items():
+            w = from_bounds(*limites, transform=d.transform).round_offsets().round_lengths()
+            datos[k] = d.read(1, window=w, out_shape=forma, resampling=Resampling.nearest).astype("float32")
 
         vacio = datos["green"] == 0
         for k, v in datos.items():
@@ -145,7 +158,12 @@ def escenas(prm, tramos, anio):
         datetime=f"{anio}-{t['desde']}/{anio}-{t['hasta']}",
         query={"eo:cloud_cover": {"lt": prm["sentinel2"]["nubes_max_escena"]}},
     )
-    return list(b.items())
+    # Para la mediana de la temporada bastan las escenas más despejadas de cada tesela.
+    por_tesela: dict[str, list] = {}
+    for it in b.items():
+        por_tesela.setdefault(it.properties.get("grid:code", it.id.split("_")[1]), []).append(it)
+    n = prm["sentinel2"]["escenas_por_tesela"]
+    return [it for lista in por_tesela.values() for it in sorted(lista, key=lambda x: x.properties.get("eo:cloud_cover", 100))[:n]]
 
 
 def calcular_escenas(prm, tramos) -> None:
@@ -160,43 +178,50 @@ def calcular_escenas(prm, tramos) -> None:
     candado = threading.Lock()
     for anio in prm["periodo"]["anios"]:
         items = escenas(prm, tramos, anio)
-        tareas = []
+        por_escena: dict[str, tuple] = {}
+        orden = list(huellas)
         for it in items:
             if it.properties.get("proj:code", f"EPSG:{it.properties.get('proj:epsg')}") != f"EPSG:{crs_epsg}":
                 continue  # todas las teselas de la zona son UTM 19S; otra proyección se omite
             huella = shape(it.geometry)
-            for tid, h in huellas.items():
-                if (it.id, tid) not in hechas and huella.intersects(h):
-                    tareas.append((it, tid))
-        print(f"  {anio}: {len(items)} escenas, {len(tareas)} lecturas pendientes")
+            tids = [tid for tid in orden if (it.id, tid) not in hechas and huella.intersects(huellas[tid])]
+            if tids:
+                por_escena[it.id] = (it, tids)
+        total = sum(len(v[1]) for v in por_escena.values())
+        print(f"  {anio}: {len(items)} escenas, {len(por_escena)} por leer, {total} lecturas pendientes")
 
-        def hacer(it, tid):
+        def hacer(it, tids):
+            filas = []
             try:
-                r = Lector(it, prm, zonas).leer(tid)
-            except Exception as e:  # una ventana que falla no detiene la corrida; se registra
-                r = {"error": str(e)[:200]}
-            return it, tid, r
+                with Lector(it, prm, zonas) as lector:
+                    for tid in tids:  # en orden de río: los vecinos comparten mosaicos en caché
+                        try:
+                            r = lector.leer(tid)
+                        except Exception as e:  # una ventana que falla no detiene la corrida; se registra
+                            r = {"error": str(e)[:200]}
+                        filas.append((tid, r))
+            except Exception as e:
+                filas = [(tid, {"error": str(e)[:200]}) for tid in tids]
+            return it, filas
 
-        with ThreadPoolExecutor(32) as ex, salida.open("a") as f:
-            futuros = [ex.submit(hacer, it, tid) for it, tid in tareas]
-            for i, fu in enumerate(as_completed(futuros), 1):
-                it, tid, r = fu.result()
-                if r is None:
-                    r = {"px_agua": 0}
-                fila = {
-                    "escena": it.id,
-                    "tramo": tid,
-                    "fecha": it.datetime.date().isoformat(),
-                    "nubes": it.properties.get("eo:cloud_cover"),
-                    "baseline": it.properties.get("s2:processing_baseline"),
-                    **r,
-                }
+        hechos = 0
+        with ThreadPoolExecutor(6) as ex, salida.open("a") as f:
+            for fu in as_completed([ex.submit(hacer, it, tids) for it, tids in por_escena.values()]):
+                it, filas = fu.result()
                 with candado:
-                    f.write(json.dumps(fila) + "\n")
+                    for tid, r in filas:
+                        fila = {
+                            "escena": it.id,
+                            "tramo": tid,
+                            "fecha": it.datetime.date().isoformat(),
+                            "nubes": it.properties.get("eo:cloud_cover"),
+                            "baseline": it.properties.get("s2:processing_baseline"),
+                            **(r or {"px_agua": 0}),
+                        }
+                        f.write(json.dumps(fila) + "\n")
                     f.flush()
-                if i % 200 == 0:
-                    f.flush()
-                    print(f"    {i}/{len(tareas)}")
+                hechos += len(filas)
+                print(f"    {hechos}/{total}")
 
 
 def resumir(prm, tramos) -> dict:
