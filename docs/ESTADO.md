@@ -55,7 +55,7 @@ NestJS 12 + PostgreSQL 17/PostGIS 3.5 en Docker. Detalle, rutas y reglas en `app
 | Muestras, mediciones, revisión técnica por otra persona | Hecho |
 | `POST /sync/operations` idempotente (propias y QR v1) y paquete por comunidad | Hecho |
 | Conexión del frontend a la API (sesión, mapa, publicar/respaldar/responder, cola y QR por `/sync/operations`, panel y Laboratorio) | Hecho · con `VITE_API_URL`; sin ella, demostración local |
-| Campañas y donaciones con escrow por hitos en **Stellar testnet** (contrato Soroban propio en `contracts/escrow`, USDC de prueba de Circle) | Hecho en API · Donaciones del frontend aún con datos locales |
+| Campañas y donaciones con escrow por hitos en **Stellar testnet** (contrato Soroban propio en `contracts/escrow`, USDC de prueba de Circle) | Hecho en API y en la pestaña Donaciones |
 | Laboratorio (`/laboratory/*`), alertas por API, moderación, adjuntos | Pendiente |
 
 Escrow: contrato desplegado en testnet (`CBJEQGCIA24NJXIOIQPKIDUR4D3O5OPJGJMSNZJH3C3HP4FMQUZBGJCI`), 6 pruebas en Rust. Probado en vivo por la API en testnet (2026-11-26, con 20 USDC de prueba del faucet de Circle en el donante DEMO):
@@ -63,6 +63,14 @@ Escrow: contrato desplegado en testnet (`CBJEQGCIA24NJXIOIQPKIDUR4D3O5OPJGJMSNZJ
 - Campaña B (meta 4): aporte de 2 → hito 1 liberado (1) → cancelada por moderación → reembolso de 1 al donante.
 - Saldos finales en la red: organización DEMO 4 USDC, donante DEMO 16 USDC. Las dos campañas quedaron conciliadas con el contrato.
 - Las mismas reglas también están cubiertas en las pruebas de la API con un escrow en memoria.
+
+**Pestaña Donaciones conectada** (con `VITE_API_URL`):
+- Lista las campañas del servidor con la etiqueta TESTNET y su estado.
+- Dos formas de aportar: con **Freighter** (firma la billetera del donante, red Testnet) o con el aporte de prueba que firma la cuenta DEMO del servidor (requiere haber ingresado con un rol).
+- El río de transparencia muestra las transacciones confirmadas y las de liberación de hitos, con enlace a stellar.expert, e indica si todo coincide con el contrato.
+- Sin API, o si el servidor no tiene campañas, la pestaña sigue con las campañas DEMO locales y el aporte simulado.
+- Probado con Chrome headless: un aporte de prueba de 1 USDC confirmado en testnet; el contrato coincide con lo registrado; el río muestra la transacción; sin Freighter aparece un mensaje claro; sin errores de consola.
+- Freighter no se pudo probar en el navegador automatizado porque no tiene la extensión. El camino firmar → enviar del API sí está probado en vivo, firmando con `stellar tx sign`.
 
 Probado: `npm run api:typecheck`, `npm run api:build`, `npm run api:test` (38 pruebas: dominio e integración contra PostGIS real, incluido el ciclo completo de una solicitud y la deduplicación de QR entre dos transportistas).
 

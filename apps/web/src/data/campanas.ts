@@ -8,6 +8,8 @@ export interface Hito {
   monto: number;
   estado: EstadoHito;
   evidencia?: string;
+  /** Hash de la transacción que liberó el hito (testnet). */
+  tx?: string;
 }
 
 export interface Campana {
@@ -23,6 +25,9 @@ export interface Campana {
   responsable: string;
   verificador: string;
   hitos: Hito[];
+  /** true si viene del API y su dinero vive en el contrato de testnet (no DEMO local). */
+  remota?: boolean;
+  estado?: 'abierta' | 'completada' | 'cancelada';
 }
 
 export const CAMPANAS: Campana[] = [

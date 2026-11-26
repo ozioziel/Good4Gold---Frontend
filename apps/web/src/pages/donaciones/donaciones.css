@@ -697,6 +697,44 @@
   color: var(--alerta);
   font-size: 0.875rem;
 }
+.aporte__nota {
+  color: var(--tinta-2);
+  font-size: 0.875rem;
+}
+.aporte__nota a,
+.aporte__datos a {
+  color: var(--oro-texto);
+  text-underline-offset: 3px;
+}
+/* Enlaces a transacciones reales de testnet (explorador público). */
+.aporte__datos a,
+.rio-tx__bloque a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-underline-offset: 3px;
+}
+.rio-tx__bloque a {
+  color: inherit;
+}
+.aporte__datos a svg,
+.rio-tx__bloque a svg {
+  display: inline-block;
+  flex: none;
+  width: 13px;
+  height: 13px;
+}
+.rio-tx__conciliada {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rio-tx__conciliada svg {
+  display: inline-block;
+  flex: none;
+  width: 15px;
+  height: 15px;
+}
 .aporte__acciones {
   display: grid;
   gap: 10px;

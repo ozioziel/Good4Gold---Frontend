@@ -1,8 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import { ArrowDown, ArrowRight, BadgeCheck, Check, ChevronsDown, FileText, Loader2, MapPinned, ShieldCheck, Wallet } from 'lucide-react';
-import { CAMPANAS, PLANTAS_DEMO, TX_DEMO, type Campana, type Causa } from '@/data/campanas';
+import { ArrowDown, ArrowRight, BadgeCheck, Check, ChevronsDown, ExternalLink, FileText, Loader2, MapPinned, ShieldCheck, Wallet } from 'lucide-react';
+import { PLANTAS_DEMO, TX_DEMO, type Campana, type Causa } from '@/data/campanas';
+import { useCampanas } from '@/app/useCampanas';
+import { useSesion } from '@/app/sesion';
+import { api, type CampanaDetalleApi, enlaceTx } from '@/lib/api';
+import { donarConFreighter, ErrorBilletera, type PasoBilletera } from '@/lib/billetera';
 import { Hoja } from '@/components/ui/Hoja';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { Ilustracion } from '../informate/Ilustracion';
@@ -41,18 +45,25 @@ const leerAportes = (): Aporte[] => {
 export default function Donaciones() {
   const { t } = useTranslation();
   const reducido = useReducedMotion();
+  const { campanas, remoto, detalles, recargar, cargarDetalle } = useCampanas();
   const [causa, setCausa] = useState<Causa>('investigar');
-  const [campanaId, setCampanaId] = useState(() => new URLSearchParams(location.search).get('campana') ?? CAMPANAS[0].id);
+  const [campanaId, setCampanaId] = useState(() => new URLSearchParams(location.search).get('campana') ?? '');
   const [monto, setMonto] = useState(25);
   const [aportes, setAportes] = useState<Aporte[]>(leerAportes);
   const [dialogo, setDialogo] = useState(false);
-  const campana = CAMPANAS.find((c) => c.id === campanaId) ?? CAMPANAS[0];
+  const campana = campanas.find((c) => c.id === campanaId) ?? campanas[0]!;
   const rio = useRef<HTMLElement>(null);
+  // Con escrow real, el río muestra las transacciones confirmadas de la campaña elegida.
+  useEffect(() => {
+    if (remoto && campana.remota) void cargarDetalle(campana.id);
+  }, [remoto, campana.id, campana.remota, cargarDetalle]);
+  // Los aportes simulados solo se suman a las campañas DEMO locales.
+  const locales = remoto ? [] : aportes;
 
   // La causa elegida sugiere su campaña (sin bloquear la elección manual).
   const elegirCausa = (c: Causa) => {
     setCausa(c);
-    const primera = CAMPANAS.find((x) => x.causa === c);
+    const primera = campanas.find((x) => x.causa === c);
     if (primera) setCampanaId(primera.id);
   };
   useEffect(() => {
@@ -136,12 +147,12 @@ export default function Donaciones() {
         </h2>
         <p className="donar__lema">{t('donaciones.campanasTexto')}</p>
         <ul className="campanas">
-          {CAMPANAS.map((c) => (
+          {campanas.map((c) => (
             <li key={c.id}>
               <TarjetaCampana
                 c={c}
                 elegida={c.id === campana.id}
-                extra={aportes.filter((a) => a.campanaId === c.id).reduce((s, a) => s + a.monto, 0)}
+                extra={locales.filter((a) => a.campanaId === c.id).reduce((s, a) => s + a.monto, 0)}
                 onElegir={() => {
                   setCampanaId(c.id);
                   rio.current?.scrollIntoView({ behavior: reducido ? 'auto' : 'smooth', block: 'start' });
@@ -159,7 +170,7 @@ export default function Donaciones() {
         <p className="donar__lema">
           {campana.titulo} · {t('donaciones.rioTexto')}
         </p>
-        <RioTransparencia c={campana} aportes={aportes.filter((a) => a.campanaId === campana.id)} />
+        <RioTransparencia c={campana} aportes={locales.filter((a) => a.campanaId === campana.id)} detalle={campana.remota ? detalles[campana.id] : undefined} />
       </section>
 
       <section className="donar__seccion" aria-labelledby="bosque">
@@ -167,7 +178,10 @@ export default function Donaciones() {
           {t('donaciones.bosqueTitulo')}
         </h2>
         <p className="donar__lema">{t('donaciones.bosqueTexto')}</p>
-        <Bosque cuenta={PLANTAS_DEMO + aportes.length} nuevas={aportes.length} />
+        <Bosque
+          cuenta={remoto ? campanas.reduce((n, c) => n + c.aportes, 0) : PLANTAS_DEMO + aportes.length}
+          nuevas={remoto ? 0 : aportes.length}
+        />
         <p className="donar__nota">{t('donaciones.bosqueNota')}</p>
       </section>
 
@@ -177,6 +191,12 @@ export default function Donaciones() {
         c={campana}
         onCerrar={() => setDialogo(false)}
         onConfirmado={(a) => {
+          if (campana.remota) {
+            // La red ya lo confirmó: se vuelve a leer del servidor (y del contrato).
+            void recargar();
+            void cargarDetalle(campana.id);
+            return;
+          }
           const nuevos = [a, ...aportes];
           setAportes(nuevos);
           localStorage.setItem(CLAVE, JSON.stringify(nuevos));
@@ -293,7 +313,13 @@ function TarjetaCampana({ c, elegida, extra, onElegir }: { c: Campana; elegida: 
     <article className={'campana' + (elegida ? ' is-elegida' : '')}>
       <div className="campana__cabeza">
         <span className="campana__causa">{t(`donaciones.causas.${c.causa}.titulo`)}</span>
-        <span className="etiqueta-demo">{t('comun.demo')}</span>
+        {c.remota ? (
+          <span className="etiqueta-demo">
+            TESTNET · {t(`donaciones.estadosCampana.${c.estado ?? 'abierta'}`)}
+          </span>
+        ) : (
+          <span className="etiqueta-demo">{t('comun.demo')}</span>
+        )}
       </div>
       <h3>{c.titulo}</h3>
       <div className="campana__progreso" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} aria-label={t('donaciones.recaudado')}>
@@ -337,7 +363,7 @@ const NODOS: { id: Nodo; x: number; y: number }[] = [
   { id: 'impacto', x: 780, y: 80 },
 ];
 
-function RioTransparencia({ c, aportes }: { c: Campana; aportes: Aporte[] }) {
+function RioTransparencia({ c, aportes, detalle }: { c: Campana; aportes: Aporte[]; detalle?: CampanaDetalleApi }) {
   const { t } = useTranslation();
   const [nodo, setNodo] = useState<Nodo>('fondos');
   const hechos = c.hitos.filter((h) => h.estado === 'hecho').length;
@@ -349,6 +375,7 @@ function RioTransparencia({ c, aportes }: { c: Campana; aportes: Aporte[] }) {
     impacto: hechos === c.hitos.length ? 'hecho' : hechos > 0 ? 'curso' : 'pendiente',
   };
   const txs = useMemo(() => [...aportes.map((a) => a.tx), ...TX_DEMO].slice(0, 4), [aportes]);
+  const real = c.remota;
   return (
     <div className="rio-tx">
       <svg className="rio-tx__svg" viewBox="0 0 850 190" role="group" aria-label={t('donaciones.rioTitulo')}>
@@ -377,13 +404,35 @@ function RioTransparencia({ c, aportes }: { c: Campana; aportes: Aporte[] }) {
         {(nodo === 'donacion' || nodo === 'fondos') && (
           <div className="rio-tx__bloque">
             <h4>{t('donaciones.transacciones')}</h4>
-            <ul>
-              {txs.map((tx) => (
-                <li key={tx} className="num">
-                  <ShieldCheck aria-hidden="true" /> {tx} <span className="etiqueta-demo">{t('donaciones.txSimulada')}</span>
-                </li>
-              ))}
-            </ul>
+            {real ? (
+              <>
+                <ul>
+                  {(detalle?.donaciones ?? []).slice(0, 6).map((d) => (
+                    <li key={d.tx} className="num">
+                      <ShieldCheck aria-hidden="true" /> {d.monto} USDC ·{' '}
+                      <a href={enlaceTx(d.tx)} target="_blank" rel="noreferrer">
+                        {d.tx.slice(0, 4)}…{d.tx.slice(-4)} <ExternalLink aria-hidden="true" />
+                      </a>{' '}
+                      <span className="etiqueta-demo">TESTNET</span>
+                    </li>
+                  ))}
+                  {detalle && detalle.donaciones.length === 0 && <li>{t('donaciones.sinAportesAun')}</li>}
+                </ul>
+                {detalle && (
+                  <p className="rio-tx__resp rio-tx__conciliada">
+                    <ShieldCheck aria-hidden="true" /> {detalle.cadena?.conciliada ? t('donaciones.conciliada') : t('donaciones.noConciliada')}
+                  </p>
+                )}
+              </>
+            ) : (
+              <ul>
+                {txs.map((tx) => (
+                  <li key={tx} className="num">
+                    <ShieldCheck aria-hidden="true" /> {tx} <span className="etiqueta-demo">{t('donaciones.txSimulada')}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         )}
         {(nodo === 'investigacion' || nodo === 'impacto') && (
@@ -394,6 +443,14 @@ function RioTransparencia({ c, aportes }: { c: Campana; aportes: Aporte[] }) {
                 <li key={h.titulo} className={`hito--${h.estado}`}>
                   <FileText aria-hidden="true" /> {h.titulo}: {h.evidencia ?? t(`donaciones.hitos.${h.estado}`)}
                   <span className="num"> · {h.monto} USDC</span>
+                  {h.tx && (
+                    <>
+                      {' · '}
+                      <a href={enlaceTx(h.tx)} target="_blank" rel="noreferrer" className="num">
+                        {h.tx.slice(0, 4)}…{h.tx.slice(-4)} <ExternalLink aria-hidden="true" />
+                      </a>
+                    </>
+                  )}
                 </li>
               ))}
             </ul>
@@ -436,7 +493,12 @@ function Bosque({ cuenta, nuevas }: { cuenta: number; nuevas: number }) {
   );
 }
 
-// ---------------------------------------------------------------- Diálogo de aporte (simulación de testnet)
+// ---------------------------------------------------------------- Diálogo de aporte
+// Campaña DEMO local: simulación (nada sale del navegador).
+// Campaña del API: escrow real en Stellar testnet. Con Freighter firma el donante; el aporte de prueba lo
+// firma una cuenta DEMO que custodia el servidor. En ambos casos lo confirma la red, no la interfaz.
+
+type Paso = 'confirmar' | 'conectada' | 'enviando' | 'confirmando' | 'listo' | PasoBilletera;
 
 function DialogoAporte({
   abierto,
@@ -454,13 +516,26 @@ function DialogoAporte({
   onVerRio: () => void;
 }) {
   const { t } = useTranslation();
-  const [paso, setPaso] = useState<'confirmar' | 'conectada' | 'enviando' | 'confirmando' | 'listo'>('confirmar');
+  const { conectado } = useSesion();
+  const [paso, setPaso] = useState<Paso>('confirmar');
   const [tx, setTx] = useState('');
+  const [error, setError] = useState<string | null>(null);
   useEffect(() => {
-    if (!abierto) setPaso('confirmar');
+    if (!abierto) {
+      setPaso('confirmar');
+      setTx('');
+      setError(null);
+    }
   }, [abierto]);
 
-  const firmar = () => {
+  const restante = Math.max(0, c.meta - c.reunido);
+  const abierta = !c.remota || c.estado === 'abierta';
+  const valido = monto >= 1 && monto <= 10000 && abierta && (!c.remota || monto <= restante);
+  const montoTexto = String(Math.round(monto * 1e7) / 1e7);
+  const aporte = (hash: string): Aporte => ({ monto, campana: c.titulo, campanaId: c.id, fecha: new Date().toISOString().slice(0, 10), tx: hash });
+
+  // Simulación local (campañas DEMO sin API).
+  const firmarSimulado = () => {
     setPaso('enviando');
     const hash = Array.from(crypto.getRandomValues(new Uint8Array(32)), (b) => b.toString(16).padStart(2, '0')).join('');
     const corto = `${hash.slice(0, 4)}…${hash.slice(-4)}`;
@@ -468,11 +543,50 @@ function DialogoAporte({
     setTimeout(() => setPaso('confirmando'), 900);
     setTimeout(() => {
       setPaso('listo');
-      onConfirmado({ monto, campana: c.titulo, campanaId: c.id, fecha: new Date().toISOString().slice(0, 10), tx: corto });
+      onConfirmado(aporte(corto));
     }, 2100);
   };
 
-  const valido = monto >= 1 && monto <= 10000;
+  const fallo = (e: unknown) => {
+    setPaso('confirmar');
+    setError(e instanceof ErrorBilletera ? t(`donaciones.errores.${e.message}`) : e instanceof Error ? e.message : String(e));
+  };
+
+  const conFreighter = async () => {
+    setError(null);
+    try {
+      const r = await donarConFreighter(c.id, montoTexto, setPaso);
+      setTx(r.tx);
+      setPaso('listo');
+      onConfirmado(aporte(r.tx));
+    } catch (e) {
+      fallo(e);
+    }
+  };
+
+  const demoServidor = async () => {
+    setError(null);
+    setPaso('enviando');
+    try {
+      const r = await api.donarDemo(c.id, montoTexto);
+      setTx(r.tx);
+      setPaso('listo');
+      onConfirmado(aporte(r.tx));
+    } catch (e) {
+      fallo(e);
+    }
+  };
+
+  const esperando = paso !== 'confirmar' && paso !== 'conectada' && paso !== 'listo';
+  const textoEspera =
+    paso === 'conectando' || paso === 'preparando' || paso === 'firmando'
+      ? t(`donaciones.pasos.${paso}`)
+      : paso === 'enviando' && c.remota
+        ? t('donaciones.pasos.enviando')
+        : paso === 'enviando'
+          ? t('donaciones.enviando')
+          : t('donaciones.confirmando');
+
   return (
     <Hoja abierta={abierto} titulo={paso === 'listo' ? t('donaciones.listo') : t('donaciones.confirmarTitulo')} onCerrar={onCerrar}>
       <div className="aporte">
@@ -487,7 +601,7 @@ function DialogoAporte({
           <div>
             <dt>{t('donaciones.red')}</dt>
             <dd>
-              {t('donaciones.redValor')} <span className="etiqueta-demo">TESTNET</span>
+              {c.remota ? t('donaciones.redReal') : t('donaciones.redValor')} <span className="etiqueta-demo">TESTNET</span>
             </dd>
           </div>
           <div>
@@ -498,18 +612,56 @@ function DialogoAporte({
             <div>
               <dt>{t('donaciones.transacciones')}</dt>
               <dd className="num">
-                {tx} <span className="etiqueta-demo">{t('donaciones.txSimulada')}</span>
+                {c.remota ? (
+                  <a href={enlaceTx(tx)} target="_blank" rel="noreferrer">
+                    {tx.slice(0, 6)}…{tx.slice(-6)} · {t('donaciones.verTx')} <ExternalLink aria-hidden="true" />
+                  </a>
+                ) : (
+                  <>
+                    {tx} <span className="etiqueta-demo">{t('donaciones.txSimulada')}</span>
+                  </>
+                )}
               </dd>
             </div>
           )}
         </dl>
         <p className="aporte__aviso">
           <ShieldCheck aria-hidden="true" />
-          {paso === 'listo' ? t('donaciones.listoNota') : t('donaciones.simulacion')}
+          {paso === 'listo'
+            ? c.remota
+              ? t('donaciones.listoRed')
+              : t('donaciones.listoNota')
+            : c.remota
+              ? t('donaciones.escrowReal')
+              : t('donaciones.simulacion')}
         </p>
-        {!valido && <p className="aporte__error">{t('donaciones.montoInvalido')}</p>}
+        {c.remota && abierta && paso === 'confirmar' && <p className="aporte__nota num">{t('donaciones.restante', { monto: restante.toLocaleString('es-BO') })}</p>}
+        {!abierta && <p className="aporte__error">{t('donaciones.cerrada')}</p>}
+        {abierta && !valido && <p className="aporte__error">{t('donaciones.montoInvalido')}</p>}
+        {error && (
+          <p className="aporte__error" role="alert">
+            {error}
+          </p>
+        )}
         <div className="aporte__acciones" aria-live="polite">
-          {paso === 'confirmar' && (
+          {paso === 'confirmar' && c.remota && (
+            <>
+              <button type="button" className="boton-oro boton-oro--ancho" disabled={!valido} onClick={() => void conFreighter()}>
+                <Wallet aria-hidden="true" />
+                {t('donaciones.conFreighter')}
+              </button>
+              {conectado ? (
+                <button type="button" className="boton-linea boton-oro--ancho" disabled={!valido} onClick={() => void demoServidor()}>
+                  {t('donaciones.demoServidor')}
+                </button>
+              ) : (
+                <p className="aporte__nota">
+                  {t('donaciones.necesitasIngresar')} <Link to="/login">{t('donaciones.ingresar')}</Link>
+                </p>
+              )}
+            </>
+          )}
+          {paso === 'confirmar' && !c.remota && (
             <button type="button" className="boton-linea boton-oro--ancho" disabled={!valido} onClick={() => setPaso('conectada')}>
               <Wallet aria-hidden="true" />
               {t('donaciones.conectar')}
@@ -521,15 +673,15 @@ function DialogoAporte({
                 <Check aria-hidden="true" />
                 {t('donaciones.conectada')}
               </p>
-              <button type="button" className="boton-oro boton-oro--ancho" onClick={firmar}>
+              <button type="button" className="boton-oro boton-oro--ancho" onClick={firmarSimulado}>
                 {t('donaciones.firmar')}
               </button>
             </>
           )}
-          {(paso === 'enviando' || paso === 'confirmando') && (
+          {esperando && (
             <p className="aporte__espera">
               <Loader2 aria-hidden="true" className="gira-lento" />
-              {paso === 'enviando' ? t('donaciones.enviando') : t('donaciones.confirmando')}
+              {textoEspera}
             </p>
           )}
           {paso === 'listo' && (

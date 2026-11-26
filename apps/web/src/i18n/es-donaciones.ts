@@ -64,6 +64,33 @@ const donaciones = {
   verRio: 'Ver el río',
   cerrar: 'Cerrar',
   montoInvalido: 'Ingresa un monto entre 1 y 10 000.',
+  // Conectado al escrow real en Stellar testnet
+  redReal: 'Stellar testnet · USDC de prueba de Circle (sin valor real)',
+  escrowReal: 'Los fondos quedan en un contrato de escrow y se liberan por hitos que aprueba el verificador.',
+  conFreighter: 'Firmar con Freighter',
+  demoServidor: 'Aporte de prueba (firma una cuenta DEMO del servidor)',
+  necesitasIngresar: 'Para el aporte de prueba, ingresa con un rol.',
+  ingresar: 'Ingresar',
+  pasos: {
+    conectando: 'Conectando con Freighter…',
+    preparando: 'Preparando la transacción…',
+    firmando: 'Firma en Freighter…',
+    enviando: 'Enviando y esperando la confirmación de la red…',
+  },
+  errores: {
+    sinFreighter: 'No encontramos Freighter. Instálala y elige la red de prueba (Testnet).',
+    accesoDenegado: 'Freighter no dio acceso a tu cuenta.',
+    redIncorrecta: 'Freighter está en otra red: cámbiala a Testnet.',
+    firmaRechazada: 'La firma fue cancelada.',
+  },
+  listoRed: 'Confirmado por la red de prueba de Stellar. Puedes verlo en el explorador público.',
+  verTx: 'Ver en el explorador',
+  restante: 'Faltan {{monto}} USDC para la meta.',
+  cerrada: 'Esta campaña ya no recibe aportes.',
+  conciliada: 'Coincide con el contrato',
+  noConciliada: 'No se pudo comprobar con el contrato',
+  estadosCampana: { abierta: 'Abierta', completada: 'Completada', cancelada: 'Cancelada' },
+  sinAportesAun: 'Todavía no hay aportes confirmados.',
 };
 
 export default donaciones;

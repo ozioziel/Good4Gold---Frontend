@@ -46,11 +46,12 @@ export function registrarIngreso(p: Promise<unknown>) {
   ingresoEnCurso = actual;
 }
 
-async function pedir<T>(ruta: string, opciones: { metodo?: string; cuerpo?: unknown; sinEsperar?: boolean } = {}): Promise<T> {
+async function pedir<T>(ruta: string, opciones: { metodo?: string; cuerpo?: unknown; sinEsperar?: boolean; esperaMs?: number } = {}): Promise<T> {
   if (!hayApi) throw new ErrorApi(0, 'API no configurada');
   if (ingresoEnCurso && !opciones.sinEsperar) await ingresoEnCurso.catch(() => undefined);
   const control = new AbortController();
-  const reloj = setTimeout(() => control.abort(), ESPERA_MS);
+  // Las operaciones en la red (crear, donar, liberar) tardan más que una lectura.
+  const reloj = setTimeout(() => control.abort(), opciones.esperaMs ?? (opciones.metodo && opciones.metodo !== 'GET' ? 60_000 : ESPERA_MS));
   const token = leerToken();
   try {
     const r = await fetch(BASE + ruta, {
@@ -242,4 +243,49 @@ export const api = {
   cambiarEstado: (id: string, estado: EstadoSolicitud, nota?: string) =>
     pedir<{ id: string; estado: EstadoSolicitud }>(`/research-requests/${id}/status`, { metodo: 'PATCH', cuerpo: { estado, ...(nota ? { nota } : {}) } }),
   sincronizar: (operaciones: Operacion[]) => pedir<{ acuses: Acuse[] }>('/sync/operations', { metodo: 'POST', cuerpo: { operaciones } }),
+  // Campañas y donaciones (escrow por hitos en Stellar testnet)
+  campanas: () => pedir<CampanaApi[]>('/campaigns'),
+  campana: (id: string) => pedir<CampanaDetalleApi>(`/campaigns/${id}`),
+  donarDemo: (id: string, monto: string) => pedir<{ id: string; tx: string }>(`/campaigns/${id}/donations/demo`, { metodo: 'POST', cuerpo: { monto } }),
+  prepararDonacion: (id: string, direccion: string, monto: string) =>
+    pedir<{ donacionId: string; xdr: string }>(`/campaigns/${id}/donations/prepare`, { metodo: 'POST', cuerpo: { direccion, monto } }),
+  enviarDonacion: (donacionId: string, xdr: string) => pedir<{ tx: string }>(`/donations/${donacionId}/submit`, { metodo: 'POST', cuerpo: { xdr }, esperaMs: 60_000 }),
 };
+
+export interface HitoApi {
+  id: string;
+  indice: number;
+  titulo: string;
+  monto: string;
+  estado: 'pendiente' | 'liberado';
+  evidenciaRef: string | null;
+  tx: string | null;
+}
+
+export interface CampanaApi {
+  id: string;
+  solicitudId: string;
+  titulo: string;
+  causa: 'investigar' | 'proteger' | 'educar' | 'restaurar';
+  estado: 'abierta' | 'completada' | 'cancelada';
+  meta: string;
+  reunido: string;
+  liberado: string;
+  aportes: number;
+  lugar: string;
+  lugarId: string;
+  responsable: string;
+  verificador: string;
+  contratoId: string;
+  txCreacion: string;
+  demo: boolean;
+  hitos: HitoApi[];
+}
+
+export interface CampanaDetalleApi extends CampanaApi {
+  donaciones: { id: string; monto: string; modo: 'demo' | 'billetera'; tx: string; fecha: string }[];
+  cadena: { aportado: string; liberado: string; estado: string; conciliada: boolean } | null;
+}
+
+/** Enlace público a una transacción de testnet. */
+export const enlaceTx = (hash: string) => `https://stellar.expert/explorer/testnet/tx/${hash}`;
