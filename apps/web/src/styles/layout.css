@@ -21,7 +21,7 @@ main:focus {
   color: var(--tinta);
 }
 .marca__dos {
-  color: var(--oro);
+  color: var(--oro-trazo);
   font-style: italic;
   margin: 0 0.02em;
 }
@@ -33,7 +33,7 @@ main:focus {
   z-index: 40;
   padding-top: env(safe-area-inset-top);
   /* Sin vidrio: la cabecera se funde con la escena mediante un velo degradado. */
-  background: linear-gradient(to bottom, rgb(24 26 23 / 0.86), rgb(24 26 23 / 0.5) 60%, rgb(24 26 23 / 0));
+  background: linear-gradient(to bottom, rgb(var(--suelo-rgb) / 0.86), rgb(var(--suelo-rgb) / 0.5) 60%, rgb(var(--suelo-rgb) / 0));
 }
 .cabecera__fila {
   width: var(--contenedor);
@@ -88,14 +88,31 @@ main:focus {
   position: absolute;
   bottom: 1px;
 }
-.nav + .cabecera__ingresar {
-  margin-left: 8px;
+/* Interruptor de tema: entre la navegación y «Ingresar» */
+.cabecera__modo {
+  margin-left: auto;
+  flex: none;
+}
+.cabecera__modo + .cabecera__ingresar {
+  margin-left: -12px;
+}
+.cabecera__modo svg {
+  width: 20px;
+  height: 20px;
+}
+.cabecera__modo[aria-pressed='true'] svg {
+  color: var(--oro-trazo);
+}
+@media (min-width: 900px) {
+  .nav + .cabecera__modo {
+    margin-left: 8px;
+  }
 }
 
 /* El hilo de río se dibuja al llegar a la pestaña */
 .hilo-rio path {
   fill: none;
-  stroke: var(--accion);
+  stroke: var(--oro-trazo);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-dasharray: 1;
@@ -141,12 +158,12 @@ main:focus {
     inset: auto 0 0 0;
     z-index: 40;
     padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
-    background: rgb(24 26 23 / 0.94);
+    background: var(--tabbar-solida);
     border-top: 1px solid var(--linea);
   }
   @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
     .tabbar {
-      background: rgb(24 26 23 / 0.78);
+      background: var(--tabbar-vidrio);
       backdrop-filter: blur(14px) saturate(1.2);
       -webkit-backdrop-filter: blur(14px) saturate(1.2);
     }
@@ -184,7 +201,7 @@ main:focus {
     color: var(--tinta);
   }
   .tabbar__item[aria-current='page'] svg:not(.hilo-rio) {
-    color: var(--accion);
+    color: var(--oro-trazo);
   }
   .tabbar__hilo-vacio {
     height: 8px;
@@ -195,85 +212,43 @@ main:focus {
   }
 }
 
-/* ---------- Tema oscuro (Mapa, Laboratorio): cabecera sólida sobre la noche ---------- */
-.app[data-tema='oscuro'] .cabecera {
-  background: rgb(21 23 20 / 0.96);
+/* ---------- Cabecera sólida: Mapa, Laboratorio y cuenta (siguen el tema) e Infórmate (claro fijo) ---------- */
+.app[data-tema='oscuro'] .cabecera,
+.app[data-tema='claro'] .cabecera {
+  background: var(--cabecera-solida);
   border-bottom: 1px solid var(--linea);
 }
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .app[data-tema='oscuro'] .cabecera {
-    background: rgb(21 23 20 / 0.78);
+  .app[data-tema='oscuro'] .cabecera,
+  .app[data-tema='claro'] .cabecera {
+    background: var(--cabecera-vidrio);
     backdrop-filter: blur(14px) saturate(1.2);
     -webkit-backdrop-filter: blur(14px) saturate(1.2);
   }
 }
 
-/* ---------- Tema bosque (Donaciones) ---------- */
+/* ---------- Inicio en tema claro: la escena sigue oscura, pero las fuentes del final son claras.
+   El velo de la cabecera baja más oscuro para que la navegación conserve contraste sobre ellas. ---------- */
+:root[data-modo='claro'] .app[data-tema='escena'] .cabecera {
+  background: linear-gradient(to bottom, rgb(var(--suelo-rgb) / 0.92), rgb(var(--suelo-rgb) / 0.8) 70%, rgb(var(--suelo-rgb) / 0));
+}
+
+/* ---------- Tema bosque (Donaciones): la cabecera conserva el bosque en ambos temas ---------- */
 .app[data-tema='bosque'] .cabecera {
-  background: linear-gradient(to bottom, rgb(20 40 31 / 0.92), rgb(20 40 31 / 0.55) 70%, rgb(20 40 31 / 0));
+  background: linear-gradient(to bottom, rgb(var(--bosque-rgb) / 0.92), rgb(var(--bosque-rgb) / 0.55) 70%, rgb(var(--bosque-rgb) / 0));
+}
+/* En tema claro el resto de la página es marfil: cabecera de bosque sólida para no perder contraste. */
+:root[data-modo='claro'] .app[data-tema='bosque'] .cabecera {
+  background: rgb(var(--bosque-rgb) / 0.95);
 }
 @media (max-width: 899px) {
   .app[data-tema='bosque'] .tabbar {
-    background: rgb(20 40 31 / 0.94);
+    background: rgb(var(--bosque-rgb) / 0.94);
   }
 }
 
-/* ---------- Tema claro (Infórmate): superficie marfil y tinta oscura ---------- */
+/* ---------- Tema claro (Infórmate): superficie marfil fija; los roles claros vienen de tokens.css ---------- */
 .app[data-tema='claro'] {
-  background: var(--suelo-claro);
-  color: var(--tinta-oscura);
-  color-scheme: light;
-}
-.app[data-tema='claro'] .cabecera {
-  background: rgb(243 240 228 / 0.94);
-  border-bottom: 1px solid var(--linea-clara);
-}
-@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .app[data-tema='claro'] .cabecera {
-    background: rgb(243 240 228 / 0.82);
-    backdrop-filter: blur(14px) saturate(1.1);
-    -webkit-backdrop-filter: blur(14px) saturate(1.1);
-  }
-}
-.app[data-tema='claro'] .marca__nombre {
-  color: var(--tinta-oscura);
-}
-.app[data-tema='claro'] .marca__dos {
-  color: var(--oro-hondo);
-}
-.app[data-tema='claro'] .nav__enlace {
-  color: var(--tinta-oscura-2);
-}
-.app[data-tema='claro'] .nav__enlace:hover,
-.app[data-tema='claro'] .nav__enlace[aria-current='page'] {
-  color: var(--tinta-oscura);
-}
-.app[data-tema='claro'] .hilo-rio path {
-  stroke: var(--oro-hondo);
-}
-.app[data-tema='claro'] .cabecera__ingresar {
-  --b-fondo: transparent;
-  --b-borde: var(--linea-clara);
-  --b-tinta: var(--tinta-oscura);
-}
-.app[data-tema='claro'] .cabecera__ingresar:hover {
-  --b-borde: var(--oro-hondo);
-}
-.app[data-tema='claro'] :focus-visible {
-  outline-color: var(--oro-hondo);
-}
-@media (max-width: 899px) {
-  .app[data-tema='claro'] .tabbar {
-    background: rgb(251 249 242 / 0.96);
-    border-top-color: var(--linea-clara);
-  }
-  .app[data-tema='claro'] .tabbar__item {
-    color: var(--tinta-oscura-2);
-  }
-  .app[data-tema='claro'] .tabbar__item[aria-current='page'] {
-    color: var(--tinta-oscura);
-  }
-  .app[data-tema='claro'] .tabbar__item[aria-current='page'] svg:not(.hilo-rio) {
-    color: var(--oro-hondo);
-  }
+  background: var(--suelo);
+  color: var(--tinta);
 }

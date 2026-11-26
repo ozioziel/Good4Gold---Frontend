@@ -1,4 +1,4 @@
-/* ===================== Infórmate — crema, verde desaturado y oro ===================== */
+/* ===================== Infórmate — crema, verde desaturado y oro (claro fijo en ambos temas: ver tokens.css) ===================== */
 .informate {
   position: relative;
   min-height: 100dvh;
@@ -21,7 +21,7 @@
   font-size: var(--t-overline);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #7a5c27;
+  color: var(--crema-oro);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -35,7 +35,7 @@
 .informate__cabeza h1 {
   font-size: var(--t-display-l);
   font-weight: 460;
-  color: #24301f;
+  color: var(--crema-titulo);
 }
 .informate__lema {
   font-size: var(--t-body-l);
@@ -73,7 +73,7 @@
   min-height: 40px;
   padding: 0 16px;
   border-radius: var(--r-pill);
-  border: 1px solid rgb(31 34 29 / 0.16);
+  border: 1px solid rgb(var(--tinta-rgb) / 0.16);
   background: rgb(255 255 255 / 0.6);
   color: var(--tinta-oscura);
   font: 600 0.875rem var(--f-ui);
@@ -83,17 +83,17 @@
     border-color var(--dur-hover) var(--ease-rio);
 }
 .tema:hover {
-  border-color: #a9852f;
+  border-color: var(--crema-oro-trazo);
 }
 .tema[aria-pressed='true'] {
-  background: #2f4a33;
-  border-color: #2f4a33;
+  background: var(--crema-verde);
+  border-color: var(--crema-verde);
   color: var(--marfil);
 }
 .app[data-tema='claro'] .tema:focus-visible,
 .app[data-tema='claro'] .flecha:focus-visible,
 .app[data-tema='claro'] .carrusel__pista:focus-visible {
-  outline: 2px solid #a9852f;
+  outline: 2px solid var(--foco);
   outline-offset: 3px;
 }
 
@@ -125,24 +125,24 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   border-radius: 26px;
-  background: #fbf9f2;
+  background: var(--superficie-clara);
   box-shadow:
     0 1px 0 rgb(255 255 255 / 0.8) inset,
-    0 20px 40px -28px rgb(47 74 51 / 0.45),
-    0 2px 6px -2px rgb(47 74 51 / 0.12);
+    0 20px 40px -28px rgb(var(--crema-sombra-rgb) / 0.45),
+    0 2px 6px -2px rgb(var(--crema-sombra-rgb) / 0.12);
   overflow: hidden;
 }
 .carta__ilus {
   padding: 12px 18px 0;
-  background: linear-gradient(to bottom, #f1ead7, #fbf9f2);
+  background: linear-gradient(to bottom, #f1ead7, var(--superficie-clara));
 }
 .carta__ilus--salud,
 .carta__ilus--prevencion {
-  background: linear-gradient(to bottom, #f2e6d4, #fbf9f2);
+  background: linear-gradient(to bottom, #f2e6d4, var(--superficie-clara));
 }
 .carta__ilus--agua,
 .carta__ilus--naturaleza {
-  background: linear-gradient(to bottom, #e3ece6, #fbf9f2);
+  background: linear-gradient(to bottom, #e3ece6, var(--superficie-clara));
 }
 .ilus {
   width: 100%;
@@ -159,23 +159,23 @@
   font-size: 0.6875rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #7a5c27;
+  color: var(--crema-oro);
 }
 .carta h2 {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #24301f;
+  color: var(--crema-titulo);
 }
 .carta__texto {
   font-size: 1.0625rem;
   line-height: 1.5;
-  color: #33382f;
+  color: var(--crema-texto);
 }
 .carta__pie {
   display: grid;
   gap: 8px;
   padding: 12px 22px 18px;
-  border-top: 1px solid rgb(31 34 29 / 0.08);
+  border-top: 1px solid rgb(var(--tinta-rgb) / 0.08);
 }
 .carta__fuente {
   display: inline-flex;
@@ -184,7 +184,7 @@
   font-size: 0.8125rem;
   color: var(--tinta-oscura-2);
   text-decoration: underline;
-  text-decoration-color: rgb(31 34 29 / 0.25);
+  text-decoration-color: rgb(var(--tinta-rgb) / 0.25);
   text-underline-offset: 3px;
 }
 .carta__fuente svg {
@@ -200,7 +200,7 @@
   min-height: 40px;
   padding: 0 14px;
   border-radius: var(--r-pill);
-  background: #2f4a33;
+  background: var(--crema-verde);
   color: var(--marfil);
   font-weight: 700;
   font-size: 0.875rem;
@@ -220,7 +220,7 @@
   font-size: 0.625rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #8a7a52;
+  color: var(--crema-oro);
 }
 
 .carrusel__controles {
@@ -237,8 +237,8 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  border: 1px solid rgb(31 34 29 / 0.18);
-  background: #fbf9f2;
+  border: 1px solid rgb(var(--tinta-rgb) / 0.18);
+  background: var(--superficie-clara);
   color: var(--tinta-oscura);
   cursor: pointer;
   transition:
@@ -246,7 +246,7 @@
     border-color var(--dur-hover) var(--ease-rio);
 }
 .flecha:hover:not(:disabled) {
-  border-color: #a9852f;
+  border-color: var(--crema-oro-trazo);
 }
 .flecha:active:not(:disabled) {
   transform: scale(0.92);
@@ -270,13 +270,13 @@
 .carrusel__barra {
   height: 3px;
   border-radius: 2px;
-  background: rgb(31 34 29 / 0.1);
+  background: rgb(var(--tinta-rgb) / 0.1);
   overflow: hidden;
 }
 .carrusel__barra span {
   display: block;
   height: 100%;
-  background: #a9852f;
+  background: var(--crema-oro-trazo);
   transform-origin: left;
   transition: transform 420ms var(--ease-rio);
 }
@@ -293,15 +293,15 @@
 }
 .planta__tallo {
   fill: none;
-  stroke: #6d8f62;
+  stroke: var(--crema-tallo);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-dasharray: 1;
   transition: stroke-dashoffset 900ms var(--ease-rio);
 }
 .planta__hoja {
-  fill: #a9bf92;
-  stroke: #6d8f62;
+  fill: var(--crema-hoja);
+  stroke: var(--crema-tallo);
   stroke-width: 1.5;
   opacity: 0;
   transform-box: fill-box;

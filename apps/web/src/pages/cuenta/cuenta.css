@@ -1,4 +1,4 @@
-/* Ingreso, perfil y panel institucional: la noche del proyecto, tarjetas sólidas (sin escena detrás). */
+/* Ingreso, perfil y panel institucional: siguen el tema; tarjetas sólidas (sin escena detrás). */
 .cuenta {
   width: var(--contenedor);
   margin: 0 auto;
@@ -49,13 +49,13 @@
 .cuenta__tarjeta h2 svg {
   width: 20px;
   height: 20px;
-  color: var(--oro);
+  color: var(--oro-trazo);
 }
 .cuenta__nota {
   color: var(--tinta-2);
 }
 .cuenta__nota a {
-  color: var(--oro-claro);
+  color: var(--oro-texto);
 }
 .roles {
   list-style: none;
@@ -74,7 +74,7 @@
   padding: 12px 16px;
   border-radius: 16px;
   border: 1px solid var(--linea);
-  background: rgb(243 240 228 / 0.03);
+  background: rgb(var(--tinta-rgb) / 0.03);
   color: var(--tinta);
   text-align: left;
   cursor: pointer;
@@ -83,19 +83,19 @@
     transform var(--dur-press) var(--ease-rio);
 }
 .rol-opcion:hover {
-  border-color: var(--oro-claro);
+  border-color: var(--borde-hover);
 }
 .rol-opcion:active {
   transform: scale(0.99);
 }
 .rol-opcion[aria-pressed='true'] {
-  border-color: var(--oro);
+  border-color: var(--oro-trazo);
   background: var(--accion-suave);
 }
 .rol-opcion > svg {
   width: 22px;
   height: 22px;
-  color: var(--oro);
+  color: var(--oro-trazo);
 }
 .rol-opcion > span {
   display: grid;
@@ -125,7 +125,7 @@
   gap: 2px;
   padding: 12px 14px;
   border-radius: 14px;
-  background: rgb(243 240 228 / 0.04);
+  background: rgb(var(--tinta-rgb) / 0.04);
 }
 .lista-simple li span {
   font-size: 0.75rem;
@@ -214,18 +214,18 @@
   padding: 6px 12px;
   border-radius: var(--r-pill);
   background: var(--accion-suave);
-  color: var(--oro-claro);
+  color: var(--oro-texto);
   font-weight: 700;
   font-size: 0.8125rem;
 }
 .caso--rechazada .caso__estado {
-  background: rgb(234 111 95 / 0.15);
-  color: #ea6f5f;
+  background: color-mix(in srgb, var(--alerta) 15%, transparent);
+  color: var(--alerta);
 }
 .caso--resultados_publicados .caso__estado,
 .caso--cerrada .caso__estado {
-  background: rgb(143 195 220 / 0.15);
-  color: #8fc3dc;
+  background: color-mix(in srgb, var(--agua-texto) 15%, transparent);
+  color: var(--agua-texto);
 }
 .caso__pasos {
   list-style: none;
@@ -241,10 +241,10 @@
   background: var(--linea);
 }
 .caso__pasos li.is-hecho {
-  background: var(--selva-claro);
+  background: var(--vida-texto);
 }
 .caso__pasos li.is-actual {
-  background: var(--oro);
+  background: var(--oro-trazo);
 }
 .caso__meta {
   display: flex;
@@ -257,7 +257,7 @@
 .caso__meta svg {
   width: 14px;
   height: 14px;
-  color: #8fc3dc;
+  color: var(--agua-texto);
 }
 .caso__acciones {
   display: flex;
@@ -278,7 +278,7 @@
   padding: 0 14px;
   border-radius: var(--r-pill);
   border: 1px solid var(--linea-fuerte);
-  background: rgb(243 240 228 / 0.04);
+  background: rgb(var(--tinta-rgb) / 0.04);
   color: var(--tinta);
   font: 400 0.9375rem var(--f-ui);
 }

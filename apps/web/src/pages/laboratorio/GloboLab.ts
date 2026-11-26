@@ -2,13 +2,17 @@ import * as maplibregl from 'maplibre-gl';
 import type { GeoJSONSource, LayerSpecification, Map as MlMap, StyleSpecification } from 'maplibre-gl';
 import type { Feature } from 'geojson';
 import { estiloNoche, ORO, reducido } from '@/lib/mapaBase';
+import { exprTono, type Tono } from '../mapa/senales';
 import { ATRIBUCION_GIBS, atribucionS2, urlModis, urlNdvi, urlS2, type AnioS2, type IdCapa } from '@/data/laboratorio';
 
 /**
  * Globo del Laboratorio (MapLibre en proyección de globo, con modo 2D). Clase imperativa fuera de React.
  * Capas satelitales reales (EOX Sentinel-2 sin nubes, NASA GIBS MODIS) + ríos de OSM + evidencias.
  * Comparador: un segundo mapa (solo imagen) encima, recortado por la línea del deslizador y sincronizado.
+ * El globo es siempre oscuro (espacio + imágenes satelitales) en ambos temas; los paneles de encima sí siguen el tema.
  */
+const ESPACIO = '#05070a';
+const NOCHE = '#151714';
 export const BOLIVIA: [number, number] = [-64.9, -16.6];
 
 export interface PuntoLab {
@@ -17,7 +21,7 @@ export interface PuntoLab {
   nombre: string;
   lat: number;
   lon: number;
-  tono: string;
+  tono: Tono;
   ficticio: boolean;
 }
 
@@ -43,7 +47,7 @@ export class GloboLab {
   constructor(private contenedor: HTMLElement, private ev: Eventos) {
     this.mapa = new maplibregl.Map({
       container: contenedor,
-      style: { version: 8, sources: {}, layers: [{ id: 'fondo', type: 'background', paint: { 'background-color': '#05070a' } }] },
+      style: { version: 8, sources: {}, layers: [{ id: 'fondo', type: 'background', paint: { 'background-color': ESPACIO } }] },
       center: BOLIVIA,
       zoom: innerWidth < 900 ? 1.6 : 2.2,
       attributionControl: false,
@@ -103,7 +107,7 @@ export class GloboLab {
         id: `${f}-halo`,
         type: 'circle',
         source: f,
-        paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, 6, 10, 16], 'circle-color': ['get', 'tono'], 'circle-opacity': 0.18 + forma * 0, 'circle-blur': 0.5 },
+        paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, 6, 10, 16], 'circle-color': exprTono('oscuro'), 'circle-opacity': 0.18 + forma * 0, 'circle-blur': 0.5 },
       });
       m.addLayer({
         id: f,
@@ -111,8 +115,8 @@ export class GloboLab {
         source: f,
         paint: {
           'circle-radius': ['interpolate', ['linear'], ['zoom'], 2, f === 'estudios' ? 4 : 3, 10, f === 'estudios' ? 7 : 6],
-          'circle-color': f === 'estudios' ? '#151714' : ['get', 'tono'],
-          'circle-stroke-color': f === 'estudios' ? ORO : '#151714',
+          'circle-color': f === 'estudios' ? NOCHE : exprTono('oscuro'),
+          'circle-stroke-color': f === 'estudios' ? ORO : NOCHE,
           'circle-stroke-width': f === 'estudios' ? 2 : 1.5,
         },
       });
@@ -122,7 +126,7 @@ export class GloboLab {
     m.addSource('zona', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
     m.addLayer({ id: 'zona-relleno', type: 'fill', source: 'zona', filter: ['==', ['geometry-type'], 'Polygon'], paint: { 'fill-color': ORO, 'fill-opacity': 0.14 } });
     m.addLayer({ id: 'zona-borde', type: 'line', source: 'zona', paint: { 'line-color': ORO, 'line-width': 2, 'line-dasharray': [2, 1.5] } });
-    m.addLayer({ id: 'zona-vertices', type: 'circle', source: 'zona', filter: ['==', ['geometry-type'], 'Point'], paint: { 'circle-radius': 4, 'circle-color': ORO, 'circle-stroke-color': '#151714', 'circle-stroke-width': 1.5 } });
+    m.addLayer({ id: 'zona-vertices', type: 'circle', source: 'zona', filter: ['==', ['geometry-type'], 'Point'], paint: { 'circle-radius': 4, 'circle-color': ORO, 'circle-stroke-color': NOCHE, 'circle-stroke-width': 1.5 } });
 
     m.on('click', (e) => {
       if (this.dibujando) {
@@ -233,7 +237,7 @@ export class GloboLab {
         version: 8,
         sources: { s2b: { type: 'raster', tiles: [urlS2(anioB)], tileSize: 256, maxzoom: 15 } },
         layers: [
-          { id: 'fondo', type: 'background', paint: { 'background-color': '#05070a' } },
+          { id: 'fondo', type: 'background', paint: { 'background-color': ESPACIO } },
           { id: 's2b', type: 'raster', source: 's2b' },
         ],
         projection: { type: this.mapa.getProjection()?.type === 'mercator' ? 'mercator' : 'globe' },

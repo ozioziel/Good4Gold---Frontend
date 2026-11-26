@@ -36,6 +36,11 @@ const es = {
     donacionesCorto: 'Donar',
     ingresar: 'Ingresar',
   },
+  tema: {
+    modoClaro: 'Modo claro',
+    aClaro: 'Cambiar a modo claro',
+    aOscuro: 'Cambiar a modo oscuro',
+  },
   inicio: {
     titulo: 'El lado invisible del oro',
     resumen: 'Resumen del recorrido',

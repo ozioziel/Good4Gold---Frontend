@@ -8,7 +8,6 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: calc(var(--header-alto) + 16px);
-  color-scheme: dark;
 }
 
 body {
@@ -106,7 +105,7 @@ p {
 
 /* ---------- Botones: una sola familia ---------- */
 .btn {
-  --b-fondo: rgb(243 240 228 / 0.06);
+  --b-fondo: rgb(var(--tinta-rgb) / 0.06);
   --b-borde: var(--linea-fuerte);
   --b-tinta: var(--tinta);
   display: inline-flex;
@@ -134,7 +133,7 @@ p {
   -webkit-tap-highlight-color: transparent;
 }
 .btn:hover {
-  --b-borde: var(--oro-claro);
+  --b-borde: var(--borde-hover);
   transform: translateY(-2px);
 }
 .btn:active {
@@ -182,7 +181,7 @@ p {
   gap: 6px;
   padding: 2px 8px;
   border-radius: var(--r-pill);
-  border: 1px solid rgb(227 180 90 / 0.5);
+  border: 1px solid var(--demo-borde);
   background: var(--demo-fondo);
   color: var(--demo);
   font-family: var(--f-mono);
@@ -192,17 +191,17 @@ p {
   text-transform: uppercase;
 }
 
-/* Vidrio: solo con mundo detrás (escena del Inicio, globo del Laboratorio) */
+/* Vidrio: solo con mundo detrás (escena del Inicio, globo, mapa). Oscuro o marfil según el tema. */
 .vidrio {
-  background: linear-gradient(150deg, rgb(34 37 31 / 0.72), rgb(24 26 23 / 0.5));
+  background: var(--vidrio-fondo);
   border: 1px solid var(--linea);
-  box-shadow: var(--sombra-2), inset 0 1px 0 rgb(243 240 228 / 0.08);
+  box-shadow: var(--sombra-2), inset 0 1px 0 var(--vidrio-brillo);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
 }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .vidrio {
-    background: rgb(28 31 26 / 0.96);
+    background: var(--vidrio-solido);
   }
 }
 

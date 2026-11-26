@@ -6,6 +6,9 @@ import { codificar, decodificar, type ReporteQR } from '@/lib/qrReporte';
 import { useMapa } from './estado';
 import { Hoja } from '@/components/ui/Hoja';
 
+const QR_OSCURO = '#151714';
+const QR_CLARO = '#f3f0e4';
+
 /** Compartir una publicación por QR: el reporte viaja dentro del código, sin internet. */
 export function HojaQr({ pub, onCerrar }: { pub: Publicacion | null; onCerrar: () => void }) {
   const { t } = useTranslation();
@@ -22,8 +25,9 @@ export function HojaQr({ pub, onCerrar }: { pub: Publicacion | null; onCerrar: (
       a: pub.autor.nombre.slice(0, 60),
     });
     // La librería de QR se descarga solo al compartir.
+    // Colores fijos en ambos temas (--qr-oscuro / --qr-claro): un QR invertido no lo leen muchos escáneres.
     import('qrcode').then((QR) =>
-      QR.toString(codigo, { type: 'svg', errorCorrectionLevel: 'M', margin: 1, color: { dark: '#151714', light: '#f3f0e4' } }).then((s) => vivo && setSvg(s)),
+      QR.toString(codigo, { type: 'svg', errorCorrectionLevel: 'M', margin: 1, color: { dark: QR_OSCURO, light: QR_CLARO } }).then((s) => vivo && setSvg(s)),
     );
     return () => {
       vivo = false;

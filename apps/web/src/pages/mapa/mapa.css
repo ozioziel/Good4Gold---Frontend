@@ -1,9 +1,9 @@
-/* ===================== Mapa comunitario — la noche del Inicio, el río como protagonista ===================== */
+/* ===================== Mapa comunitario — la noche del Inicio (o el alba, en tema claro), el río como protagonista ===================== */
 
 .mapa {
   position: fixed;
   inset: calc(var(--header-alto) + env(safe-area-inset-top)) 0 0 0;
-  background: #151714;
+  background: var(--mapa-fondo);
   color: var(--tinta);
   /* clip (no hidden): un contenedor «hidden» se puede desplazar al enfocar algo y el mapa se corre. */
   overflow: clip;
@@ -17,7 +17,7 @@
   inset: 0;
   background:
     radial-gradient(40% 30% at 50% 55%, rgb(63 134 168 / 0.16), transparent 70%),
-    #151714;
+    var(--mapa-fondo);
   animation: respira 2.4s ease-in-out infinite;
 }
 @keyframes respira {
@@ -37,7 +37,7 @@
   text-align: center;
 }
 .maplibregl-ctrl-attrib {
-  background: rgb(21 23 20 / 0.6) !important;
+  background: rgb(var(--suelo-rgb) / 0.75) !important;
   color: var(--tinta-3) !important;
   font-size: 10px;
 }
@@ -45,7 +45,7 @@
   color: var(--tinta-2) !important;
 }
 .maplibregl-ctrl-attrib-button {
-  filter: invert(0.85);
+  filter: var(--attrib-filtro);
 }
 
 /* ---------- Arriba: buscar + más ---------- */
@@ -83,14 +83,14 @@
   padding: 0 40px;
   border-radius: var(--r-pill);
   border: 1px solid var(--linea-fuerte);
-  background: rgb(24 26 23 / 0.82);
+  background: var(--velo-control-solido);
   color: var(--tinta);
   font: 400 0.9375rem var(--f-ui);
-  box-shadow: 0 10px 24px -14px rgb(0 0 0 / 0.8);
+  box-shadow: var(--sombra-flotante);
 }
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .buscar__campo {
-    background: rgb(24 26 23 / 0.62);
+    background: var(--velo-control);
     backdrop-filter: blur(12px) saturate(1.2);
     -webkit-backdrop-filter: blur(12px) saturate(1.2);
   }
@@ -138,7 +138,7 @@
   cursor: pointer;
 }
 .buscar__lista li[aria-selected='true'] {
-  background: rgb(212 175 85 / 0.16);
+  background: var(--accion-suave);
 }
 .buscar__vacio {
   color: var(--tinta-3);
@@ -231,7 +231,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--tinta-2);
-  text-shadow: 0 1px 6px #000;
+  text-shadow: var(--sombra-texto);
 }
 .cercanos ul {
   display: flex;
@@ -247,7 +247,7 @@
   width: 14px;
   height: 2px;
   border-radius: 1px;
-  background: #7db5cf;
+  background: var(--mapa-rio);
 }
 
 /* ---------- Tarjeta de tres señales ---------- */
@@ -278,8 +278,8 @@
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: rgb(212 175 85 / 0.14);
-  color: var(--oro);
+  background: var(--accion-suave);
+  color: var(--oro-trazo);
 }
 .tarjeta__icono svg {
   width: 20px;
@@ -379,7 +379,7 @@
   align-items: center;
   gap: 4px;
   min-height: 32px;
-  color: var(--oro-claro);
+  color: var(--oro-texto);
   font-weight: 700;
   font-size: 0.8125rem;
   text-decoration: none;
@@ -412,7 +412,7 @@
   translate: -50% 0;
   padding: 10px 16px;
   border-radius: var(--r-pill);
-  background: rgb(24 26 23 / 0.85);
+  background: var(--velo-control-solido);
   border: 1px solid var(--linea-fuerte);
   font-weight: 700;
   font-size: 0.875rem;
@@ -427,9 +427,9 @@
   height: 46px;
   margin: -23px 0 0 -23px;
   border-radius: 50%;
-  border: 2px solid var(--oro);
+  border: 2px solid var(--oro-trazo);
   box-shadow:
-    0 0 0 6px rgb(212 175 85 / 0.18),
+    0 0 0 6px var(--accion-suave),
     0 0 24px rgb(212 175 85 / 0.45);
   pointer-events: none;
 }
@@ -439,7 +439,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  background: var(--oro);
+  background: var(--oro-trazo);
   translate: -50% -50%;
 }
 .ubicar__mira::before {
@@ -461,7 +461,7 @@
   gap: 10px;
 }
 .ubicar__acciones .boton-linea {
-  background: rgb(24 26 23 / 0.85);
+  background: var(--velo-control-solido);
 }
 
 /* Componer */
@@ -478,7 +478,7 @@
   padding: 12px 8px;
   border-radius: 16px;
   border: 1px solid var(--linea-fuerte);
-  background: rgb(243 240 228 / 0.03);
+  background: rgb(var(--tinta-rgb) / 0.03);
   color: var(--tinta-2);
   font: 700 0.875rem var(--f-ui);
   cursor: pointer;
@@ -491,12 +491,12 @@
   height: 22px;
 }
 .tipo[aria-checked='true'] {
-  border-color: var(--oro);
-  background: rgb(212 175 85 / 0.12);
+  border-color: var(--oro-trazo);
+  background: var(--accion-suave);
   color: var(--tinta);
 }
 .tipo[aria-checked='true'] svg {
-  color: var(--oro);
+  color: var(--oro-trazo);
 }
 .tipo:active {
   transform: scale(0.97);
@@ -520,8 +520,8 @@
   cursor: pointer;
 }
 .chip--foto.is-lista {
-  border-color: var(--oro);
-  color: var(--oro-claro);
+  border-color: var(--oro-trazo);
+  color: var(--oro-texto);
 }
 .chip--foto:focus-within {
   outline: 2px solid var(--foco);
@@ -554,16 +554,16 @@
   gap: 8px;
   padding: 12px;
   border-radius: 18px;
-  background: rgb(243 240 228 / 0.04);
+  background: rgb(var(--tinta-rgb) / 0.04);
   border: 1px solid var(--linea);
 }
 .pub--oficial {
-  border-color: rgb(234 111 95 / 0.6);
-  background: rgb(234 111 95 / 0.08);
+  border-color: color-mix(in srgb, var(--alerta) 60%, transparent);
+  background: color-mix(in srgb, var(--alerta) 8%, transparent);
 }
 .pub--pendiente {
   border-style: dashed;
-  border-color: rgb(212 175 85 / 0.6);
+  border-color: color-mix(in srgb, var(--oro-trazo) 60%, transparent);
 }
 .pub__cabeza {
   display: flex;
@@ -577,21 +577,21 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: rgb(243 240 228 / 0.1);
+  background: rgb(var(--tinta-rgb) / 0.1);
   font: 600 0.9375rem var(--f-display);
 }
 .pub__avatar.rol--investigador,
 .pub__avatar.rol--laboratorio {
-  background: rgb(143 195 220 / 0.18);
-  color: #8fc3dc;
+  background: color-mix(in srgb, var(--agua-texto) 18%, transparent);
+  color: var(--agua-texto);
 }
 .pub__avatar.rol--autoridad {
-  background: rgb(234 111 95 / 0.18);
-  color: #ea6f5f;
+  background: color-mix(in srgb, var(--alerta) 16%, transparent);
+  color: var(--alerta);
 }
 .pub__avatar.rol--representante {
-  background: rgb(127 167 132 / 0.2);
-  color: var(--selva-claro);
+  background: color-mix(in srgb, var(--vida-texto) 20%, transparent);
+  color: var(--vida-texto);
 }
 .pub__autor {
   flex: 1;
@@ -607,19 +607,19 @@
   flex: none;
   padding: 4px 10px;
   border-radius: var(--r-pill);
-  background: rgb(243 240 228 / 0.07);
+  background: rgb(var(--tinta-rgb) / 0.07);
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--tinta-2);
 }
 .pub--lo_vi .pub__tipo {
-  color: #e8a256;
+  color: var(--naranja);
 }
 .pub--analisis .pub__tipo {
-  color: var(--oro-claro);
+  color: var(--oro-texto);
 }
 .pub--oficial .pub__tipo {
-  color: #ea6f5f;
+  color: var(--alerta);
 }
 .pub__texto {
   line-height: 1.5;
@@ -671,8 +671,8 @@
   height: 15px;
 }
 .pub__accion[aria-pressed='true'] {
-  border-color: var(--oro);
-  color: var(--oro-claro);
+  border-color: var(--oro-trazo);
+  color: var(--oro-texto);
 }
 .pub__accion:disabled {
   opacity: 0.5;
@@ -716,7 +716,9 @@
   aspect-ratio: 1;
   padding: 10px;
   border-radius: 18px;
-  background: var(--marfil);
+  /* Fondo claro fijo: el QR siempre es oscuro sobre claro para poder escanearlo. */
+  background: var(--qr-claro);
+  box-shadow: 0 0 0 1px var(--linea);
 }
 .qr svg {
   width: 100%;
@@ -732,10 +734,10 @@
   width: 16px;
   height: 16px;
   flex: none;
-  color: var(--oro);
+  color: var(--oro-trazo);
 }
 .qr__error {
-  color: #ea6f5f;
+  color: var(--alerta);
   font-size: 0.875rem;
 }
 .escaner {
@@ -766,9 +768,9 @@
 .importar blockquote {
   margin: 0;
   padding: 12px 14px;
-  border-left: 3px solid var(--oro);
+  border-left: 3px solid var(--oro-trazo);
   border-radius: 0 12px 12px 0;
-  background: rgb(243 240 228 / 0.05);
+  background: rgb(var(--tinta-rgb) / 0.05);
 }
 
 /* Menú */
@@ -854,29 +856,29 @@
   width: 22px;
   height: 3px;
   border-radius: 2px;
-  background: #7db5cf;
-  box-shadow: 0 0 8px #3f86a8;
+  background: var(--mapa-rio);
+  box-shadow: 0 0 8px var(--mapa-rio-brillo);
 }
 .leyenda__lugar {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #e8a256;
-  box-shadow: 0 0 0 4px rgb(232 162 86 / 0.25);
+  background: var(--senal-riesgo);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--senal-riesgo) 25%, transparent);
 }
 .leyenda__pub {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--marfil);
-  border: 1.5px solid var(--oro);
+  background: var(--superficie);
+  border: 1.5px solid var(--oro-trazo);
 }
 .leyenda__yo {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--marfil);
-  border: 3px solid #5fa6c9;
+  background: var(--superficie);
+  border: 3px solid var(--mapa-yo);
 }
 .menu__reiniciar {
   justify-self: start;
@@ -908,8 +910,8 @@
   max-width: min(420px, 90vw);
   padding: 12px 18px;
   border-radius: 16px;
-  background: var(--marfil);
-  color: var(--tinta-oscura);
+  background: var(--aviso-fondo);
+  color: var(--aviso-tinta);
   font-weight: 600;
   font-size: 0.9375rem;
   text-align: center;

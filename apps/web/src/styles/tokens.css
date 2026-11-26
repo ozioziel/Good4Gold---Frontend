@@ -2,6 +2,13 @@
   Tokens de Gold2Life. Mundo: «río amazónico al alba: oro, mercurio, bosque».
   Paleta cruda con nombres del mundo; los componentes solo usan los nombres de rol de más abajo.
   Contrastes medidos en docs/diseno.md.
+
+  Dos temas: oscuro (la noche del Inicio) y claro (el alba: marfil y tinta de bosque).
+  El tema vive en <html data-modo="oscuro|claro"> y lo fija un script en index.html antes del primer pintado.
+  Algunas zonas no siguen el tema y fijan su juego de roles:
+  - Noche fija: la escena 3D del Inicio, el héroe de Donaciones, sus cabeceras y el texto suelto sobre el globo.
+  - Claro fijo: Infórmate (crema editorial en ambos temas).
+  Las fuentes al pie del Inicio vuelven a seguir el tema (están dentro de la escena, pero son lectura).
 */
 :root {
   /* Paleta cruda — Inicio y sistema general (plan.md §2.1) */
@@ -28,38 +35,46 @@
   --don-marfil: #f4f1e6;
   --don-vida: #a9bf92;
 
-  /* Roles — superficie oscura (Inicio, Laboratorio) */
-  --suelo: var(--noche);
-  --superficie: var(--noche-2);
-  --superficie-2: var(--noche-3);
-  --tinta: var(--marfil);
-  --tinta-2: #c9c5b6;
-  --tinta-3: #9c998c;
-  --linea: rgb(243 240 228 / 0.14);
-  --linea-fuerte: rgb(243 240 228 / 0.28);
-
-  /* Roles — superficie clara (Infórmate, Mapa, formularios) */
+  /* Superficie clara fija (Infórmate, avisos, cartas): no cambia con el tema */
   --suelo-claro: var(--marfil);
   --superficie-clara: #fbf9f2;
   --tinta-oscura: #1f221d;
   --tinta-oscura-2: #4c4f45;
   --linea-clara: rgb(31 34 29 / 0.14);
+  --crema-titulo: #24301f;
+  --crema-texto: #33382f;
+  --crema-oro: #7a5c27;
+  --crema-oro-trazo: #a9852f;
+  --crema-verde: #2f4a33;
+  --crema-tallo: #6d8f62;
+  --crema-hoja: #a9bf92;
+  --crema-sombra-rgb: 47 74 51;
 
-  /* Acción y foco: una sola acción, el oro */
+  /* Cartas de causas de Donaciones: marfil en ambos temas */
+  --bosque-rgb: 20 40 31; /* cabecera y barra de Donaciones */
+  --carta-don-tinta: #1f2b22;
+  --carta-don-tinta-2: #4b5446;
+
+  /* Acción: una sola, el oro (igual en ambos temas; texto oscuro sobre oro 8.3:1) */
   --accion: var(--oro);
   --accion-hover: var(--oro-claro);
   --accion-tinta: #1d1a10;
-  --accion-suave: rgb(212 175 85 / 0.16);
-  --foco: var(--oro-claro);
 
   /* Acentos con significado fijo */
   --agua: var(--rio);
   --vida: var(--selva);
   --riesgo-hg: var(--mercurio);
 
-  /* Estados DEMO / TESTNET (siempre con texto) */
-  --demo: #e3b45a;
-  --demo-fondo: rgb(227 180 90 / 0.14);
+  /* Globo del Laboratorio: siempre oscuro (espacio + satélite); las muestras de la leyenda copian estos colores */
+  --espacio: #05070a;
+  --globo-rio: #7db5cf;
+  --globo-rio-brillo: #3f86a8;
+  --globo-riesgo: #e8a256;
+  --globo-agua: #8fc3dc;
+
+  /* QR: siempre oscuro sobre claro para que se pueda escanear (también en el tema oscuro) */
+  --qr-oscuro: #151714;
+  --qr-claro: #f3f0e4;
 
   /* Tipografía */
   --f-display: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
@@ -86,11 +101,6 @@
   --header-alto: 64px;
   --tabbar-alto: 68px;
 
-  /* Sombras en el color del mundo (nunca gris neutro) */
-  --sombra-1: 0 1px 0 rgb(243 240 228 / 0.06) inset, 0 12px 30px -18px rgb(0 0 0 / 0.6);
-  --sombra-2: 0 30px 60px -30px rgb(5 7 4 / 0.75);
-  --sombra-oro: 0 10px 28px -10px rgb(212 175 85 / 0.45);
-
   /* Movimiento */
   --ease-rio: cubic-bezier(0.22, 1, 0.36, 1); /* llegada suave, como agua que se asienta */
   --ease-sale: cubic-bezier(0.55, 0, 1, 0.45);
@@ -98,4 +108,182 @@
   --dur-hover: 220ms;
   --dur-entra: 340ms;
   --dur-sale: 160ms;
+}
+
+/* ---------- Roles — tema oscuro (por defecto y zonas de noche fija) ---------- */
+:root,
+.noche-fija,
+.inicio,
+.donar-hero,
+.app[data-tema='escena'] .cabecera,
+.app[data-tema='escena'] .tabbar,
+.app[data-tema='bosque'] .cabecera,
+.app[data-tema='bosque'] .tabbar,
+.lab__atribucion {
+  --suelo: var(--noche);
+  --suelo-rgb: 24 26 23;
+  --superficie: var(--noche-2);
+  --superficie-2: var(--noche-3);
+  --tinta: var(--marfil);
+  --tinta-rgb: 243 240 228;
+  --tinta-2: #c9c5b6;
+  --tinta-3: #9c998c;
+  --linea: rgb(243 240 228 / 0.14);
+  /* 0.38: borde de controles con 3:1 sobre el suelo (WCAG 1.4.11) */
+  --linea-fuerte: rgb(243 240 228 / 0.38);
+
+  --accion-suave: rgb(212 175 85 / 0.16);
+  --foco: var(--oro-claro);
+  --borde-hover: var(--oro-claro);
+  /* Oro como texto (≥4.5:1) y como trazo, icono o borde (≥3:1) */
+  --oro-texto: var(--oro-claro);
+  --oro-trazo: var(--oro);
+  /* Logotipo: gota de mercurio e hilo de río */
+  --marca-mercurio: var(--mercurio);
+  --marca-rio: var(--rio-claro);
+
+  /* Texto de acentos con significado (siempre acompañados de palabra o icono) */
+  --agua-texto: #8fc3dc;
+  --alerta: #ea6f5f;
+  --naranja: #e8a256;
+  --vida-texto: var(--selva-claro);
+  --vida-sobre: #10140f;
+
+  /* Estados DEMO / TESTNET (siempre con texto) */
+  --demo: #e3b45a;
+  --demo-fondo: rgb(227 180 90 / 0.14);
+  --demo-borde: rgb(227 180 90 / 0.5);
+
+  /* Señales del mapa: espejo de TONO_HEX.oscuro en pages/mapa/senales.ts */
+  --senal-neutro: #a9a596;
+  --senal-agua: #8fc3dc;
+  --senal-proceso: #d4af55;
+  --senal-riesgo: #e8a256;
+  --senal-alto: #ea6f5f;
+  --senal-duda: #c2ab7f;
+  --senal-reportes: #d9d3c0;
+
+  /* Mapa comunitario */
+  --mapa-fondo: #151714;
+  --mapa-rio: #7db5cf;
+  --mapa-rio-brillo: #3f86a8;
+  --mapa-yo: #5fa6c9;
+  --attrib-filtro: invert(0.85);
+
+  /* Superficies flotantes */
+  --vidrio-fondo: linear-gradient(150deg, rgb(34 37 31 / 0.72), rgb(24 26 23 / 0.5));
+  --vidrio-solido: rgb(28 31 26 / 0.96);
+  --vidrio-brillo: rgb(243 240 228 / 0.08);
+  --velo-control: rgb(24 26 23 / 0.62);
+  --velo-control-solido: rgb(24 26 23 / 0.85);
+  --hoja-fondo: rgb(26 28 24 / 0.97);
+  --hoja-velo: rgb(8 9 8 / 0.5);
+  --hoja-velo-lado: rgb(8 9 8 / 0.35);
+  /* Sobre el globo del Laboratorio (que es siempre oscuro) */
+  --flotante: rgb(5 7 10 / 0.65);
+  --flotante-fuerte: rgb(5 7 10 / 0.78);
+  --panel-lab: rgb(14 17 15 / 0.9);
+  --campo-fondo: #111410;
+  --cabecera-solida: rgb(21 23 20 / 0.96);
+  --cabecera-vidrio: rgb(21 23 20 / 0.78);
+  --tabbar-solida: rgb(24 26 23 / 0.94);
+  --tabbar-vidrio: rgb(24 26 23 / 0.78);
+  /* Aviso emergente: invertido respecto al suelo */
+  --aviso-fondo: var(--marfil);
+  --aviso-tinta: var(--tinta-oscura);
+  --sombra-texto: 0 1px 6px #000;
+
+  /* Sombras en el color del mundo (nunca gris neutro) */
+  --sombra-1: 0 1px 0 rgb(243 240 228 / 0.06) inset, 0 12px 30px -18px rgb(0 0 0 / 0.6);
+  --sombra-2: 0 30px 60px -30px rgb(5 7 4 / 0.75);
+  --sombra-flotante: 0 10px 24px -14px rgb(0 0 0 / 0.8);
+  --sombra-oro: 0 10px 28px -10px rgb(212 175 85 / 0.45);
+
+  color-scheme: dark;
+}
+
+/* ---------- Roles — tema claro (el alba) y zonas de claro fijo ---------- */
+:root[data-modo='claro'],
+:root[data-modo='claro'] .inicio__fuentes,
+.claro-fijo,
+.app[data-tema='claro'] {
+  --suelo: var(--marfil);
+  --suelo-rgb: 243 240 228;
+  --superficie: #fbf9f2;
+  --superficie-2: #e9e4d3;
+  --tinta: #1f221d;
+  --tinta-rgb: 31 34 29;
+  --tinta-2: #45483f;
+  --tinta-3: #5c5d53;
+  --linea: rgb(31 34 29 / 0.14);
+  --linea-fuerte: rgb(31 34 29 / 0.5);
+
+  --accion-suave: rgb(169 133 47 / 0.14);
+  --foco: #7a5c27;
+  --borde-hover: #93701f;
+  --oro-texto: #7a5c27;
+  --oro-trazo: #93701f;
+  --marca-mercurio: #8d979d;
+  --marca-rio: var(--rio);
+
+  --agua-texto: #2b6a89;
+  --alerta: #b0392b;
+  --naranja: #9c5016;
+  --vida-texto: #3b6743;
+  --vida-sobre: var(--marfil);
+
+  --demo: #7a5815;
+  --demo-fondo: rgb(227 180 90 / 0.22);
+  --demo-borde: rgb(122 88 21 / 0.45);
+
+  /* Espejo de TONO_HEX.claro en pages/mapa/senales.ts */
+  --senal-neutro: #66645a;
+  --senal-agua: #2b6a89;
+  --senal-proceso: #80611f;
+  --senal-riesgo: #9c5016;
+  --senal-alto: #b0392b;
+  --senal-duda: #74643c;
+  --senal-reportes: #47463f;
+
+  --mapa-fondo: #e9e4d4;
+  --mapa-rio: #2f7393;
+  --mapa-rio-brillo: #7fb0c8;
+  --mapa-yo: #2b6a89;
+  --attrib-filtro: none;
+
+  --vidrio-fondo: linear-gradient(150deg, rgb(251 249 242 / 0.92), rgb(243 240 228 / 0.84));
+  --vidrio-solido: rgb(251 249 242 / 0.98);
+  --vidrio-brillo: rgb(255 255 255 / 0.7);
+  --velo-control: rgb(251 249 242 / 0.82);
+  --velo-control-solido: rgb(251 249 242 / 0.95);
+  --hoja-fondo: rgb(251 249 242 / 0.98);
+  --hoja-velo: rgb(31 34 29 / 0.32);
+  --hoja-velo-lado: rgb(31 34 29 / 0.22);
+  --flotante: rgb(251 249 242 / 0.9);
+  --flotante-fuerte: rgb(251 249 242 / 0.94);
+  --panel-lab: rgb(251 249 242 / 0.95);
+  --campo-fondo: #fbf9f2;
+  --cabecera-solida: rgb(243 240 228 / 0.94);
+  --cabecera-vidrio: rgb(243 240 228 / 0.82);
+  --tabbar-solida: rgb(251 249 242 / 0.96);
+  --tabbar-vidrio: rgb(251 249 242 / 0.86);
+  --aviso-fondo: #1f221d;
+  --aviso-tinta: var(--marfil);
+  --sombra-texto: 0 1px 6px #f3f0e4;
+
+  --sombra-1: 0 1px 0 rgb(255 255 255 / 0.6) inset, 0 12px 30px -18px rgb(47 54 40 / 0.35);
+  --sombra-2: 0 24px 50px -28px rgb(47 54 40 / 0.4);
+  --sombra-flotante: 0 10px 24px -14px rgb(47 54 40 / 0.45);
+  --sombra-oro: 0 10px 24px -12px rgb(169 133 47 / 0.5);
+
+  color-scheme: light;
+}
+
+/* Las zonas fijas heredan el color de texto del cuerpo: lo devolvemos a su propio rol. */
+.noche-fija,
+.claro-fijo,
+.inicio,
+.donar-hero,
+.lab__atribucion {
+  color: var(--tinta);
 }

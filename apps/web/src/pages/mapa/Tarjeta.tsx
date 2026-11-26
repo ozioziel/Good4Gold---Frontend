@@ -5,7 +5,7 @@ import { ArrowUpRight, ChevronDown, Droplets, FlaskConical, MessageCircle, Plus,
 import type { Lugar } from '@/data/mapa-lugares';
 import { ESTUDIO_REGIONAL } from '@/data/mapa-lugares';
 import { useMapa } from './estado';
-import { tonoComunidad, tonoOficial, tonoVirtual } from './senales';
+import { cssTono, tonoComunidad, tonoOficial, tonoVirtual } from './senales';
 
 /**
  * Tarjeta de un río o lugar: solo tres señales, siempre separadas. Cada fila se abre para ver el porqué.
@@ -48,10 +48,10 @@ export function Tarjeta({ lugar, onCerrar, onPublicar, onVer }: { lugar: Lugar; 
       </header>
 
       <ul className="senales">
-        <Senal icono={<Users />} etiqueta={t('mapa.senales.comunidad')} valor={valorComunidad} tono={tonoComunidad(s.comunidad.nivel)}>
+        <Senal icono={<Users />} etiqueta={t('mapa.senales.comunidad')} valor={valorComunidad} tono={cssTono(tonoComunidad(s.comunidad.nivel))}>
           <p>{detalleComunidad}</p>
         </Senal>
-        <Senal icono={<Satellite />} etiqueta={t('mapa.senales.virtual')} valor={t(`mapa.virtual.${lugar.virtual.nivel}`)} tono={tonoVirtual(lugar.virtual.nivel)} estimacion>
+        <Senal icono={<Satellite />} etiqueta={t('mapa.senales.virtual')} valor={t(`mapa.virtual.${lugar.virtual.nivel}`)} tono={cssTono(tonoVirtual(lugar.virtual.nivel))} estimacion>
           <p>{lugar.virtual.detalle}</p>
           <p className="senal__nota">{t('mapa.virtual.nota')}</p>
           <Link className="senal__enlace" to={`/laboratorio?lat=${lugar.lat.toFixed(4)}&lon=${lugar.lon.toFixed(4)}`}>
@@ -63,7 +63,7 @@ export function Tarjeta({ lugar, onCerrar, onPublicar, onVer }: { lugar: Lugar; 
           icono={<FlaskConical />}
           etiqueta={t('mapa.senales.oficial')}
           valor={lugar.oficial.valor ? `${t(`mapa.oficial.${s.oficial}`)} · ${lugar.oficial.valor}` : t(`mapa.oficial.${s.oficial}`)}
-          tono={tonoOficial(s.oficial)}
+          tono={cssTono(tonoOficial(s.oficial))}
         >
           <p>{s.oficial === 'solicitado' ? t('mapa.analisisPedido') : lugar.oficial.detalle}</p>
           {!lugar.ficticio && (

@@ -1,19 +1,26 @@
 import { NavLink, Outlet, useLocation } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import { UserRound } from 'lucide-react';
+import { Moon, Sun, UserRound } from 'lucide-react';
 import { RUTAS } from './rutas';
 import { Marca } from '@/components/ui/Marca';
 import { HiloRio } from '@/components/ui/HiloRio';
 import { useEffect } from 'react';
 import { useSesion } from './sesion';
+import { COLOR_BARRA, fijarColorBarra, useModo } from './tema';
 
 export function Layout() {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const { rol } = useSesion();
+  const { modo, alternar } = useModo();
   const enInicio = pathname === '/';
   // Tema de la cabecera por pestaña: sobre la escena (Inicio), claro (Infórmate), bosque (Donaciones) u oscuro.
   const tema = enInicio ? 'escena' : /^\/informate/.test(pathname) ? 'claro' : /^\/donaciones/.test(pathname) ? 'bosque' : 'oscuro';
+
+  // Barra del navegador: Inicio y Donaciones empiezan con su escena oscura; Infórmate es crema; el resto sigue al tema.
+  useEffect(() => {
+    fijarColorBarra(tema === 'escena' ? COLOR_BARRA.oscuro : tema === 'bosque' ? '#14281f' : tema === 'claro' ? COLOR_BARRA.claro : COLOR_BARRA[modo]);
+  }, [tema, modo]);
 
   // Al cambiar de pestaña, empezar arriba (el Inicio gestiona su propio scroll).
   useEffect(() => {
@@ -48,6 +55,17 @@ export function Layout() {
               ))}
             </ul>
           </nav>
+
+          <button
+            type="button"
+            className="btn btn--icono cabecera__modo"
+            aria-pressed={modo === 'claro'}
+            aria-label={t('tema.modoClaro')}
+            title={modo === 'claro' ? t('tema.aOscuro') : t('tema.aClaro')}
+            onClick={alternar}
+          >
+            {modo === 'claro' ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+          </button>
 
           <NavLink to={rol === 'visitante' ? '/login' : '/perfil'} className="btn cabecera__ingresar">
             <UserRound aria-hidden="true" />

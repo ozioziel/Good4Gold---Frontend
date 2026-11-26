@@ -545,12 +545,13 @@
   background: rgb(16 17 14 / 0.5);
 }
 
-/* ---------- Fuentes y pie ---------- */
+/* ---------- Fuentes y pie: lo único del Inicio que sigue el tema (la escena es siempre de noche) ---------- */
 .inicio__fuentes {
   position: relative;
   z-index: 4;
-  background: linear-gradient(to bottom, rgb(24 26 23 / 0.92), var(--suelo) 120px);
+  background: linear-gradient(to bottom, rgb(var(--suelo-rgb) / 0.92), var(--suelo) 120px);
   border-top: 1px solid var(--linea);
+  color: var(--tinta);
 }
 .fuentes__cuerpo {
   width: var(--contenedor);
@@ -599,7 +600,7 @@
   top: 18px;
   font-family: var(--f-mono);
   font-size: 0.75rem;
-  color: var(--oro);
+  color: var(--oro-texto);
 }
 .fuentes__lista a {
   display: inline-flex;
@@ -607,11 +608,11 @@
   gap: 6px;
   font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: rgb(243 240 228 / 0.25);
+  text-decoration-color: rgb(var(--tinta-rgb) / 0.25);
   text-underline-offset: 3px;
 }
 .fuentes__lista a:hover {
-  text-decoration-color: var(--oro);
+  text-decoration-color: var(--oro-trazo);
 }
 .fuentes__lista a svg {
   width: 14px;

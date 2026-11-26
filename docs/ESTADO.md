@@ -33,6 +33,14 @@ Decisión del 2026-11-25/26: primero todo el frontend, con datos simulados marca
 - Anchos 1440, 768 y 320; recorrido completo solo con teclado; lector de pantalla.
 - Playwright (no instalado).
 
+## Modo claro / oscuro (2026-11-26)
+
+- Botón en la cabecera (Sol/Luna, `aria-pressed`). Preferencia en `localStorage` (`gold2-modo`) o, si no hay, la del sistema; se aplica antes del primer pintado (`index.html`) y con fundido que respeta `prefers-reduced-motion`. Estado en `src/app/tema.ts`, atributo `<html data-modo>`.
+- Siempre oscuros por narrativa: Inicio (escena y versión ligera), héroe de Donaciones y globo del Laboratorio (sus paneles sí siguen el tema). Infórmate siempre crema. El QR siempre oscuro sobre claro.
+- Mapa comunitario: base «alba» en claro, repintada sin recargar teselas. Las señales siguen con texto, icono y anillo, no solo color.
+- Contraste AA verificado por cálculo en ambos temas (tokens, señales, mapa, Donaciones). **Revisión visual en navegador pendiente** (pestañas, hojas, QR, cabecera a 375 px).
+- Pendientes conocidos: en oscuro `#ea6f5f` sobre superficie-2 da 4,38:1 (previo); etapas inactivas del héroe de Donaciones al 35 % de opacidad, bajo AA (diseño previo).
+
 ## Backend (`apps/api`, iniciado 2026-11-26)
 
 NestJS 12 + PostgreSQL 17/PostGIS 3.5 en Docker. Detalle, rutas y reglas en `apps/api/README.md`.

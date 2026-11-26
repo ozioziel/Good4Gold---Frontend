@@ -269,7 +269,7 @@ function PlantaAporte({ monto }: { monto: number }) {
   return (
     <div className="planta-aporte" aria-hidden="true">
       <svg viewBox="0 0 200 220">
-        <ellipse cx="100" cy="200" rx="64" ry="9" fill="#183528" />
+        <ellipse cx="100" cy="200" rx="64" ry="9" style={{ fill: 'var(--d-suelo-svg)' }} />
         <path d="M100 200 C 98 160 104 120 100 40" className="planta-aporte__tallo" pathLength={1} style={{ strokeDashoffset: 1 - p }} />
         {hojas.map((h) => (
           <path key={h.t} d={h.d} className={'planta-aporte__hoja' + (p >= h.t ? ' is-abierta' : '')} />
@@ -419,15 +419,15 @@ function Bosque({ cuenta, nuevas }: { cuenta: number; nuevas: number }) {
   return (
     <div className="bosque">
       <svg viewBox="0 0 800 140" aria-label={t('donaciones.plantas', { count: cuenta })} role="img">
-        <path d="M0 120 C 200 108, 600 132, 800 116 V140 H0z" fill="#183528" />
+        <path d="M0 120 C 200 108, 600 132, 800 116 V140 H0z" style={{ fill: 'var(--d-suelo-svg)' }} />
         {plantas
           .sort((a, b) => a.alto - b.alto)
           .map((p, i) => (
             <g key={i} transform={`translate(${p.x} ${124 - (i % 3) * 3})`} className={p.nueva ? 'bosque__nueva' : undefined}>
-              <path d={`M0 0 Q ${p.tono * 4 - 2} ${-p.alto / 2} 0 ${-p.alto}`} stroke="#6d8f62" strokeWidth="1.6" fill="none" />
-              <path d={`M0 ${-p.alto * 0.55} q -10 -2 -12 -10 q 10 0 12 10z`} fill={p.tono > 0.5 ? '#a9bf92' : '#8fae7a'} />
-              <path d={`M0 ${-p.alto * 0.75} q 10 -2 12 -10 q -10 0 -12 10z`} fill={p.tono > 0.3 ? '#a9bf92' : '#b8c9a2'} />
-              {p.nueva && <circle cy={-p.alto} r="3" fill="#c7a354" />}
+              <path d={`M0 0 Q ${p.tono * 4 - 2} ${-p.alto / 2} 0 ${-p.alto}`} strokeWidth="1.6" fill="none" style={{ stroke: 'var(--d-tallo-svg)' }} />
+              <path d={`M0 ${-p.alto * 0.55} q -10 -2 -12 -10 q 10 0 12 10z`} style={{ fill: p.tono > 0.5 ? 'var(--d-hoja-a)' : 'var(--d-hoja-b)' }} />
+              <path d={`M0 ${-p.alto * 0.75} q 10 -2 12 -10 q -10 0 -12 10z`} style={{ fill: p.tono > 0.3 ? 'var(--d-hoja-a)' : 'var(--d-hoja-c)' }} />
+              {p.nueva && <circle cy={-p.alto} r="3" style={{ fill: 'var(--don-oro)' }} />}
             </g>
           ))}
       </svg>

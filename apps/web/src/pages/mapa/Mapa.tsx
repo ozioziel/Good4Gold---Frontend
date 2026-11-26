@@ -11,6 +11,7 @@ import { HojaComponer, type Ubicado } from './Componer';
 import { HojaEscanear, HojaQr } from './Qr';
 import { Hoja } from '@/components/ui/Hoja';
 import { tieneInformacion, tonoLugar } from './senales';
+import { modoActual, useModo } from '@/app/tema';
 import './mapa.css';
 
 /**
@@ -77,7 +78,7 @@ function PaginaMapa() {
     let vivo = true;
     import('./MapaRios').then(({ MapaRios }) => {
       if (!vivo || !lienzo.current) return;
-      mapa.current = new MapaRios(lienzo.current, {
+      mapa.current = new MapaRios(lienzo.current, modoActual(), {
         onLugar: (id) => elegirLugar.current(id),
         onRio: (n, lat, lon) => elegirRio.current(n, lat, lon),
         onVacio: () => d({ tipo: 'elegir', lugar: null }),
@@ -92,6 +93,12 @@ function PaginaMapa() {
       mapa.current = null;
     };
   }, [d]);
+
+  // Tema → mapa: el mapa base y las capas propias se repintan sin recargar.
+  const { modo } = useModo();
+  useEffect(() => {
+    if (listo) mapa.current?.setModo(modo);
+  }, [listo, modo]);
 
   // Datos → mapa: solo los lugares con algo que decir y las publicaciones.
   const puntos = useMemo(

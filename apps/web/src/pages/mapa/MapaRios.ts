@@ -1,20 +1,73 @@
 import * as maplibregl from 'maplibre-gl';
 import type { GeoJSONSource, LayerSpecification, Map as MlMap } from 'maplibre-gl';
-import { estiloNoche, ORO, reducido } from '@/lib/mapaBase';
+import { estiloBase, fondoMapa, ORO, reducido, repintarBase } from '@/lib/mapaBase';
+import type { Modo } from '@/app/tema';
+import { exprTono, type Tono } from './senales';
 
 /**
  * Mapa de ríos (MapLibre, 2D). Clase imperativa fuera de React: React le pasa datos y recibe eventos.
- * Base: OpenFreeMap «dark» (datos de OpenStreetMap, sin clave) recoloreada con la noche del Inicio.
+ * Base: OpenFreeMap «dark» (datos de OpenStreetMap, sin clave) recoloreada con la noche del Inicio o el alba.
  * Los ríos son el protagonista: se resaltan en azul y el que se toca se ilumina en oro (el hilo de río).
  */
 const CENTRO_INICIAL: [number, number] = [-67.45, -15.0];
+
+/** Colores de las capas propias por tema. En claro, oro y agua hondos para conservar ≥3:1 sobre el marfil. */
+const CAPAS: Record<Modo, {
+  arroyo: string;
+  rioBrillo: string;
+  rioBrilloOpacidad: number;
+  rio: string;
+  oro: string;
+  oroSuave: string;
+  pubLlena: string;
+  hueco: string;
+  bordeFicticio: string;
+  bordeReal: string;
+  nombre: string;
+  halo: string;
+  yo: string;
+  yoBorde: string;
+}> = {
+  oscuro: {
+    arroyo: '#335f72',
+    rioBrillo: '#3f86a8',
+    rioBrilloOpacidad: 0.32,
+    rio: '#7db5cf',
+    oro: ORO,
+    oroSuave: 'rgba(212,175,85,0.7)',
+    pubLlena: '#f3f0e4',
+    hueco: '#151714',
+    bordeFicticio: '#f3f0e4',
+    bordeReal: '#151714',
+    nombre: '#e7e2d1',
+    halo: '#151714',
+    yo: '#8fc3dc',
+    yoBorde: '#5fa6c9',
+  },
+  claro: {
+    arroyo: '#7fa9bb',
+    rioBrillo: '#7fb0c8',
+    rioBrilloOpacidad: 0.4,
+    rio: '#2f7393',
+    oro: '#93701f',
+    oroSuave: 'rgba(147,112,31,0.8)',
+    pubLlena: '#fbf9f2',
+    hueco: '#e9e4d4',
+    bordeFicticio: '#1f221d',
+    bordeReal: '#fbf9f2',
+    nombre: '#2d3029',
+    halo: '#f3f0e4',
+    yo: '#2b6a89',
+    yoBorde: '#2b6a89',
+  },
+};
 
 export interface PuntoLugar {
   id: string;
   nombre: string;
   lat: number;
   lon: number;
-  tono: string;
+  tono: Tono;
   ficticio: boolean;
 }
 export interface PuntoPublicacion {
@@ -47,11 +100,11 @@ export class MapaRios {
   private pendientes: (() => void)[] = [];
   private timerCercanos = 0;
 
-  constructor(contenedor: HTMLElement, private ev: Eventos) {
+  constructor(contenedor: HTMLElement, private modo: Modo, private ev: Eventos) {
     const movil = innerWidth < 900;
     this.mapa = new maplibregl.Map({
       container: contenedor,
-      style: { version: 8, sources: {}, layers: [{ id: 'fondo', type: 'background', paint: { 'background-color': '#151714' } }] },
+      style: { version: 8, sources: {}, layers: [{ id: 'fondo', type: 'background', paint: { 'background-color': fondoMapa(modo) } }] },
       center: CENTRO_INICIAL,
       zoom: movil ? 6.6 : 7.3,
       attributionControl: false,
@@ -61,7 +114,7 @@ export class MapaRios {
     });
     this.mapa.touchZoomRotate.disableRotation();
     this.mapa.addControl(new maplibregl.AttributionControl({ compact: true, customAttribution: '© OpenStreetMap · OpenFreeMap' }), 'bottom-left');
-    estiloNoche()
+    estiloBase(modo)
       .then((st) => {
         const ref = st.layers.find((l) => l.id === 'place_town') as { layout?: { 'text-font'?: string[] } } | undefined;
         if (ref?.layout?.['text-font']?.[0]) this.fuente = ref.layout['text-font'][0];
@@ -87,8 +140,9 @@ export class MapaRios {
     const rio = ['==', ['get', 'class'], 'river'] as const;
     const nombre = ['coalesce', ['get', 'name:es'], ['get', 'name']];
     const add = (l: LayerSpecification) => m.addLayer(l, antesDe);
+    const c = CAPAS[this.modo];
 
-    add({ id: 'arroyos', type: 'line', source: 'openmaptiles', 'source-layer': 'waterway', minzoom: 10, filter: ['==', ['get', 'class'], 'stream'], paint: { 'line-color': '#335f72', 'line-width': 0.9 } });
+    add({ id: 'arroyos', type: 'line', source: 'openmaptiles', 'source-layer': 'waterway', minzoom: 10, filter: ['==', ['get', 'class'], 'stream'], paint: { 'line-color': c.arroyo, 'line-width': 0.9 } });
     add({
       id: 'rios-brillo',
       type: 'line',
@@ -96,8 +150,8 @@ export class MapaRios {
       'source-layer': 'waterway',
       filter: rio as never,
       paint: {
-        'line-color': '#3f86a8',
-        'line-opacity': 0.32,
+        'line-color': c.rioBrillo,
+        'line-opacity': c.rioBrilloOpacidad,
         'line-width': ['interpolate', ['linear'], ['zoom'], 5, 3, 10, 9, 14, 16],
         'line-blur': ['interpolate', ['linear'], ['zoom'], 5, 2, 10, 7, 14, 12],
       },
@@ -109,7 +163,7 @@ export class MapaRios {
       source: 'openmaptiles',
       'source-layer': 'waterway',
       filter: rio as never,
-      paint: { 'line-color': '#7db5cf', 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.9, 10, 2.2, 14, 4] },
+      paint: { 'line-color': c.rio, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.9, 10, 2.2, 14, 4] },
       layout: { 'line-cap': 'round', 'line-join': 'round' },
     });
     add({
@@ -127,7 +181,7 @@ export class MapaRios {
       source: 'openmaptiles',
       'source-layer': 'waterway',
       filter: ['==', nombre, '__ninguno__'] as never,
-      paint: { 'line-color': ORO, 'line-opacity': 0.45, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 6, 12, 18], 'line-blur': 8 },
+      paint: { 'line-color': c.oro, 'line-opacity': 0.45, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 6, 12, 18], 'line-blur': 8 },
       layout: { 'line-cap': 'round', 'line-join': 'round' },
     });
     add({
@@ -136,7 +190,7 @@ export class MapaRios {
       source: 'openmaptiles',
       'source-layer': 'waterway',
       filter: ['==', nombre, '__ninguno__'] as never,
-      paint: { 'line-color': ORO, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 2, 12, 4.5] },
+      paint: { 'line-color': c.oro, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 2, 12, 4.5] },
       layout: { 'line-cap': 'round', 'line-join': 'round' },
     });
 
@@ -147,22 +201,22 @@ export class MapaRios {
 
     m.addLayer({ id: 'pubs', type: 'circle', source: 'pubs', paint: {
       'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 3, 12, 6],
-      'circle-color': ['case', ['get', 'pendiente'], '#151714', '#f3f0e4'],
-      'circle-stroke-color': ['case', ['get', 'pendiente'], ORO, 'rgba(212,175,85,0.7)'],
+      'circle-color': ['case', ['get', 'pendiente'], c.hueco, c.pubLlena],
+      'circle-stroke-color': ['case', ['get', 'pendiente'], c.oro, c.oroSuave],
       'circle-stroke-width': ['case', ['get', 'pendiente'], 2, 1.5],
     } });
-    m.addLayer({ id: 'lugares-halo', type: 'circle', source: 'lugares', paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 9, 12, 18], 'circle-color': ['get', 'tono'], 'circle-opacity': 0.2, 'circle-blur': 0.4 } });
+    m.addLayer({ id: 'lugares-halo', type: 'circle', source: 'lugares', paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 9, 12, 18], 'circle-color': exprTono(this.modo), 'circle-opacity': 0.2, 'circle-blur': 0.4 } });
     m.addLayer({ id: 'lugares', type: 'circle', source: 'lugares', paint: {
       'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 5, 12, 8],
-      'circle-color': ['get', 'tono'],
-      'circle-stroke-color': ['case', ['get', 'ficticio'], '#f3f0e4', '#151714'],
+      'circle-color': exprTono(this.modo),
+      'circle-stroke-color': ['case', ['get', 'ficticio'], c.bordeFicticio, c.bordeReal],
       'circle-stroke-width': ['case', ['get', 'ficticio'], 1, 2],
       'circle-stroke-opacity': ['case', ['get', 'ficticio'], 0.65, 1],
     } });
-    m.addLayer({ id: 'lugar-sel', type: 'circle', source: 'lugares', filter: ['==', ['get', 'id'], '__ninguno__'], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 11, 12, 15], 'circle-color': 'rgba(0,0,0,0)', 'circle-stroke-color': ORO, 'circle-stroke-width': 2.5 } });
-    m.addLayer({ id: 'lugares-nombre', type: 'symbol', source: 'lugares', minzoom: 8.5, layout: { 'text-field': ['get', 'nombre'], 'text-font': [this.fuente], 'text-size': 12, 'text-offset': [0, 1.4], 'text-anchor': 'top', 'text-optional': true }, paint: { 'text-color': '#e7e2d1', 'text-halo-color': '#151714', 'text-halo-width': 1.4 } });
-    m.addLayer({ id: 'yo-halo', type: 'circle', source: 'yo', paint: { 'circle-radius': 22, 'circle-color': '#8fc3dc', 'circle-opacity': 0.18 } });
-    m.addLayer({ id: 'yo', type: 'circle', source: 'yo', paint: { 'circle-radius': 7, 'circle-color': '#f3f0e4', 'circle-stroke-color': '#5fa6c9', 'circle-stroke-width': 3 } });
+    m.addLayer({ id: 'lugar-sel', type: 'circle', source: 'lugares', filter: ['==', ['get', 'id'], '__ninguno__'], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 11, 12, 15], 'circle-color': 'rgba(0,0,0,0)', 'circle-stroke-color': c.oro, 'circle-stroke-width': 2.5 } });
+    m.addLayer({ id: 'lugares-nombre', type: 'symbol', source: 'lugares', minzoom: 8.5, layout: { 'text-field': ['get', 'nombre'], 'text-font': [this.fuente], 'text-size': 12, 'text-offset': [0, 1.4], 'text-anchor': 'top', 'text-optional': true }, paint: { 'text-color': c.nombre, 'text-halo-color': c.halo, 'text-halo-width': 1.4 } });
+    m.addLayer({ id: 'yo-halo', type: 'circle', source: 'yo', paint: { 'circle-radius': 22, 'circle-color': c.yo, 'circle-opacity': 0.18 } });
+    m.addLayer({ id: 'yo', type: 'circle', source: 'yo', paint: { 'circle-radius': 7, 'circle-color': c.pubLlena, 'circle-stroke-color': c.yoBorde, 'circle-stroke-width': 3 } });
 
     m.on('click', (e) => this.alTocar(e.point));
     for (const capa of ['lugares', 'pubs', 'rios-toque']) {
@@ -263,6 +317,35 @@ export class MapaRios {
       const f = ['==', ['coalesce', ['get', 'name:es'], ['get', 'name']], nombreRio ?? '__ninguno__'] as never;
       m.setFilter('rio-sel', f);
       m.setFilter('rio-sel-brillo', f);
+    });
+  }
+
+  /** Cambia el tema: repinta el mapa base y las capas propias en el sitio (sin recargar el estilo). */
+  setModo(modo: Modo) {
+    if (modo === this.modo) return;
+    this.modo = modo;
+    this.alListo(() => {
+      const m = this.mapa;
+      const c = CAPAS[modo];
+      repintarBase(m, modo);
+      const pintar = (capa: string, prop: string, valor: unknown) => m.getLayer(capa) && m.setPaintProperty(capa, prop as Parameters<MlMap["setPaintProperty"]>[1], valor as never);
+      pintar('arroyos', 'line-color', c.arroyo);
+      pintar('rios-brillo', 'line-color', c.rioBrillo);
+      pintar('rios-brillo', 'line-opacity', c.rioBrilloOpacidad);
+      pintar('rios', 'line-color', c.rio);
+      pintar('rio-sel-brillo', 'line-color', c.oro);
+      pintar('rio-sel', 'line-color', c.oro);
+      pintar('pubs', 'circle-color', ['case', ['get', 'pendiente'], c.hueco, c.pubLlena]);
+      pintar('pubs', 'circle-stroke-color', ['case', ['get', 'pendiente'], c.oro, c.oroSuave]);
+      pintar('lugares-halo', 'circle-color', exprTono(modo));
+      pintar('lugares', 'circle-color', exprTono(modo));
+      pintar('lugares', 'circle-stroke-color', ['case', ['get', 'ficticio'], c.bordeFicticio, c.bordeReal]);
+      pintar('lugar-sel', 'circle-stroke-color', c.oro);
+      pintar('lugares-nombre', 'text-color', c.nombre);
+      pintar('lugares-nombre', 'text-halo-color', c.halo);
+      pintar('yo-halo', 'circle-color', c.yo);
+      pintar('yo', 'circle-color', c.pubLlena);
+      pintar('yo', 'circle-stroke-color', c.yoBorde);
     });
   }
 

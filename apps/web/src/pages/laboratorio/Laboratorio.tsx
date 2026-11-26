@@ -23,7 +23,7 @@ import { LUGARES } from '@/data/mapa-lugares';
 import { LOCALIDADES_BENI } from '@/data/localidades-beni';
 import { leerSolicitudes } from '@/data/solicitudes';
 import { useSesion } from '@/app/sesion';
-import { TONO, tonoOficial, tonoVirtual } from '../mapa/senales';
+import { cssTono, tonoOficial, tonoVirtual } from '../mapa/senales';
 import type { GloboLab, PuntoLab } from './GloboLab';
 import { areaKm2, dentro, indicadoresDemo, informeMarkdown } from './zona';
 import './laboratorio.css';
@@ -74,7 +74,7 @@ export default function Laboratorio() {
       nombre: l.nombre,
       lat: l.lat,
       lon: l.lon,
-      tono: l.virtual.nivel === 'posible_riesgo' ? TONO.riesgo : TONO.neutro,
+      tono: l.virtual.nivel === 'posible_riesgo' ? ('riesgo' as const) : ('neutro' as const),
       ficticio: l.ficticio,
     }));
     const mediciones = LUGARES.filter((l) => l.oficial.valor).map((l) => ({
@@ -89,8 +89,8 @@ export default function Laboratorio() {
     const sols = solicitudes
       .map((s) => ({ s, l: LUGARES.find((l) => l.id === s.lugarId) }))
       .filter((x) => x.l)
-      .map(({ s, l }) => ({ id: s.id, capa: 'solicitudes' as const, nombre: s.lugar, lat: l!.lat - 0.03, lon: l!.lon - 0.03, tono: TONO.proceso, ficticio: true }));
-    const estudios = ESTUDIOS.map((e) => ({ id: e.id, capa: 'estudios' as const, nombre: e.titulo, lat: e.lat, lon: e.lon, tono: TONO.proceso, ficticio: false }));
+      .map(({ s, l }) => ({ id: s.id, capa: 'solicitudes' as const, nombre: s.lugar, lat: l!.lat - 0.03, lon: l!.lon - 0.03, tono: 'proceso' as const, ficticio: true }));
+    const estudios = ESTUDIOS.map((e) => ({ id: e.id, capa: 'estudios' as const, nombre: e.titulo, lat: e.lat, lon: e.lon, tono: 'proceso' as const, ficticio: false }));
     return [...lugares, ...mediciones, ...sols, ...estudios];
   }, [solicitudes]);
 
@@ -297,7 +297,7 @@ export default function Laboratorio() {
       {/* Ficha del punto tocado */}
       {punto && !panel?.startsWith('investigar') && (
         <div className="lab__ficha vidrio" role="status">
-          <span className="lab__ficha-tono" style={{ background: punto.tono }} aria-hidden="true" />
+          <span className="lab__ficha-tono" style={{ background: cssTono(punto.tono) }} aria-hidden="true" />
           <div>
             <p className="lab__ficha-capa">
               {t(`laboratorio.capas.${punto.capa}`)} {punto.ficticio && <span className="etiqueta-demo">{t('mapa.demo')}</span>}
@@ -408,12 +408,12 @@ function PanelIA({ onVer }: { onVer: (lat: number, lon: number) => void }) {
           {prioridad.map((l) => (
             <li key={l.id}>
               <button type="button" onClick={() => onVer(l.lat, l.lon)}>
-                <span className="punto-tono" style={{ background: tonoVirtual(l.virtual.nivel) }} aria-hidden="true" />
+                <span className="punto-tono" style={{ background: cssTono(tonoVirtual(l.virtual.nivel)) }} aria-hidden="true" />
                 <span>
                   <strong>{l.nombre}</strong>
                   <span>{l.virtual.detalle}</span>
                 </span>
-                <span className="lista-lab__valor" style={{ color: tonoVirtual(l.virtual.nivel) }}>
+                <span className="lista-lab__valor" style={{ color: cssTono(tonoVirtual(l.virtual.nivel)) }}>
                   {t(`mapa.virtual.${l.virtual.nivel}`)}
                 </span>
               </button>
@@ -435,14 +435,14 @@ function Mediciones({ onVer }: { onVer: (lat: number, lon: number) => void }) {
         {lista.map((l) => (
           <li key={l.id}>
             <button type="button" onClick={() => onVer(l.lat, l.lon)}>
-              <span className="punto-tono" style={{ background: tonoOficial(l.oficial.nivel) }} aria-hidden="true" />
+              <span className="punto-tono" style={{ background: cssTono(tonoOficial(l.oficial.nivel)) }} aria-hidden="true" />
               <span>
                 <strong>
                   {l.nombre} {l.ficticio && <span className="etiqueta-demo">{t('mapa.demo')}</span>}
                 </strong>
                 <span>{l.oficial.detalle}</span>
               </span>
-              <span className="lista-lab__valor num" style={{ color: tonoOficial(l.oficial.nivel) }}>
+              <span className="lista-lab__valor num" style={{ color: cssTono(tonoOficial(l.oficial.nivel)) }}>
                 {l.oficial.valor ?? t(`mapa.oficial.${l.oficial.nivel}`)}
               </span>
             </button>
@@ -506,7 +506,7 @@ function Solicitudes({ esInstitucion, onVer }: { esInstitucion: boolean; onVer: 
           return (
             <li key={s.id}>
               <button type="button" onClick={() => l && onVer(l.lat, l.lon)}>
-                <span className="punto-tono" style={{ background: TONO.proceso }} aria-hidden="true" />
+                <span className="punto-tono" style={{ background: cssTono('proceso') }} aria-hidden="true" />
                 <span>
                   <strong>{s.lugar}</strong>
                   <span>«{s.motivo}»</span>
