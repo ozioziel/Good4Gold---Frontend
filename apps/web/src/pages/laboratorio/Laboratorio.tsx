@@ -22,6 +22,7 @@ import { ANIOS_S2, CAPAS, ESTUDIOS, MODELO, atribucionS2, type AnioS2, type IdCa
 import { LUGARES } from '@/data/mapa-lugares';
 import { LOCALIDADES_BENI } from '@/data/localidades-beni';
 import { useSolicitudes } from '@/app/useSolicitudes';
+import { api, hayApi, type TramosApi } from '@/lib/api';
 import { useSesion } from '@/app/sesion';
 import { cssTono, tonoOficial, tonoVirtual } from '../mapa/senales';
 import type { GloboLab, PuntoLab } from './GloboLab';
@@ -53,7 +54,12 @@ export default function Laboratorio() {
   const [listo, setListo] = useState(false);
   const [error, setError] = useState(false);
   const [panel, setPanel] = useState<IdPanel | null>(innerWidth >= 900 ? 'explorador' : null);
-  const [capas, setCapas] = useState<Set<IdCapa>>(new Set(['s2', 'rios', 'lugares', 'mediciones', 'estudios']));
+  const [capas, setCapas] = useState<Set<IdCapa>>(new Set(['s2', 'rios', 'tramos', 'lugares', 'mediciones', 'estudios']));
+  // Prioridad de muestreo por tramo (pipeline science/, vía API). Sin API: null y el panel muestra la demo.
+  const [tramos, setTramos] = useState<TramosApi | null>(null);
+  useEffect(() => {
+    if (hayApi) api.laboratorioTramos().then((fc) => fc.features.length && setTramos(fc)).catch(() => undefined);
+  }, []);
   const [anio, setAnio] = useState<AnioS2>(2025);
   const [anioB, setAnioB] = useState<AnioS2>(2016);
   const [fecha, setFecha] = useState(() => new Date(Date.now() - 2 * 86_400_000).toISOString().slice(0, 10));
@@ -125,6 +131,11 @@ export default function Laboratorio() {
 
   useEffect(() => {
     if (listo) globo.current?.setPuntos(puntos);
+  }, [listo, puntos]);
+  useEffect(() => {
+    if (listo && tramos) globo.current?.setTramos(tramos);
+  }, [listo, tramos]);
+  useEffect(() => {
   }, [listo, puntos]);
   useEffect(() => globo.current?.setCapas(capas), [capas]);
   useEffect(() => globo.current?.setAnio(anio), [anio]);
@@ -270,7 +281,7 @@ export default function Laboratorio() {
           <div className="lab__panel-cuerpo">
             {panel === 'explorador' && <Explorador capas={capas} alternar={alternar} />}
             {panel === 'satelites' && <Satelites anio={anio} fecha={fecha} setFecha={setFecha} capas={capas} alternar={alternar} />}
-            {panel === 'ia' && <PanelIA onVer={(lat, lon) => globo.current?.volar(lat, lon, 10)} />}
+            {panel === 'ia' && <PanelIA tramos={tramos} onVer={(lat, lon) => globo.current?.volar(lat, lon, 10)} />}
             {panel === 'mediciones' && <Mediciones onVer={(lat, lon) => globo.current?.volar(lat, lon, 11)} />}
             {panel === 'estudios' && <Estudios onVer={(lat, lon) => globo.current?.volar(lat, lon, 7)} />}
             {panel === 'solicitudes' && <Solicitudes esInstitucion={esInstitucion} onVer={(lat, lon) => globo.current?.volar(lat, lon, 11)} />}
@@ -385,11 +396,94 @@ function Satelites({ anio, fecha, setFecha, capas, alternar }: { anio: AnioS2; f
   );
 }
 
-function PanelIA({ onVer }: { onVer: (lat: number, lon: number) => void }) {
+const ORDEN_PRIORIDAD = { alta: 0, media: 1, baja: 2, insuficiente: 3 } as const;
+const TONO_PRIORIDAD = { alta: 'alto', media: 'riesgo', baja: 'agua', insuficiente: 'neutro' } as const;
+
+function PanelIA({ tramos, onVer }: { tramos: TramosApi | null; onVer: (lat: number, lon: number) => void }) {
   const { t } = useTranslation();
-  const prioridad = LUGARES.filter((l) => l.virtual.nivel !== 'sin_analisis');
+  const [abierto, setAbierto] = useState<string | null>(null);
+  const prioridadDemo = LUGARES.filter((l) => l.virtual.nivel !== 'sin_analisis');
+  const lista = tramos
+    ? [...tramos.features].sort(
+        (a, b) =>
+          ORDEN_PRIORIDAD[a.properties.prioridad ?? 'insuficiente'] - ORDEN_PRIORIDAD[b.properties.prioridad ?? 'insuficiente'] ||
+          (b.properties.mineriaAguasArribaHa ?? 0) - (a.properties.mineriaAguasArribaHa ?? 0),
+      )
+    : [];
   return (
     <>
+      {tramos ? (
+        <Fila titulo={t('laboratorio.riesgoTitulo', { anio: lista[0]?.properties.anio ?? '' })}>
+          <span className="estado-lab">{t('laboratorio.riesgoEstado')}</span>
+          <p className="lab__nota">{tramos.aviso}</p>
+          <ul className="lista-lab">
+            {lista.map((f) => {
+              const p = f.properties;
+              const pr = p.prioridad ?? 'insuficiente';
+              const medio = f.geometry.coordinates[Math.floor(f.geometry.coordinates.length / 2)]!;
+              return (
+                <li key={p.id}>
+                  <button
+                    type="button"
+                    aria-expanded={abierto === p.id}
+                    onClick={() => {
+                      setAbierto(abierto === p.id ? null : p.id);
+                      onVer(medio[1]!, medio[0]!);
+                    }}
+                  >
+                    <span className="punto-tono" style={{ background: cssTono(TONO_PRIORIDAD[pr]) }} aria-hidden="true" />
+                    <span>
+                      <strong>
+                        {t('laboratorio.tramo', { rio: p.rio, n: p.id.split('-').pop() })}
+                      </strong>
+                      <span className="num">{t('laboratorio.mineriaArriba', { ha: Math.round(p.mineriaAguasArribaHa ?? 0).toLocaleString('es-BO') })}</span>
+                    </span>
+                    <span className="lista-lab__valor" style={{ color: cssTono(TONO_PRIORIDAD[pr]) }}>
+                      {t(`laboratorio.prioridades.${pr}`)}
+                    </span>
+                  </button>
+                  {abierto === p.id && (
+                    <div className="lab__detalle">
+                      {(p.reglas ?? []).map((r) => (
+                        <p key={r.id}>
+                          <strong>{r.id}</strong> · {r.texto}
+                        </p>
+                      ))}
+                      {(p.faltantes ?? []).map((x) => (
+                        <p key={x} className="lab__nota">
+                          {t('laboratorio.falta')}: {x}
+                        </p>
+                      ))}
+                      {!p.reglas?.length && !p.faltantes?.length && <p className="lab__nota">{t('laboratorio.sinReglas')}</p>}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+          <p className="lab__nota">{t('laboratorio.riesgoFuentes')}</p>
+        </Fila>
+      ) : (
+        <Fila titulo={t('laboratorio.iaPrioridad')} demo>
+          <p className="lab__nota">{t('laboratorio.iaPrioridadNota')}</p>
+          <ul className="lista-lab">
+            {prioridadDemo.map((l) => (
+              <li key={l.id}>
+                <button type="button" onClick={() => onVer(l.lat, l.lon)}>
+                  <span className="punto-tono" style={{ background: cssTono(tonoVirtual(l.virtual.nivel)) }} aria-hidden="true" />
+                  <span>
+                    <strong>{l.nombre}</strong>
+                    <span>{l.virtual.detalle}</span>
+                  </span>
+                  <span className="lista-lab__valor" style={{ color: cssTono(tonoVirtual(l.virtual.nivel)) }}>
+                    {t(`mapa.virtual.${l.virtual.nivel}`)}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </Fila>
+      )}
       <Fila titulo={t('laboratorio.iaTitulo')}>
         <span className="estado-lab">{t('laboratorio.iaEstado')}</span>
         <p>{t('laboratorio.iaTexto')}</p>
@@ -401,25 +495,6 @@ function PanelIA({ onVer }: { onVer: (lat: number, lon: number) => void }) {
           ))}
         </ol>
         <p className="lab__nota">{t('laboratorio.iaSinPrediccion')}</p>
-      </Fila>
-      <Fila titulo={t('laboratorio.iaPrioridad')} demo>
-        <p className="lab__nota">{t('laboratorio.iaPrioridadNota')}</p>
-        <ul className="lista-lab">
-          {prioridad.map((l) => (
-            <li key={l.id}>
-              <button type="button" onClick={() => onVer(l.lat, l.lon)}>
-                <span className="punto-tono" style={{ background: cssTono(tonoVirtual(l.virtual.nivel)) }} aria-hidden="true" />
-                <span>
-                  <strong>{l.nombre}</strong>
-                  <span>{l.virtual.detalle}</span>
-                </span>
-                <span className="lista-lab__valor" style={{ color: cssTono(tonoVirtual(l.virtual.nivel)) }}>
-                  {t(`mapa.virtual.${l.virtual.nivel}`)}
-                </span>
-              </button>
-            </li>
-          ))}
-        </ul>
       </Fila>
     </>
   );

@@ -20,7 +20,7 @@ export const urlNdvi = (fecha: string) =>
   `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_NDVI_8Day/default/${fecha}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.png`;
 export const ATRIBUCION_GIBS = 'NASA EOSDIS GIBS · MODIS Terra';
 
-export type IdCapa = 's2' | 'modis' | 'ndvi' | 'rios' | 'lugares' | 'mediciones' | 'solicitudes' | 'estudios';
+export type IdCapa = 's2' | 'modis' | 'ndvi' | 'rios' | 'tramos' | 'lugares' | 'mediciones' | 'solicitudes' | 'estudios';
 
 export interface DefCapa {
   id: IdCapa;
@@ -35,6 +35,7 @@ export const CAPAS: DefCapa[] = [
   { id: 'modis', grupo: 'imagen', real: true, fuente: ATRIBUCION_GIBS, resolucion: '250 m' },
   { id: 'ndvi', grupo: 'imagen', real: true, fuente: `${ATRIBUCION_GIBS} · NDVI 8 días`, resolucion: '250 m' },
   { id: 'rios', grupo: 'territorio', real: true, fuente: 'OpenStreetMap' },
+  { id: 'tramos', grupo: 'evidencia', real: true, fuente: 'Gold2Risk v0 · Sentinel-2, Amazon Mining Watch, CHIRPS', resolucion: 'tramos de ~15 km' },
   { id: 'lugares', grupo: 'territorio', real: false, fuente: 'Gold2Life (demo)' },
   { id: 'mediciones', grupo: 'evidencia', real: false, fuente: 'Laboratorios participantes (demo)' },
   { id: 'solicitudes', grupo: 'evidencia', real: false, fuente: 'Mapa comunitario (demo)' },
@@ -157,12 +158,15 @@ export const ESTUDIOS: Estudio[] = [
   },
 ];
 
-/** Estado honesto del modelo experimental (ciencia-datos.md §4). */
+/**
+ * Estado honesto de Gold2Mercury (estimación experimental de Hg total en agua): EN PAUSA.
+ * No hay muestras de Bolivia con coordenadas para validarlo; ningún paso está terminado.
+ */
 export const MODELO = {
-  nombre: 'Hg total en agua · experimento',
-  estado: 'en_evaluacion' as const,
+  nombre: 'Gold2Mercury · Hg total en agua (experimento)',
+  estado: 'en_pausa' as const,
   pasos: [
-    { id: 'datos', hecho: true },
+    { id: 'datos', hecho: false },
     { id: 'emparejar', hecho: false },
     { id: 'baseline', hecho: false },
     { id: 'validar', hecho: false },

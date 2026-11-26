@@ -1,0 +1,27 @@
+[project]
+name = "gold2-ciencia"
+version = "0.1.0"
+description = "Laboratorio virtual de Gold2Life: huella minera, indicadores espectrales y prioridad de muestreo por tramo de río."
+requires-python = ">=3.12"
+dependencies = [
+  "pystac-client>=0.8",
+  "rasterio>=1.4",
+  "numpy>=2.0",
+  "shapely>=2.0",
+  "pyproj>=3.6",
+  "pyyaml>=6.0",
+  "requests>=2.32",
+  "psycopg[binary]>=3.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

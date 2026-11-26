@@ -249,6 +249,7 @@ export const api = {
   donarDemo: (id: string, monto: string) => pedir<{ id: string; tx: string }>(`/campaigns/${id}/donations/demo`, { metodo: 'POST', cuerpo: { monto } }),
   prepararDonacion: (id: string, direccion: string, monto: string) =>
     pedir<{ donacionId: string; xdr: string }>(`/campaigns/${id}/donations/prepare`, { metodo: 'POST', cuerpo: { direccion, monto } }),
+  laboratorioTramos: () => pedir<TramosApi>('/laboratory/tramos'),
   enviarDonacion: (donacionId: string, xdr: string) => pedir<{ tx: string }>(`/donations/${donacionId}/submit`, { metodo: 'POST', cuerpo: { xdr }, esperaMs: 60_000 }),
 };
 
@@ -286,6 +287,20 @@ export interface CampanaDetalleApi extends CampanaApi {
   donaciones: { id: string; monto: string; modo: 'demo' | 'billetera'; tx: string; fecha: string }[];
   cadena: { aportado: string; liberado: string; estado: string; conciliada: boolean } | null;
 }
+
+export interface PropTramo {
+  id: string;
+  rio: string;
+  fuenteId: string;
+  longitudKm: number;
+  anio: number | null;
+  prioridad: 'alta' | 'media' | 'baja' | 'insuficiente' | null;
+  reglas: { id: string; prioridad: string; texto: string }[] | null;
+  faltantes: string[] | null;
+  mineriaAguasArribaHa: number | null;
+  mineriaTramoHa: number | null;
+}
+export type TramosApi = GeoJSON.FeatureCollection<GeoJSON.LineString, PropTramo> & { aviso: string };
 
 /** Enlace público a una transacción de testnet. */
 export const enlaceTx = (hash: string) => `https://stellar.expert/explorer/testnet/tx/${hash}`;

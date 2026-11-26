@@ -1,0 +1,58 @@
+# Parámetros del laboratorio virtual (Gold2Mining, Gold2Spectral, Gold2Risk).
+# Todo umbral marcado «v0» es ILUSTRATIVO y está pendiente de revisión por especialistas.
+
+zona:
+  nombre: "Piedemonte Guanay–Teoponte–Mapiri y río Beni hasta Rurrenabaque"
+  bbox: [-68.45, -15.85, -67.25, -14.30]   # oeste, sur, este, norte (WGS84)
+  crs_metrico: "EPSG:32719"                # UTM 19S: todas las teselas Sentinel-2 de la zona (19L…)
+
+rios:
+  # Nombre en OSM (sin tilde inicial) → id de fuente de agua en la plataforma
+  Kaka: "rio:rio-kaka"
+  Mapiri: "rio:rio-mapiri"
+  Tipuani: "rio:rio-tipuani"
+  Coroico: "rio:rio-coroico"
+  Beni: "rio:rio-beni"
+  Alto Beni: "rio:rio-alto-beni"
+
+tramos:
+  longitud_km: 15          # largo objetivo de cada tramo
+  union_m: 1200            # distancia para considerar que un tramo desemboca en otro (OSM tiene huecos de ~1 km)
+
+periodo:
+  anios: [2019, 2020, 2021, 2022, 2023, 2024, 2025]
+  temporada: { desde: "06-01", hasta: "09-30" }   # época seca: menos nubes en los Yungas
+
+sentinel2:
+  stac: "https://earth-search.aws.element84.com/v1"
+  coleccion: "sentinel-2-c1-l2a"   # reprocesada: escala 0.0001 y offset -0.1 en toda la serie (sin salto de 2022)
+  nubes_max_escena: 40
+  resolucion_m: 20
+  scl_validos: [4, 5, 6, 7]        # vegetación, suelo, agua, sin clasificar (fuera: sombras, nubes, cirros, nieve)
+  agua_buffer_m: 250               # franja alrededor del eje del río donde se buscan píxeles de agua (MNDWI > 0)
+  tierra_anillo_m: [300, 1500]     # anillo de orilla para vegetación y suelo desnudo
+  min_pixeles_agua: 20
+  min_fraccion_valida: 0.5
+
+mineria:
+  fuente: "Amazon Mining Watch (Earth Genome / Pulitzer Center), CC BY 4.0"
+  url: "https://data.source.coop/earthgenome/amazon-mining-watch/amazon_basin_mining_scar_masks.tif"
+  zona_km: 3                       # franja a cada lado del río donde se suma la huella minera
+
+lluvia:
+  fuente: "CHIRPS v3.0 pentadas (Climate Hazards Center, UCSB)"
+  url: "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/pentads/latam/tifs/chirps-v3.0.{anio}.{mes:02d}.{pentada}.tif"
+  pentadas_previas: 2              # lluvia de ~10 días antes de cada escena
+
+anomalia:
+  z_umbral: 2.0                    # v0
+  mad_minimo: 0.01                 # evita z enormes cuando los años son casi iguales
+  min_anios_referencia: 3
+  min_escenas_temporada: 3
+
+riesgo:
+  version: "v0 · sin revisión de especialista"
+  mineria_nueva_ha_alta: 20        # v0: hectáreas nuevas (2 años) aguas arriba
+  mineria_total_ha_media: 50       # v0: hectáreas acumuladas aguas arriba
+  lluvia_z_explica: 1.5            # v0: si la lluvia previa también es anómala, la turbidez podría ser natural
+  persistencia: { temporadas: 3, minimo: 2 }

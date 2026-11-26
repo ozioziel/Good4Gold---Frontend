@@ -2,7 +2,7 @@ import * as maplibregl from 'maplibre-gl';
 import type { GeoJSONSource, LayerSpecification, Map as MlMap, StyleSpecification } from 'maplibre-gl';
 import type { Feature } from 'geojson';
 import { estiloNoche, ORO, reducido } from '@/lib/mapaBase';
-import { exprTono, type Tono } from '../mapa/senales';
+import { exprTono, TONO_HEX, type Tono } from '../mapa/senales';
 import { ATRIBUCION_GIBS, atribucionS2, urlModis, urlNdvi, urlS2, type AnioS2, type IdCapa } from '@/data/laboratorio';
 
 /**
@@ -42,7 +42,7 @@ export class GloboLab {
   private pendientes: (() => void)[] = [];
   private dibujando = false;
   private vertices: [number, number][] = [];
-  private estado = { anio: 2025 as AnioS2, fecha: '', capas: new Set<IdCapa>(['s2', 'rios', 'lugares', 'mediciones', 'estudios']) };
+  private estado = { anio: 2025 as AnioS2, fecha: '', capas: new Set<IdCapa>(['s2', 'rios', 'tramos', 'lugares', 'mediciones', 'estudios']) };
 
   constructor(private contenedor: HTMLElement, private ev: Eventos) {
     this.mapa = new maplibregl.Map({
@@ -98,6 +98,34 @@ export class GloboLab {
       layout: { 'line-cap': 'round', 'line-join': 'round' },
     };
     m.addLayer(rio, primerSimbolo);
+
+    // Prioridad de muestreo por tramo (Gold2Risk v0). El color nunca va solo: el panel lo dice en texto.
+    m.addSource('tramos', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+    const tonoPrioridad = ['match', ['get', 'prioridad'], 'alta', TONO_HEX.oscuro.alto, 'media', TONO_HEX.oscuro.riesgo, 'baja', TONO_HEX.oscuro.agua, TONO_HEX.oscuro.neutro] as unknown as string;
+    m.addLayer(
+      {
+        id: 'tramos-halo',
+        type: 'line',
+        source: 'tramos',
+        paint: { 'line-color': tonoPrioridad, 'line-opacity': 0.25, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 6, 12, 16], 'line-blur': 2 },
+        layout: { 'line-cap': 'round', 'line-join': 'round' },
+      },
+      primerSimbolo,
+    );
+    m.addLayer(
+      {
+        id: 'tramos',
+        type: 'line',
+        source: 'tramos',
+        paint: {
+          'line-color': tonoPrioridad,
+          'line-width': ['interpolate', ['linear'], ['zoom'], 5, 2, 12, 5],
+          'line-opacity': ['match', ['get', 'prioridad'], 'insuficiente', 0.6, 1],
+        },
+        layout: { 'line-cap': 'round', 'line-join': 'round' },
+      },
+      primerSimbolo,
+    );
 
     // Evidencias: una fuente por grupo para poder encenderlas por separado.
     for (const f of FUENTES_EVIDENCIA) {
@@ -178,6 +206,8 @@ export class GloboLab {
     vis('modis', this.estado.capas.has('modis'));
     vis('ndvi', this.estado.capas.has('ndvi'));
     vis('rios', this.estado.capas.has('rios'));
+    vis('tramos', this.estado.capas.has('tramos'));
+    vis('tramos-halo', this.estado.capas.has('tramos'));
     for (const f of FUENTES_EVIDENCIA) {
       vis(f, this.estado.capas.has(f));
       vis(`${f}-halo`, this.estado.capas.has(f));
@@ -216,6 +246,11 @@ export class GloboLab {
         });
       }
     });
+  }
+
+  /** Tramos de río con su prioridad de muestreo (GeoJSON de GET /laboratory/tramos). */
+  setTramos(fc: GeoJSON.FeatureCollection) {
+    this.alListo(() => (this.mapa.getSource('tramos') as GeoJSONSource | undefined)?.setData(fc));
   }
 
   setGlobo(globo: boolean) {

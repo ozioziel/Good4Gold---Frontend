@@ -771,3 +771,18 @@
     animation: none;
   }
 }
+
+/* Reglas de Gold2Risk de un tramo (se despliegan bajo el botón). */
+.lab__detalle {
+  display: grid;
+  gap: 6px;
+  margin: 4px 0 10px;
+  padding: 10px 12px;
+  border-left: 2px solid var(--linea-fuerte);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--tinta-2);
+}
+.lab__detalle strong {
+  color: var(--tinta);
+}

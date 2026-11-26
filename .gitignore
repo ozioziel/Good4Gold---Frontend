@@ -13,6 +13,9 @@ Thumbs.db
 # Datos científicos crudos descargados (se regeneran con scripts; ver docs/FUENTES.md)
 science/data/raw/
 science/.venv/
+science/datos/brutos/
+science/datos/derivados/*.log
+.pytest_cache/
 __pycache__/
 
 # Compilación de contratos Soroban

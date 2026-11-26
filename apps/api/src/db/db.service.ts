@@ -6,6 +6,9 @@ import { CONFIG, type Config } from '../config';
 pg.types.setTypeParser(pg.types.builtins.NUMERIC, (v) => Number(v));
 // Las fechas sin hora se devuelven tal cual (AAAA-MM-DD), sin pasar por zonas horarias.
 pg.types.setTypeParser(pg.types.builtins.DATE, (v) => v);
+// Lo mismo para listas de fechas (date[]): se leen como lista de texto.
+const listaTexto = pg.types.getTypeParser(1009 as never);
+pg.types.setTypeParser(1182 as never, (v: string) => listaTexto(v));
 
 export type Consulta = Pick<pg.PoolClient, 'query'>;
 

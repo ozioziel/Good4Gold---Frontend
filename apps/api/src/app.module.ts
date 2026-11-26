@@ -4,6 +4,7 @@ import { CampanasController } from './campanas/campanas.controller';
 import { CampanasService } from './campanas/campanas.service';
 import { ESCROW, EscrowNoConfigurado, EscrowStellar, leerConfigStellar } from './campanas/escrow';
 import { DbModule } from './db/db.module';
+import { LaboratorioController } from './laboratorio/laboratorio.controller';
 import { LugaresController } from './lugares/lugares.controller';
 import { LugaresService } from './lugares/lugares.service';
 import { MedicionesController } from './mediciones/mediciones.controller';
@@ -18,7 +19,7 @@ import { SyncService } from './sync/sync.service';
 
 @Module({
   imports: [DbModule, AuthModule],
-  controllers: [CampanasController, SaludController, LugaresController, PublicacionesController, SolicitudesController, MedicionesController, SyncController],
+  controllers: [CampanasController, LaboratorioController, SaludController, LugaresController, PublicacionesController, SolicitudesController, MedicionesController, SyncController],
   providers: [
     CampanasService,
     // Escrow en Stellar testnet si hay configuración; si no, las campañas responden 503.
