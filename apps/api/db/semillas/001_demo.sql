@@ -99,7 +99,7 @@ INSERT INTO respuestas (id, publicacion_id, autor_id, texto, creado_en) VALUES
 ON CONFLICT DO NOTHING;
 
 INSERT INTO solicitudes (id, fuente_id, publicacion_id, motivo, matriz, estado, solicitante_id, familias_representadas, consentimiento, organizacion_id, campana_id, demo, creado_en) VALUES
-  ('00000000-0000-4000-8000-0000000000f1', 'demo:arroyo-esperanza', '00000000-0000-4000-8000-0000000000d2', 'Actividad minera aguas arriba y agua turbia. Lo usamos para cocinar.', 'agua', 'en_muestreo', '00000000-0000-4000-8000-0000000000b2', 31, true, '00000000-0000-4000-8000-0000000000a1', 'arroyo-esperanza', true, '2026-10-04'),
+  ('00000000-0000-4000-8000-0000000000f1', 'demo:arroyo-esperanza', '00000000-0000-4000-8000-0000000000d2', 'Actividad minera aguas arriba y agua turbia. Lo usamos para cocinar.', 'agua', 'en_muestreo', '00000000-0000-4000-8000-0000000000b2', 31, true, '00000000-0000-4000-8000-0000000000a1', NULL, true, '2026-10-04'),
   ('00000000-0000-4000-8000-0000000000f2', 'demo:san-lucero', NULL, 'Repetir el análisis con un método más sensible.', 'agua', 'solicitada', '00000000-0000-4000-8000-0000000000b2', NULL, false, NULL, NULL, true, '2026-11-20'),
   ('00000000-0000-4000-8000-0000000000f3', 'rio:rio-beni', '00000000-0000-4000-8000-0000000000d5', '¿Hay mercurio en el agua y el pescado que consumimos?', NULL, 'en_revision', '00000000-0000-4000-8000-0000000000b3', NULL, false, NULL, NULL, true, '2026-11-22')
 ON CONFLICT DO NOTHING;

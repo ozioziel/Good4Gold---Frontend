@@ -1,5 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AuthModule } from './auth/auth.module';
+import { CampanasController } from './campanas/campanas.controller';
+import { CampanasService } from './campanas/campanas.service';
+import { ESCROW, EscrowNoConfigurado, EscrowStellar, leerConfigStellar } from './campanas/escrow';
 import { DbModule } from './db/db.module';
 import { LugaresController } from './lugares/lugares.controller';
 import { LugaresService } from './lugares/lugares.service';
@@ -15,7 +18,11 @@ import { SyncService } from './sync/sync.service';
 
 @Module({
   imports: [DbModule, AuthModule],
-  controllers: [SaludController, LugaresController, PublicacionesController, SolicitudesController, MedicionesController, SyncController],
-  providers: [LugaresService, PublicacionesService, SolicitudesService, MedicionesService, SyncService],
+  controllers: [CampanasController, SaludController, LugaresController, PublicacionesController, SolicitudesController, MedicionesController, SyncController],
+  providers: [
+    CampanasService,
+    // Escrow en Stellar testnet si hay configuración; si no, las campañas responden 503.
+    { provide: ESCROW, useFactory: () => { const c = leerConfigStellar(); return c ? new EscrowStellar(c) : new EscrowNoConfigurado(); } },
+    LugaresService, PublicacionesService, SolicitudesService, MedicionesService, SyncService],
 })
 export class AppModule {}

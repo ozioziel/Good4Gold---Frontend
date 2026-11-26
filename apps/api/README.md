@@ -34,6 +34,12 @@ Desde `apps/api`: `npm run db:up`, `db:migrar`, `db:semillas`, `db:down`.
 | `POST /measurements/:id/reviews` | investigador o moderación | Revisión técnica, hecha por otra persona que quien cargó el resultado |
 | `GET /water-sources/:id/measurements` | público | Solo mediciones validadas, con su alcance y el criterio de su matriz |
 | `POST /sync/operations` · `GET /sync/communities/:id` | con sesión · público | Lote idempotente (propias o QR v1) · paquete para guardar sin conexión |
+| `GET /escrow` · `GET /campaigns` · `GET /campaigns/:id` | público | Red, contrato y activo · campañas · detalle con donaciones, movimientos y estado **leído del contrato** (`conciliada`) |
+| `POST /campaigns` | ONG, investigador o laboratorio verificado | Solo la organización asignada a un caso aceptado. Crea la campaña en el contrato de testnet con un verificador independiente |
+| `POST /campaigns/:id/donations/demo` | con sesión | Aporte DEMO firmado por un donante de prueba que custodia el servidor |
+| `POST /campaigns/:id/donations/prepare` · `POST /donations/:id/submit` | público | Billetera (p. ej. Freighter): prepara la transacción sin firmar y envía la firmada. Se confirma solo si la red la confirma y si es exactamente el aporte preparado |
+| `POST /milestones/:id/reviews` | organización verificadora | Aprueba el siguiente hito con su evidencia (a la cadena va el hash) y el contrato libera el monto |
+| `POST /campaigns/:id/cancel` · `POST /campaigns/:id/refunds` | moderación · público | Cancelar tras una disputa documentada · reembolso proporcional al donante |
 
 ## Reglas que hace cumplir
 
@@ -68,8 +74,12 @@ Desde `apps/api`: `npm run db:up`, `db:migrar`, `db:semillas`, `db:down`.
   - Reales, sin resultados: 10 localidades y 5 ríos de OSM.
   - DEMO: los lugares, las publicaciones, las solicitudes y las mediciones del frontend. Todo lo simulado lleva `demo = true`.
 
+## Escrow en Stellar testnet
+
+El contrato propio está en `contracts/escrow` (ver su README): direcciones, despliegue y límites. Para activarlo, completa las variables `STELLAR_*` y `ESCROW_CONTRACT_ID` de `.env.example`; sin ellas, las rutas de campañas responden 503. Las pruebas de la API usan un escrow en memoria con las mismas reglas que el contrato (`test/escrow-falso.ts`).
+
 ## Pendiente
 
 - Autenticación real (Supabase Auth u otra).
-- Campañas y donaciones (Stellar testnet y Trustless Work).
+- Conectar la pestaña Donaciones del frontend a `/campaigns` y a una billetera (Freighter).
 - Tablas y rutas del Laboratorio (`/laboratory/*`), alertas oficiales por API, moderación, adjuntos y notificaciones.

@@ -55,9 +55,12 @@ NestJS 12 + PostgreSQL 17/PostGIS 3.5 en Docker. Detalle, rutas y reglas en `app
 | Muestras, mediciones, revisión técnica por otra persona | Hecho |
 | `POST /sync/operations` idempotente (propias y QR v1) y paquete por comunidad | Hecho |
 | Conexión del frontend a la API (sesión, mapa, publicar/respaldar/responder, cola y QR por `/sync/operations`, panel y Laboratorio) | Hecho · con `VITE_API_URL`; sin ella, demostración local |
-| Campañas/donaciones, Laboratorio (`/laboratory/*`), alertas por API, moderación, adjuntos | Pendiente |
+| Campañas y donaciones con escrow por hitos en **Stellar testnet** (contrato Soroban propio en `contracts/escrow`, USDC de prueba de Circle) | Hecho en API · Donaciones del frontend aún con datos locales |
+| Laboratorio (`/laboratory/*`), alertas por API, moderación, adjuntos | Pendiente |
 
-Probado: `npm run api:typecheck`, `npm run api:build`, `npm run api:test` (32 pruebas: dominio e integración contra PostGIS real, incluido el ciclo completo de una solicitud y la deduplicación de QR entre dos transportistas).
+Escrow: contrato desplegado en testnet (`CBJEQGCIA24NJXIOIQPKIDUR4D3O5OPJGJMSNZJH3C3HP4FMQUZBGJCI`), 6 pruebas en Rust. Probado en vivo por la API: una campaña creada en el contrato y conciliada con su estado. Las donaciones en vivo esperan USDC de prueba en la cuenta del donante DEMO (faucet de Circle, con CAPTCHA). El flujo completo (donar → liberar hitos → cancelar → reembolsar) está probado con un escrow en memoria con las mismas reglas.
+
+Probado: `npm run api:typecheck`, `npm run api:build`, `npm run api:test` (38 pruebas: dominio e integración contra PostGIS real, incluido el ciclo completo de una solicitud y la deduplicación de QR entre dos transportistas).
 
 El frontend ya aplica la misma regla: el laboratorio **no** publica recomendaciones oficiales (PROYECTO.md §6).
 

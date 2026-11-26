@@ -14,3 +14,7 @@ Thumbs.db
 science/data/raw/
 science/.venv/
 __pycache__/
+
+# Compilación de contratos Soroban
+target/
+test_snapshots/
