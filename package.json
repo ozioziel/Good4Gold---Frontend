@@ -10,7 +10,12 @@
     "dev": "npm run dev -w apps/web",
     "build": "npm run build -w apps/web",
     "typecheck": "npm run typecheck -w apps/web",
-    "preview": "npm run preview -w apps/web"
+    "preview": "npm run preview -w apps/web",
+    "api:db": "npm run db:up -w apps/api && npm run db:semillas -w apps/api",
+    "api:dev": "npm run dev -w apps/api",
+    "api:build": "npm run build -w apps/api",
+    "api:typecheck": "npm run typecheck -w apps/api",
+    "api:test": "npm run test -w apps/api"
   },
   "engines": {
     "node": ">=22"

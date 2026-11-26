@@ -1,0 +1,22 @@
+name: gold2
+# Base de datos local: PostgreSQL + PostGIS. Puerto 5433 para no chocar con un PostgreSQL instalado.
+services:
+  db:
+    image: postgis/postgis:17-3.5
+    # La imagen oficial solo se publica para amd64; en Mac con Apple Silicon corre emulada.
+    platform: linux/amd64
+    environment:
+      POSTGRES_DB: gold2
+      POSTGRES_USER: gold2
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-gold2_local}
+    ports:
+      - "127.0.0.1:${DB_PORT:-5433}:5432"
+    volumes:
+      - gold2-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gold2 -d gold2"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+volumes:
+  gold2-db:

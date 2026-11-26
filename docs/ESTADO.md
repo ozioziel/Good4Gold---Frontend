@@ -33,10 +33,30 @@ Decisión del 2026-11-25/26: primero todo el frontend, con datos simulados marca
 - Anchos 1440, 768 y 320; recorrido completo solo con teclado; lector de pantalla.
 - Playwright (no instalado).
 
+## Backend (`apps/api`, iniciado 2026-11-26)
+
+NestJS 12 + PostgreSQL 17/PostGIS 3.5 en Docker. Detalle, rutas y reglas en `apps/api/README.md`.
+
+| Pieza | Estado |
+|---|---|
+| Esquema y semillas (reales OSM sin resultados + DEMO del frontend) | Hecho |
+| Ingreso DEMO con token firmado, guardia de roles leída de la base | Hecho (auth real pendiente) |
+| Lugares y comunidades con las tres señales separadas y estado de evidencia | Hecho |
+| Publicaciones, respaldos/cuestionamientos, respuestas | Hecho |
+| Solicitudes: ciclo completo con transiciones validadas en servidor e historial | Hecho |
+| Muestras, mediciones, revisión técnica por otra persona | Hecho |
+| `POST /sync/operations` idempotente (propias y QR v1) y paquete por comunidad | Hecho |
+| Conexión del frontend a la API | Pendiente |
+| Campañas/donaciones, Laboratorio (`/laboratory/*`), alertas por API, moderación, adjuntos | Pendiente |
+
+Probado: `npm run api:typecheck`, `npm run api:build`, `npm run api:test` (32 pruebas: dominio e integración contra PostGIS real, incluido el ciclo completo de una solicitud y la deduplicación de QR entre dos transportistas).
+
+Diferencia con el frontend: en la API el rol laboratorio **no** publica recomendaciones oficiales (PROYECTO.md §6); `tiposPermitidos` del Mapa todavía lo permite.
+
 ## Pendiente (fuera del frontend)
 
-- Backend (NestJS + Supabase/PostGIS), autenticación real y permisos en servidor.
-- Sincronización real (`POST /sync/operations` idempotente) y mapas descargables por región (PMTiles).
+- Autenticación real (Supabase Auth u otra) en la API.
+- Mapas descargables por región (PMTiles).
 - Stellar testnet + Trustless Work (escrow por hitos). Hoy el flujo es una simulación marcada.
 - Pipeline científico (Dryad Gerson 2022 + Sentinel-2 L2A) y ficha del modelo con métricas reales.
 - Huella minera de Amazon Mining Watch como capa del Laboratorio.
