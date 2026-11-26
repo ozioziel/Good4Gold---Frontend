@@ -1,0 +1,6801 @@
+{
+ "alto-beni-01": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4878,
+   "ndti_agua": -0.0619,
+   "ndvi_orilla": 0.8442,
+   "bsi_orilla": -0.2308,
+   "lluvia_previa_mm": 3.45,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -2.34,
+   "z_bsi_orilla": 0.11,
+   "z_lluvia_previa_mm": -1.16
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 4304,
+   "ndti_agua": -0.002,
+   "ndvi_orilla": 0.8399,
+   "bsi_orilla": -0.2283,
+   "lluvia_previa_mm": 20.1,
+   "fechas": [
+    "2020-07-27",
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.5,
+   "z_bsi_orilla": 0.29,
+   "z_lluvia_previa_mm": 2.35
+  },
+  "2021": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 4962,
+   "ndti_agua": 0.0239,
+   "ndvi_orilla": 0.8305,
+   "bsi_orilla": -0.2269,
+   "lluvia_previa_mm": 15.6,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": 0.39,
+   "z_bsi_orilla": 0.38,
+   "z_lluvia_previa_mm": 1.45
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 2778,
+   "ndti_agua": 0.1027,
+   "ndvi_orilla": 1.5065,
+   "bsi_orilla": -0.6554,
+   "lluvia_previa_mm": 9.4,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 3.42,
+   "z_bsi_orilla": -42.58,
+   "z_lluvia_previa_mm": -0.23
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 4262,
+   "ndti_agua": 0.0155,
+   "ndvi_orilla": 0.8,
+   "bsi_orilla": -0.2142,
+   "lluvia_previa_mm": 29.35,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 0.1,
+   "z_bsi_orilla": 1.99,
+   "z_lluvia_previa_mm": 4.2
+  },
+  "2024": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5006,
+   "ndti_agua": -0.014,
+   "ndvi_orilla": 0.8339,
+   "bsi_orilla": -0.2594,
+   "lluvia_previa_mm": 7.2,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -0.97,
+   "z_bsi_orilla": -2.99,
+   "z_lluvia_previa_mm": -0.56
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 5374,
+   "ndti_agua": 0.045,
+   "ndvi_orilla": 0.863,
+   "bsi_orilla": -0.2374,
+   "lluvia_previa_mm": 7.3,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 1.36,
+   "z_bsi_orilla": -0.59,
+   "z_lluvia_previa_mm": -0.54
+  }
+ },
+ "alto-beni-02": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4069,
+   "ndti_agua": -0.0665,
+   "ndvi_orilla": 0.8313,
+   "bsi_orilla": -0.2109,
+   "lluvia_previa_mm": 3.8,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -3.61,
+   "z_bsi_orilla": 1.27,
+   "z_lluvia_previa_mm": -1.02
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3271,
+   "ndti_agua": -0.0006,
+   "ndvi_orilla": 0.8149,
+   "bsi_orilla": -0.2196,
+   "lluvia_previa_mm": 22.5,
+   "fechas": [
+    "2020-07-27",
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.62,
+   "z_bsi_orilla": 0.57,
+   "z_lluvia_previa_mm": 2.9
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1988,
+   "ndti_agua": 0.0037,
+   "ndvi_orilla": 0.8495,
+   "bsi_orilla": -0.2385,
+   "lluvia_previa_mm": 13.8,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.42,
+   "z_bsi_orilla": -1.56,
+   "z_lluvia_previa_mm": 1.16
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 1988,
+   "ndti_agua": 0.0983,
+   "ndvi_orilla": 1.8881,
+   "bsi_orilla": -0.7284,
+   "lluvia_previa_mm": 7.0,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 4.15,
+   "z_bsi_orilla": -46.21,
+   "z_lluvia_previa_mm": -0.45
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 4102,
+   "ndti_agua": 0.0302,
+   "ndvi_orilla": 0.8065,
+   "bsi_orilla": -0.2171,
+   "lluvia_previa_mm": 28.7,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 0.86,
+   "z_bsi_orilla": 0.83,
+   "z_lluvia_previa_mm": 4.14
+  },
+  "2024": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 3944,
+   "ndti_agua": 0.0033,
+   "ndvi_orilla": 0.845,
+   "bsi_orilla": -0.2342,
+   "lluvia_previa_mm": 5.7,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -0.44,
+   "z_bsi_orilla": -1.17,
+   "z_lluvia_previa_mm": -0.64
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 4716,
+   "ndti_agua": 0.0412,
+   "ndvi_orilla": 0.8547,
+   "bsi_orilla": -0.2232,
+   "lluvia_previa_mm": 9.0,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 1.65,
+   "z_bsi_orilla": 0.23,
+   "z_lluvia_previa_mm": -0.17
+  }
+ },
+ "alto-beni-03": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 5948,
+   "ndti_agua": -0.058,
+   "ndvi_orilla": 0.8431,
+   "bsi_orilla": -0.2277,
+   "lluvia_previa_mm": 3.85,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -2.57,
+   "z_bsi_orilla": -0.62,
+   "z_lluvia_previa_mm": -1.22
+  },
+  "2020": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5073,
+   "ndti_agua": 0.0292,
+   "ndvi_orilla": 0.8298,
+   "bsi_orilla": -0.196,
+   "lluvia_previa_mm": 28.0,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.08,
+   "z_bsi_orilla": 2.25,
+   "z_lluvia_previa_mm": 4.06
+  },
+  "2021": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 5178,
+   "ndti_agua": 0.0777,
+   "ndvi_orilla": 0.87,
+   "bsi_orilla": -0.2241,
+   "lluvia_previa_mm": 12.6,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-31",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": 1.2,
+   "z_bsi_orilla": -0.39,
+   "z_lluvia_previa_mm": 0.98
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2488,
+   "ndti_agua": 0.1003,
+   "ndvi_orilla": 1.9594,
+   "bsi_orilla": -0.8232,
+   "lluvia_previa_mm": 8.2,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 1.76,
+   "z_bsi_orilla": -37.13,
+   "z_lluvia_previa_mm": -0.24
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 4370,
+   "ndti_agua": 0.0301,
+   "ndvi_orilla": 0.7872,
+   "bsi_orilla": -0.195,
+   "lluvia_previa_mm": 26.55,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.06,
+   "z_bsi_orilla": 2.34,
+   "z_lluvia_previa_mm": 3.77
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4698,
+   "ndti_agua": -0.0154,
+   "ndvi_orilla": 0.8473,
+   "bsi_orilla": -0.2131,
+   "lluvia_previa_mm": 7.15,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -1.39,
+   "z_bsi_orilla": 0.31,
+   "z_lluvia_previa_mm": -0.42
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5728,
+   "ndti_agua": 0.0387,
+   "ndvi_orilla": 0.8497,
+   "bsi_orilla": -0.2166,
+   "lluvia_previa_mm": 6.4,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16"
+   ],
+   "z_ndti_agua": 0.13,
+   "z_bsi_orilla": 0.09,
+   "z_lluvia_previa_mm": -0.55
+  }
+ },
+ "alto-beni-04": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 6646,
+   "ndti_agua": -0.0603,
+   "ndvi_orilla": 0.8476,
+   "bsi_orilla": -0.236,
+   "lluvia_previa_mm": 5.85,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -2.63,
+   "z_bsi_orilla": -1.61,
+   "z_lluvia_previa_mm": -0.44
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 6158,
+   "ndti_agua": 0.0503,
+   "ndvi_orilla": 0.8175,
+   "bsi_orilla": -0.2075,
+   "lluvia_previa_mm": 18.2,
+   "fechas": [
+    "2020-08-06",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.13,
+   "z_bsi_orilla": 1.1,
+   "z_lluvia_previa_mm": 2.4
+  },
+  "2021": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 6479,
+   "ndti_agua": 0.0924,
+   "ndvi_orilla": 0.8682,
+   "bsi_orilla": -0.2265,
+   "lluvia_previa_mm": 10.2,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-31",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": 0.99,
+   "z_bsi_orilla": -0.79,
+   "z_lluvia_previa_mm": 0.79
+  },
+  "2022": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 2568,
+   "ndti_agua": 0.1008,
+   "ndvi_orilla": 1.8753,
+   "bsi_orilla": -0.7618,
+   "lluvia_previa_mm": 3.5,
+   "fechas": [
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 1.3,
+   "z_bsi_orilla": -46.51,
+   "z_lluvia_previa_mm": -0.98
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5334,
+   "ndti_agua": 0.0404,
+   "ndvi_orilla": 0.7985,
+   "bsi_orilla": -0.2159,
+   "lluvia_previa_mm": 27.4,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.05,
+   "z_bsi_orilla": 0.35,
+   "z_lluvia_previa_mm": 4.23
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 5654,
+   "ndti_agua": -0.0244,
+   "ndvi_orilla": 0.846,
+   "bsi_orilla": -0.2107,
+   "lluvia_previa_mm": 6.6,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -1.74,
+   "z_bsi_orilla": 0.79,
+   "z_lluvia_previa_mm": -0.27
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 6817,
+   "ndti_agua": 0.0383,
+   "ndvi_orilla": 0.8486,
+   "bsi_orilla": -0.2183,
+   "lluvia_previa_mm": 5.4,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16"
+   ],
+   "z_ndti_agua": -0.09,
+   "z_bsi_orilla": 0.16,
+   "z_lluvia_previa_mm": -0.54
+  }
+ },
+ "alto-beni-05": {
+  "2019": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 4030,
+   "ndti_agua": -0.0467,
+   "ndvi_orilla": 0.8183,
+   "bsi_orilla": -0.1708,
+   "lluvia_previa_mm": 3.8,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -1.41,
+   "z_bsi_orilla": 0.51,
+   "z_lluvia_previa_mm": -1.1
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 3685,
+   "ndti_agua": 0.0128,
+   "ndvi_orilla": 0.7679,
+   "bsi_orilla": -0.1415,
+   "lluvia_previa_mm": 12.8,
+   "fechas": [
+    "2020-07-27",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.19,
+   "z_bsi_orilla": 1.25,
+   "z_lluvia_previa_mm": 1.21
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3552,
+   "ndti_agua": 0.0016,
+   "ndvi_orilla": 0.7776,
+   "bsi_orilla": -0.16,
+   "lluvia_previa_mm": 11.45,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.24,
+   "z_bsi_orilla": 0.89,
+   "z_lluvia_previa_mm": 0.94
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2652,
+   "ndti_agua": 0.0789,
+   "ndvi_orilla": 1.7505,
+   "bsi_orilla": -0.6457,
+   "lluvia_previa_mm": 6.75,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 2.53,
+   "z_bsi_orilla": -10.93,
+   "z_lluvia_previa_mm": -0.65
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 2860,
+   "ndti_agua": 0.0201,
+   "ndvi_orilla": 0.8293,
+   "bsi_orilla": -0.1821,
+   "lluvia_previa_mm": 31.85,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 3233,
+   "ndti_agua": -0.019,
+   "ndvi_orilla": 0.8233,
+   "bsi_orilla": -0.2157,
+   "lluvia_previa_mm": 6.2,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -0.75,
+   "z_bsi_orilla": -1.03,
+   "z_lluvia_previa_mm": -0.75
+  },
+  "2025": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 3988,
+   "ndti_agua": 0.0413,
+   "ndvi_orilla": 0.8478,
+   "bsi_orilla": -0.2051,
+   "lluvia_previa_mm": 16.3,
+   "fechas": [
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 1.3,
+   "z_bsi_orilla": -0.79,
+   "z_lluvia_previa_mm": 1.91
+  }
+ },
+ "alto-beni-06": {
+  "2019": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 4362,
+   "ndti_agua": -0.0489,
+   "ndvi_orilla": 0.7962,
+   "bsi_orilla": -0.1381,
+   "lluvia_previa_mm": 4.5,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -1.78,
+   "z_bsi_orilla": 0.6,
+   "z_lluvia_previa_mm": -1.12
+  },
+  "2020": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 4184,
+   "ndti_agua": 0.0398,
+   "ndvi_orilla": 0.7698,
+   "bsi_orilla": -0.1283,
+   "lluvia_previa_mm": 15.6,
+   "fechas": [
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.61,
+   "z_bsi_orilla": 0.8,
+   "z_lluvia_previa_mm": 1.5
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3872,
+   "ndti_agua": 0.0061,
+   "ndvi_orilla": 0.7602,
+   "bsi_orilla": -0.131,
+   "lluvia_previa_mm": 15.4,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.55,
+   "z_bsi_orilla": 0.76,
+   "z_lluvia_previa_mm": 1.46
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3233,
+   "ndti_agua": 0.0809,
+   "ndvi_orilla": 1.6785,
+   "bsi_orilla": -0.6127,
+   "lluvia_previa_mm": 7.95,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 1.5,
+   "z_bsi_orilla": -32.66,
+   "z_lluvia_previa_mm": -0.77
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 3381,
+   "ndti_agua": 0.0123,
+   "ndvi_orilla": 0.8257,
+   "bsi_orilla": -0.1738,
+   "lluvia_previa_mm": 31.1,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4122,
+   "ndti_agua": -0.0241,
+   "ndvi_orilla": 0.819,
+   "bsi_orilla": -0.2006,
+   "lluvia_previa_mm": 7.15,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -1.28,
+   "z_bsi_orilla": -4.3,
+   "z_lluvia_previa_mm": -0.85
+  },
+  "2025": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4602,
+   "ndti_agua": 0.0431,
+   "ndvi_orilla": 0.8454,
+   "bsi_orilla": -0.1927,
+   "lluvia_previa_mm": 21.95,
+   "fechas": [
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 0.74,
+   "z_bsi_orilla": -3.76,
+   "z_lluvia_previa_mm": 2.74
+  }
+ },
+ "alto-beni-07": {
+  "2019": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 5451,
+   "ndti_agua": -0.038,
+   "ndvi_orilla": 0.8519,
+   "bsi_orilla": -0.21,
+   "lluvia_previa_mm": 4.6,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -1.57,
+   "z_bsi_orilla": 0.47,
+   "z_lluvia_previa_mm": -1.37
+  },
+  "2020": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 5211,
+   "ndti_agua": 0.0475,
+   "ndvi_orilla": 0.8116,
+   "bsi_orilla": -0.1771,
+   "lluvia_previa_mm": 15.7,
+   "fechas": [
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.66,
+   "z_bsi_orilla": 1.78,
+   "z_lluvia_previa_mm": 0.97
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5162,
+   "ndti_agua": 0.0107,
+   "ndvi_orilla": 0.8165,
+   "bsi_orilla": -0.203,
+   "lluvia_previa_mm": 13.75,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.54,
+   "z_bsi_orilla": 0.84,
+   "z_lluvia_previa_mm": 0.65
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2937,
+   "ndti_agua": 0.0932,
+   "ndvi_orilla": 1.777,
+   "bsi_orilla": -0.7601,
+   "lluvia_previa_mm": 9.25,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 1.51,
+   "z_bsi_orilla": -22.62,
+   "z_lluvia_previa_mm": -0.46
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 4437,
+   "ndti_agua": -0.0046,
+   "ndvi_orilla": 0.8612,
+   "bsi_orilla": -0.232,
+   "lluvia_previa_mm": 32.4,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 5195,
+   "ndti_agua": -0.0255,
+   "ndvi_orilla": 0.8533,
+   "bsi_orilla": -0.2451,
+   "lluvia_previa_mm": 7.15,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -1.34,
+   "z_bsi_orilla": -1.44,
+   "z_lluvia_previa_mm": -0.99
+  },
+  "2025": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4909,
+   "ndti_agua": 0.0485,
+   "ndvi_orilla": 0.8691,
+   "bsi_orilla": -0.2264,
+   "lluvia_previa_mm": 26.75,
+   "fechas": [
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 0.69,
+   "z_bsi_orilla": -0.34,
+   "z_lluvia_previa_mm": 2.62
+  }
+ },
+ "alto-beni-08": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 5767,
+   "ndti_agua": -0.0531,
+   "ndvi_orilla": 0.8455,
+   "bsi_orilla": -0.2193,
+   "lluvia_previa_mm": 3.6,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -2.41,
+   "z_bsi_orilla": 0.24,
+   "z_lluvia_previa_mm": -1.24
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5174,
+   "ndti_agua": -0.005,
+   "ndvi_orilla": 0.8346,
+   "bsi_orilla": -0.2107,
+   "lluvia_previa_mm": 18.15,
+   "fechas": [
+    "2020-07-27",
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.63,
+   "z_bsi_orilla": 0.75,
+   "z_lluvia_previa_mm": 1.59
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5664,
+   "ndti_agua": 0.0127,
+   "ndvi_orilla": 0.8078,
+   "bsi_orilla": -0.2075,
+   "lluvia_previa_mm": 15.35,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": 0.11,
+   "z_bsi_orilla": 0.89,
+   "z_lluvia_previa_mm": 1.09
+  },
+  "2022": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 2677,
+   "ndti_agua": 0.1013,
+   "ndvi_orilla": 1.7799,
+   "bsi_orilla": -0.7104,
+   "lluvia_previa_mm": 10.7,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 5.29,
+   "z_bsi_orilla": -48.33,
+   "z_lluvia_previa_mm": -0.12
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 101,
+   "ndti_agua": 0.0194,
+   "ndvi_orilla": 0.7976,
+   "bsi_orilla": -0.2127,
+   "lluvia_previa_mm": 33.55,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 0.39,
+   "z_bsi_orilla": 0.63,
+   "z_lluvia_previa_mm": 4.36
+  },
+  "2024": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5238,
+   "ndti_agua": -0.0016,
+   "ndvi_orilla": 0.845,
+   "bsi_orilla": -0.244,
+   "lluvia_previa_mm": 7.9,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -0.49,
+   "z_bsi_orilla": -2.74,
+   "z_lluvia_previa_mm": -0.65
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 4764,
+   "ndti_agua": 0.0435,
+   "ndvi_orilla": 0.8619,
+   "bsi_orilla": -0.237,
+   "lluvia_previa_mm": 7.5,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 2.1,
+   "z_bsi_orilla": -2.05,
+   "z_lluvia_previa_mm": -0.73
+  }
+ },
+ "beni-01": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5812,
+   "ndti_agua": 0.0786,
+   "ndvi_orilla": 0.8763,
+   "bsi_orilla": -0.2901,
+   "lluvia_previa_mm": 0.6,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.26,
+   "z_bsi_orilla": -0.5,
+   "z_lluvia_previa_mm": -1.49
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5644,
+   "ndti_agua": 0.0842,
+   "ndvi_orilla": 0.8546,
+   "bsi_orilla": -0.2806,
+   "lluvia_previa_mm": 35.45,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-24",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.29,
+   "z_bsi_orilla": 0.66,
+   "z_lluvia_previa_mm": 2.6
+  },
+  "2021": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 5821,
+   "ndti_agua": 0.0817,
+   "ndvi_orilla": 0.819,
+   "bsi_orilla": -0.2868,
+   "lluvia_previa_mm": 15.4,
+   "fechas": [
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-20",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": 0.02,
+   "z_bsi_orilla": -0.13,
+   "z_lluvia_previa_mm": 0.41
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 5407,
+   "ndti_agua": 0.1137,
+   "ndvi_orilla": 1.7731,
+   "bsi_orilla": -0.8915,
+   "lluvia_previa_mm": 2.3,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 3.35,
+   "z_bsi_orilla": -60.64,
+   "z_lluvia_previa_mm": -1.31
+  },
+  "2023": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 5422,
+   "ndti_agua": 0.076,
+   "ndvi_orilla": 0.8503,
+   "bsi_orilla": -0.268,
+   "lluvia_previa_mm": 19.5,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.47,
+   "z_bsi_orilla": 1.92,
+   "z_lluvia_previa_mm": 0.96
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 5599,
+   "ndti_agua": 0.0655,
+   "ndvi_orilla": 0.8297,
+   "bsi_orilla": -0.2834,
+   "lluvia_previa_mm": 7.0,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -1.74,
+   "z_bsi_orilla": 0.39,
+   "z_lluvia_previa_mm": -0.58
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 5280,
+   "ndti_agua": 0.0986,
+   "ndvi_orilla": 0.8763,
+   "bsi_orilla": -0.2877,
+   "lluvia_previa_mm": 13.4,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 1.84,
+   "z_bsi_orilla": -0.26,
+   "z_lluvia_previa_mm": 0.17
+  }
+ },
+ "beni-02": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 7855,
+   "ndti_agua": 0.079,
+   "ndvi_orilla": 0.8631,
+   "bsi_orilla": -0.2755,
+   "lluvia_previa_mm": 0.8,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.14,
+   "z_bsi_orilla": 0.04,
+   "z_lluvia_previa_mm": -2.7
+  },
+  "2020": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 7910,
+   "ndti_agua": 0.0808,
+   "ndvi_orilla": 0.8423,
+   "bsi_orilla": -0.2601,
+   "lluvia_previa_mm": 13.8,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.12,
+   "z_bsi_orilla": 1.69,
+   "z_lluvia_previa_mm": -0.2
+  },
+  "2021": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 8825,
+   "ndti_agua": 0.0801,
+   "ndvi_orilla": 0.8141,
+   "bsi_orilla": -0.2739,
+   "lluvia_previa_mm": 13.2,
+   "fechas": [
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-31",
+    "2021-09-20",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": 0.02,
+   "z_bsi_orilla": 0.19,
+   "z_lluvia_previa_mm": -0.31
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3020,
+   "ndti_agua": 0.1159,
+   "ndvi_orilla": 1.8132,
+   "bsi_orilla": -0.9006,
+   "lluvia_previa_mm": 20.8,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 3.63,
+   "z_bsi_orilla": -62.59,
+   "z_lluvia_previa_mm": 0.71
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 7554,
+   "ndti_agua": 0.0726,
+   "ndvi_orilla": 0.822,
+   "bsi_orilla": -0.2572,
+   "lluvia_previa_mm": 23.35,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.78,
+   "z_bsi_orilla": 1.98,
+   "z_lluvia_previa_mm": 1.11
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 7615,
+   "ndti_agua": 0.0768,
+   "ndvi_orilla": 0.8294,
+   "bsi_orilla": -0.2785,
+   "lluvia_previa_mm": 4.35,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -0.37,
+   "z_bsi_orilla": -0.24,
+   "z_lluvia_previa_mm": -2.07
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 9014,
+   "ndti_agua": 0.1008,
+   "ndvi_orilla": 0.8727,
+   "bsi_orilla": -0.2817,
+   "lluvia_previa_mm": 18.2,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16"
+   ],
+   "z_ndti_agua": 2.12,
+   "z_bsi_orilla": -0.51,
+   "z_lluvia_previa_mm": 0.39
+  }
+ },
+ "beni-03": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 8352,
+   "ndti_agua": 0.0876,
+   "ndvi_orilla": 0.8727,
+   "bsi_orilla": -0.2685,
+   "lluvia_previa_mm": 1.3,
+   "fechas": [
+    "2019-07-08",
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -0.31,
+   "z_bsi_orilla": -1.02,
+   "z_lluvia_previa_mm": -4.4
+  },
+  "2020": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 7848,
+   "ndti_agua": 0.112,
+   "ndvi_orilla": 0.8641,
+   "bsi_orilla": -0.2694,
+   "lluvia_previa_mm": 26.1,
+   "fechas": [
+    "2020-07-17",
+    "2020-07-27",
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 2.74,
+   "z_bsi_orilla": -1.17,
+   "z_lluvia_previa_mm": 0.78
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 7996,
+   "ndti_agua": 0.0766,
+   "ndvi_orilla": 0.8205,
+   "bsi_orilla": -0.2561,
+   "lluvia_previa_mm": 22.8,
+   "fechas": [
+    "2021-07-02",
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-31",
+    "2021-09-20",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": -1.11,
+   "z_bsi_orilla": 0.67,
+   "z_lluvia_previa_mm": 0.12
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 2449,
+   "ndti_agua": 0.1051,
+   "ndvi_orilla": 1.8048,
+   "bsi_orilla": -0.899,
+   "lluvia_previa_mm": 23.8,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-05"
+   ],
+   "z_ndti_agua": 2.05,
+   "z_bsi_orilla": -62.28,
+   "z_lluvia_previa_mm": 0.31
+  },
+  "2023": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 7163,
+   "ndti_agua": 0.0802,
+   "ndvi_orilla": 0.8541,
+   "bsi_orilla": -0.2546,
+   "lluvia_previa_mm": 27.1,
+   "fechas": [
+    "2023-07-22",
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.91,
+   "z_bsi_orilla": 0.89,
+   "z_lluvia_previa_mm": 1.09
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 7664,
+   "ndti_agua": 0.0816,
+   "ndvi_orilla": 0.8175,
+   "bsi_orilla": -0.2434,
+   "lluvia_previa_mm": 5.4,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -0.8,
+   "z_bsi_orilla": 2.01,
+   "z_lluvia_previa_mm": -3.58
+  },
+  "2025": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 8136,
+   "ndti_agua": 0.1055,
+   "ndvi_orilla": 0.8722,
+   "bsi_orilla": -0.2585,
+   "lluvia_previa_mm": 20.1,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-11",
+    "2025-07-21",
+    "2025-08-17",
+    "2025-08-27",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16"
+   ],
+   "z_ndti_agua": 2.09,
+   "z_bsi_orilla": 0.35,
+   "z_lluvia_previa_mm": -0.64
+  }
+ },
+ "beni-04": {
+  "2019": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 7020,
+   "ndti_agua": 0.0965,
+   "ndvi_orilla": 0.8757,
+   "bsi_orilla": -0.2561,
+   "lluvia_previa_mm": 3.5,
+   "fechas": [
+    "2019-07-08",
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-14",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": 0.17,
+   "z_bsi_orilla": -0.75,
+   "z_lluvia_previa_mm": -3.74
+  },
+  "2020": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 7009,
+   "ndti_agua": 0.1109,
+   "ndvi_orilla": 0.858,
+   "bsi_orilla": -0.2618,
+   "lluvia_previa_mm": 28.4,
+   "fechas": [
+    "2020-07-17",
+    "2020-07-27",
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 1.1,
+   "z_bsi_orilla": -1.59,
+   "z_lluvia_previa_mm": 0.61
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 7473,
+   "ndti_agua": 0.0723,
+   "ndvi_orilla": 0.7863,
+   "bsi_orilla": -0.2435,
+   "lluvia_previa_mm": 22.4,
+   "fechas": [
+    "2021-07-02",
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-31",
+    "2021-09-20",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": -1.73,
+   "z_bsi_orilla": 0.64,
+   "z_lluvia_previa_mm": -0.04
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 1211,
+   "ndti_agua": 0.1103,
+   "ndvi_orilla": 1.785,
+   "bsi_orilla": -0.8714,
+   "lluvia_previa_mm": 29.1,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-05"
+   ],
+   "z_ndti_agua": 1.07,
+   "z_bsi_orilla": -62.55,
+   "z_lluvia_previa_mm": 0.68
+  },
+  "2023": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 6985,
+   "ndti_agua": 0.0761,
+   "ndvi_orilla": 0.8327,
+   "bsi_orilla": -0.2452,
+   "lluvia_previa_mm": 29.6,
+   "fechas": [
+    "2023-07-22",
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -1.49,
+   "z_bsi_orilla": 0.45,
+   "z_lluvia_previa_mm": 0.74
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 6826,
+   "ndti_agua": 0.0811,
+   "ndvi_orilla": 0.8158,
+   "bsi_orilla": -0.2127,
+   "lluvia_previa_mm": 5.7,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -1.18,
+   "z_bsi_orilla": 3.72,
+   "z_lluvia_previa_mm": -3.36
+  },
+  "2025": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 8377,
+   "ndti_agua": 0.1032,
+   "ndvi_orilla": 0.8421,
+   "bsi_orilla": -0.2466,
+   "lluvia_previa_mm": 17.2,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-11",
+    "2025-07-21",
+    "2025-08-17",
+    "2025-08-27",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16"
+   ],
+   "z_ndti_agua": 0.67,
+   "z_bsi_orilla": 0.3,
+   "z_lluvia_previa_mm": -1.4
+  }
+ },
+ "beni-05": {
+  "2019": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 9759,
+   "ndti_agua": 0.0939,
+   "ndvi_orilla": 0.8591,
+   "bsi_orilla": -0.3039,
+   "lluvia_previa_mm": 2.35,
+   "fechas": [
+    "2019-07-08",
+    "2019-08-05",
+    "2019-08-07",
+    "2019-08-15",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-14",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.6,
+   "z_bsi_orilla": -0.19,
+   "z_lluvia_previa_mm": -3.67
+  },
+  "2020": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 8725,
+   "ndti_agua": 0.1086,
+   "ndvi_orilla": 0.8586,
+   "bsi_orilla": -0.3009,
+   "lluvia_previa_mm": 23.9,
+   "fechas": [
+    "2020-07-17",
+    "2020-07-27",
+    "2020-08-06",
+    "2020-08-09",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25"
+   ],
+   "z_ndti_agua": 0.68,
+   "z_bsi_orilla": 0.02,
+   "z_lluvia_previa_mm": 0.26
+  },
+  "2021": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 9939,
+   "ndti_agua": 0.1031,
+   "ndvi_orilla": 0.8738,
+   "bsi_orilla": -0.2989,
+   "lluvia_previa_mm": 19.4,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-02",
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-13"
+   ],
+   "z_ndti_agua": 0.28,
+   "z_bsi_orilla": 0.16,
+   "z_lluvia_previa_mm": -0.63
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 4350,
+   "ndti_agua": 0.1139,
+   "ndvi_orilla": 1.7164,
+   "bsi_orilla": -0.8453,
+   "lluvia_previa_mm": 28.8,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-15",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-05"
+   ],
+   "z_ndti_agua": 1.32,
+   "z_bsi_orilla": -47.16,
+   "z_lluvia_previa_mm": 1.19
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 9064,
+   "ndti_agua": 0.0779,
+   "ndvi_orilla": 0.8493,
+   "bsi_orilla": -0.2883,
+   "lluvia_previa_mm": 27.2,
+   "fechas": [
+    "2023-07-20",
+    "2023-07-22",
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-18"
+   ],
+   "z_ndti_agua": -2.22,
+   "z_bsi_orilla": 1.03,
+   "z_lluvia_previa_mm": 0.79
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 9236,
+   "ndti_agua": 0.0747,
+   "ndvi_orilla": 0.8304,
+   "bsi_orilla": -0.2757,
+   "lluvia_previa_mm": 8.35,
+   "fechas": [
+    "2024-07-19",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-17"
+   ],
+   "z_ndti_agua": -2.51,
+   "z_bsi_orilla": 2.05,
+   "z_lluvia_previa_mm": -2.63
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 10566,
+   "ndti_agua": 0.101,
+   "ndvi_orilla": 0.8839,
+   "bsi_orilla": -0.3173,
+   "lluvia_previa_mm": 23.2,
+   "fechas": [
+    "2025-07-04",
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-09",
+    "2025-07-21",
+    "2025-08-27",
+    "2025-08-30",
+    "2025-09-14"
+   ],
+   "z_ndti_agua": 0.13,
+   "z_bsi_orilla": -1.5,
+   "z_lluvia_previa_mm": 0.16
+  }
+ },
+ "beni-06": {
+  "2019": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 12440,
+   "ndti_agua": 0.0943,
+   "ndvi_orilla": 0.8617,
+   "bsi_orilla": -0.3146,
+   "lluvia_previa_mm": 2.75,
+   "fechas": [
+    "2019-07-08",
+    "2019-08-05",
+    "2019-08-07",
+    "2019-08-15",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-14",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.46,
+   "z_bsi_orilla": -0.54,
+   "z_lluvia_previa_mm": -1.37
+  },
+  "2020": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 12632,
+   "ndti_agua": 0.1061,
+   "ndvi_orilla": 0.8489,
+   "bsi_orilla": -0.3075,
+   "lluvia_previa_mm": 42.1,
+   "fechas": [
+    "2020-07-17",
+    "2020-07-27",
+    "2020-08-01",
+    "2020-08-06",
+    "2020-08-09",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25"
+   ],
+   "z_ndti_agua": 0.49,
+   "z_bsi_orilla": 0.14,
+   "z_lluvia_previa_mm": 1.94
+  },
+  "2021": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 13311,
+   "ndti_agua": 0.1015,
+   "ndvi_orilla": 0.8733,
+   "bsi_orilla": -0.3047,
+   "lluvia_previa_mm": 16.3,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-02",
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-13"
+   ],
+   "z_ndti_agua": 0.16,
+   "z_bsi_orilla": 0.41,
+   "z_lluvia_previa_mm": -0.21
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 3352,
+   "ndti_agua": 0.1206,
+   "ndvi_orilla": 1.7535,
+   "bsi_orilla": -0.9426,
+   "lluvia_previa_mm": 34.0,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-15",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-05"
+   ],
+   "z_ndti_agua": 2.27,
+   "z_bsi_orilla": -45.43,
+   "z_lluvia_previa_mm": 1.31
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 12073,
+   "ndti_agua": 0.0798,
+   "ndvi_orilla": 0.8464,
+   "bsi_orilla": -0.2954,
+   "lluvia_previa_mm": 23.45,
+   "fechas": [
+    "2023-07-20",
+    "2023-07-22",
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-18"
+   ],
+   "z_ndti_agua": -2.23,
+   "z_bsi_orilla": 1.56,
+   "z_lluvia_previa_mm": 0.34
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 12621,
+   "ndti_agua": 0.0738,
+   "ndvi_orilla": 0.8272,
+   "bsi_orilla": -0.2833,
+   "lluvia_previa_mm": 6.1,
+   "fechas": [
+    "2024-07-19",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-17"
+   ],
+   "z_ndti_agua": -2.82,
+   "z_bsi_orilla": 2.77,
+   "z_lluvia_previa_mm": -1.11
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 14282,
+   "ndti_agua": 0.1026,
+   "ndvi_orilla": 0.8801,
+   "bsi_orilla": -0.3165,
+   "lluvia_previa_mm": 17.9,
+   "fechas": [
+    "2025-07-04",
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-09",
+    "2025-07-21",
+    "2025-08-27",
+    "2025-08-30",
+    "2025-09-14"
+   ],
+   "z_ndti_agua": 0.24,
+   "z_bsi_orilla": -0.73,
+   "z_lluvia_previa_mm": -0.1
+  }
+ },
+ "beni-07": {
+  "2019": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 9087,
+   "ndti_agua": 0.093,
+   "ndvi_orilla": 0.8528,
+   "bsi_orilla": -0.312,
+   "lluvia_previa_mm": 2.25,
+   "fechas": [
+    "2019-07-08",
+    "2019-08-05",
+    "2019-08-07",
+    "2019-08-15",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-14",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.9,
+   "z_bsi_orilla": -0.57,
+   "z_lluvia_previa_mm": -1.48
+  },
+  "2020": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 11861,
+   "ndti_agua": 0.1208,
+   "ndvi_orilla": 0.8283,
+   "bsi_orilla": -0.3071,
+   "lluvia_previa_mm": 7.7,
+   "fechas": [
+    "2020-07-17",
+    "2020-07-27",
+    "2020-08-01",
+    "2020-08-06",
+    "2020-08-09",
+    "2020-09-10",
+    "2020-09-25"
+   ],
+   "z_ndti_agua": 0.78,
+   "z_bsi_orilla": 0.03,
+   "z_lluvia_previa_mm": -0.64
+  },
+  "2021": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 13250,
+   "ndti_agua": 0.1039,
+   "ndvi_orilla": 0.863,
+   "bsi_orilla": -0.3004,
+   "lluvia_previa_mm": 11.8,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-02",
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-13"
+   ],
+   "z_ndti_agua": 0.01,
+   "z_bsi_orilla": 0.88,
+   "z_lluvia_previa_mm": -0.03
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 2505,
+   "ndti_agua": 0.1213,
+   "ndvi_orilla": 1.7788,
+   "bsi_orilla": -0.9406,
+   "lluvia_previa_mm": 35.8,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-15",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-05"
+   ],
+   "z_ndti_agua": 0.81,
+   "z_bsi_orilla": -63.56,
+   "z_lluvia_previa_mm": 4.56
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 9687,
+   "ndti_agua": 0.0755,
+   "ndvi_orilla": 0.8398,
+   "bsi_orilla": -0.3029,
+   "lluvia_previa_mm": 21.25,
+   "fechas": [
+    "2023-07-20",
+    "2023-07-22",
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-18"
+   ],
+   "z_ndti_agua": -1.89,
+   "z_bsi_orilla": 0.54,
+   "z_lluvia_previa_mm": 1.95
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 9813,
+   "ndti_agua": 0.0742,
+   "ndvi_orilla": 0.83,
+   "bsi_orilla": -0.2824,
+   "lluvia_previa_mm": 9.05,
+   "fechas": [
+    "2024-07-19",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-17"
+   ],
+   "z_ndti_agua": -1.96,
+   "z_bsi_orilla": 2.6,
+   "z_lluvia_previa_mm": -0.44
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 14865,
+   "ndti_agua": 0.1142,
+   "ndvi_orilla": 0.8745,
+   "bsi_orilla": -0.317,
+   "lluvia_previa_mm": 15.2,
+   "fechas": [
+    "2025-07-04",
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-21",
+    "2025-08-27",
+    "2025-08-30",
+    "2025-09-14"
+   ],
+   "z_ndti_agua": 0.47,
+   "z_bsi_orilla": -1.2,
+   "z_lluvia_previa_mm": 0.59
+  }
+ },
+ "beni-08": {
+  "2019": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 10308,
+   "ndti_agua": 0.0942,
+   "ndvi_orilla": 0.8482,
+   "bsi_orilla": -0.3201,
+   "lluvia_previa_mm": 2.1,
+   "fechas": [
+    "2019-07-08",
+    "2019-08-05",
+    "2019-08-07",
+    "2019-08-15",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-14",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.79,
+   "z_bsi_orilla": -0.24,
+   "z_lluvia_previa_mm": -1.66
+  },
+  "2020": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 11066,
+   "ndti_agua": 0.1205,
+   "ndvi_orilla": 0.8523,
+   "bsi_orilla": -0.313,
+   "lluvia_previa_mm": 25.45,
+   "fechas": [
+    "2020-07-17",
+    "2020-07-27",
+    "2020-08-01",
+    "2020-08-06",
+    "2020-08-09",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25"
+   ],
+   "z_ndti_agua": 0.87,
+   "z_bsi_orilla": 0.19,
+   "z_lluvia_previa_mm": 1.04
+  },
+  "2021": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 12955,
+   "ndti_agua": 0.1064,
+   "ndvi_orilla": 0.8731,
+   "bsi_orilla": -0.3155,
+   "lluvia_previa_mm": 12.4,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-02",
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-13"
+   ],
+   "z_ndti_agua": 0.11,
+   "z_bsi_orilla": 0.04,
+   "z_lluvia_previa_mm": -0.41
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 3728,
+   "ndti_agua": 0.1244,
+   "ndvi_orilla": 1.7586,
+   "bsi_orilla": -0.9446,
+   "lluvia_previa_mm": 37.2,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-15",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-05"
+   ],
+   "z_ndti_agua": 1.03,
+   "z_bsi_orilla": -52.82,
+   "z_lluvia_previa_mm": 2.04
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 11063,
+   "ndti_agua": 0.0809,
+   "ndvi_orilla": 0.8435,
+   "bsi_orilla": -0.304,
+   "lluvia_previa_mm": 22.25,
+   "fechas": [
+    "2023-07-20",
+    "2023-07-22",
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-18"
+   ],
+   "z_ndti_agua": -1.47,
+   "z_bsi_orilla": 0.77,
+   "z_lluvia_previa_mm": 0.67
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 10971,
+   "ndti_agua": 0.0696,
+   "ndvi_orilla": 0.8321,
+   "bsi_orilla": -0.2876,
+   "lluvia_previa_mm": 6.4,
+   "fechas": [
+    "2024-07-19",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-17"
+   ],
+   "z_ndti_agua": -2.06,
+   "z_bsi_orilla": 2.19,
+   "z_lluvia_previa_mm": -1.22
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 14446,
+   "ndti_agua": 0.1124,
+   "ndvi_orilla": 0.8847,
+   "bsi_orilla": -0.3373,
+   "lluvia_previa_mm": 14.1,
+   "fechas": [
+    "2025-07-04",
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-09",
+    "2025-07-21",
+    "2025-08-27",
+    "2025-08-30",
+    "2025-09-14"
+   ],
+   "z_ndti_agua": 0.41,
+   "z_bsi_orilla": -1.93,
+   "z_lluvia_previa_mm": -0.23
+  }
+ },
+ "beni-09": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 6955,
+   "ndti_agua": 0.0685,
+   "ndvi_orilla": 0.8562,
+   "bsi_orilla": -0.2599,
+   "lluvia_previa_mm": 4.7,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.8,
+   "z_bsi_orilla": -0.37,
+   "z_lluvia_previa_mm": -0.67
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 7178,
+   "ndti_agua": 0.0726,
+   "ndvi_orilla": 0.8421,
+   "bsi_orilla": -0.2586,
+   "lluvia_previa_mm": 22.85,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-24",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.56,
+   "z_bsi_orilla": -0.27,
+   "z_lluvia_previa_mm": 3.4
+  },
+  "2021": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 6601,
+   "ndti_agua": 0.0896,
+   "ndvi_orilla": 0.8435,
+   "bsi_orilla": -0.2724,
+   "lluvia_previa_mm": 4.8,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": 1.0,
+   "z_bsi_orilla": -1.81,
+   "z_lluvia_previa_mm": -0.64
+  },
+  "2022": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 1920,
+   "ndti_agua": 0.1093,
+   "ndvi_orilla": 1.7531,
+   "bsi_orilla": -0.749,
+   "lluvia_previa_mm": 4.5,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 2.61,
+   "z_bsi_orilla": -45.25,
+   "z_lluvia_previa_mm": -0.71
+  },
+  "2023": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 5266,
+   "ndti_agua": 0.0821,
+   "ndvi_orilla": 0.8382,
+   "bsi_orilla": -0.2464,
+   "lluvia_previa_mm": 26.5,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 0.06,
+   "z_bsi_orilla": 0.63,
+   "z_lluvia_previa_mm": 4.13
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 6127,
+   "ndti_agua": 0.0697,
+   "ndvi_orilla": 0.8317,
+   "bsi_orilla": -0.2145,
+   "lluvia_previa_mm": 11.25,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -0.75,
+   "z_bsi_orilla": 2.32,
+   "z_lluvia_previa_mm": 1.08
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 5466,
+   "ndti_agua": 0.1017,
+   "ndvi_orilla": 0.8541,
+   "bsi_orilla": -0.2451,
+   "lluvia_previa_mm": 6.9,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-09",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 1.99,
+   "z_bsi_orilla": 0.73,
+   "z_lluvia_previa_mm": -0.22
+  }
+ },
+ "beni-10": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 3205,
+   "ndti_agua": 0.0806,
+   "ndvi_orilla": 0.866,
+   "bsi_orilla": -0.2723,
+   "lluvia_previa_mm": 3.9,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.72,
+   "z_bsi_orilla": 0.29,
+   "z_lluvia_previa_mm": -0.68
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3097,
+   "ndti_agua": 0.0804,
+   "ndvi_orilla": 0.8606,
+   "bsi_orilla": -0.2777,
+   "lluvia_previa_mm": 26.4,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-24",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.74,
+   "z_bsi_orilla": -0.43,
+   "z_lluvia_previa_mm": 4.17
+  },
+  "2021": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 3175,
+   "ndti_agua": 0.0943,
+   "ndvi_orilla": 0.8612,
+   "bsi_orilla": -0.2817,
+   "lluvia_previa_mm": 3.8,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": 0.96,
+   "z_bsi_orilla": -0.89,
+   "z_lluvia_previa_mm": -0.71
+  },
+  "2022": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 5066,
+   "ndti_agua": 0.1009,
+   "ndvi_orilla": 1.8032,
+   "bsi_orilla": -0.9386,
+   "lluvia_previa_mm": 4.1,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 1.62,
+   "z_bsi_orilla": -66.58,
+   "z_lluvia_previa_mm": -0.63
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 3069,
+   "ndti_agua": 0.0887,
+   "ndvi_orilla": 0.8443,
+   "bsi_orilla": -0.2734,
+   "lluvia_previa_mm": 22.2,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 0.12,
+   "z_bsi_orilla": 0.14,
+   "z_lluvia_previa_mm": 3.33
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 3080,
+   "ndti_agua": 0.08,
+   "ndvi_orilla": 0.8366,
+   "bsi_orilla": -0.2314,
+   "lluvia_previa_mm": 6.95,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -0.76,
+   "z_bsi_orilla": 4.41,
+   "z_lluvia_previa_mm": 0.17
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 3427,
+   "ndti_agua": 0.1056,
+   "ndvi_orilla": 0.8609,
+   "bsi_orilla": -0.2664,
+   "lluvia_previa_mm": 8.1,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-09",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 2.09,
+   "z_bsi_orilla": 0.91,
+   "z_lluvia_previa_mm": 0.51
+  }
+ },
+ "beni-11": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 6338,
+   "ndti_agua": 0.0839,
+   "ndvi_orilla": 0.8792,
+   "bsi_orilla": -0.2891,
+   "lluvia_previa_mm": 3.2,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": 0.2,
+   "z_bsi_orilla": -0.36,
+   "z_lluvia_previa_mm": -0.58
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5723,
+   "ndti_agua": 0.082,
+   "ndvi_orilla": 0.8657,
+   "bsi_orilla": -0.2855,
+   "lluvia_previa_mm": 30.0,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-24",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.08,
+   "z_bsi_orilla": 0.18,
+   "z_lluvia_previa_mm": 5.05
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 6240,
+   "ndti_agua": 0.0796,
+   "ndvi_orilla": 0.8481,
+   "bsi_orilla": -0.2854,
+   "lluvia_previa_mm": 3.05,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-20",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": -0.33,
+   "z_bsi_orilla": 0.19,
+   "z_lluvia_previa_mm": -0.61
+  },
+  "2022": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 5438,
+   "ndti_agua": 0.1033,
+   "ndvi_orilla": 1.7759,
+   "bsi_orilla": -1.0101,
+   "lluvia_previa_mm": 2.2,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 2.14,
+   "z_bsi_orilla": -72.46,
+   "z_lluvia_previa_mm": -0.85
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 6143,
+   "ndti_agua": 0.0819,
+   "ndvi_orilla": 0.8574,
+   "bsi_orilla": -0.285,
+   "lluvia_previa_mm": 19.4,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.09,
+   "z_bsi_orilla": 0.23,
+   "z_lluvia_previa_mm": 2.93
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 6275,
+   "ndti_agua": 0.0711,
+   "ndvi_orilla": 0.8447,
+   "bsi_orilla": -0.2855,
+   "lluvia_previa_mm": 6.3,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -1.18,
+   "z_bsi_orilla": 0.18,
+   "z_lluvia_previa_mm": 0.25
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 6546,
+   "ndti_agua": 0.1063,
+   "ndvi_orilla": 0.8753,
+   "bsi_orilla": -0.2946,
+   "lluvia_previa_mm": 6.9,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-09",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 2.44,
+   "z_bsi_orilla": -0.91,
+   "z_lluvia_previa_mm": 0.43
+  }
+ },
+ "beni-12": {
+  "2019": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 8097,
+   "ndti_agua": 0.094,
+   "ndvi_orilla": 0.8469,
+   "bsi_orilla": -0.2802,
+   "lluvia_previa_mm": 2.6,
+   "fechas": [
+    "2019-07-08",
+    "2019-08-05",
+    "2019-08-07",
+    "2019-08-15",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-14",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": -0.45,
+   "z_bsi_orilla": 1.1,
+   "z_lluvia_previa_mm": -2.76
+  },
+  "2020": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 7932,
+   "ndti_agua": 0.1042,
+   "ndvi_orilla": 0.8514,
+   "bsi_orilla": -0.2958,
+   "lluvia_previa_mm": 23.7,
+   "fechas": [
+    "2020-07-17",
+    "2020-07-27",
+    "2020-08-06",
+    "2020-08-09",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25"
+   ],
+   "z_ndti_agua": 0.31,
+   "z_bsi_orilla": -0.61,
+   "z_lluvia_previa_mm": 0.09
+  },
+  "2021": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 8700,
+   "ndti_agua": 0.1046,
+   "ndvi_orilla": 0.8582,
+   "bsi_orilla": -0.2895,
+   "lluvia_previa_mm": 18.2,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-02",
+    "2021-07-22",
+    "2021-08-06",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-13"
+   ],
+   "z_ndti_agua": 0.34,
+   "z_bsi_orilla": 0.04,
+   "z_lluvia_previa_mm": -0.87
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 640,
+   "ndti_agua": 0.1586,
+   "ndvi_orilla": 1.6165,
+   "bsi_orilla": -0.6919,
+   "lluvia_previa_mm": 31.6,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-15",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-05"
+   ],
+   "z_ndti_agua": 6.06,
+   "z_bsi_orilla": -35.01,
+   "z_lluvia_previa_mm": 0.93
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 8204,
+   "ndti_agua": 0.0776,
+   "ndvi_orilla": 0.8415,
+   "bsi_orilla": -0.2845,
+   "lluvia_previa_mm": 27.05,
+   "fechas": [
+    "2023-07-20",
+    "2023-07-22",
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-18"
+   ],
+   "z_ndti_agua": -2.54,
+   "z_bsi_orilla": 0.56,
+   "z_lluvia_previa_mm": 0.41
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 8314,
+   "ndti_agua": 0.0773,
+   "ndvi_orilla": 0.822,
+   "bsi_orilla": -0.2618,
+   "lluvia_previa_mm": 7.4,
+   "fechas": [
+    "2024-07-19",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-17"
+   ],
+   "z_ndti_agua": -2.58,
+   "z_bsi_orilla": 2.72,
+   "z_lluvia_previa_mm": -2.17
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 9187,
+   "ndti_agua": 0.1019,
+   "ndvi_orilla": 0.8752,
+   "bsi_orilla": -0.2998,
+   "lluvia_previa_mm": 30.3,
+   "fechas": [
+    "2025-07-04",
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-21",
+    "2025-08-27",
+    "2025-08-30",
+    "2025-09-14"
+   ],
+   "z_ndti_agua": 0.14,
+   "z_bsi_orilla": -1.11,
+   "z_lluvia_previa_mm": 0.75
+  }
+ },
+ "beni-13": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 2519,
+   "ndti_agua": 0.0836,
+   "ndvi_orilla": 0.8858,
+   "bsi_orilla": -0.2951,
+   "lluvia_previa_mm": 2.2,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": 0.14,
+   "z_bsi_orilla": 0.68,
+   "z_lluvia_previa_mm": -1.22
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2177,
+   "ndti_agua": 0.0794,
+   "ndvi_orilla": 0.8656,
+   "bsi_orilla": -0.2886,
+   "lluvia_previa_mm": 29.2,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-24",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.22,
+   "z_bsi_orilla": 1.53,
+   "z_lluvia_previa_mm": 1.89
+  },
+  "2021": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 1961,
+   "ndti_agua": 0.0829,
+   "ndvi_orilla": 0.8758,
+   "bsi_orilla": -0.3034,
+   "lluvia_previa_mm": 16.4,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": 0.08,
+   "z_bsi_orilla": -0.28,
+   "z_lluvia_previa_mm": 0.65
+  },
+  "2022": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 816,
+   "ndti_agua": 0.1145,
+   "ndvi_orilla": 1.754,
+   "bsi_orilla": -0.9623,
+   "lluvia_previa_mm": 2.3,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 3.34,
+   "z_bsi_orilla": -66.31,
+   "z_lluvia_previa_mm": -1.21
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 1825,
+   "ndti_agua": 0.073,
+   "ndvi_orilla": 0.8594,
+   "bsi_orilla": -0.286,
+   "lluvia_previa_mm": 19.9,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.79,
+   "z_bsi_orilla": 1.79,
+   "z_lluvia_previa_mm": 1.0
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 1871,
+   "ndti_agua": 0.0641,
+   "ndvi_orilla": 0.8315,
+   "bsi_orilla": -0.3044,
+   "lluvia_previa_mm": 6.3,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -1.83,
+   "z_bsi_orilla": -0.4,
+   "z_lluvia_previa_mm": -0.63
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 2123,
+   "ndti_agua": 0.097,
+   "ndvi_orilla": 0.8866,
+   "bsi_orilla": -0.306,
+   "lluvia_previa_mm": 12.6,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 1.59,
+   "z_bsi_orilla": -0.58,
+   "z_lluvia_previa_mm": 0.1
+  }
+ },
+ "beni-14": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 1612,
+   "ndti_agua": 0.0851,
+   "ndvi_orilla": 0.8882,
+   "bsi_orilla": -0.294,
+   "lluvia_previa_mm": 2.2,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": 0.28,
+   "z_bsi_orilla": 0.53,
+   "z_lluvia_previa_mm": -1.44
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1479,
+   "ndti_agua": 0.0791,
+   "ndvi_orilla": 0.8667,
+   "bsi_orilla": -0.2864,
+   "lluvia_previa_mm": 29.2,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-24",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.23,
+   "z_bsi_orilla": 1.46,
+   "z_lluvia_previa_mm": 1.97
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1516,
+   "ndti_agua": 0.0747,
+   "ndvi_orilla": 0.857,
+   "bsi_orilla": -0.3006,
+   "lluvia_previa_mm": 16.4,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-20",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": -0.53,
+   "z_bsi_orilla": -0.22,
+   "z_lluvia_previa_mm": 0.68
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 601,
+   "ndti_agua": 0.1089,
+   "ndvi_orilla": 1.7295,
+   "bsi_orilla": -0.9167,
+   "lluvia_previa_mm": 2.9,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 2.82,
+   "z_bsi_orilla": -61.94,
+   "z_lluvia_previa_mm": -1.36
+  },
+  "2023": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 1559,
+   "ndti_agua": 0.0823,
+   "ndvi_orilla": 0.8651,
+   "bsi_orilla": -0.2824,
+   "lluvia_previa_mm": 17.8,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-29",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 0.01,
+   "z_bsi_orilla": 1.86,
+   "z_lluvia_previa_mm": 0.83
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 1652,
+   "ndti_agua": 0.0653,
+   "ndvi_orilla": 0.8302,
+   "bsi_orilla": -0.3042,
+   "lluvia_previa_mm": 6.3,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -1.83,
+   "z_bsi_orilla": -0.62,
+   "z_lluvia_previa_mm": -0.74
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 1993,
+   "ndti_agua": 0.1026,
+   "ndvi_orilla": 0.8873,
+   "bsi_orilla": -0.3015,
+   "lluvia_previa_mm": 12.6,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 2.19,
+   "z_bsi_orilla": -0.32,
+   "z_lluvia_previa_mm": 0.11
+  }
+ },
+ "coroico-01": {
+  "2019": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 52,
+   "ndti_agua": 0.007,
+   "ndvi_orilla": 0.7981,
+   "bsi_orilla": -0.1707,
+   "lluvia_previa_mm": 4.9,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": 0.2,
+   "z_bsi_orilla": 0.54,
+   "z_lluvia_previa_mm": -0.48
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 118,
+   "ndti_agua": 0.0043,
+   "ndvi_orilla": 0.7919,
+   "bsi_orilla": -0.1844,
+   "lluvia_previa_mm": 6.05,
+   "fechas": [
+    "2020-07-27",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.1,
+   "z_bsi_orilla": -1.37,
+   "z_lluvia_previa_mm": -0.25
+  },
+  "2021": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 317,
+   "ndti_agua": -0.0183,
+   "ndvi_orilla": 0.7651,
+   "bsi_orilla": -0.1675,
+   "lluvia_previa_mm": 7.3,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -2.26,
+   "z_bsi_orilla": 0.93,
+   "z_lluvia_previa_mm": 0.25
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5858,
+   "ndti_agua": 0.0791,
+   "ndvi_orilla": 1.8071,
+   "bsi_orilla": -0.5859,
+   "lluvia_previa_mm": 8.1,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 7.78,
+   "z_bsi_orilla": -41.52,
+   "z_lluvia_previa_mm": 0.41
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 114,
+   "ndti_agua": 0.0164,
+   "ndvi_orilla": 0.7841,
+   "bsi_orilla": -0.1755,
+   "lluvia_previa_mm": 28.4,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 197,
+   "ndti_agua": -0.044,
+   "ndvi_orilla": 0.7567,
+   "bsi_orilla": -0.1773,
+   "lluvia_previa_mm": 0.9,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -4.83,
+   "z_bsi_orilla": -0.66,
+   "z_lluvia_previa_mm": -1.28
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 270,
+   "ndti_agua": 0.0013,
+   "ndvi_orilla": 0.7762,
+   "bsi_orilla": -0.1691,
+   "lluvia_previa_mm": 12.8,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-16",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": -0.09,
+   "z_bsi_orilla": 0.78,
+   "z_lluvia_previa_mm": 1.35
+  }
+ },
+ "coroico-02": {
+  "2019": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 83,
+   "ndti_agua": -0.0335,
+   "ndvi_orilla": 0.833,
+   "bsi_orilla": -0.2372,
+   "lluvia_previa_mm": 34.45,
+   "fechas": [
+    "2019-08-07",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2020": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 232,
+   "ndti_agua": -0.0381,
+   "ndvi_orilla": 0.8333,
+   "bsi_orilla": -0.2264,
+   "lluvia_previa_mm": 10.3,
+   "fechas": [
+    "2020-07-27",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.34,
+   "z_bsi_orilla": 1.78,
+   "z_lluvia_previa_mm": 0.28
+  },
+  "2021": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 154,
+   "ndti_agua": -0.0455,
+   "ndvi_orilla": 0.804,
+   "bsi_orilla": -0.238,
+   "lluvia_previa_mm": 7.5,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.77,
+   "z_bsi_orilla": 0.58,
+   "z_lluvia_previa_mm": -0.56
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 6945,
+   "ndti_agua": 0.0779,
+   "ndvi_orilla": 1.7628,
+   "bsi_orilla": -0.7617,
+   "lluvia_previa_mm": 10.35,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 11.97,
+   "z_bsi_orilla": -37.92,
+   "z_lluvia_previa_mm": 0.29
+  },
+  "2023": {
+   "escenas": 1,
+   "suficiente": false,
+   "px_agua_mediana": 38,
+   "ndti_agua": 0.008,
+   "ndvi_orilla": 0.8275,
+   "bsi_orilla": -0.227,
+   "lluvia_previa_mm": 54.1,
+   "fechas": [
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 270,
+   "ndti_agua": -0.0375,
+   "ndvi_orilla": 0.8148,
+   "bsi_orilla": -0.2565,
+   "lluvia_previa_mm": 1.8,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 0.43,
+   "z_bsi_orilla": -1.07,
+   "z_lluvia_previa_mm": -1.7
+  },
+  "2025": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 169,
+   "ndti_agua": -0.0462,
+   "ndvi_orilla": 0.8201,
+   "bsi_orilla": -0.2452,
+   "lluvia_previa_mm": 10.5,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-16",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": -0.84,
+   "z_bsi_orilla": 0.09,
+   "z_lluvia_previa_mm": 0.32
+  }
+ },
+ "coroico-03": {
+  "2019": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 264,
+   "ndti_agua": -0.0426,
+   "ndvi_orilla": 0.8343,
+   "bsi_orilla": -0.2419,
+   "lluvia_previa_mm": 5.8,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": 0.44,
+   "z_bsi_orilla": 0.31,
+   "z_lluvia_previa_mm": -1.11
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 479,
+   "ndti_agua": -0.0543,
+   "ndvi_orilla": 0.8414,
+   "bsi_orilla": -0.2361,
+   "lluvia_previa_mm": 11.45,
+   "fechas": [
+    "2020-07-27",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -1.17,
+   "z_bsi_orilla": 0.55,
+   "z_lluvia_previa_mm": 0.63
+  },
+  "2021": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 352,
+   "ndti_agua": -0.0472,
+   "ndvi_orilla": 0.8093,
+   "bsi_orilla": -0.233,
+   "lluvia_previa_mm": 8.3,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.27,
+   "z_bsi_orilla": 0.83,
+   "z_lluvia_previa_mm": -0.61
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 7334,
+   "ndti_agua": 0.072,
+   "ndvi_orilla": 1.7863,
+   "bsi_orilla": -0.8043,
+   "lluvia_previa_mm": 11.35,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 11.32,
+   "z_bsi_orilla": -49.91,
+   "z_lluvia_previa_mm": 0.61
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 150,
+   "ndti_agua": -0.0174,
+   "ndvi_orilla": 0.8262,
+   "bsi_orilla": -0.221,
+   "lluvia_previa_mm": 31.15,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 743,
+   "ndti_agua": -0.0401,
+   "ndvi_orilla": 0.8368,
+   "bsi_orilla": -0.2664,
+   "lluvia_previa_mm": 3.0,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 0.67,
+   "z_bsi_orilla": -2.17,
+   "z_lluvia_previa_mm": -1.67
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 406,
+   "ndti_agua": -0.0581,
+   "ndvi_orilla": 0.8398,
+   "bsi_orilla": -0.2495,
+   "lluvia_previa_mm": 12.5,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-16",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": -1.55,
+   "z_bsi_orilla": -0.58,
+   "z_lluvia_previa_mm": 0.84
+  }
+ },
+ "coroico-04": {
+  "2019": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 571,
+   "ndti_agua": -0.0507,
+   "ndvi_orilla": 0.7931,
+   "bsi_orilla": -0.1823,
+   "lluvia_previa_mm": 5.7,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -0.82,
+   "z_bsi_orilla": -0.46,
+   "z_lluvia_previa_mm": -1.27
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 687,
+   "ndti_agua": -0.0355,
+   "ndvi_orilla": 0.8051,
+   "bsi_orilla": -0.1764,
+   "lluvia_previa_mm": 15.0,
+   "fechas": [
+    "2020-07-27",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 1.25,
+   "z_bsi_orilla": 0.27,
+   "z_lluvia_previa_mm": 0.63
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 635,
+   "ndti_agua": -0.048,
+   "ndvi_orilla": 0.7617,
+   "bsi_orilla": -0.1678,
+   "lluvia_previa_mm": 13.75,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.57,
+   "z_bsi_orilla": 1.21,
+   "z_lluvia_previa_mm": 0.38
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 4904,
+   "ndti_agua": 0.0769,
+   "ndvi_orilla": 1.7995,
+   "bsi_orilla": -0.5777,
+   "lluvia_previa_mm": 11.85,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 12.49,
+   "z_bsi_orilla": -40.13,
+   "z_lluvia_previa_mm": -0.04
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 431,
+   "ndti_agua": -0.0607,
+   "ndvi_orilla": 0.7692,
+   "bsi_orilla": -0.1205,
+   "lluvia_previa_mm": 26.75,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 1478,
+   "ndti_agua": -0.0313,
+   "ndvi_orilla": 0.8113,
+   "bsi_orilla": -0.1742,
+   "lluvia_previa_mm": 6.95,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 1.67,
+   "z_bsi_orilla": 0.38,
+   "z_lluvia_previa_mm": -1.02
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 783,
+   "ndti_agua": -0.0502,
+   "ndvi_orilla": 0.8264,
+   "bsi_orilla": -0.1992,
+   "lluvia_previa_mm": 12.05,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-16",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": -0.79,
+   "z_bsi_orilla": -2.28,
+   "z_lluvia_previa_mm": 0.04
+  }
+ },
+ "coroico-05": {
+  "2019": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 960,
+   "ndti_agua": -0.066,
+   "ndvi_orilla": 0.8162,
+   "bsi_orilla": -0.1852,
+   "lluvia_previa_mm": 40.7,
+   "fechas": [
+    "2019-08-07",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 910,
+   "ndti_agua": -0.0654,
+   "ndvi_orilla": 0.7971,
+   "bsi_orilla": -0.1406,
+   "lluvia_previa_mm": 12.4,
+   "fechas": [
+    "2020-07-27",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.72,
+   "z_bsi_orilla": 1.09,
+   "z_lluvia_previa_mm": -0.33
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1243,
+   "ndti_agua": -0.089,
+   "ndvi_orilla": 0.7414,
+   "bsi_orilla": -0.1424,
+   "lluvia_previa_mm": 14.75,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -1.69,
+   "z_bsi_orilla": 1.02,
+   "z_lluvia_previa_mm": 0.38
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 4227,
+   "ndti_agua": 0.0852,
+   "ndvi_orilla": 1.7889,
+   "bsi_orilla": -0.6267,
+   "lluvia_previa_mm": 15.0,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 3.66,
+   "z_bsi_orilla": -19.28,
+   "z_lluvia_previa_mm": 0.42
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 866,
+   "ndti_agua": -0.0144,
+   "ndvi_orilla": 0.7685,
+   "bsi_orilla": -0.1247,
+   "lluvia_previa_mm": 28.25,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 1650,
+   "ndti_agua": -0.0369,
+   "ndvi_orilla": 0.8098,
+   "bsi_orilla": -0.1734,
+   "lluvia_previa_mm": 7.55,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 0.06,
+   "z_bsi_orilla": -0.07,
+   "z_lluvia_previa_mm": -1.3
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1460,
+   "ndti_agua": -0.0151,
+   "ndvi_orilla": 0.8336,
+   "bsi_orilla": -0.1981,
+   "lluvia_previa_mm": 13.35,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-16",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 0.93,
+   "z_bsi_orilla": -1.65,
+   "z_lluvia_previa_mm": -0.04
+  }
+ },
+ "coroico-06": {
+  "2019": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 2316,
+   "ndti_agua": -0.0072,
+   "ndvi_orilla": 0.7978,
+   "bsi_orilla": -0.1457,
+   "lluvia_previa_mm": 35.45,
+   "fechas": [
+    "2019-08-07",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 1460,
+   "ndti_agua": -0.0672,
+   "ndvi_orilla": 0.7839,
+   "bsi_orilla": -0.1143,
+   "lluvia_previa_mm": 14.15,
+   "fechas": [
+    "2020-07-27",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -3.61,
+   "z_bsi_orilla": 1.19,
+   "z_lluvia_previa_mm": 0.64
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2261,
+   "ndti_agua": 0.0255,
+   "ndvi_orilla": 0.7307,
+   "bsi_orilla": -0.1102,
+   "lluvia_previa_mm": 13.85,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": 0.0,
+   "z_bsi_orilla": 1.34,
+   "z_lluvia_previa_mm": 0.58
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2858,
+   "ndti_agua": 0.0846,
+   "ndvi_orilla": 1.8711,
+   "bsi_orilla": -0.6692,
+   "lluvia_previa_mm": 9.9,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 2.43,
+   "z_bsi_orilla": -10.96,
+   "z_lluvia_previa_mm": -0.6
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 1967,
+   "ndti_agua": -0.0134,
+   "ndvi_orilla": 0.751,
+   "bsi_orilla": -0.0915,
+   "lluvia_previa_mm": 25.5,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 2732,
+   "ndti_agua": 0.0063,
+   "ndvi_orilla": 0.8178,
+   "bsi_orilla": -0.1748,
+   "lluvia_previa_mm": 7.3,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -0.66,
+   "z_bsi_orilla": -0.48,
+   "z_lluvia_previa_mm": -1.12
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2538,
+   "ndti_agua": 0.0445,
+   "ndvi_orilla": 0.8366,
+   "bsi_orilla": -0.1835,
+   "lluvia_previa_mm": 11.95,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-16",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 0.49,
+   "z_bsi_orilla": -0.81,
+   "z_lluvia_previa_mm": 0.01
+  }
+ },
+ "coroico-07": {
+  "2019": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 1187,
+   "ndti_agua": -0.1034,
+   "ndvi_orilla": 0.7788,
+   "bsi_orilla": -0.1158,
+   "lluvia_previa_mm": 31.95,
+   "fechas": [
+    "2019-08-07",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 1099,
+   "ndti_agua": -0.0552,
+   "ndvi_orilla": 0.7653,
+   "bsi_orilla": -0.0901,
+   "lluvia_previa_mm": 11.1,
+   "fechas": [
+    "2020-07-27",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -3.66,
+   "z_bsi_orilla": 2.28,
+   "z_lluvia_previa_mm": 0.22
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1826,
+   "ndti_agua": 0.0175,
+   "ndvi_orilla": 0.7461,
+   "bsi_orilla": -0.1264,
+   "lluvia_previa_mm": 12.35,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -1.06,
+   "z_bsi_orilla": 0.7,
+   "z_lluvia_previa_mm": 0.47
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1871,
+   "ndti_agua": 0.0915,
+   "ndvi_orilla": 1.8226,
+   "bsi_orilla": -0.6912,
+   "lluvia_previa_mm": 9.15,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 2.01,
+   "z_bsi_orilla": -15.69,
+   "z_lluvia_previa_mm": -0.36
+  },
+  "2023": {
+   "escenas": 2,
+   "suficiente": false,
+   "px_agua_mediana": 1385,
+   "ndti_agua": 0.0225,
+   "ndvi_orilla": 0.739,
+   "bsi_orilla": -0.0768,
+   "lluvia_previa_mm": 22.2,
+   "fechas": [
+    "2023-08-06",
+    "2023-08-16"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 2509,
+   "ndti_agua": 0.0571,
+   "ndvi_orilla": 0.8143,
+   "bsi_orilla": -0.1653,
+   "lluvia_previa_mm": 10.8,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-15",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 0.45,
+   "z_bsi_orilla": -0.25,
+   "z_lluvia_previa_mm": 0.13
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2464,
+   "ndti_agua": 0.0474,
+   "ndvi_orilla": 0.8335,
+   "bsi_orilla": -0.1733,
+   "lluvia_previa_mm": 9.2,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-16",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 0.18,
+   "z_bsi_orilla": -0.49,
+   "z_lluvia_previa_mm": -0.35
+  }
+ },
+ "coroico-08": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 995,
+   "ndti_agua": -0.0242,
+   "ndvi_orilla": 0.7503,
+   "bsi_orilla": -0.1056,
+   "lluvia_previa_mm": 24.8,
+   "fechas": [
+    "2019-07-31",
+    "2019-08-07",
+    "2019-09-16",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": -2.19,
+   "z_bsi_orilla": 0.8,
+   "z_lluvia_previa_mm": 2.86
+  },
+  "2020": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 790,
+   "ndti_agua": -0.0881,
+   "ndvi_orilla": 0.7923,
+   "bsi_orilla": -0.1462,
+   "lluvia_previa_mm": 11.05,
+   "fechas": [
+    "2020-06-30",
+    "2020-07-20",
+    "2020-07-27",
+    "2020-08-04",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -4.49,
+   "z_bsi_orilla": -0.97,
+   "z_lluvia_previa_mm": 0.11
+  },
+  "2021": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 1473,
+   "ndti_agua": 0.0245,
+   "ndvi_orilla": 0.764,
+   "bsi_orilla": -0.129,
+   "lluvia_previa_mm": 11.1,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-18",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.16,
+   "z_bsi_orilla": -0.08,
+   "z_lluvia_previa_mm": 0.12
+  },
+  "2022": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 1550,
+   "ndti_agua": 0.084,
+   "ndvi_orilla": 1.7759,
+   "bsi_orilla": -0.6321,
+   "lluvia_previa_mm": 9.4,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-08"
+   ],
+   "z_ndti_agua": 1.38,
+   "z_bsi_orilla": -17.28,
+   "z_lluvia_previa_mm": -0.33
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 1427,
+   "ndti_agua": 0.0541,
+   "ndvi_orilla": 0.7415,
+   "bsi_orilla": -0.0902,
+   "lluvia_previa_mm": 9.9,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-19",
+    "2023-08-29",
+    "2023-09-08"
+   ],
+   "z_ndti_agua": 0.62,
+   "z_bsi_orilla": 1.22,
+   "z_lluvia_previa_mm": -0.23
+  },
+  "2024": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 1786,
+   "ndti_agua": 0.0166,
+   "ndvi_orilla": 0.5843,
+   "bsi_orilla": -0.1042,
+   "lluvia_previa_mm": 9.4,
+   "fechas": [
+    "2024-06-09",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-15",
+    "2024-09-04",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -0.42,
+   "z_bsi_orilla": 0.86,
+   "z_lluvia_previa_mm": -0.33
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 2057,
+   "ndti_agua": 0.0491,
+   "ndvi_orilla": 0.8147,
+   "bsi_orilla": -0.1582,
+   "lluvia_previa_mm": 11.4,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-06",
+    "2025-07-16",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-19",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 0.49,
+   "z_bsi_orilla": -1.37,
+   "z_lluvia_previa_mm": 0.18
+  }
+ },
+ "kaka-01": {
+  "2019": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 3930,
+   "ndti_agua": 0.0756,
+   "ndvi_orilla": 0.7674,
+   "bsi_orilla": -0.133,
+   "lluvia_previa_mm": 4.7,
+   "fechas": [
+    "2019-07-31",
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": -0.8,
+   "z_bsi_orilla": -0.48,
+   "z_lluvia_previa_mm": -1.36
+  },
+  "2020": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 3841,
+   "ndti_agua": 0.0815,
+   "ndvi_orilla": 0.7672,
+   "bsi_orilla": -0.1124,
+   "lluvia_previa_mm": 13.5,
+   "fechas": [
+    "2020-06-30",
+    "2020-07-20",
+    "2020-07-27",
+    "2020-08-04",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.33,
+   "z_bsi_orilla": 0.49,
+   "z_lluvia_previa_mm": 0.63
+  },
+  "2021": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 3941,
+   "ndti_agua": 0.0737,
+   "ndvi_orilla": 0.7466,
+   "bsi_orilla": -0.1061,
+   "lluvia_previa_mm": 9.7,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-16",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-18",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -1.02,
+   "z_bsi_orilla": 0.81,
+   "z_lluvia_previa_mm": -0.35
+  },
+  "2022": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 943,
+   "ndti_agua": 0.1045,
+   "ndvi_orilla": 1.8069,
+   "bsi_orilla": -0.5863,
+   "lluvia_previa_mm": 11.0,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-08"
+   ],
+   "z_ndti_agua": 2.02,
+   "z_bsi_orilla": -23.5,
+   "z_lluvia_previa_mm": 0.02
+  },
+  "2023": {
+   "escenas": 12,
+   "suficiente": true,
+   "px_agua_mediana": 3501,
+   "ndti_agua": 0.089,
+   "ndvi_orilla": 0.7127,
+   "bsi_orilla": -0.0769,
+   "lluvia_previa_mm": 12.05,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-01",
+    "2023-08-04",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-19",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 0.33,
+   "z_bsi_orilla": 1.89,
+   "z_lluvia_previa_mm": 0.33
+  },
+  "2024": {
+   "escenas": 12,
+   "suficiente": true,
+   "px_agua_mediana": 3502,
+   "ndti_agua": 0.0871,
+   "ndvi_orilla": 0.7373,
+   "bsi_orilla": -0.123,
+   "lluvia_previa_mm": 6.45,
+   "fechas": [
+    "2024-06-09",
+    "2024-06-11",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": 0.12,
+   "z_bsi_orilla": -0.01,
+   "z_lluvia_previa_mm": -1.02
+  },
+  "2025": {
+   "escenas": 10,
+   "suficiente": true,
+   "px_agua_mediana": 4305,
+   "ndti_agua": 0.1153,
+   "ndvi_orilla": 0.8034,
+   "bsi_orilla": -0.1488,
+   "lluvia_previa_mm": 19.55,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-06",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-19",
+    "2025-09-26",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 3.1,
+   "z_bsi_orilla": -1.56,
+   "z_lluvia_previa_mm": 1.84
+  }
+ },
+ "kaka-02": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 2762,
+   "ndti_agua": 0.0885,
+   "ndvi_orilla": 0.8435,
+   "bsi_orilla": -0.251,
+   "lluvia_previa_mm": 3.4,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -0.37,
+   "z_bsi_orilla": -1.41,
+   "z_lluvia_previa_mm": -1.64
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2827,
+   "ndti_agua": 0.0826,
+   "ndvi_orilla": 0.8328,
+   "bsi_orilla": -0.2431,
+   "lluvia_previa_mm": 14.15,
+   "fechas": [
+    "2020-07-27",
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.92,
+   "z_bsi_orilla": -0.65,
+   "z_lluvia_previa_mm": 1.04
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3021,
+   "ndti_agua": 0.0785,
+   "ndvi_orilla": 0.8081,
+   "bsi_orilla": -0.2239,
+   "lluvia_previa_mm": 13.55,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -1.14,
+   "z_bsi_orilla": 0.7,
+   "z_lluvia_previa_mm": 0.87
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 2576,
+   "ndti_agua": 0.112,
+   "ndvi_orilla": 1.6733,
+   "bsi_orilla": -0.8324,
+   "lluvia_previa_mm": 10.2,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 2.64,
+   "z_bsi_orilla": -38.94,
+   "z_lluvia_previa_mm": -0.03
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1762,
+   "ndti_agua": 0.0827,
+   "ndvi_orilla": 0.8108,
+   "bsi_orilla": -0.2344,
+   "lluvia_previa_mm": 24.95,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.91,
+   "z_bsi_orilla": -0.04,
+   "z_lluvia_previa_mm": 3.11
+  },
+  "2024": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 3604,
+   "ndti_agua": 0.1112,
+   "ndvi_orilla": 0.8205,
+   "bsi_orilla": -0.1992,
+   "lluvia_previa_mm": 7.2,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 2.56,
+   "z_bsi_orilla": 1.97,
+   "z_lluvia_previa_mm": -0.82
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 3996,
+   "ndti_agua": 0.1101,
+   "ndvi_orilla": 0.8505,
+   "bsi_orilla": -0.2222,
+   "lluvia_previa_mm": 6.5,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 2.45,
+   "z_bsi_orilla": 0.82,
+   "z_lluvia_previa_mm": -1.04
+  }
+ },
+ "kaka-03": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 6457,
+   "ndti_agua": 0.0915,
+   "ndvi_orilla": 0.8528,
+   "bsi_orilla": -0.2186,
+   "lluvia_previa_mm": 3.9,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": 0.72,
+   "z_bsi_orilla": -1.56,
+   "z_lluvia_previa_mm": -1.1
+  },
+  "2020": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 6053,
+   "ndti_agua": 0.0818,
+   "ndvi_orilla": 0.808,
+   "bsi_orilla": -0.1997,
+   "lluvia_previa_mm": 25.6,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.35,
+   "z_bsi_orilla": 0.19,
+   "z_lluvia_previa_mm": 2.53
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5792,
+   "ndti_agua": 0.074,
+   "ndvi_orilla": 0.7837,
+   "bsi_orilla": -0.1829,
+   "lluvia_previa_mm": 15.85,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -1.14,
+   "z_bsi_orilla": 1.26,
+   "z_lluvia_previa_mm": 0.64
+  },
+  "2022": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 1779,
+   "ndti_agua": 0.1361,
+   "ndvi_orilla": 1.6145,
+   "bsi_orilla": -0.5991,
+   "lluvia_previa_mm": 13.9,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 5.22,
+   "z_bsi_orilla": -27.75,
+   "z_lluvia_previa_mm": 0.21
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5782,
+   "ndti_agua": 0.0779,
+   "ndvi_orilla": 0.7531,
+   "bsi_orilla": -0.1893,
+   "lluvia_previa_mm": 27.45,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -0.67,
+   "z_bsi_orilla": 0.93,
+   "z_lluvia_previa_mm": 2.85
+  },
+  "2024": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 6175,
+   "ndti_agua": 0.0851,
+   "ndvi_orilla": 0.8126,
+   "bsi_orilla": -0.2155,
+   "lluvia_previa_mm": 8.2,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": -0.1,
+   "z_bsi_orilla": -1.35,
+   "z_lluvia_previa_mm": -0.51
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 6797,
+   "ndti_agua": 0.1089,
+   "ndvi_orilla": 0.8099,
+   "bsi_orilla": -0.1921,
+   "lluvia_previa_mm": 8.1,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 2.52,
+   "z_bsi_orilla": 0.71,
+   "z_lluvia_previa_mm": -0.53
+  }
+ },
+ "kaka-04": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 5856,
+   "ndti_agua": 0.0844,
+   "ndvi_orilla": 0.846,
+   "bsi_orilla": -0.236,
+   "lluvia_previa_mm": 3.4,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": 0.01,
+   "z_bsi_orilla": -1.12,
+   "z_lluvia_previa_mm": -0.99
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 5692,
+   "ndti_agua": 0.0752,
+   "ndvi_orilla": 0.8071,
+   "bsi_orilla": -0.1991,
+   "lluvia_previa_mm": 24.7,
+   "fechas": [
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.6,
+   "z_bsi_orilla": 0.77,
+   "z_lluvia_previa_mm": 3.6
+  },
+  "2021": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3227,
+   "ndti_agua": 0.0792,
+   "ndvi_orilla": 0.7598,
+   "bsi_orilla": -0.173,
+   "lluvia_previa_mm": 12.1,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.34,
+   "z_bsi_orilla": 1.79,
+   "z_lluvia_previa_mm": 1.08
+  },
+  "2022": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 2053,
+   "ndti_agua": 0.1257,
+   "ndvi_orilla": 1.7644,
+   "bsi_orilla": -0.6962,
+   "lluvia_previa_mm": 6.5,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 4.2,
+   "z_bsi_orilla": -17.59,
+   "z_lluvia_previa_mm": -0.35
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5823,
+   "ndti_agua": 0.0685,
+   "ndvi_orilla": 0.8045,
+   "bsi_orilla": -0.2335,
+   "lluvia_previa_mm": 28.25,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -1.28,
+   "z_bsi_orilla": -0.97,
+   "z_lluvia_previa_mm": 4.31
+  },
+  "2024": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5069,
+   "ndti_agua": 0.0893,
+   "ndvi_orilla": 0.8341,
+   "bsi_orilla": -0.1958,
+   "lluvia_previa_mm": 4.2,
+   "fechas": [
+    "2024-06-11",
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 0.51,
+   "z_bsi_orilla": 0.95,
+   "z_lluvia_previa_mm": -0.79
+  },
+  "2025": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 5678,
+   "ndti_agua": 0.1077,
+   "ndvi_orilla": 0.833,
+   "bsi_orilla": -0.2103,
+   "lluvia_previa_mm": 6.9,
+   "fechas": [
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 2.48,
+   "z_bsi_orilla": 0.2,
+   "z_lluvia_previa_mm": -0.29
+  }
+ },
+ "kaka-05": {
+  "2019": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4726,
+   "ndti_agua": 0.0834,
+   "ndvi_orilla": 0.8522,
+   "bsi_orilla": -0.2597,
+   "lluvia_previa_mm": 6.0,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16"
+   ],
+   "z_ndti_agua": -1.7,
+   "z_bsi_orilla": -0.81,
+   "z_lluvia_previa_mm": -0.45
+  },
+  "2020": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5082,
+   "ndti_agua": 0.0841,
+   "ndvi_orilla": 0.8316,
+   "bsi_orilla": -0.2377,
+   "lluvia_previa_mm": 21.0,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -1.64,
+   "z_bsi_orilla": 1.31,
+   "z_lluvia_previa_mm": 2.99
+  },
+  "2021": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 5610,
+   "ndti_agua": 0.0993,
+   "ndvi_orilla": 0.8757,
+   "bsi_orilla": -0.2566,
+   "lluvia_previa_mm": 14.5,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-31",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": 0.4,
+   "z_bsi_orilla": -0.51,
+   "z_lluvia_previa_mm": 1.69
+  },
+  "2022": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 2159,
+   "ndti_agua": 0.108,
+   "ndvi_orilla": 1.8285,
+   "bsi_orilla": -0.8175,
+   "lluvia_previa_mm": 3.4,
+   "fechas": [
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 1.21,
+   "z_bsi_orilla": -40.63,
+   "z_lluvia_previa_mm": -0.91
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5316,
+   "ndti_agua": 0.0725,
+   "ndvi_orilla": 0.8184,
+   "bsi_orilla": -0.2562,
+   "lluvia_previa_mm": 30.2,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -2.8,
+   "z_bsi_orilla": -0.47,
+   "z_lluvia_previa_mm": 4.83
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 5090,
+   "ndti_agua": 0.1016,
+   "ndvi_orilla": 0.8538,
+   "bsi_orilla": -0.227,
+   "lluvia_previa_mm": 6.15,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 0.62,
+   "z_bsi_orilla": 2.05,
+   "z_lluvia_previa_mm": -0.43
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5398,
+   "ndti_agua": 0.105,
+   "ndvi_orilla": 0.8507,
+   "bsi_orilla": -0.2404,
+   "lluvia_previa_mm": 4.35,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16"
+   ],
+   "z_ndti_agua": 0.99,
+   "z_bsi_orilla": 0.98,
+   "z_lluvia_previa_mm": -0.72
+  }
+ },
+ "kaka-06": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5229,
+   "ndti_agua": 0.0867,
+   "ndvi_orilla": 0.8389,
+   "bsi_orilla": -0.2407,
+   "lluvia_previa_mm": 4.8,
+   "fechas": [
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24"
+   ],
+   "z_ndti_agua": 0.24,
+   "z_bsi_orilla": -0.45,
+   "z_lluvia_previa_mm": -0.19
+  },
+  "2020": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5412,
+   "ndti_agua": 0.0795,
+   "ndvi_orilla": 0.8181,
+   "bsi_orilla": -0.2179,
+   "lluvia_previa_mm": 17.5,
+   "fechas": [
+    "2020-08-06",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.62,
+   "z_bsi_orilla": 0.49,
+   "z_lluvia_previa_mm": 2.59
+  },
+  "2021": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 5014,
+   "ndti_agua": 0.0817,
+   "ndvi_orilla": 0.8422,
+   "bsi_orilla": -0.2704,
+   "lluvia_previa_mm": 3.3,
+   "fechas": [
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-25"
+   ],
+   "z_ndti_agua": -0.38,
+   "z_bsi_orilla": -2.65,
+   "z_lluvia_previa_mm": -0.54
+  },
+  "2022": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 1701,
+   "ndti_agua": 0.0997,
+   "ndvi_orilla": 1.8818,
+   "bsi_orilla": -0.7654,
+   "lluvia_previa_mm": 2.5,
+   "fechas": [
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-21",
+    "2022-08-26",
+    "2022-08-31"
+   ],
+   "z_ndti_agua": 1.55,
+   "z_bsi_orilla": -31.94,
+   "z_lluvia_previa_mm": -0.7
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5163,
+   "ndti_agua": 0.0759,
+   "ndvi_orilla": 0.8003,
+   "bsi_orilla": -0.2325,
+   "lluvia_previa_mm": 23.5,
+   "fechas": [
+    "2023-08-01",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": -1.09,
+   "z_bsi_orilla": -0.07,
+   "z_lluvia_previa_mm": 3.79
+  },
+  "2024": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 5182,
+   "ndti_agua": 0.0869,
+   "ndvi_orilla": 0.8105,
+   "bsi_orilla": -0.1877,
+   "lluvia_previa_mm": 7.2,
+   "fechas": [
+    "2024-07-21",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04"
+   ],
+   "z_ndti_agua": 0.27,
+   "z_bsi_orilla": 1.8,
+   "z_lluvia_previa_mm": 0.53
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 6340,
+   "ndti_agua": 0.1099,
+   "ndvi_orilla": 0.841,
+   "bsi_orilla": -0.2186,
+   "lluvia_previa_mm": 4.3,
+   "fechas": [
+    "2025-07-08",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16"
+   ],
+   "z_ndti_agua": 2.57,
+   "z_bsi_orilla": 0.46,
+   "z_lluvia_previa_mm": -0.34
+  }
+ },
+ "mapiri-01": {
+  "2019": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 3640,
+   "ndti_agua": 0.0365,
+   "ndvi_orilla": 0.7667,
+   "bsi_orilla": -0.1625,
+   "lluvia_previa_mm": 11.1,
+   "fechas": [
+    "2019-06-06",
+    "2019-07-31",
+    "2019-08-05",
+    "2019-08-15",
+    "2019-09-14",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": -1.83,
+   "z_bsi_orilla": 0.7,
+   "z_lluvia_previa_mm": 1.34
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4317,
+   "ndti_agua": 0.0878,
+   "ndvi_orilla": 0.7753,
+   "bsi_orilla": -0.1975,
+   "lluvia_previa_mm": 15.5,
+   "fechas": [
+    "2020-06-30",
+    "2020-07-20",
+    "2020-08-04",
+    "2020-08-24"
+   ],
+   "z_ndti_agua": 0.97,
+   "z_bsi_orilla": -0.59,
+   "z_lluvia_previa_mm": 2.22
+  },
+  "2021": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 4081,
+   "ndti_agua": 0.046,
+   "ndvi_orilla": 0.7457,
+   "bsi_orilla": -0.1975,
+   "lluvia_previa_mm": 3.4,
+   "fechas": [
+    "2021-07-05",
+    "2021-07-10",
+    "2021-08-19"
+   ],
+   "z_ndti_agua": -1.42,
+   "z_bsi_orilla": -0.59,
+   "z_lluvia_previa_mm": -0.6
+  },
+  "2022": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 2799,
+   "ndti_agua": 0.0754,
+   "ndvi_orilla": 1.5965,
+   "bsi_orilla": -0.2547,
+   "lluvia_previa_mm": 1.6,
+   "fechas": [
+    "2022-06-15",
+    "2022-07-05",
+    "2022-07-10",
+    "2022-08-14",
+    "2022-08-24"
+   ],
+   "z_ndti_agua": 0.34,
+   "z_bsi_orilla": -2.28,
+   "z_lluvia_previa_mm": -0.96
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 3586,
+   "ndti_agua": 0.0834,
+   "ndvi_orilla": 0.7299,
+   "bsi_orilla": -0.1424,
+   "lluvia_previa_mm": 8.45,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-19",
+    "2023-08-24",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-18"
+   ],
+   "z_ndti_agua": 0.79,
+   "z_bsi_orilla": 1.87,
+   "z_lluvia_previa_mm": 0.81
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 4679,
+   "ndti_agua": 0.0459,
+   "ndvi_orilla": 0.7207,
+   "bsi_orilla": -0.132,
+   "lluvia_previa_mm": 4.4,
+   "fechas": [
+    "2024-06-04",
+    "2024-06-09",
+    "2024-07-04",
+    "2024-07-19",
+    "2024-08-13",
+    "2024-08-18",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -1.43,
+   "z_bsi_orilla": 2.27,
+   "z_lluvia_previa_mm": -0.35
+  },
+  "2025": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3838,
+   "ndti_agua": 0.1027,
+   "ndvi_orilla": 0.7626,
+   "bsi_orilla": -0.1844,
+   "lluvia_previa_mm": 4.4,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-04",
+    "2025-07-09",
+    "2025-07-21",
+    "2025-07-24",
+    "2025-08-03"
+   ],
+   "z_ndti_agua": 1.51,
+   "z_bsi_orilla": -0.11,
+   "z_lluvia_previa_mm": -0.35
+  }
+ },
+ "mapiri-02": {
+  "2019": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2482,
+   "ndti_agua": 0.097,
+   "ndvi_orilla": 0.8429,
+   "bsi_orilla": -0.243,
+   "lluvia_previa_mm": 16.85,
+   "fechas": [
+    "2019-06-06",
+    "2019-07-31",
+    "2019-08-05",
+    "2019-09-14",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": -0.02,
+   "z_bsi_orilla": -0.03,
+   "z_lluvia_previa_mm": 1.96
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 1777,
+   "ndti_agua": 0.1061,
+   "ndvi_orilla": 0.822,
+   "bsi_orilla": -0.285,
+   "lluvia_previa_mm": 15.4,
+   "fechas": [
+    "2020-06-30",
+    "2020-07-20",
+    "2020-08-04",
+    "2020-08-24"
+   ],
+   "z_ndti_agua": 0.83,
+   "z_bsi_orilla": -2.52,
+   "z_lluvia_previa_mm": 1.67
+  },
+  "2021": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 1739,
+   "ndti_agua": 0.0601,
+   "ndvi_orilla": 0.7798,
+   "bsi_orilla": -0.226,
+   "lluvia_previa_mm": 4.2,
+   "fechas": [
+    "2021-07-10",
+    "2021-08-09",
+    "2021-08-19"
+   ],
+   "z_ndti_agua": -3.72,
+   "z_bsi_orilla": 0.54,
+   "z_lluvia_previa_mm": -0.73
+  },
+  "2022": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 4627,
+   "ndti_agua": 0.0828,
+   "ndvi_orilla": 1.7345,
+   "bsi_orilla": -0.756,
+   "lluvia_previa_mm": 1.75,
+   "fechas": [
+    "2022-07-05",
+    "2022-07-10",
+    "2022-08-14",
+    "2022-08-24"
+   ],
+   "z_ndti_agua": -1.45,
+   "z_bsi_orilla": -27.63,
+   "z_lluvia_previa_mm": -1.03
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 2519,
+   "ndti_agua": 0.0974,
+   "ndvi_orilla": 0.8116,
+   "bsi_orilla": -0.2513,
+   "lluvia_previa_mm": 10.65,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-19",
+    "2023-08-24",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-18"
+   ],
+   "z_ndti_agua": 0.02,
+   "z_bsi_orilla": -0.31,
+   "z_lluvia_previa_mm": 0.6
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 2696,
+   "ndti_agua": 0.0972,
+   "ndvi_orilla": 0.7524,
+   "bsi_orilla": -0.183,
+   "lluvia_previa_mm": 9.8,
+   "fechas": [
+    "2024-06-04",
+    "2024-06-09",
+    "2024-07-04",
+    "2024-08-13",
+    "2024-08-18",
+    "2024-09-02",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -0.0,
+   "z_bsi_orilla": 2.42,
+   "z_lluvia_previa_mm": 0.35
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 2569,
+   "ndti_agua": 0.1272,
+   "ndvi_orilla": 0.8238,
+   "bsi_orilla": -0.2325,
+   "lluvia_previa_mm": 4.3,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-04",
+    "2025-07-09",
+    "2025-07-21",
+    "2025-07-24",
+    "2025-08-03",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 3.01,
+   "z_bsi_orilla": 0.33,
+   "z_lluvia_previa_mm": -0.71
+  }
+ },
+ "mapiri-03": {
+  "2019": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2446,
+   "ndti_agua": 0.0938,
+   "ndvi_orilla": 0.8491,
+   "bsi_orilla": -0.2576,
+   "lluvia_previa_mm": 18.1,
+   "fechas": [
+    "2019-06-06",
+    "2019-07-31",
+    "2019-08-05",
+    "2019-09-14",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": 0.11,
+   "z_bsi_orilla": -0.31,
+   "z_lluvia_previa_mm": 1.91
+  },
+  "2020": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 2188,
+   "ndti_agua": 0.0814,
+   "ndvi_orilla": 0.8054,
+   "bsi_orilla": -0.2735,
+   "lluvia_previa_mm": 9.55,
+   "fechas": [
+    "2020-06-25",
+    "2020-06-30",
+    "2020-07-05",
+    "2020-07-20",
+    "2020-08-04",
+    "2020-08-24"
+   ],
+   "z_ndti_agua": -1.08,
+   "z_bsi_orilla": -0.9,
+   "z_lluvia_previa_mm": -0.01
+  },
+  "2021": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 1878,
+   "ndti_agua": 0.0756,
+   "ndvi_orilla": 0.7823,
+   "bsi_orilla": -0.2133,
+   "lluvia_previa_mm": 7.6,
+   "fechas": [
+    "2021-07-10",
+    "2021-08-09",
+    "2021-08-19",
+    "2021-09-18"
+   ],
+   "z_ndti_agua": -1.46,
+   "z_bsi_orilla": 1.33,
+   "z_lluvia_previa_mm": -0.48
+  },
+  "2022": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 4113,
+   "ndti_agua": 0.0823,
+   "ndvi_orilla": 1.6369,
+   "bsi_orilla": -0.6769,
+   "lluvia_previa_mm": 2.5,
+   "fechas": [
+    "2022-07-05",
+    "2022-07-10",
+    "2022-08-14",
+    "2022-08-24",
+    "2022-09-08"
+   ],
+   "z_ndti_agua": -0.98,
+   "z_bsi_orilla": -12.55,
+   "z_lluvia_previa_mm": -1.61
+  },
+  "2023": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 2760,
+   "ndti_agua": 0.1019,
+   "ndvi_orilla": 0.7866,
+   "bsi_orilla": -0.2272,
+   "lluvia_previa_mm": 11.7,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-19",
+    "2023-08-24",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-18"
+   ],
+   "z_ndti_agua": 0.98,
+   "z_bsi_orilla": 0.71,
+   "z_lluvia_previa_mm": 0.51
+  },
+  "2024": {
+   "escenas": 10,
+   "suficiente": true,
+   "px_agua_mediana": 2801,
+   "ndti_agua": 0.1029,
+   "ndvi_orilla": 0.7534,
+   "bsi_orilla": -0.2063,
+   "lluvia_previa_mm": 3.4,
+   "fechas": [
+    "2024-06-04",
+    "2024-06-09",
+    "2024-06-14",
+    "2024-07-04",
+    "2024-07-24",
+    "2024-08-13",
+    "2024-08-18",
+    "2024-09-02",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": 1.05,
+   "z_bsi_orilla": 1.53,
+   "z_lluvia_previa_mm": -1.43
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 2501,
+   "ndti_agua": 0.1395,
+   "ndvi_orilla": 0.8476,
+   "bsi_orilla": -0.26,
+   "lluvia_previa_mm": 11.6,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-04",
+    "2025-07-09",
+    "2025-08-03",
+    "2025-08-13",
+    "2025-09-19",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 3.63,
+   "z_bsi_orilla": -0.39,
+   "z_lluvia_previa_mm": 0.49
+  }
+ },
+ "mapiri-04": {
+  "2019": {
+   "escenas": 12,
+   "suficiente": true,
+   "px_agua_mediana": 1946,
+   "ndti_agua": 0.0963,
+   "ndvi_orilla": 0.8296,
+   "bsi_orilla": -0.2332,
+   "lluvia_previa_mm": 17.8,
+   "fechas": [
+    "2019-06-06",
+    "2019-06-23",
+    "2019-07-08",
+    "2019-07-31",
+    "2019-08-05",
+    "2019-08-07",
+    "2019-08-17",
+    "2019-08-22",
+    "2019-09-14",
+    "2019-09-16",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": -0.36,
+   "z_bsi_orilla": -0.49,
+   "z_lluvia_previa_mm": 1.54
+  },
+  "2020": {
+   "escenas": 11,
+   "suficiente": true,
+   "px_agua_mediana": 2254,
+   "ndti_agua": 0.0881,
+   "ndvi_orilla": 0.8089,
+   "bsi_orilla": -0.2509,
+   "lluvia_previa_mm": 8.5,
+   "fechas": [
+    "2020-06-25",
+    "2020-06-30",
+    "2020-07-05",
+    "2020-07-20",
+    "2020-07-22",
+    "2020-07-27",
+    "2020-08-04",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.87,
+   "z_bsi_orilla": -0.93,
+   "z_lluvia_previa_mm": -0.36
+  },
+  "2021": {
+   "escenas": 11,
+   "suficiente": true,
+   "px_agua_mediana": 2113,
+   "ndti_agua": 0.0902,
+   "ndvi_orilla": 0.7788,
+   "bsi_orilla": -0.1618,
+   "lluvia_previa_mm": 10.0,
+   "fechas": [
+    "2021-06-02",
+    "2021-07-07",
+    "2021-07-10",
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-16",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-18",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.71,
+   "z_bsi_orilla": 1.19,
+   "z_lluvia_previa_mm": -0.11
+  },
+  "2022": {
+   "escenas": 12,
+   "suficiente": true,
+   "px_agua_mediana": 2851,
+   "ndti_agua": 0.0939,
+   "ndvi_orilla": 1.7487,
+   "bsi_orilla": -0.6163,
+   "lluvia_previa_mm": 5.9,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-02",
+    "2022-07-05",
+    "2022-07-10",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-08"
+   ],
+   "z_ndti_agua": -0.48,
+   "z_bsi_orilla": -7.84,
+   "z_lluvia_previa_mm": -0.84
+  },
+  "2023": {
+   "escenas": 14,
+   "suficiente": true,
+   "px_agua_mediana": 2637,
+   "ndti_agua": 0.1155,
+   "ndvi_orilla": 0.744,
+   "bsi_orilla": -0.1546,
+   "lluvia_previa_mm": 18.9,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-01",
+    "2023-08-04",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-19",
+    "2023-08-21",
+    "2023-08-24",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-10",
+    "2023-09-18",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 2.04,
+   "z_bsi_orilla": 1.31,
+   "z_lluvia_previa_mm": 1.74
+  },
+  "2024": {
+   "escenas": 16,
+   "suficiente": true,
+   "px_agua_mediana": 2463,
+   "ndti_agua": 0.1263,
+   "ndvi_orilla": 0.7603,
+   "bsi_orilla": -0.1699,
+   "lluvia_previa_mm": 4.85,
+   "fechas": [
+    "2024-06-04",
+    "2024-06-06",
+    "2024-06-09",
+    "2024-06-11",
+    "2024-06-14",
+    "2024-07-04",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": 3.12,
+   "z_bsi_orilla": 0.96,
+   "z_lluvia_previa_mm": -1.03
+  },
+  "2025": {
+   "escenas": 13,
+   "suficiente": true,
+   "px_agua_mediana": 2863,
+   "ndti_agua": 0.1449,
+   "ndvi_orilla": 0.826,
+   "bsi_orilla": -0.2332,
+   "lluvia_previa_mm": 13.4,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-09",
+    "2025-07-11",
+    "2025-08-03",
+    "2025-08-13",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-19",
+    "2025-09-26",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 4.98,
+   "z_bsi_orilla": -0.49,
+   "z_lluvia_previa_mm": 0.72
+  }
+ },
+ "mapiri-05": {
+  "2019": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 3234,
+   "ndti_agua": 0.0966,
+   "ndvi_orilla": 0.786,
+   "bsi_orilla": -0.1507,
+   "lluvia_previa_mm": 17.45,
+   "fechas": [
+    "2019-07-31",
+    "2019-08-07",
+    "2019-08-22",
+    "2019-09-16",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": -0.75,
+   "z_bsi_orilla": -0.75,
+   "z_lluvia_previa_mm": 1.4
+  },
+  "2020": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 3197,
+   "ndti_agua": 0.0981,
+   "ndvi_orilla": 0.7768,
+   "bsi_orilla": -0.1261,
+   "lluvia_previa_mm": 12.8,
+   "fechas": [
+    "2020-06-30",
+    "2020-07-20",
+    "2020-07-27",
+    "2020-08-04",
+    "2020-08-24",
+    "2020-08-26",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.67,
+   "z_bsi_orilla": 0.16,
+   "z_lluvia_previa_mm": 0.47
+  },
+  "2021": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 3171,
+   "ndti_agua": 0.0901,
+   "ndvi_orilla": 0.7295,
+   "bsi_orilla": -0.0957,
+   "lluvia_previa_mm": 13.0,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-16",
+    "2021-08-19",
+    "2021-08-31",
+    "2021-09-18",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.98,
+   "z_bsi_orilla": 1.6,
+   "z_lluvia_previa_mm": 0.51
+  },
+  "2022": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 958,
+   "ndti_agua": 0.1599,
+   "ndvi_orilla": 1.8089,
+   "bsi_orilla": -0.4795,
+   "lluvia_previa_mm": 9.4,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-07-27",
+    "2022-08-14",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-08"
+   ],
+   "z_ndti_agua": 3.02,
+   "z_bsi_orilla": -8.9,
+   "z_lluvia_previa_mm": -0.47
+  },
+  "2023": {
+   "escenas": 12,
+   "suficiente": true,
+   "px_agua_mediana": 3215,
+   "ndti_agua": 0.1203,
+   "ndvi_orilla": 0.7014,
+   "bsi_orilla": -0.0775,
+   "lluvia_previa_mm": 10.75,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-01",
+    "2023-08-04",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-19",
+    "2023-08-29",
+    "2023-09-08",
+    "2023-09-10",
+    "2023-09-15",
+    "2023-09-25"
+   ],
+   "z_ndti_agua": 0.67,
+   "z_bsi_orilla": 2.28,
+   "z_lluvia_previa_mm": -0.15
+  },
+  "2024": {
+   "escenas": 12,
+   "suficiente": true,
+   "px_agua_mediana": 3446,
+   "ndti_agua": 0.1157,
+   "ndvi_orilla": 0.7076,
+   "bsi_orilla": -0.1149,
+   "lluvia_previa_mm": 8.5,
+   "fechas": [
+    "2024-06-09",
+    "2024-06-11",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-13",
+    "2024-08-15",
+    "2024-08-18",
+    "2024-08-30",
+    "2024-09-02",
+    "2024-09-04",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": 0.28,
+   "z_bsi_orilla": 0.57,
+   "z_lluvia_previa_mm": -0.66
+  },
+  "2025": {
+   "escenas": 12,
+   "suficiente": true,
+   "px_agua_mediana": 2632,
+   "ndti_agua": 0.1366,
+   "ndvi_orilla": 0.7829,
+   "bsi_orilla": -0.1501,
+   "lluvia_previa_mm": 10.2,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-06",
+    "2025-07-08",
+    "2025-07-09",
+    "2025-07-11",
+    "2025-08-17",
+    "2025-08-30",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-19",
+    "2025-09-26",
+    "2025-09-27"
+   ],
+   "z_ndti_agua": 1.69,
+   "z_bsi_orilla": -0.73,
+   "z_lluvia_previa_mm": -0.32
+  }
+ },
+ "tipuani-01": {
+  "2019": {
+   "escenas": 1,
+   "suficiente": false,
+   "px_agua_mediana": 28,
+   "ndti_agua": -0.0271,
+   "ndvi_orilla": 0.3981,
+   "bsi_orilla": 0.1759,
+   "lluvia_previa_mm": 24.6,
+   "fechas": [
+    "2019-09-29"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2020": {
+   "escenas": 0,
+   "suficiente": false,
+   "px_agua_mediana": 0,
+   "ndti_agua": null,
+   "ndvi_orilla": null,
+   "bsi_orilla": null,
+   "lluvia_previa_mm": null,
+   "fechas": [],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2021": {
+   "escenas": 0,
+   "suficiente": false,
+   "px_agua_mediana": 0,
+   "ndti_agua": null,
+   "ndvi_orilla": null,
+   "bsi_orilla": null,
+   "lluvia_previa_mm": null,
+   "fechas": [],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2022": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 7033,
+   "ndti_agua": 0.0513,
+   "ndvi_orilla": 1.3848,
+   "bsi_orilla": 0.6899,
+   "lluvia_previa_mm": 9.75,
+   "fechas": [
+    "2022-06-15",
+    "2022-06-30",
+    "2022-07-05",
+    "2022-08-24"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2023": {
+   "escenas": 0,
+   "suficiente": false,
+   "px_agua_mediana": 0,
+   "ndti_agua": null,
+   "ndvi_orilla": null,
+   "bsi_orilla": null,
+   "lluvia_previa_mm": null,
+   "fechas": [],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2024": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 21,
+   "ndti_agua": -0.0308,
+   "ndvi_orilla": 0.4659,
+   "bsi_orilla": 0.1242,
+   "lluvia_previa_mm": 9.6,
+   "fechas": [
+    "2024-06-09",
+    "2024-06-14",
+    "2024-07-04"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  },
+  "2025": {
+   "escenas": 1,
+   "suficiente": false,
+   "px_agua_mediana": 24,
+   "ndti_agua": -0.0557,
+   "ndvi_orilla": 0.5027,
+   "bsi_orilla": 0.0749,
+   "lluvia_previa_mm": 25.6,
+   "fechas": [
+    "2025-06-04"
+   ],
+   "z_ndti_agua": null,
+   "z_bsi_orilla": null,
+   "z_lluvia_previa_mm": null
+  }
+ },
+ "tipuani-02": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 186,
+   "ndti_agua": -0.0116,
+   "ndvi_orilla": 0.8539,
+   "bsi_orilla": -0.2967,
+   "lluvia_previa_mm": 17.1,
+   "fechas": [
+    "2019-06-06",
+    "2019-07-31",
+    "2019-08-05",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": 0.2,
+   "z_bsi_orilla": 0.48,
+   "z_lluvia_previa_mm": 2.9
+  },
+  "2020": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 141,
+   "ndti_agua": -0.0062,
+   "ndvi_orilla": 0.8438,
+   "bsi_orilla": -0.3085,
+   "lluvia_previa_mm": 1.5,
+   "fechas": [
+    "2020-06-25",
+    "2020-06-30",
+    "2020-07-05",
+    "2020-07-20",
+    "2020-08-04"
+   ],
+   "z_ndti_agua": 1.08,
+   "z_bsi_orilla": -0.92,
+   "z_lluvia_previa_mm": -0.33
+  },
+  "2021": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 114,
+   "ndti_agua": -0.0029,
+   "ndvi_orilla": 0.8609,
+   "bsi_orilla": -0.2933,
+   "lluvia_previa_mm": 0.5,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-05",
+    "2021-07-10",
+    "2021-08-19"
+   ],
+   "z_ndti_agua": 1.41,
+   "z_bsi_orilla": 0.87,
+   "z_lluvia_previa_mm": -0.53
+  },
+  "2022": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 12368,
+   "ndti_agua": 0.0663,
+   "ndvi_orilla": 1.76,
+   "bsi_orilla": -0.8142,
+   "lluvia_previa_mm": 2.75,
+   "fechas": [
+    "2022-06-15",
+    "2022-06-30",
+    "2022-07-05",
+    "2022-08-24"
+   ],
+   "z_ndti_agua": 8.33,
+   "z_bsi_orilla": -51.49,
+   "z_lluvia_previa_mm": -0.05
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 129,
+   "ndti_agua": -0.0235,
+   "ndvi_orilla": 0.8278,
+   "bsi_orilla": -0.2935,
+   "lluvia_previa_mm": 3.55,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-19",
+    "2023-08-24",
+    "2023-08-29"
+   ],
+   "z_ndti_agua": -1.01,
+   "z_bsi_orilla": 0.85,
+   "z_lluvia_previa_mm": 0.18
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 241,
+   "ndti_agua": -0.0233,
+   "ndvi_orilla": 0.8548,
+   "bsi_orilla": -0.3018,
+   "lluvia_previa_mm": 2.5,
+   "fechas": [
+    "2024-06-09",
+    "2024-06-14",
+    "2024-07-04",
+    "2024-07-19"
+   ],
+   "z_ndti_agua": -1.0,
+   "z_bsi_orilla": -0.24,
+   "z_lluvia_previa_mm": -0.13
+  },
+  "2025": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 142,
+   "ndti_agua": -0.0224,
+   "ndvi_orilla": 0.8403,
+   "bsi_orilla": -0.3022,
+   "lluvia_previa_mm": 5.5,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-04",
+    "2025-07-09",
+    "2025-08-03",
+    "2025-08-13"
+   ],
+   "z_ndti_agua": -0.89,
+   "z_bsi_orilla": -0.3,
+   "z_lluvia_previa_mm": 0.57
+  }
+ },
+ "tipuani-03": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 81,
+   "ndti_agua": 0.0495,
+   "ndvi_orilla": 0.8618,
+   "bsi_orilla": -0.2941,
+   "lluvia_previa_mm": 9.1,
+   "fechas": [
+    "2019-06-06",
+    "2019-07-31",
+    "2019-08-05",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": 3.03,
+   "z_bsi_orilla": 0.98,
+   "z_lluvia_previa_mm": 1.39
+  },
+  "2020": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 60,
+   "ndti_agua": 0.0189,
+   "ndvi_orilla": 0.8526,
+   "bsi_orilla": -0.3132,
+   "lluvia_previa_mm": 2.6,
+   "fechas": [
+    "2020-06-25",
+    "2020-06-30",
+    "2020-07-05",
+    "2020-07-20",
+    "2020-08-04"
+   ],
+   "z_ndti_agua": -0.31,
+   "z_bsi_orilla": -1.0,
+   "z_lluvia_previa_mm": -0.09
+  },
+  "2021": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 65,
+   "ndti_agua": 0.0133,
+   "ndvi_orilla": 0.8478,
+   "bsi_orilla": -0.2789,
+   "lluvia_previa_mm": 0.0,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-05",
+    "2021-07-10"
+   ],
+   "z_ndti_agua": -0.97,
+   "z_bsi_orilla": 2.5,
+   "z_lluvia_previa_mm": -0.7
+  },
+  "2022": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 13888,
+   "ndti_agua": 0.0774,
+   "ndvi_orilla": 1.7803,
+   "bsi_orilla": -0.9391,
+   "lluvia_previa_mm": 4.4,
+   "fechas": [
+    "2022-06-15",
+    "2022-06-30",
+    "2022-08-24"
+   ],
+   "z_ndti_agua": 5.81,
+   "z_bsi_orilla": -63.59,
+   "z_lluvia_previa_mm": 0.45
+  },
+  "2023": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 93,
+   "ndti_agua": 0.0146,
+   "ndvi_orilla": 0.8469,
+   "bsi_orilla": -0.3028,
+   "lluvia_previa_mm": 1.7,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-19",
+    "2023-08-24"
+   ],
+   "z_ndti_agua": -0.82,
+   "z_bsi_orilla": 0.08,
+   "z_lluvia_previa_mm": -0.36
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 77,
+   "ndti_agua": 0.0264,
+   "ndvi_orilla": 0.854,
+   "bsi_orilla": -0.3036,
+   "lluvia_previa_mm": 0.6,
+   "fechas": [
+    "2024-06-09",
+    "2024-06-14",
+    "2024-07-04",
+    "2024-07-19"
+   ],
+   "z_ndti_agua": 0.71,
+   "z_bsi_orilla": -0.01,
+   "z_lluvia_previa_mm": -0.58
+  },
+  "2025": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 185,
+   "ndti_agua": 0.0196,
+   "ndvi_orilla": 0.8535,
+   "bsi_orilla": -0.3042,
+   "lluvia_previa_mm": 5.9,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-04",
+    "2025-07-09",
+    "2025-08-03",
+    "2025-08-13"
+   ],
+   "z_ndti_agua": -0.24,
+   "z_bsi_orilla": -0.07,
+   "z_lluvia_previa_mm": 0.75
+  }
+ },
+ "tipuani-04": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 339,
+   "ndti_agua": 0.0501,
+   "ndvi_orilla": 0.8519,
+   "bsi_orilla": -0.2793,
+   "lluvia_previa_mm": 10.6,
+   "fechas": [
+    "2019-06-06",
+    "2019-07-31",
+    "2019-08-05",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": 0.89,
+   "z_bsi_orilla": 0.19,
+   "z_lluvia_previa_mm": 1.46
+  },
+  "2020": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 291,
+   "ndti_agua": 0.0236,
+   "ndvi_orilla": 0.8437,
+   "bsi_orilla": -0.2957,
+   "lluvia_previa_mm": 2.5,
+   "fechas": [
+    "2020-06-25",
+    "2020-06-30",
+    "2020-07-05",
+    "2020-07-20",
+    "2020-08-04"
+   ],
+   "z_ndti_agua": -1.37,
+   "z_bsi_orilla": -0.73,
+   "z_lluvia_previa_mm": -0.53
+  },
+  "2021": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 141,
+   "ndti_agua": 0.0098,
+   "ndvi_orilla": 0.7492,
+   "bsi_orilla": -0.2234,
+   "lluvia_previa_mm": 0.55,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-05",
+    "2021-07-10",
+    "2021-08-19"
+   ],
+   "z_ndti_agua": -2.31,
+   "z_bsi_orilla": 5.03,
+   "z_lluvia_previa_mm": -0.95
+  },
+  "2022": {
+   "escenas": 3,
+   "suficiente": true,
+   "px_agua_mediana": 9793,
+   "ndti_agua": 0.085,
+   "ndvi_orilla": 1.7375,
+   "bsi_orilla": -0.7313,
+   "lluvia_previa_mm": 6.6,
+   "fechas": [
+    "2022-06-15",
+    "2022-06-30",
+    "2022-08-24"
+   ],
+   "z_ndti_agua": 3.24,
+   "z_bsi_orilla": -36.52,
+   "z_lluvia_previa_mm": 0.66
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 274,
+   "ndti_agua": 0.0304,
+   "ndvi_orilla": 0.8238,
+   "bsi_orilla": -0.2589,
+   "lluvia_previa_mm": 4.05,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-19",
+    "2023-08-24",
+    "2023-08-29"
+   ],
+   "z_ndti_agua": -0.67,
+   "z_bsi_orilla": 2.11,
+   "z_lluvia_previa_mm": -0.09
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 469,
+   "ndti_agua": 0.0437,
+   "ndvi_orilla": 0.8406,
+   "bsi_orilla": -0.2844,
+   "lluvia_previa_mm": 0.85,
+   "fechas": [
+    "2024-06-09",
+    "2024-06-14",
+    "2024-07-04",
+    "2024-07-19"
+   ],
+   "z_ndti_agua": 0.35,
+   "z_bsi_orilla": -0.09,
+   "z_lluvia_previa_mm": -0.89
+  },
+  "2025": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 435,
+   "ndti_agua": 0.0434,
+   "ndvi_orilla": 0.8445,
+   "bsi_orilla": -0.2846,
+   "lluvia_previa_mm": 8.0,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-04",
+    "2025-07-09",
+    "2025-08-03",
+    "2025-08-13"
+   ],
+   "z_ndti_agua": 0.32,
+   "z_bsi_orilla": -0.1,
+   "z_lluvia_previa_mm": 0.94
+  }
+ },
+ "tipuani-05": {
+  "2019": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 1329,
+   "ndti_agua": 0.052,
+   "ndvi_orilla": 0.809,
+   "bsi_orilla": -0.2116,
+   "lluvia_previa_mm": 7.0,
+   "fechas": [
+    "2019-06-06",
+    "2019-06-23",
+    "2019-07-08",
+    "2019-07-31",
+    "2019-08-07",
+    "2019-08-17",
+    "2019-09-16",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": 0.88,
+   "z_bsi_orilla": -0.41,
+   "z_lluvia_previa_mm": -0.79
+  },
+  "2020": {
+   "escenas": 10,
+   "suficiente": true,
+   "px_agua_mediana": 1161,
+   "ndti_agua": 0.0413,
+   "ndvi_orilla": 0.7937,
+   "bsi_orilla": -0.1914,
+   "lluvia_previa_mm": 9.75,
+   "fechas": [
+    "2020-06-25",
+    "2020-06-30",
+    "2020-07-20",
+    "2020-07-22",
+    "2020-07-27",
+    "2020-08-04",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": -0.36,
+   "z_bsi_orilla": 0.34,
+   "z_lluvia_previa_mm": 0.03
+  },
+  "2021": {
+   "escenas": 9,
+   "suficiente": true,
+   "px_agua_mediana": 1299,
+   "ndti_agua": 0.0371,
+   "ndvi_orilla": 0.767,
+   "bsi_orilla": -0.1601,
+   "lluvia_previa_mm": 12.2,
+   "fechas": [
+    "2021-06-02",
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-18",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.78,
+   "z_bsi_orilla": 2.63,
+   "z_lluvia_previa_mm": 0.76
+  },
+  "2022": {
+   "escenas": 12,
+   "suficiente": true,
+   "px_agua_mediana": 3739,
+   "ndti_agua": 0.0694,
+   "ndvi_orilla": 1.5957,
+   "bsi_orilla": -0.4249,
+   "lluvia_previa_mm": 6.65,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-15",
+    "2022-06-17",
+    "2022-06-27",
+    "2022-07-02",
+    "2022-07-05",
+    "2022-07-22",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-08"
+   ],
+   "z_ndti_agua": 2.62,
+   "z_bsi_orilla": -8.63,
+   "z_lluvia_previa_mm": -0.86
+  },
+  "2023": {
+   "escenas": 10,
+   "suficiente": true,
+   "px_agua_mediana": 1898,
+   "ndti_agua": 0.043,
+   "ndvi_orilla": 0.7521,
+   "bsi_orilla": -0.1603,
+   "lluvia_previa_mm": 13.9,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-19",
+    "2023-08-21",
+    "2023-08-24",
+    "2023-08-29",
+    "2023-09-08"
+   ],
+   "z_ndti_agua": -0.19,
+   "z_bsi_orilla": 2.61,
+   "z_lluvia_previa_mm": 1.1
+  },
+  "2024": {
+   "escenas": 11,
+   "suficiente": true,
+   "px_agua_mediana": 2162,
+   "ndti_agua": 0.0434,
+   "ndvi_orilla": 0.7689,
+   "bsi_orilla": -0.1989,
+   "lluvia_previa_mm": 3.1,
+   "fechas": [
+    "2024-06-06",
+    "2024-06-09",
+    "2024-06-11",
+    "2024-06-14",
+    "2024-07-04",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-15",
+    "2024-09-04",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -0.13,
+   "z_bsi_orilla": 0.06,
+   "z_lluvia_previa_mm": -1.57
+  },
+  "2025": {
+   "escenas": 11,
+   "suficiente": true,
+   "px_agua_mediana": 2041,
+   "ndti_agua": 0.0464,
+   "ndvi_orilla": 0.8084,
+   "bsi_orilla": -0.2146,
+   "lluvia_previa_mm": 12.9,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-04",
+    "2025-07-06",
+    "2025-07-09",
+    "2025-08-03",
+    "2025-08-13",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-19",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 0.32,
+   "z_bsi_orilla": -0.51,
+   "z_lluvia_previa_mm": 0.91
+  }
+ },
+ "tipuani-06": {
+  "2019": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 880,
+   "ndti_agua": 0.068,
+   "ndvi_orilla": 0.778,
+   "bsi_orilla": -0.1642,
+   "lluvia_previa_mm": 15.25,
+   "fechas": [
+    "2019-07-31",
+    "2019-08-07",
+    "2019-08-17",
+    "2019-09-16",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": 0.73,
+   "z_bsi_orilla": 0.19,
+   "z_lluvia_previa_mm": 1.6
+  },
+  "2020": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 669,
+   "ndti_agua": 0.0617,
+   "ndvi_orilla": 0.7583,
+   "bsi_orilla": -0.1884,
+   "lluvia_previa_mm": 12.05,
+   "fechas": [
+    "2020-06-30",
+    "2020-07-20",
+    "2020-07-27",
+    "2020-08-04",
+    "2020-08-24",
+    "2020-09-10",
+    "2020-09-25",
+    "2020-09-30"
+   ],
+   "z_ndti_agua": 0.06,
+   "z_bsi_orilla": -1.62,
+   "z_lluvia_previa_mm": 0.96
+  },
+  "2021": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 624,
+   "ndti_agua": 0.0542,
+   "ndvi_orilla": 0.7578,
+   "bsi_orilla": -0.1362,
+   "lluvia_previa_mm": 10.75,
+   "fechas": [
+    "2021-07-07",
+    "2021-08-06",
+    "2021-08-09",
+    "2021-08-16",
+    "2021-08-31",
+    "2021-09-18",
+    "2021-09-25",
+    "2021-09-30"
+   ],
+   "z_ndti_agua": -0.78,
+   "z_bsi_orilla": 2.01,
+   "z_lluvia_previa_mm": 0.7
+  },
+  "2022": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 2449,
+   "ndti_agua": 0.0838,
+   "ndvi_orilla": 1.6677,
+   "bsi_orilla": -0.5282,
+   "lluvia_previa_mm": 7.7,
+   "fechas": [
+    "2022-06-12",
+    "2022-06-17",
+    "2022-08-21",
+    "2022-08-24",
+    "2022-08-26",
+    "2022-08-31",
+    "2022-09-08"
+   ],
+   "z_ndti_agua": 2.31,
+   "z_bsi_orilla": -26.27,
+   "z_lluvia_previa_mm": -0.22
+  },
+  "2023": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 927,
+   "ndti_agua": 0.0598,
+   "ndvi_orilla": 0.7658,
+   "bsi_orilla": -0.1522,
+   "lluvia_previa_mm": 6.4,
+   "fechas": [
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-06",
+    "2023-08-16",
+    "2023-08-19",
+    "2023-08-29",
+    "2023-09-08"
+   ],
+   "z_ndti_agua": -0.22,
+   "z_bsi_orilla": 0.96,
+   "z_lluvia_previa_mm": -0.56
+  },
+  "2024": {
+   "escenas": 8,
+   "suficiente": true,
+   "px_agua_mediana": 1158,
+   "ndti_agua": 0.0539,
+   "ndvi_orilla": 0.7028,
+   "bsi_orilla": -0.1679,
+   "lluvia_previa_mm": 5.65,
+   "fechas": [
+    "2024-06-09",
+    "2024-06-11",
+    "2024-07-21",
+    "2024-07-24",
+    "2024-08-15",
+    "2024-09-04",
+    "2024-09-07",
+    "2024-09-22"
+   ],
+   "z_ndti_agua": -0.81,
+   "z_bsi_orilla": -0.01,
+   "z_lluvia_previa_mm": -0.71
+  },
+  "2025": {
+   "escenas": 7,
+   "suficiente": true,
+   "px_agua_mediana": 1058,
+   "ndti_agua": 0.0623,
+   "ndvi_orilla": 0.8188,
+   "bsi_orilla": -0.1708,
+   "lluvia_previa_mm": 6.8,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-06",
+    "2025-08-17",
+    "2025-09-14",
+    "2025-09-16",
+    "2025-09-19",
+    "2025-09-26"
+   ],
+   "z_ndti_agua": 0.16,
+   "z_bsi_orilla": -0.18,
+   "z_lluvia_previa_mm": -0.48
+  }
+ },
+ "tipuani-07": {
+  "2019": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 67,
+   "ndti_agua": 0.0428,
+   "ndvi_orilla": 0.8398,
+   "bsi_orilla": -0.2706,
+   "lluvia_previa_mm": 15.7,
+   "fechas": [
+    "2019-06-06",
+    "2019-07-31",
+    "2019-08-05",
+    "2019-09-24",
+    "2019-09-29"
+   ],
+   "z_ndti_agua": 0.35,
+   "z_bsi_orilla": 0.58,
+   "z_lluvia_previa_mm": 2.43
+  },
+  "2020": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 54,
+   "ndti_agua": 0.0416,
+   "ndvi_orilla": 0.846,
+   "bsi_orilla": -0.2923,
+   "lluvia_previa_mm": 2.0,
+   "fechas": [
+    "2020-06-25",
+    "2020-06-30",
+    "2020-07-05",
+    "2020-07-20"
+   ],
+   "z_ndti_agua": 0.23,
+   "z_bsi_orilla": -1.91,
+   "z_lluvia_previa_mm": -0.36
+  },
+  "2021": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 61,
+   "ndti_agua": 0.0417,
+   "ndvi_orilla": 0.8516,
+   "bsi_orilla": -0.2673,
+   "lluvia_previa_mm": 1.05,
+   "fechas": [
+    "2021-06-30",
+    "2021-07-05",
+    "2021-07-10",
+    "2021-08-19"
+   ],
+   "z_ndti_agua": 0.24,
+   "z_bsi_orilla": 0.94,
+   "z_lluvia_previa_mm": -0.55
+  },
+  "2022": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 8519,
+   "ndti_agua": 0.0607,
+   "ndvi_orilla": 1.88,
+   "bsi_orilla": -0.6843,
+   "lluvia_previa_mm": 3.55,
+   "fechas": [
+    "2022-06-15",
+    "2022-06-30",
+    "2022-07-05",
+    "2022-08-24"
+   ],
+   "z_ndti_agua": 2.14,
+   "z_bsi_orilla": -41.11,
+   "z_lluvia_previa_mm": -0.05
+  },
+  "2023": {
+   "escenas": 6,
+   "suficiente": true,
+   "px_agua_mediana": 112,
+   "ndti_agua": 0.028,
+   "ndvi_orilla": 0.8167,
+   "bsi_orilla": -0.2719,
+   "lluvia_previa_mm": 4.05,
+   "fechas": [
+    "2023-06-20",
+    "2023-06-25",
+    "2023-08-04",
+    "2023-08-19",
+    "2023-08-24",
+    "2023-08-29"
+   ],
+   "z_ndti_agua": -1.36,
+   "z_bsi_orilla": 0.42,
+   "z_lluvia_previa_mm": 0.1
+  },
+  "2024": {
+   "escenas": 4,
+   "suficiente": true,
+   "px_agua_mediana": 64,
+   "ndti_agua": 0.0329,
+   "ndvi_orilla": 0.8461,
+   "bsi_orilla": -0.2746,
+   "lluvia_previa_mm": 3.55,
+   "fechas": [
+    "2024-06-09",
+    "2024-06-14",
+    "2024-07-04",
+    "2024-07-19"
+   ],
+   "z_ndti_agua": -0.88,
+   "z_bsi_orilla": 0.07,
+   "z_lluvia_previa_mm": -0.05
+  },
+  "2025": {
+   "escenas": 5,
+   "suficiente": true,
+   "px_agua_mediana": 119,
+   "ndti_agua": 0.037,
+   "ndvi_orilla": 0.8215,
+   "bsi_orilla": -0.2788,
+   "lluvia_previa_mm": 4.7,
+   "fechas": [
+    "2025-06-04",
+    "2025-07-04",
+    "2025-07-09",
+    "2025-08-03",
+    "2025-08-13"
+   ],
+   "z_ndti_agua": -0.47,
+   "z_bsi_orilla": -0.55,
+   "z_lluvia_previa_mm": 0.23
+  }
+ }
+}

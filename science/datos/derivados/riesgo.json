@@ -1,0 +1,4443 @@
+{
+ "alto-beni-01": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": 0.39,
+    "z_lluvia_previa": 1.45,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 3.42) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 3.42,
+    "z_lluvia_previa": -0.23,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 0.1,
+    "z_lluvia_previa": 4.2,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -0.97,
+    "z_lluvia_previa": -0.56,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 1.36,
+    "z_lluvia_previa": -0.54,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "alto-beni-02": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.42,
+    "z_lluvia_previa": 1.16,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 4.15) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 4.15,
+    "z_lluvia_previa": -0.45,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 0.86,
+    "z_lluvia_previa": 4.14,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -0.44,
+    "z_lluvia_previa": -0.64,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 1.65,
+    "z_lluvia_previa": -0.17,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "alto-beni-03": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 3,
+    "z_ndti_agua": 1.2,
+    "z_lluvia_previa": 0.98,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 1.76,
+    "z_lluvia_previa": -0.24,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.06,
+    "z_lluvia_previa": 3.77,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": -1.39,
+    "z_lluvia_previa": -0.42,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 0.13,
+    "z_lluvia_previa": -0.55,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "alto-beni-04": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "139.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 139.6,
+    "mineria_nueva_2a_ha": 105.2,
+    "escenas": 3,
+    "z_ndti_agua": 0.99,
+    "z_lluvia_previa": 0.79,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "154.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 154.7,
+    "mineria_nueva_2a_ha": 85.8,
+    "escenas": 5,
+    "z_ndti_agua": 1.3,
+    "z_lluvia_previa": -0.98,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "157.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 157.8,
+    "mineria_nueva_2a_ha": 18.2,
+    "escenas": 6,
+    "z_ndti_agua": -0.05,
+    "z_lluvia_previa": 4.23,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "157.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 157.8,
+    "mineria_nueva_2a_ha": 3.1,
+    "escenas": 4,
+    "z_ndti_agua": -1.74,
+    "z_lluvia_previa": -0.27,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "157.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 157.8,
+    "mineria_nueva_2a_ha": 0.0,
+    "escenas": 6,
+    "z_ndti_agua": -0.09,
+    "z_lluvia_previa": -0.54,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "alto-beni-05": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.24,
+    "z_lluvia_previa": 0.94,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.53) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 2.53,
+    "z_lluvia_previa": -0.65,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": -0.75,
+    "z_lluvia_previa": -0.75,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 1.3,
+    "z_lluvia_previa": 1.91,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "alto-beni-06": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.55,
+    "z_lluvia_previa": 1.46,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 1.5,
+    "z_lluvia_previa": -0.77,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": -1.28,
+    "z_lluvia_previa": -0.85,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 0.74,
+    "z_lluvia_previa": 2.74,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "alto-beni-07": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.54,
+    "z_lluvia_previa": 0.65,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 1.51,
+    "z_lluvia_previa": -0.46,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": -1.34,
+    "z_lluvia_previa": -0.99,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 0.69,
+    "z_lluvia_previa": 2.62,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "alto-beni-08": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 0.11,
+    "z_lluvia_previa": 1.09,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 5.29) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": 5.29,
+    "z_lluvia_previa": -0.12,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 0.39,
+    "z_lluvia_previa": 4.36,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -0.49,
+    "z_lluvia_previa": -0.65,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.1) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 2.1,
+    "z_lluvia_previa": -0.73,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-01": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9778.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9778.3,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 7,
+    "z_ndti_agua": 0.02,
+    "z_lluvia_previa": 0.41,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10930.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 3.35) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10930.8,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 7,
+    "z_ndti_agua": 3.35,
+    "z_lluvia_previa": -1.31,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12608.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12608.9,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 7,
+    "z_ndti_agua": -0.47,
+    "z_lluvia_previa": 0.96,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13041.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13041.6,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -1.74,
+    "z_lluvia_previa": -0.58,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13393.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13393.0,
+    "mineria_nueva_2a_ha": 784.1,
+    "escenas": 7,
+    "z_ndti_agua": 1.84,
+    "z_lluvia_previa": 0.17,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-02": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9778.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9778.3,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 5,
+    "z_ndti_agua": 0.02,
+    "z_lluvia_previa": -0.31,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10930.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 3.63) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10930.8,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 6,
+    "z_ndti_agua": 3.63,
+    "z_lluvia_previa": 0.71,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12608.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12608.9,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 6,
+    "z_ndti_agua": -0.78,
+    "z_lluvia_previa": 1.11,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13041.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13041.6,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 4,
+    "z_ndti_agua": -0.37,
+    "z_lluvia_previa": -2.07,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13393.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.12) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13393.0,
+    "mineria_nueva_2a_ha": 784.1,
+    "escenas": 6,
+    "z_ndti_agua": 2.12,
+    "z_lluvia_previa": 0.39,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-03": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9778.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9778.3,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 6,
+    "z_ndti_agua": -1.11,
+    "z_lluvia_previa": 0.12,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "alta",
+   "reglas": [
+    {
+     "id": "R1",
+     "prioridad": "alta",
+     "texto": "2416.6 ha de minería nueva aguas arriba en 2 años y turbidez anómala persistente no explicada por lluvia"
+    },
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10930.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.05) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10930.8,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 7,
+    "z_ndti_agua": 2.05,
+    "z_lluvia_previa": 0.31,
+    "anomalia_persistente": true
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12608.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12608.9,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 7,
+    "z_ndti_agua": -0.91,
+    "z_lluvia_previa": 1.09,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13041.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13041.6,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 4,
+    "z_ndti_agua": -0.8,
+    "z_lluvia_previa": -3.58,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13393.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.09) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13393.0,
+    "mineria_nueva_2a_ha": 784.1,
+    "escenas": 9,
+    "z_ndti_agua": 2.09,
+    "z_lluvia_previa": -0.64,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-04": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9778.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9778.3,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 6,
+    "z_ndti_agua": -1.73,
+    "z_lluvia_previa": -0.04,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10930.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10930.8,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 7,
+    "z_ndti_agua": 1.07,
+    "z_lluvia_previa": 0.68,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12608.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12608.9,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 7,
+    "z_ndti_agua": -1.49,
+    "z_lluvia_previa": 0.74,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13041.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13041.6,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 4,
+    "z_ndti_agua": -1.18,
+    "z_lluvia_previa": -3.36,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13393.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13393.0,
+    "mineria_nueva_2a_ha": 784.1,
+    "escenas": 9,
+    "z_ndti_agua": 0.67,
+    "z_lluvia_previa": -1.4,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-05": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9778.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9778.3,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 7,
+    "z_ndti_agua": 0.28,
+    "z_lluvia_previa": -0.63,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10930.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10930.8,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 7,
+    "z_ndti_agua": 1.32,
+    "z_lluvia_previa": 1.19,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12608.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12608.9,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 8,
+    "z_ndti_agua": -2.22,
+    "z_lluvia_previa": 0.79,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13041.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13041.6,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -2.51,
+    "z_lluvia_previa": -2.63,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13393.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13393.0,
+    "mineria_nueva_2a_ha": 784.1,
+    "escenas": 8,
+    "z_ndti_agua": 0.13,
+    "z_lluvia_previa": 0.16,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-06": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9778.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9778.3,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 7,
+    "z_ndti_agua": 0.16,
+    "z_lluvia_previa": -0.21,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10930.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.27) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10930.8,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 7,
+    "z_ndti_agua": 2.27,
+    "z_lluvia_previa": 1.31,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12608.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12608.9,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 8,
+    "z_ndti_agua": -2.23,
+    "z_lluvia_previa": 0.34,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13041.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13041.6,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -2.82,
+    "z_lluvia_previa": -1.11,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13393.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13393.0,
+    "mineria_nueva_2a_ha": 784.1,
+    "escenas": 8,
+    "z_ndti_agua": 0.24,
+    "z_lluvia_previa": -0.1,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-07": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9778.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9778.3,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 7,
+    "z_ndti_agua": 0.01,
+    "z_lluvia_previa": -0.03,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10930.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10930.8,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 7,
+    "z_ndti_agua": 0.81,
+    "z_lluvia_previa": 4.56,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12608.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12608.9,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 8,
+    "z_ndti_agua": -1.89,
+    "z_lluvia_previa": 1.95,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13041.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13041.6,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -1.96,
+    "z_lluvia_previa": -0.44,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13393.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13393.0,
+    "mineria_nueva_2a_ha": 784.1,
+    "escenas": 7,
+    "z_ndti_agua": 0.47,
+    "z_lluvia_previa": 0.59,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-08": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9778.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9778.3,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 7,
+    "z_ndti_agua": 0.11,
+    "z_lluvia_previa": -0.41,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10930.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10930.8,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 7,
+    "z_ndti_agua": 1.03,
+    "z_lluvia_previa": 2.04,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12608.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12608.9,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 8,
+    "z_ndti_agua": -1.47,
+    "z_lluvia_previa": 0.67,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13041.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13041.6,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -2.06,
+    "z_lluvia_previa": -1.22,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13393.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13393.0,
+    "mineria_nueva_2a_ha": 784.1,
+    "escenas": 8,
+    "z_ndti_agua": 0.41,
+    "z_lluvia_previa": -0.23,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-09": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9617.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9617.1,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 5,
+    "z_ndti_agua": 1.0,
+    "z_lluvia_previa": -0.64,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10769.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.61) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10769.6,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 8,
+    "z_ndti_agua": 2.61,
+    "z_lluvia_previa": -0.71,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12447.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12447.7,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 7,
+    "z_ndti_agua": 0.06,
+    "z_lluvia_previa": 4.13,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12880.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12880.4,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -0.75,
+    "z_lluvia_previa": 1.08,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13208.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13208.9,
+    "mineria_nueva_2a_ha": 761.2,
+    "escenas": 8,
+    "z_ndti_agua": 1.99,
+    "z_lluvia_previa": -0.22,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-10": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9617.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9617.1,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 5,
+    "z_ndti_agua": 0.96,
+    "z_lluvia_previa": -0.71,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10769.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10769.6,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 8,
+    "z_ndti_agua": 1.62,
+    "z_lluvia_previa": -0.63,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12447.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12447.7,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 8,
+    "z_ndti_agua": 0.12,
+    "z_lluvia_previa": 3.33,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12880.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12880.4,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -0.76,
+    "z_lluvia_previa": 0.17,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13208.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.09) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13208.9,
+    "mineria_nueva_2a_ha": 761.2,
+    "escenas": 8,
+    "z_ndti_agua": 2.09,
+    "z_lluvia_previa": 0.51,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-11": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9617.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9617.1,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 6,
+    "z_ndti_agua": -0.33,
+    "z_lluvia_previa": -0.61,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10769.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.14) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10769.6,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 8,
+    "z_ndti_agua": 2.14,
+    "z_lluvia_previa": -0.85,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12447.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12447.7,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 8,
+    "z_ndti_agua": -0.09,
+    "z_lluvia_previa": 2.93,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12880.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12880.4,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -1.18,
+    "z_lluvia_previa": 0.25,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13208.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.44) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13208.9,
+    "mineria_nueva_2a_ha": 761.2,
+    "escenas": 8,
+    "z_ndti_agua": 2.44,
+    "z_lluvia_previa": 0.43,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-12": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 0.34,
+    "z_lluvia_previa": -0.87,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 6.06) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 6.06,
+    "z_lluvia_previa": 0.93,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 8,
+    "z_ndti_agua": -2.54,
+    "z_lluvia_previa": 0.41,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 8,
+    "z_ndti_agua": -2.58,
+    "z_lluvia_previa": -2.17,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 0.14,
+    "z_lluvia_previa": 0.75,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-13": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9617.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9617.1,
+    "mineria_nueva_2a_ha": 2873.0,
+    "escenas": 5,
+    "z_ndti_agua": 0.08,
+    "z_lluvia_previa": 0.65,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10769.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 3.34) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10769.6,
+    "mineria_nueva_2a_ha": 2416.6,
+    "escenas": 8,
+    "z_ndti_agua": 3.34,
+    "z_lluvia_previa": -1.21,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12447.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12447.7,
+    "mineria_nueva_2a_ha": 2830.6,
+    "escenas": 8,
+    "z_ndti_agua": -0.79,
+    "z_lluvia_previa": 1.0,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12880.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12880.4,
+    "mineria_nueva_2a_ha": 2110.8,
+    "escenas": 8,
+    "z_ndti_agua": -1.83,
+    "z_lluvia_previa": -0.63,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13208.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13208.9,
+    "mineria_nueva_2a_ha": 761.2,
+    "escenas": 7,
+    "z_ndti_agua": 1.59,
+    "z_lluvia_previa": 0.1,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "beni-14": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.53,
+    "z_lluvia_previa": 0.68,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.82) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 2.82,
+    "z_lluvia_previa": -1.36,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 0.01,
+    "z_lluvia_previa": 0.83,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 8,
+    "z_ndti_agua": -1.83,
+    "z_lluvia_previa": -0.74,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.19) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 7,
+    "z_ndti_agua": 2.19,
+    "z_lluvia_previa": 0.11,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "coroico-01": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -2.26,
+    "z_lluvia_previa": 0.25,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 7.78) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 7.78,
+    "z_lluvia_previa": 0.41,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 3,
+    "z_ndti_agua": -4.83,
+    "z_lluvia_previa": -1.28,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.09,
+    "z_lluvia_previa": 1.35,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "coroico-02": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": -0.77,
+    "z_lluvia_previa": -0.56,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 11.97) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 11.97,
+    "z_lluvia_previa": 0.29,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 1,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 3,
+    "z_ndti_agua": 0.43,
+    "z_lluvia_previa": -1.7,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": -0.84,
+    "z_lluvia_previa": 0.32,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "coroico-03": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -0.27,
+    "z_lluvia_previa": -0.61,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 11.32) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 11.32,
+    "z_lluvia_previa": 0.61,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 3,
+    "z_ndti_agua": 0.67,
+    "z_lluvia_previa": -1.67,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -1.55,
+    "z_lluvia_previa": 0.84,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "coroico-04": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.57,
+    "z_lluvia_previa": 0.38,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 12.49) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": 12.49,
+    "z_lluvia_previa": -0.04,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 1.67,
+    "z_lluvia_previa": -1.02,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -0.79,
+    "z_lluvia_previa": 0.04,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "coroico-05": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "60.5 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 60.5,
+    "mineria_nueva_2a_ha": 60.5,
+    "escenas": 6,
+    "z_ndti_agua": -1.69,
+    "z_lluvia_previa": 0.38,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "123.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 3.66) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 123.1,
+    "mineria_nueva_2a_ha": 123.1,
+    "escenas": 6,
+    "z_ndti_agua": 3.66,
+    "z_lluvia_previa": 0.42,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "318.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 318.3,
+    "mineria_nueva_2a_ha": 257.8,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "360.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 360.2,
+    "mineria_nueva_2a_ha": 237.1,
+    "escenas": 4,
+    "z_ndti_agua": 0.06,
+    "z_lluvia_previa": -1.3,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "376.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 376.2,
+    "mineria_nueva_2a_ha": 57.9,
+    "escenas": 6,
+    "z_ndti_agua": 0.93,
+    "z_lluvia_previa": -0.04,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "coroico-06": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "105.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 105.7,
+    "mineria_nueva_2a_ha": 105.7,
+    "escenas": 6,
+    "z_ndti_agua": 0.0,
+    "z_lluvia_previa": 0.58,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "199.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.43) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 199.0,
+    "mineria_nueva_2a_ha": 199.0,
+    "escenas": 6,
+    "z_ndti_agua": 2.43,
+    "z_lluvia_previa": -0.6,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "620.5 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 620.5,
+    "mineria_nueva_2a_ha": 514.8,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "672.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 672.6,
+    "mineria_nueva_2a_ha": 473.6,
+    "escenas": 4,
+    "z_ndti_agua": -0.66,
+    "z_lluvia_previa": -1.12,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "688.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 688.7,
+    "mineria_nueva_2a_ha": 68.2,
+    "escenas": 6,
+    "z_ndti_agua": 0.49,
+    "z_lluvia_previa": 0.01,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "coroico-07": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "184.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 184.4,
+    "mineria_nueva_2a_ha": 113.7,
+    "escenas": 6,
+    "z_ndti_agua": -1.06,
+    "z_lluvia_previa": 0.47,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "302.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.01) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 302.0,
+    "mineria_nueva_2a_ha": 224.1,
+    "escenas": 6,
+    "z_ndti_agua": 2.01,
+    "z_lluvia_previa": -0.36,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "785.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 785.1,
+    "mineria_nueva_2a_ha": 600.7,
+    "escenas": 2,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "837.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 837.2,
+    "mineria_nueva_2a_ha": 535.2,
+    "escenas": 3,
+    "z_ndti_agua": 0.45,
+    "z_lluvia_previa": 0.13,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "872.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 872.1,
+    "mineria_nueva_2a_ha": 87.0,
+    "escenas": 6,
+    "z_ndti_agua": 0.18,
+    "z_lluvia_previa": -0.35,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "coroico-08": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "580.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 580.8,
+    "mineria_nueva_2a_ha": 148.8,
+    "escenas": 8,
+    "z_ndti_agua": -0.16,
+    "z_lluvia_previa": 0.12,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "705.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 705.6,
+    "mineria_nueva_2a_ha": 241.7,
+    "escenas": 8,
+    "z_ndti_agua": 1.38,
+    "z_lluvia_previa": -0.33,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "1198.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 1198.3,
+    "mineria_nueva_2a_ha": 617.5,
+    "escenas": 8,
+    "z_ndti_agua": 0.62,
+    "z_lluvia_previa": -0.23,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "1275.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 1275.2,
+    "mineria_nueva_2a_ha": 569.6,
+    "escenas": 7,
+    "z_ndti_agua": -0.42,
+    "z_lluvia_previa": -0.33,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "1310.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 1310.1,
+    "mineria_nueva_2a_ha": 111.8,
+    "escenas": 8,
+    "z_ndti_agua": 0.49,
+    "z_lluvia_previa": 0.18,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "kaka-01": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "6722.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 6722.7,
+    "mineria_nueva_2a_ha": 1439.3,
+    "escenas": 9,
+    "z_ndti_agua": -1.02,
+    "z_lluvia_previa": -0.35,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "7165.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.02) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 7165.6,
+    "mineria_nueva_2a_ha": 931.5,
+    "escenas": 9,
+    "z_ndti_agua": 2.02,
+    "z_lluvia_previa": 0.02,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "8290.5 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 8290.5,
+    "mineria_nueva_2a_ha": 1567.8,
+    "escenas": 12,
+    "z_ndti_agua": 0.33,
+    "z_lluvia_previa": 0.33,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "8516.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 8516.8,
+    "mineria_nueva_2a_ha": 1351.2,
+    "escenas": 12,
+    "z_ndti_agua": 0.12,
+    "z_lluvia_previa": -1.02,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "8635.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 8635.6,
+    "mineria_nueva_2a_ha": 345.1,
+    "escenas": 10,
+    "z_ndti_agua": 3.1,
+    "z_lluvia_previa": 1.84,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "kaka-02": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "6945.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 6945.9,
+    "mineria_nueva_2a_ha": 1451.5,
+    "escenas": 6,
+    "z_ndti_agua": -1.14,
+    "z_lluvia_previa": 0.87,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "7486.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.64) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 7486.7,
+    "mineria_nueva_2a_ha": 1033.6,
+    "escenas": 7,
+    "z_ndti_agua": 2.64,
+    "z_lluvia_previa": -0.03,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "8722.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 8722.2,
+    "mineria_nueva_2a_ha": 1776.3,
+    "escenas": 6,
+    "z_ndti_agua": -0.91,
+    "z_lluvia_previa": 3.11,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "alta",
+   "reglas": [
+    {
+     "id": "R1",
+     "prioridad": "alta",
+     "texto": "1511.3 ha de minería nueva aguas arriba en 2 años y turbidez anómala persistente no explicada por lluvia"
+    },
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "8998.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2024 (z = 2.56) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 8998.0,
+    "mineria_nueva_2a_ha": 1511.3,
+    "escenas": 5,
+    "z_ndti_agua": 2.56,
+    "z_lluvia_previa": -0.82,
+    "anomalia_persistente": true
+   }
+  },
+  "2025": {
+   "prioridad": "alta",
+   "reglas": [
+    {
+     "id": "R1",
+     "prioridad": "alta",
+     "texto": "494.8 ha de minería nueva aguas arriba en 2 años y turbidez anómala persistente no explicada por lluvia"
+    },
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9217.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.45) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9217.0,
+    "mineria_nueva_2a_ha": 494.8,
+    "escenas": 7,
+    "z_ndti_agua": 2.45,
+    "z_lluvia_previa": -1.04,
+    "anomalia_persistente": true
+   }
+  }
+ },
+ "kaka-03": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "8366.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 8366.6,
+    "mineria_nueva_2a_ha": 2036.5,
+    "escenas": 6,
+    "z_ndti_agua": -1.14,
+    "z_lluvia_previa": 0.64,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9138.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 5.22) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9138.7,
+    "mineria_nueva_2a_ha": 1533.4,
+    "escenas": 6,
+    "z_ndti_agua": 5.22,
+    "z_lluvia_previa": 0.21,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10507.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10507.8,
+    "mineria_nueva_2a_ha": 2141.2,
+    "escenas": 6,
+    "z_ndti_agua": -0.67,
+    "z_lluvia_previa": 2.85,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10908.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10908.4,
+    "mineria_nueva_2a_ha": 1769.7,
+    "escenas": 5,
+    "z_ndti_agua": -0.1,
+    "z_lluvia_previa": -0.51,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "11192.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.52) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 11192.0,
+    "mineria_nueva_2a_ha": 684.2,
+    "escenas": 8,
+    "z_ndti_agua": 2.52,
+    "z_lluvia_previa": -0.53,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "kaka-04": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9143.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9143.1,
+    "mineria_nueva_2a_ha": 2597.2,
+    "escenas": 6,
+    "z_ndti_agua": -0.34,
+    "z_lluvia_previa": 1.08,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10140.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 4.2) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10140.6,
+    "mineria_nueva_2a_ha": 2092.1,
+    "escenas": 5,
+    "z_ndti_agua": 4.2,
+    "z_lluvia_previa": -0.35,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "11769.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 11769.7,
+    "mineria_nueva_2a_ha": 2626.6,
+    "escenas": 6,
+    "z_ndti_agua": -1.28,
+    "z_lluvia_previa": 4.31,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12201.5 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12201.5,
+    "mineria_nueva_2a_ha": 2060.9,
+    "escenas": 5,
+    "z_ndti_agua": 0.51,
+    "z_lluvia_previa": -0.79,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12485.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.48) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12485.8,
+    "mineria_nueva_2a_ha": 716.1,
+    "escenas": 8,
+    "z_ndti_agua": 2.48,
+    "z_lluvia_previa": -0.29,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "kaka-05": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9402.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9402.0,
+    "mineria_nueva_2a_ha": 2692.3,
+    "escenas": 3,
+    "z_ndti_agua": 0.4,
+    "z_lluvia_previa": 1.69,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10528.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10528.8,
+    "mineria_nueva_2a_ha": 2302.5,
+    "escenas": 5,
+    "z_ndti_agua": 1.21,
+    "z_lluvia_previa": -0.91,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12201.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12201.1,
+    "mineria_nueva_2a_ha": 2799.1,
+    "escenas": 6,
+    "z_ndti_agua": -2.8,
+    "z_lluvia_previa": 4.83,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12633.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12633.8,
+    "mineria_nueva_2a_ha": 2105.0,
+    "escenas": 4,
+    "z_ndti_agua": 0.62,
+    "z_lluvia_previa": -0.43,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12918.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12918.1,
+    "mineria_nueva_2a_ha": 717.0,
+    "escenas": 6,
+    "z_ndti_agua": 0.99,
+    "z_lluvia_previa": -0.72,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "kaka-06": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "9477.5 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 9477.5,
+    "mineria_nueva_2a_ha": 2767.8,
+    "escenas": 5,
+    "z_ndti_agua": -0.38,
+    "z_lluvia_previa": -0.54,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "10614.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 10614.9,
+    "mineria_nueva_2a_ha": 2330.8,
+    "escenas": 5,
+    "z_ndti_agua": 1.55,
+    "z_lluvia_previa": -0.7,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12289.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12289.9,
+    "mineria_nueva_2a_ha": 2812.4,
+    "escenas": 6,
+    "z_ndti_agua": -1.09,
+    "z_lluvia_previa": 3.79,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "12722.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 12722.6,
+    "mineria_nueva_2a_ha": 2107.7,
+    "escenas": 6,
+    "z_ndti_agua": 0.27,
+    "z_lluvia_previa": 0.53,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "13006.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 2.57) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 13006.9,
+    "mineria_nueva_2a_ha": 717.0,
+    "escenas": 6,
+    "z_ndti_agua": 2.57,
+    "z_lluvia_previa": -0.34,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "mapiri-01": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "2369.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 2369.3,
+    "mineria_nueva_2a_ha": 339.5,
+    "escenas": 3,
+    "z_ndti_agua": -1.42,
+    "z_lluvia_previa": -0.6,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "2434.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 2434.0,
+    "mineria_nueva_2a_ha": 152.8,
+    "escenas": 5,
+    "z_ndti_agua": 0.34,
+    "z_lluvia_previa": -0.96,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "2572.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 2572.2,
+    "mineria_nueva_2a_ha": 202.9,
+    "escenas": 8,
+    "z_ndti_agua": 0.79,
+    "z_lluvia_previa": 0.81,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "2653.0 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 2653.0,
+    "mineria_nueva_2a_ha": 219.0,
+    "escenas": 8,
+    "z_ndti_agua": -1.43,
+    "z_lluvia_previa": -0.35,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "2711.5 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 2711.5,
+    "mineria_nueva_2a_ha": 139.3,
+    "escenas": 6,
+    "z_ndti_agua": 1.51,
+    "z_lluvia_previa": -0.35,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "mapiri-02": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "2832.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 2832.2,
+    "mineria_nueva_2a_ha": 476.3,
+    "escenas": 3,
+    "z_ndti_agua": -3.72,
+    "z_lluvia_previa": -0.73,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "2953.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 2953.1,
+    "mineria_nueva_2a_ha": 243.4,
+    "escenas": 4,
+    "z_ndti_agua": -1.45,
+    "z_lluvia_previa": -1.03,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "3124.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 3124.7,
+    "mineria_nueva_2a_ha": 292.5,
+    "escenas": 8,
+    "z_ndti_agua": 0.02,
+    "z_lluvia_previa": 0.6,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "3208.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 3208.2,
+    "mineria_nueva_2a_ha": 255.1,
+    "escenas": 8,
+    "z_ndti_agua": -0.0,
+    "z_lluvia_previa": 0.35,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "3266.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 3.01) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 3266.7,
+    "mineria_nueva_2a_ha": 142.0,
+    "escenas": 7,
+    "z_ndti_agua": 3.01,
+    "z_lluvia_previa": -0.71,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "mapiri-03": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "3471.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 3471.3,
+    "mineria_nueva_2a_ha": 763.3,
+    "escenas": 4,
+    "z_ndti_agua": -1.46,
+    "z_lluvia_previa": -0.48,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "3743.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 3743.9,
+    "mineria_nueva_2a_ha": 514.4,
+    "escenas": 5,
+    "z_ndti_agua": -0.98,
+    "z_lluvia_previa": -1.61,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "4159.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 4159.2,
+    "mineria_nueva_2a_ha": 687.9,
+    "escenas": 8,
+    "z_ndti_agua": 0.98,
+    "z_lluvia_previa": 0.51,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "4258.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 4258.8,
+    "mineria_nueva_2a_ha": 514.9,
+    "escenas": 10,
+    "z_ndti_agua": 1.05,
+    "z_lluvia_previa": -1.43,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "4333.5 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 3.63) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 4333.5,
+    "mineria_nueva_2a_ha": 174.3,
+    "escenas": 7,
+    "z_ndti_agua": 3.63,
+    "z_lluvia_previa": 0.49,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "mapiri-04": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "4091.2 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 4091.2,
+    "mineria_nueva_2a_ha": 826.0,
+    "escenas": 11,
+    "z_ndti_agua": -0.71,
+    "z_lluvia_previa": -0.11,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "4364.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 4364.4,
+    "mineria_nueva_2a_ha": 529.6,
+    "escenas": 12,
+    "z_ndti_agua": -0.48,
+    "z_lluvia_previa": -0.84,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "4794.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 4794.1,
+    "mineria_nueva_2a_ha": 702.9,
+    "escenas": 14,
+    "z_ndti_agua": 2.04,
+    "z_lluvia_previa": 1.74,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "4898.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2024 (z = 3.12) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 4898.8,
+    "mineria_nueva_2a_ha": 534.4,
+    "escenas": 16,
+    "z_ndti_agua": 3.12,
+    "z_lluvia_previa": -1.03,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "alta",
+   "reglas": [
+    {
+     "id": "R1",
+     "prioridad": "alta",
+     "texto": "179.4 ha de minería nueva aguas arriba en 2 años y turbidez anómala persistente no explicada por lluvia"
+    },
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "4973.5 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2025 (z = 4.98) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 4973.5,
+    "mineria_nueva_2a_ha": 179.4,
+    "escenas": 13,
+    "z_ndti_agua": 4.98,
+    "z_lluvia_previa": 0.72,
+    "anomalia_persistente": true
+   }
+  }
+ },
+ "mapiri-05": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "5379.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 5379.3,
+    "mineria_nueva_2a_ha": 1137.5,
+    "escenas": 9,
+    "z_ndti_agua": -0.98,
+    "z_lluvia_previa": 0.51,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "5669.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 3.02) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 5669.3,
+    "mineria_nueva_2a_ha": 614.2,
+    "escenas": 9,
+    "z_ndti_agua": 3.02,
+    "z_lluvia_previa": -0.47,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "6260.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 6260.8,
+    "mineria_nueva_2a_ha": 881.5,
+    "escenas": 12,
+    "z_ndti_agua": 0.67,
+    "z_lluvia_previa": -0.15,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "6378.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 6378.9,
+    "mineria_nueva_2a_ha": 709.6,
+    "escenas": 12,
+    "z_ndti_agua": 0.28,
+    "z_lluvia_previa": -0.66,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "6456.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 6456.9,
+    "mineria_nueva_2a_ha": 196.1,
+    "escenas": 12,
+    "z_ndti_agua": 1.69,
+    "z_lluvia_previa": -0.32,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "tipuani-01": {
+  "2021": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2021"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 0,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "pocos años de referencia para comparar la turbidez"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2023"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 0,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "pocos años de referencia para comparar la turbidez"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 3,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "insuficiente",
+   "reglas": [],
+   "faltantes": [
+    "menos de 3 escenas útiles en la temporada 2025"
+   ],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 1,
+    "z_ndti_agua": null,
+    "z_lluvia_previa": null,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "tipuani-02": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 1.41,
+    "z_lluvia_previa": -0.53,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 8.33) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 8.33,
+    "z_lluvia_previa": -0.05,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -1.01,
+    "z_lluvia_previa": 0.18,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": -1.0,
+    "z_lluvia_previa": -0.13,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -0.89,
+    "z_lluvia_previa": 0.57,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "tipuani-03": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 3,
+    "z_ndti_agua": -0.97,
+    "z_lluvia_previa": -0.7,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 5.81) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 3,
+    "z_ndti_agua": 5.81,
+    "z_lluvia_previa": 0.45,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -0.82,
+    "z_lluvia_previa": -0.36,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 0.71,
+    "z_lluvia_previa": -0.58,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -0.24,
+    "z_lluvia_previa": 0.75,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "tipuani-04": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "82.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 82.7,
+    "mineria_nueva_2a_ha": 1.9,
+    "escenas": 4,
+    "z_ndti_agua": -2.31,
+    "z_lluvia_previa": -0.95,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "82.7 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 3.24) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 82.7,
+    "mineria_nueva_2a_ha": 0.0,
+    "escenas": 3,
+    "z_ndti_agua": 3.24,
+    "z_lluvia_previa": 0.66,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "109.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 109.4,
+    "mineria_nueva_2a_ha": 26.7,
+    "escenas": 6,
+    "z_ndti_agua": -0.67,
+    "z_lluvia_previa": -0.09,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "109.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 109.4,
+    "mineria_nueva_2a_ha": 26.7,
+    "escenas": 4,
+    "z_ndti_agua": 0.35,
+    "z_lluvia_previa": -0.89,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "109.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 109.4,
+    "mineria_nueva_2a_ha": 0.0,
+    "escenas": 5,
+    "z_ndti_agua": 0.32,
+    "z_lluvia_previa": 0.94,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "tipuani-05": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "558.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 558.1,
+    "mineria_nueva_2a_ha": 83.3,
+    "escenas": 9,
+    "z_ndti_agua": -0.78,
+    "z_lluvia_previa": 0.76,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "566.8 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.62) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 566.8,
+    "mineria_nueva_2a_ha": 31.0,
+    "escenas": 12,
+    "z_ndti_agua": 2.62,
+    "z_lluvia_previa": -0.86,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "686.4 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 686.4,
+    "mineria_nueva_2a_ha": 128.3,
+    "escenas": 10,
+    "z_ndti_agua": -0.19,
+    "z_lluvia_previa": 1.1,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "689.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 689.1,
+    "mineria_nueva_2a_ha": 122.3,
+    "escenas": 11,
+    "z_ndti_agua": -0.13,
+    "z_lluvia_previa": -1.57,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "689.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 689.1,
+    "mineria_nueva_2a_ha": 2.7,
+    "escenas": 11,
+    "z_ndti_agua": 0.32,
+    "z_lluvia_previa": 0.91,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "tipuani-06": {
+  "2021": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "811.1 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 811.1,
+    "mineria_nueva_2a_ha": 164.9,
+    "escenas": 8,
+    "z_ndti_agua": -0.78,
+    "z_lluvia_previa": 0.7,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "820.9 ha de huella minera acumulada aguas arriba (≥ 50)"
+    },
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.31) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 820.9,
+    "mineria_nueva_2a_ha": 64.5,
+    "escenas": 7,
+    "z_ndti_agua": 2.31,
+    "z_lluvia_previa": -0.22,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "950.6 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 950.6,
+    "mineria_nueva_2a_ha": 139.5,
+    "escenas": 7,
+    "z_ndti_agua": -0.22,
+    "z_lluvia_previa": -0.56,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "953.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 953.3,
+    "mineria_nueva_2a_ha": 132.4,
+    "escenas": 8,
+    "z_ndti_agua": -0.81,
+    "z_lluvia_previa": -0.71,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R2",
+     "prioridad": "media",
+     "texto": "953.3 ha de huella minera acumulada aguas arriba (≥ 50)"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 953.3,
+    "mineria_nueva_2a_ha": 2.7,
+    "escenas": 7,
+    "z_ndti_agua": 0.16,
+    "z_lluvia_previa": -0.48,
+    "anomalia_persistente": false
+   }
+  }
+ },
+ "tipuani-07": {
+  "2021": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 0.24,
+    "z_lluvia_previa": -0.55,
+    "anomalia_persistente": false
+   }
+  },
+  "2022": {
+   "prioridad": "media",
+   "reglas": [
+    {
+     "id": "R3",
+     "prioridad": "media",
+     "texto": "turbidez anómala en 2022 (z = 2.14) no explicada por lluvia"
+    }
+   ],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": 2.14,
+    "z_lluvia_previa": -0.05,
+    "anomalia_persistente": false
+   }
+  },
+  "2023": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 6,
+    "z_ndti_agua": -1.36,
+    "z_lluvia_previa": 0.1,
+    "anomalia_persistente": false
+   }
+  },
+  "2024": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 4,
+    "z_ndti_agua": -0.88,
+    "z_lluvia_previa": -0.05,
+    "anomalia_persistente": false
+   }
+  },
+  "2025": {
+   "prioridad": "baja",
+   "reglas": [],
+   "faltantes": [],
+   "datos": {
+    "mineria_aguas_arriba_ha": 0,
+    "mineria_nueva_2a_ha": 0,
+    "escenas": 5,
+    "z_ndti_agua": -0.47,
+    "z_lluvia_previa": 0.23,
+    "anomalia_persistente": false
+   }
+  }
+ }
+}

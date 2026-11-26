@@ -1,0 +1,91 @@
+{
+  "tramos": {
+    "fecha": "2026-11-26T20:41:04+00:00",
+    "commit": "5527600",
+    "fuente": "OpenStreetMap (Overpass), ODbL",
+    "osm_fecha": "2026-11-26T20:38:32Z",
+    "tramos": 48,
+    "por_rio": {
+      "Alto Beni": 8,
+      "Beni": 14,
+      "Coroico": 8,
+      "Kaka": 6,
+      "Mapiri": 5,
+      "Tipuani": 7
+    }
+  },
+  "mineria": {
+    "fecha": "2026-11-26T20:42:06+00:00",
+    "commit": "5527600",
+    "fuente": "Amazon Mining Watch (Earth Genome / Pulitzer Center), CC BY 4.0",
+    "url": "https://data.source.coop/earthgenome/amazon-mining-watch/amazon_basin_mining_scar_masks.tif",
+    "zona_km": 3,
+    "tramos": 48
+  },
+  "lluvia": {
+    "fecha": "2026-11-26T20:43:24+00:00",
+    "commit": "5527600",
+    "fuente": "CHIRPS v3.0 pentadas (Climate Hazards Center, UCSB)",
+    "pentadas": 189,
+    "licencia": "ver README-CHIRPSv3.0.txt (citar Funk et al.)"
+  },
+  "espectral": {
+    "fecha": "2026-11-26T22:30:15+00:00",
+    "commit": "49846af",
+    "fuente": "Sentinel-2 L2A Collection 1 (Copernicus, Earth Search / Element 84)",
+    "coleccion": "sentinel-2-c1-l2a",
+    "coleccion_respaldo": {
+      "coleccion": "sentinel-2-l2a",
+      "temporadas": [
+        2022
+      ]
+    },
+    "temporada": {
+      "desde": "06-01",
+      "hasta": "09-30"
+    },
+    "anios": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "indices": {
+      "NDTI": "(B04-B03)/(B04+B03) en agua",
+      "NDVI": "(B08-B04)/(B08+B04) en orilla",
+      "BSI": "((B11+B04)-(B08+B02))/((B11+B04)+(B08+B02)) en orilla",
+      "MNDWI": "(B03-B11)/(B03+B11) > 0 = agua"
+    }
+  },
+  "riesgo": {
+    "fecha": "2026-11-26T23:46:12+00:00",
+    "commit": "49846af",
+    "version": "v0 · sin revisión de especialista",
+    "umbrales": {
+      "version": "v0 · sin revisión de especialista",
+      "mineria_nueva_ha_alta": 20,
+      "mineria_total_ha_media": 50,
+      "lluvia_z_explica": 1.5,
+      "persistencia": {
+        "temporadas": 3,
+        "minimo": 2
+      }
+    },
+    "anios": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "prioridades_2025": {
+      "baja": 14,
+      "media": 31,
+      "alta": 2,
+      "insuficiente": 1
+    }
+  }
+}

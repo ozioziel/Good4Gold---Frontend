@@ -56,7 +56,9 @@ NestJS 12 + PostgreSQL 17/PostGIS 3.5 en Docker. Detalle, rutas y reglas en `app
 | `POST /sync/operations` idempotente (propias y QR v1) y paquete por comunidad | Hecho |
 | Conexión del frontend a la API (sesión, mapa, publicar/respaldar/responder, cola y QR por `/sync/operations`, panel y Laboratorio) | Hecho · con `VITE_API_URL`; sin ella, demostración local |
 | Campañas y donaciones con escrow por hitos en **Stellar testnet** (contrato Soroban propio en `contracts/escrow`, USDC de prueba de Circle) | Hecho en API y en la pestaña Donaciones |
-| Laboratorio (`/laboratory/*`), alertas por API, moderación, adjuntos | Pendiente |
+| Laboratorio virtual (`science/`, `/laboratory/*`, panel del Laboratorio y señal del mapa): Gold2Mining, Gold2Spectral, Gold2Risk v0 | Hecho · corrida 2019–2025 cargada (2025: 2 alta, 31 media, 14 baja, 1 sin datos) |
+| Gold2Mercury (estimar Hg desde satélite) | En pausa: sin muestras de Bolivia para validar |
+| Alertas oficiales y moderación por API, adjuntos | Pendiente |
 
 Escrow: contrato desplegado en testnet (`CBJEQGCIA24NJXIOIQPKIDUR4D3O5OPJGJMSNZJH3C3HP4FMQUZBGJCI`), 6 pruebas en Rust. Probado en vivo por la API en testnet (2026-11-26, con 20 USDC de prueba del faucet de Circle en el donante DEMO):
 - Campaña A (meta 3): aporte DEMO de 1 → hito 1 liberado → hito 2 bloqueado por falta de fondos → aporte con billetera de 2 (preparado por la API, firmado fuera con `stellar tx sign`, enviado; el reenvío da 409) → hito 2 liberado → campaña completada.

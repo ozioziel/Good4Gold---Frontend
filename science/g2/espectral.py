@@ -28,6 +28,8 @@ from shapely.ops import transform, unary_union
 from .config import DERIVADOS, leer_json, parametros, registrar, escribir_json
 from .lluvia import anteriores
 
+RESPALDO: set[int] = set()  # temporadas leídas con la colección de respaldo
+
 BANDAS = {"blue": "B02", "green": "B03", "red": "B04", "nir": "B08", "swir16": "B11"}
 GDAL = dict(
     GDAL_DISABLE_READDIR_ON_OPEN="EMPTY_DIR",
@@ -152,12 +154,21 @@ def escenas(prm, tramos, anio):
     t = prm["periodo"]["temporada"]
     limites = unary_union([shape(x["geometry"]) for x in tramos]).bounds
     c = Client.open(prm["sentinel2"]["stac"])
-    b = c.search(
-        collections=[prm["sentinel2"]["coleccion"]],
-        bbox=list(limites),
-        datetime=f"{anio}-{t['desde']}/{anio}-{t['hasta']}",
-        query={"eo:cloud_cover": {"lt": prm["sentinel2"]["nubes_max_escena"]}},
-    )
+
+    def buscar(coleccion):
+        return c.search(
+            collections=[coleccion],
+            bbox=list(limites),
+            datetime=f"{anio}-{t['desde']}/{anio}-{t['hasta']}",
+            query={"eo:cloud_cover": {"lt": prm["sentinel2"]["nubes_max_escena"]}},
+        )
+
+    b = buscar(prm["sentinel2"]["coleccion"])
+    if not b.matched() and not list(b.items()):
+        # La Collection 1 tiene un hueco en la zona (abril–noviembre de 2022): se usa la colección original,
+        # que declara la misma escala y offset (-0.1) en cada banda. Queda registrado en el manifiesto.
+        RESPALDO.add(anio)
+        b = buscar(prm["sentinel2"]["coleccion_respaldo"])
     # Para la mediana de la temporada bastan las escenas más despejadas de cada tesela.
     por_tesela: dict[str, list] = {}
     for it in b.items():
@@ -216,6 +227,7 @@ def calcular_escenas(prm, tramos) -> None:
                             "fecha": it.datetime.date().isoformat(),
                             "nubes": it.properties.get("eo:cloud_cover"),
                             "baseline": it.properties.get("s2:processing_baseline"),
+                            "coleccion": it.collection_id,
                             **(r or {"px_agua": 0}),
                         }
                         f.write(json.dumps(fila) + "\n")
@@ -277,6 +289,12 @@ def resumir(prm, tramos) -> dict:
     return res
 
 
+def _respaldo_usado(prm) -> set[int]:
+    """Temporadas con al menos una lectura de la colección de respaldo."""
+    filas = [json.loads(x) for x in (DERIVADOS / "espectral_escenas.jsonl").read_text().splitlines()]
+    return {int(f["fecha"][:4]) for f in filas if f.get("coleccion") == prm["sentinel2"]["coleccion_respaldo"]} | RESPALDO
+
+
 def ejecutar() -> None:
     prm = parametros()
     tramos = leer_json("tramos.geojson")["features"]
@@ -288,6 +306,7 @@ def ejecutar() -> None:
         {
             "fuente": "Sentinel-2 L2A Collection 1 (Copernicus, Earth Search / Element 84)",
             "coleccion": prm["sentinel2"]["coleccion"],
+            "coleccion_respaldo": {"coleccion": prm["sentinel2"]["coleccion_respaldo"], "temporadas": sorted(_respaldo_usado(prm))},
             "temporada": prm["periodo"]["temporada"],
             "anios": prm["periodo"]["anios"],
             "indices": {"NDTI": "(B04-B03)/(B04+B03) en agua", "NDVI": "(B08-B04)/(B08+B04) en orilla", "BSI": "((B11+B04)-(B08+B02))/((B11+B04)+(B08+B02)) en orilla", "MNDWI": "(B03-B11)/(B03+B11) > 0 = agua"},
