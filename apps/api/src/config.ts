@@ -4,7 +4,7 @@ import { z } from 'zod';
 const esquema = z.object({
   PORT: z.coerce.number().int().positive().default(3000),
   DATABASE_URL: z.string().url(),
-  CORS_ORIGINS: z.string().default('http://localhost:5173'),
+  CORS_ORIGINS: z.string().default('http://localhost:5180,http://127.0.0.1:5180'),
   AUTH_MODE: z.enum(['demo']).default('demo'),
   JWT_SECRET: z.string().min(32, 'JWT_SECRET debe tener al menos 32 caracteres'),
   MARCA: z.string().default('Gold2Life'),
