@@ -1,0 +1,20 @@
+{
+  "name": "Gold2Life · El lado invisible del oro",
+  "short_name": "Gold2Life",
+  "description": "Mapa comunitario, laboratorio satelital, educación y donaciones trazables frente al mercurio de la minería aurífera.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#181A17",
+  "theme_color": "#181A17",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Mapa comunitario", "url": "/mapa" },
+    { "name": "Infórmate", "url": "/informate" }
+  ]
+}

@@ -1,0 +1,101 @@
+/*
+  Tokens de Gold2Life. Mundo: «río amazónico al alba: oro, mercurio, bosque».
+  Paleta cruda con nombres del mundo; los componentes solo usan los nombres de rol de más abajo.
+  Contrastes medidos en docs/diseno.md.
+*/
+:root {
+  /* Paleta cruda — Inicio y sistema general (plan.md §2.1) */
+  --noche: #181a17;
+  --noche-2: #22251f;
+  --noche-3: #2d312a;
+  --oro: #d4af55;
+  --oro-claro: #e8cb7e;
+  --oro-hondo: #a9852f;
+  --mercurio: #a4adb3;
+  --mercurio-claro: #cfd6da;
+  --rio: #507f98;
+  --rio-claro: #8fb4c7;
+  --selva: #426c4a;
+  --selva-claro: #7fa784;
+  --marfil: #f3f0e4;
+  --marfil-2: #e7e2d1;
+  --tierra: #8a6a45;
+
+  /* Paleta cruda — Donaciones (plan.md §2.6.8) */
+  --don-oro: #c7a354;
+  --don-bosque: #244b38;
+  --don-agua: #83b6b0;
+  --don-marfil: #f4f1e6;
+  --don-vida: #a9bf92;
+
+  /* Roles — superficie oscura (Inicio, Laboratorio) */
+  --suelo: var(--noche);
+  --superficie: var(--noche-2);
+  --superficie-2: var(--noche-3);
+  --tinta: var(--marfil);
+  --tinta-2: #c9c5b6;
+  --tinta-3: #9c998c;
+  --linea: rgb(243 240 228 / 0.14);
+  --linea-fuerte: rgb(243 240 228 / 0.28);
+
+  /* Roles — superficie clara (Infórmate, Mapa, formularios) */
+  --suelo-claro: var(--marfil);
+  --superficie-clara: #fbf9f2;
+  --tinta-oscura: #1f221d;
+  --tinta-oscura-2: #4c4f45;
+  --linea-clara: rgb(31 34 29 / 0.14);
+
+  /* Acción y foco: una sola acción, el oro */
+  --accion: var(--oro);
+  --accion-hover: var(--oro-claro);
+  --accion-tinta: #1d1a10;
+  --accion-suave: rgb(212 175 85 / 0.16);
+  --foco: var(--oro-claro);
+
+  /* Acentos con significado fijo */
+  --agua: var(--rio);
+  --vida: var(--selva);
+  --riesgo-hg: var(--mercurio);
+
+  /* Estados DEMO / TESTNET (siempre con texto) */
+  --demo: #e3b45a;
+  --demo-fondo: rgb(227 180 90 / 0.14);
+
+  /* Tipografía */
+  --f-display: 'Newsreader Variable', 'Newsreader', Georgia, 'Times New Roman', serif;
+  --f-ui: 'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  --t-display-xl: clamp(2.6rem, 1.4rem + 4.6vw, 5.4rem);
+  --t-display-l: clamp(2.1rem, 1.3rem + 3vw, 3.6rem);
+  --t-display-m: clamp(1.6rem, 1.2rem + 1.4vw, 2.2rem);
+  --t-h-s: 1.25rem;
+  --t-body-l: 1.125rem;
+  --t-body-m: 1rem;
+  --t-body-s: 0.875rem;
+  --t-label: 0.9375rem;
+  --t-overline: 0.75rem;
+
+  /* Espacio y forma */
+  --r-s: 10px;
+  --r-m: 16px;
+  --r-l: 24px;
+  --r-pill: 999px;
+  --contenedor: min(1240px, 100% - 2 * var(--margen));
+  --margen: clamp(16px, 4vw, 40px);
+  --header-alto: 64px;
+  --tabbar-alto: 68px;
+
+  /* Sombras en el color del mundo (nunca gris neutro) */
+  --sombra-1: 0 1px 0 rgb(243 240 228 / 0.06) inset, 0 12px 30px -18px rgb(0 0 0 / 0.6);
+  --sombra-2: 0 30px 60px -30px rgb(5 7 4 / 0.75);
+  --sombra-oro: 0 10px 28px -10px rgb(212 175 85 / 0.45);
+
+  /* Movimiento */
+  --ease-rio: cubic-bezier(0.22, 1, 0.36, 1); /* llegada suave, como agua que se asienta */
+  --ease-sale: cubic-bezier(0.55, 0, 1, 0.45);
+  --dur-press: 180ms;
+  --dur-hover: 220ms;
+  --dur-entra: 340ms;
+  --dur-sale: 160ms;
+}

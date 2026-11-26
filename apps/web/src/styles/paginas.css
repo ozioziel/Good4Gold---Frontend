@@ -1,0 +1,27 @@
+.pagina-cargando {
+  min-height: 100dvh;
+  background: var(--suelo);
+}
+
+.en-construccion {
+  width: var(--contenedor);
+  margin: 0 auto;
+  min-height: 100dvh;
+  padding: calc(var(--header-alto) + 12vh) 0 80px;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  max-width: 720px;
+}
+.en-construccion h1 {
+  font-size: var(--t-display-l);
+}
+.en-construccion p:not(.overline) {
+  color: var(--tinta-2);
+  font-size: var(--t-body-l);
+  max-width: 52ch;
+}
+.en-construccion .btn {
+  justify-self: start;
+  margin-top: 8px;
+}

@@ -1,0 +1,713 @@
+/* ===================== Donaciones — oro, bosque, agua, marfil y vida (paleta propia, plan §2.6.8) ===================== */
+.donar {
+  --bosque: var(--don-bosque);
+  --bosque-hondo: #14281f;
+  --oro-d: var(--don-oro);
+  --agua-d: var(--don-agua);
+  --vida-d: var(--don-vida);
+  background: linear-gradient(to bottom, var(--bosque-hondo), #183528 40%, #1b3a2c);
+  color: var(--don-marfil);
+}
+
+/* Hero */
+.donar-hero {
+  position: relative;
+  height: 260vh;
+}
+.donar-hero--quieto {
+  height: auto;
+}
+.donar-hero__escenario {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(45% 45% at 50% 48%, rgb(199 163 84 / 0.16), transparent 70%),
+    radial-gradient(80% 60% at 50% 110%, rgb(131 182 176 / 0.12), transparent 70%),
+    var(--bosque-hondo);
+}
+.donar-hero--quieto .donar-hero__escenario {
+  position: relative;
+}
+.donar-hero__lienzo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.donar-hero__texto {
+  position: absolute;
+  left: var(--margen);
+  right: var(--margen);
+  bottom: clamp(90px, 16vh, 150px);
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+}
+.donar-hero__texto h1 {
+  font-size: var(--t-display-l);
+  font-weight: 460;
+  max-width: 16ch;
+  color: var(--don-marfil);
+  text-shadow: 0 2px 30px rgb(10 20 14 / 0.6);
+}
+.donar-hero__texto p {
+  max-width: 44ch;
+  font-size: var(--t-body-l);
+  color: rgb(244 241 230 / 0.78);
+}
+.donar-hero__etapas {
+  position: absolute;
+  top: calc(var(--header-alto) + 26px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(244 241 230 / 0.35);
+}
+.donar-hero__etapas li {
+  transition: color 400ms var(--ease-rio);
+}
+.donar-hero__etapas li.is-pasada {
+  color: rgb(244 241 230 / 0.6);
+}
+.donar-hero__etapas li.is-activa {
+  color: var(--oro-d);
+}
+.donar-hero__saltar {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  translate: -50% 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: var(--r-pill);
+  color: rgb(244 241 230 / 0.8);
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.donar-hero__saltar svg {
+  width: 18px;
+  height: 18px;
+  color: var(--oro-d);
+}
+
+/* Secciones */
+.donar__seccion {
+  width: var(--contenedor);
+  margin: 0 auto;
+  padding: clamp(56px, 10vh, 110px) 0 0;
+  display: grid;
+  gap: 16px;
+}
+.donar__seccion:last-of-type {
+  padding-bottom: 120px;
+}
+.donar__titulo {
+  font-size: var(--t-display-m);
+  font-weight: 470;
+  color: var(--don-marfil);
+}
+.donar__lema {
+  color: rgb(244 241 230 / 0.72);
+  max-width: 56ch;
+}
+.donar__nota {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: rgb(244 241 230 / 0.6);
+}
+
+/* Causas: cartas ilustradas (mismo trazo que Infórmate, más oro) */
+.causas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.causa {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  padding: 0 0 18px;
+  border-radius: 22px;
+  border: 2px solid transparent;
+  background: var(--don-marfil);
+  color: #1f2b22;
+  text-align: left;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform var(--dur-hover) var(--ease-rio),
+    border-color var(--dur-hover) var(--ease-rio);
+}
+.causa:hover {
+  transform: translateY(-3px);
+}
+.causa:active {
+  transform: scale(0.98);
+}
+.causa[aria-pressed='true'] {
+  border-color: var(--oro-d);
+  box-shadow: 0 0 0 4px rgb(199 163 84 / 0.25);
+}
+.causa__ilus {
+  display: block;
+  padding: 10px 14px 0;
+  background: linear-gradient(to bottom, #efe6cc, var(--don-marfil));
+}
+.causa strong {
+  padding: 0 18px;
+  font-family: var(--f-display);
+  font-size: 1.4rem;
+  font-weight: 520;
+}
+.causa > span:not(.causa__ilus) {
+  padding: 0 18px;
+  font-size: 0.9375rem;
+  color: #4b5446;
+}
+.causa__check {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  padding: 4px;
+  border-radius: 50%;
+  background: var(--oro-d);
+  color: #1d1a10;
+}
+
+/* Haz crecer el cambio */
+.donar__crecer {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 72px);
+}
+.crecer__texto {
+  display: grid;
+  gap: 14px;
+}
+.montos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.monto {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  min-height: 52px;
+  padding: 0 18px;
+  border-radius: 16px;
+  border: 1px solid rgb(244 241 230 / 0.22);
+  background: rgb(244 241 230 / 0.04);
+  color: var(--don-marfil);
+  font: 600 1.25rem var(--f-display);
+  cursor: pointer;
+  transition:
+    border-color var(--dur-hover) var(--ease-rio),
+    transform var(--dur-press) var(--ease-rio);
+}
+.monto span {
+  font: 600 0.6875rem var(--f-mono);
+  color: rgb(244 241 230 / 0.55);
+}
+.monto[aria-checked='true'] {
+  border-color: var(--oro-d);
+  background: rgb(199 163 84 / 0.16);
+}
+.monto:active {
+  transform: scale(0.96);
+}
+.monto-libre {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(244 241 230 / 0.7);
+  font-size: 0.875rem;
+}
+.monto-libre input {
+  width: 120px;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgb(244 241 230 / 0.22);
+  background: rgb(244 241 230 / 0.06);
+  color: var(--don-marfil);
+  font: 600 1rem var(--f-mono);
+  color-scheme: dark;
+}
+.monto-deslizador {
+  width: 100%;
+  accent-color: var(--oro-d);
+}
+.planta-aporte svg {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.planta-aporte__tallo {
+  fill: none;
+  stroke: var(--vida-d);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  transition: stroke-dashoffset 700ms var(--ease-rio);
+}
+.planta-aporte__hoja {
+  fill: var(--vida-d);
+  stroke: #6d8f62;
+  stroke-width: 1.4;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  scale: 0.3;
+  transition:
+    opacity 500ms var(--ease-rio),
+    scale 600ms var(--ease-rio);
+}
+.planta-aporte__hoja.is-abierta {
+  opacity: 1;
+  scale: 1;
+}
+.planta-aporte__flor {
+  fill: var(--oro-d);
+  opacity: 0;
+  transition: opacity 500ms var(--ease-rio);
+}
+.planta-aporte__flor.is-abierta {
+  opacity: 1;
+}
+/* Chispas doradas que suben al cambiar el aporte: el oro se vuelve vida. */
+.planta-aporte__chispa {
+  fill: var(--oro-d);
+  opacity: 0;
+  animation: chispa 1.1s var(--ease-rio) forwards;
+}
+@keyframes chispa {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-120px);
+    fill: var(--agua-d);
+  }
+}
+
+/* Campañas */
+.campanas {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.campana {
+  height: 100%;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: 20px;
+  border-radius: 22px;
+  background: rgb(244 241 230 / 0.05);
+  border: 1px solid rgb(244 241 230 / 0.12);
+}
+.campana.is-elegida {
+  border-color: var(--oro-d);
+  background: rgb(199 163 84 / 0.08);
+}
+.campana__cabeza {
+  display: flex;
+  justify-content: space-between;
+}
+.campana__causa {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--oro-d);
+}
+.campana h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.campana__progreso {
+  height: 8px;
+  border-radius: 4px;
+  background: rgb(244 241 230 / 0.1);
+  overflow: hidden;
+}
+.campana__progreso span {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--oro-d), var(--vida-d));
+  transition: width 600ms var(--ease-rio);
+}
+.campana__cifras {
+  font-size: 0.875rem;
+  color: rgb(244 241 230 / 0.7);
+}
+.campana__cifras strong {
+  color: var(--don-marfil);
+  font-size: 1.125rem;
+}
+.hitos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+.hito {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+}
+.hito__punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgb(244 241 230 / 0.35);
+}
+.hito--hecho .hito__punto {
+  background: var(--vida-d);
+  border-color: var(--vida-d);
+}
+.hito--curso .hito__punto {
+  border-color: var(--oro-d);
+  background: rgb(199 163 84 / 0.4);
+}
+.hito__estado {
+  font-size: 0.75rem;
+  color: rgb(244 241 230 / 0.55);
+}
+.hito--hecho .hito__estado {
+  color: var(--vida-d);
+}
+.hito--curso .hito__estado {
+  color: var(--oro-d);
+}
+.campana__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: rgb(244 241 230 / 0.6);
+}
+.campana__meta svg {
+  width: 14px;
+  height: 14px;
+  color: var(--agua-d);
+}
+.campana__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Río de transparencia */
+.rio-tx {
+  display: grid;
+  gap: 14px;
+}
+.rio-tx__svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.rio-tx__cauce {
+  fill: none;
+  stroke: rgb(131 182 176 / 0.18);
+  stroke-width: 26;
+  stroke-linecap: round;
+}
+.rio-tx__agua {
+  fill: none;
+  stroke: var(--agua-d);
+  stroke-width: 3;
+  stroke-dasharray: 10 14;
+  stroke-linecap: round;
+  animation: fluye 3.2s linear infinite;
+}
+@keyframes fluye {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+.rio-tx__nodo circle:first-child {
+  fill: var(--bosque-hondo);
+  stroke: rgb(244 241 230 / 0.35);
+  stroke-width: 2;
+}
+.rio-tx__nodo .rio-tx__centro {
+  fill: rgb(244 241 230 / 0.25);
+}
+.rio-tx__nodo--hecho circle:first-child {
+  stroke: var(--vida-d);
+}
+.rio-tx__nodo--hecho .rio-tx__centro {
+  fill: var(--vida-d);
+}
+.rio-tx__nodo--curso circle:first-child {
+  stroke: var(--oro-d);
+}
+.rio-tx__nodo--curso .rio-tx__centro {
+  fill: var(--oro-d);
+}
+.rio-tx__nodo.is-activo circle:first-child {
+  stroke-width: 4;
+}
+.rio-tx__nodo text {
+  fill: rgb(244 241 230 / 0.8);
+  font: 600 15px var(--f-ui);
+}
+.rio-tx__botones {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.rio-tx__tab {
+  display: grid;
+  gap: 2px;
+  min-height: 56px;
+  padding: 8px 12px;
+  border-radius: 14px;
+  border: 1px solid rgb(244 241 230 / 0.14);
+  background: transparent;
+  color: var(--don-marfil);
+  font: 700 0.875rem var(--f-ui);
+  text-align: left;
+  cursor: pointer;
+}
+.rio-tx__tab span {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: rgb(244 241 230 / 0.55);
+}
+.rio-tx__tab--hecho span {
+  color: var(--vida-d);
+}
+.rio-tx__tab--curso span {
+  color: var(--oro-d);
+}
+.rio-tx__tab[aria-selected='true'] {
+  border-color: var(--oro-d);
+  background: rgb(199 163 84 / 0.1);
+}
+.rio-tx__detalle {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgb(244 241 230 / 0.05);
+}
+.rio-tx__bloque h4 {
+  margin-bottom: 6px;
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgb(244 241 230 / 0.55);
+}
+.rio-tx__bloque ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 0.875rem;
+}
+.rio-tx__bloque li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.rio-tx__bloque svg {
+  width: 15px;
+  height: 15px;
+  color: var(--agua-d);
+}
+.rio-tx__bloque .hito--pendiente {
+  color: rgb(244 241 230 / 0.55);
+}
+.rio-tx__resp {
+  font-size: 0.8125rem;
+  color: rgb(244 241 230 / 0.6);
+}
+
+/* Bosque colectivo */
+.bosque svg {
+  width: 100%;
+  height: auto;
+}
+.bosque__nueva {
+  animation: brota 900ms var(--ease-rio) backwards;
+  transform-box: fill-box;
+}
+@keyframes brota {
+  from {
+    opacity: 0;
+    scale: 0.2;
+  }
+}
+.bosque__cuenta {
+  font-family: var(--f-mono);
+  font-size: 0.875rem;
+  color: var(--vida-d);
+}
+
+/* Diálogo de aporte */
+.aporte {
+  display: grid;
+  gap: 14px;
+}
+.aporte__monto {
+  font: 500 2.6rem/1 var(--f-display);
+  color: var(--oro-claro);
+}
+.aporte__monto span {
+  font: 600 0.875rem var(--f-mono);
+  color: var(--tinta-2);
+}
+.aporte__datos {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.aporte__datos div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--linea);
+}
+.aporte__datos dt {
+  color: var(--tinta-3);
+  font-size: 0.875rem;
+}
+.aporte__datos dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.aporte__aviso,
+.aporte__ok,
+.aporte__espera {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--tinta-2);
+}
+.aporte__aviso svg,
+.aporte__ok svg,
+.aporte__espera svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--oro);
+}
+.aporte__error {
+  color: #ea6f5f;
+  font-size: 0.875rem;
+}
+.aporte__acciones {
+  display: grid;
+  gap: 10px;
+}
+.gira-lento {
+  animation: gira-d 1.1s linear infinite;
+}
+@keyframes gira-d {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media (max-width: 899px) {
+  .causas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .donar__crecer {
+    grid-template-columns: 1fr;
+  }
+  .planta-aporte {
+    order: -1;
+  }
+  .planta-aporte svg {
+    max-width: 220px;
+  }
+  .campanas {
+    grid-template-columns: 1fr;
+  }
+  .rio-tx__botones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .rio-tx__nodo text {
+    font-size: 22px;
+  }
+  .donar-hero__etapas {
+    gap: 10px;
+    font-size: 0.625rem;
+  }
+  .donar-hero__saltar {
+    bottom: calc(var(--tabbar-alto) + env(safe-area-inset-bottom) + 8px);
+  }
+  .donar-hero__texto {
+    bottom: calc(var(--tabbar-alto) + 70px);
+  }
+  .donar__seccion:last-of-type {
+    padding-bottom: calc(var(--tabbar-alto) + 80px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rio-tx__agua,
+  .planta-aporte__chispa,
+  .bosque__nueva,
+  .gira-lento {
+    animation: none;
+  }
+  .planta-aporte__chispa {
+    display: none;
+  }
+}

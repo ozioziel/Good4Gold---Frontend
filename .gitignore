@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vite/
+*.local
+.env
+.env.*
+!.env.example
+coverage/
+test-results/
+playwright-report/
+.DS_Store
+Thumbs.db
+# Datos científicos crudos descargados (se regeneran con scripts; ver docs/FUENTES.md)
+science/data/raw/
+science/.venv/
+__pycache__/

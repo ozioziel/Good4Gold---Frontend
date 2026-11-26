@@ -1,0 +1,279 @@
+/* Cabecera, navegación y tab bar móvil. */
+.app {
+  min-height: 100dvh;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* ---------- Marca ---------- */
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.marca__nombre {
+  font-family: var(--f-display);
+  font-size: 1.375rem;
+  font-weight: 560;
+  letter-spacing: -0.01em;
+  color: var(--tinta);
+}
+.marca__dos {
+  color: var(--oro);
+  font-style: italic;
+  margin: 0 0.02em;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 40;
+  padding-top: env(safe-area-inset-top);
+  /* Sin vidrio: la cabecera se funde con la escena mediante un velo degradado. */
+  background: linear-gradient(to bottom, rgb(24 26 23 / 0.86), rgb(24 26 23 / 0.5) 60%, rgb(24 26 23 / 0));
+}
+.cabecera__fila {
+  width: var(--contenedor);
+  margin-inline: auto;
+  height: var(--header-alto);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.cabecera__marca {
+  text-decoration: none;
+  border-radius: 10px;
+  flex: none;
+}
+.cabecera__ingresar {
+  margin-left: auto;
+  min-height: 44px;
+  padding: 0 18px;
+}
+
+/* ---------- Navegación de escritorio ---------- */
+.nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav__enlace {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px 12px;
+  border-radius: 12px;
+  color: var(--tinta-2);
+  font-size: var(--t-label);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--dur-hover) var(--ease-rio);
+}
+.nav__enlace:hover {
+  color: var(--tinta);
+}
+.nav__enlace[aria-current='page'] {
+  color: var(--tinta);
+}
+.nav__hilo {
+  position: absolute;
+  bottom: 1px;
+}
+.nav + .cabecera__ingresar {
+  margin-left: 8px;
+}
+
+/* El hilo de río se dibuja al llegar a la pestaña */
+.hilo-rio path {
+  fill: none;
+  stroke: var(--accion);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: hilo-dibuja 620ms var(--ease-rio) 60ms forwards;
+}
+@keyframes hilo-dibuja {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hilo-rio path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ---------- Tab bar móvil ---------- */
+.tabbar {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .nav {
+    display: none;
+  }
+  .cabecera__ingresar span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .cabecera__ingresar {
+    width: 44px;
+    padding: 0;
+  }
+
+  .tabbar {
+    display: block;
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 40;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+    background: rgb(24 26 23 / 0.94);
+    border-top: 1px solid var(--linea);
+  }
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .tabbar {
+      background: rgb(24 26 23 / 0.78);
+      backdrop-filter: blur(14px) saturate(1.2);
+      -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    }
+  }
+  .tabbar ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .tabbar__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    min-height: 54px;
+    padding: 4px 2px 2px;
+    border-radius: 12px;
+    color: var(--tinta-3);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tabbar__item svg:not(.hilo-rio) {
+    width: 22px;
+    height: 22px;
+    transition: transform var(--dur-press) var(--ease-rio);
+  }
+  .tabbar__item:active svg:not(.hilo-rio) {
+    transform: scale(0.9);
+  }
+  .tabbar__item[aria-current='page'] {
+    color: var(--tinta);
+  }
+  .tabbar__item[aria-current='page'] svg:not(.hilo-rio) {
+    color: var(--accion);
+  }
+  .tabbar__hilo-vacio {
+    height: 8px;
+  }
+
+  main {
+    padding-bottom: calc(var(--tabbar-alto) + env(safe-area-inset-bottom));
+  }
+}
+
+/* ---------- Tema oscuro (Mapa, Laboratorio): cabecera sólida sobre la noche ---------- */
+.app[data-tema='oscuro'] .cabecera {
+  background: rgb(21 23 20 / 0.96);
+  border-bottom: 1px solid var(--linea);
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .app[data-tema='oscuro'] .cabecera {
+    background: rgb(21 23 20 / 0.78);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  }
+}
+
+/* ---------- Tema bosque (Donaciones) ---------- */
+.app[data-tema='bosque'] .cabecera {
+  background: linear-gradient(to bottom, rgb(20 40 31 / 0.92), rgb(20 40 31 / 0.55) 70%, rgb(20 40 31 / 0));
+}
+@media (max-width: 899px) {
+  .app[data-tema='bosque'] .tabbar {
+    background: rgb(20 40 31 / 0.94);
+  }
+}
+
+/* ---------- Tema claro (Infórmate): superficie marfil y tinta oscura ---------- */
+.app[data-tema='claro'] {
+  background: var(--suelo-claro);
+  color: var(--tinta-oscura);
+  color-scheme: light;
+}
+.app[data-tema='claro'] .cabecera {
+  background: rgb(243 240 228 / 0.94);
+  border-bottom: 1px solid var(--linea-clara);
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .app[data-tema='claro'] .cabecera {
+    background: rgb(243 240 228 / 0.82);
+    backdrop-filter: blur(14px) saturate(1.1);
+    -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  }
+}
+.app[data-tema='claro'] .marca__nombre {
+  color: var(--tinta-oscura);
+}
+.app[data-tema='claro'] .marca__dos {
+  color: var(--oro-hondo);
+}
+.app[data-tema='claro'] .nav__enlace {
+  color: var(--tinta-oscura-2);
+}
+.app[data-tema='claro'] .nav__enlace:hover,
+.app[data-tema='claro'] .nav__enlace[aria-current='page'] {
+  color: var(--tinta-oscura);
+}
+.app[data-tema='claro'] .hilo-rio path {
+  stroke: var(--oro-hondo);
+}
+.app[data-tema='claro'] .cabecera__ingresar {
+  --b-fondo: transparent;
+  --b-borde: var(--linea-clara);
+  --b-tinta: var(--tinta-oscura);
+}
+.app[data-tema='claro'] .cabecera__ingresar:hover {
+  --b-borde: var(--oro-hondo);
+}
+.app[data-tema='claro'] :focus-visible {
+  outline-color: var(--oro-hondo);
+}
+@media (max-width: 899px) {
+  .app[data-tema='claro'] .tabbar {
+    background: rgb(251 249 242 / 0.96);
+    border-top-color: var(--linea-clara);
+  }
+  .app[data-tema='claro'] .tabbar__item {
+    color: var(--tinta-oscura-2);
+  }
+  .app[data-tema='claro'] .tabbar__item[aria-current='page'] {
+    color: var(--tinta-oscura);
+  }
+  .app[data-tema='claro'] .tabbar__item[aria-current='page'] svg:not(.hilo-rio) {
+    color: var(--oro-hondo);
+  }
+}
