@@ -124,6 +124,8 @@ export function HojaEscanear({ abierta, onCerrar }: { abierta: boolean; onCerrar
         respuestas: [],
         pendiente: true,
         viaQr: true,
+        // Se reenvía tal cual al servidor: quien escanea transporta, no es autor.
+        codigoQr: codificar({ id: leido.id, t: leido.t, c: leido.c, ...(leido.f ? { f: leido.f } : {}), d: leido.d, x: leido.x, ...(leido.a ? { a: leido.a } : {}) }),
       },
     });
     d({ tipo: 'aviso', texto: t('mapa.importado') });

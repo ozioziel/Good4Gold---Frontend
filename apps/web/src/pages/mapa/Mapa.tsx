@@ -212,10 +212,7 @@ function PaginaMapa() {
               {enLinea && pendientes > 0 && (
                 <button
                   type="button"
-                  onClick={() => {
-                    d({ tipo: 'sincronizar' });
-                    d({ tipo: 'aviso', texto: t('mapa.sincronizado') });
-                  }}
+                  onClick={() => d({ tipo: 'sincronizar' })}
                 >
                   <Send aria-hidden="true" />
                   {t('mapa.sincronizar')}

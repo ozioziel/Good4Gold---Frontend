@@ -21,7 +21,7 @@ import {
 import { ANIOS_S2, CAPAS, ESTUDIOS, MODELO, atribucionS2, type AnioS2, type IdCapa } from '@/data/laboratorio';
 import { LUGARES } from '@/data/mapa-lugares';
 import { LOCALIDADES_BENI } from '@/data/localidades-beni';
-import { leerSolicitudes } from '@/data/solicitudes';
+import { useSolicitudes } from '@/app/useSolicitudes';
 import { useSesion } from '@/app/sesion';
 import { cssTono, tonoOficial, tonoVirtual } from '../mapa/senales';
 import type { GloboLab, PuntoLab } from './GloboLab';
@@ -66,7 +66,7 @@ export default function Laboratorio() {
   const [vertices, setVertices] = useState(0);
   const [poligono, setPoligono] = useState<[number, number][] | null>(null);
 
-  const solicitudes = useMemo(leerSolicitudes, []);
+  const { lista: solicitudes } = useSolicitudes();
   const puntos = useMemo<PuntoLab[]>(() => {
     const lugares = LUGARES.map((l) => ({
       id: l.id,
@@ -496,7 +496,7 @@ function Estudios({ onVer }: { onVer: (lat: number, lon: number) => void }) {
 
 function Solicitudes({ esInstitucion, onVer }: { esInstitucion: boolean; onVer: (lat: number, lon: number) => void }) {
   const { t } = useTranslation();
-  const lista = useMemo(leerSolicitudes, []);
+  const { lista } = useSolicitudes();
   return (
     <>
       <p className="lab__nota">{t('laboratorio.solTexto')}</p>

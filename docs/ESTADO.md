@@ -54,12 +54,18 @@ NestJS 12 + PostgreSQL 17/PostGIS 3.5 en Docker. Detalle, rutas y reglas en `app
 | Solicitudes: ciclo completo con transiciones validadas en servidor e historial | Hecho |
 | Muestras, mediciones, revisión técnica por otra persona | Hecho |
 | `POST /sync/operations` idempotente (propias y QR v1) y paquete por comunidad | Hecho |
-| Conexión del frontend a la API | Pendiente |
+| Conexión del frontend a la API (sesión, mapa, publicar/respaldar/responder, cola y QR por `/sync/operations`, panel y Laboratorio) | Hecho · con `VITE_API_URL`; sin ella, demostración local |
 | Campañas/donaciones, Laboratorio (`/laboratory/*`), alertas por API, moderación, adjuntos | Pendiente |
 
 Probado: `npm run api:typecheck`, `npm run api:build`, `npm run api:test` (32 pruebas: dominio e integración contra PostGIS real, incluido el ciclo completo de una solicitud y la deduplicación de QR entre dos transportistas).
 
-Diferencia con el frontend: en la API el rol laboratorio **no** publica recomendaciones oficiales (PROYECTO.md §6); `tiposPermitidos` del Mapa todavía lo permite.
+El frontend ya aplica la misma regla: el laboratorio **no** publica recomendaciones oficiales (PROYECTO.md §6).
+
+**Cómo correr todo junto:** `npm run api:db`, `npm run api:dev` y, en otra terminal, `VITE_API_URL=http://localhost:3000 npm run dev` (o copiar `apps/web/.env.example` como `apps/web/.env.local`).
+
+Probado de punta a punta con Chrome headless (2026-11-26): el rol obtiene un token DEMO; el panel lista las solicitudes del servidor y una acción cambia el estado allí; un reporte recibido por QR en la cola local se envía, queda con autoría declarada y la cola se vacía; sin errores de consola. Capturas del mapa (escritorio y 375 px), panel, Laboratorio, Donaciones e Infórmate en ambos temas.
+
+Corregido en la integración: el despachador del mapa cambiaba en cada render y el mapa se volvía a crear, perdiendo los puntos de lugares; ahora es estable.
 
 ## Pendiente (fuera del frontend)
 

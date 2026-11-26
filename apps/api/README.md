@@ -70,7 +70,6 @@ Desde `apps/api`: `npm run db:up`, `db:migrar`, `db:semillas`, `db:down`.
 
 ## Pendiente
 
-- Conectar el frontend (hoy usa `localStorage`).
 - Autenticación real (Supabase Auth u otra).
 - Campañas y donaciones (Stellar testnet y Trustless Work).
 - Tablas y rutas del Laboratorio (`/laboratory/*`), alertas oficiales por API, moderación, adjuntos y notificaciones.

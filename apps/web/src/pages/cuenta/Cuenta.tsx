@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { ArrowRight, BadgeCheck, ChevronDown, FlaskConical, Landmark, LogOut, MapPinned, Microscope, ShieldCheck, Sprout, UserRound, Users } from 'lucide-react';
 import { useSesion } from '@/app/sesion';
 import type { Publicacion, Rol } from '@/data/mapa-lugares';
-import { accionesPara, guardarSolicitudes, leerSolicitudes, PASOS, SOLICITUDES_DEMO, type SolicitudPanel } from '@/data/solicitudes';
+import { accionesPara, guardarSolicitudes, PASOS, SOLICITUDES_DEMO, type SolicitudPanel } from '@/data/solicitudes';
+import { useSolicitudes } from '@/app/useSolicitudes';
 import './cuenta.css';
 
 const ROLES: { rol: Rol; icono: typeof UserRound }[] = [
@@ -154,7 +155,7 @@ export function Perfil() {
 export function Panel() {
   const { t } = useTranslation();
   const { rol, esInstitucion, ingresar } = useSesion();
-  const [lista, setLista] = useState<SolicitudPanel[]>(leerSolicitudes);
+  const { lista, setLista, remoto, error, cambiar } = useSolicitudes();
   const [filtro, setFiltro] = useState<'activas' | 'todas'>('activas');
   const visibles = useMemo(() => (filtro === 'todas' ? lista : lista.filter((s) => s.estado !== 'cerrada' && s.estado !== 'rechazada')), [lista, filtro]);
 
@@ -176,8 +177,9 @@ export function Panel() {
     );
   }
 
-  const actualizar = (id: string, a: SolicitudPanel['estado'], nota?: string) => {
-    const nueva = lista.map((s) =>
+  // Sin servidor, el cambio se simula aquí; con servidor, lo valida el backend.
+  const local = (id: string, a: SolicitudPanel['estado'], nota?: string) =>
+    lista.map((s) =>
       s.id === id
         ? {
             ...s,
@@ -187,9 +189,7 @@ export function Panel() {
           }
         : s,
     );
-    setLista(nueva);
-    guardarSolicitudes(nueva);
-  };
+  const actualizar = (id: string, a: SolicitudPanel['estado'], nota?: string) => void cambiar(id, a, () => local(id, a, nota), nota);
 
   return (
     <section className="panel-inst">
@@ -207,18 +207,25 @@ export function Panel() {
               {t(`cuenta.filtros.${f}`)}
             </button>
           ))}
-          <button
-            type="button"
-            className="chip-panel"
-            onClick={() => {
-              setLista(SOLICITUDES_DEMO);
-              guardarSolicitudes(SOLICITUDES_DEMO);
-            }}
-          >
-            {t('cuenta.reiniciar')}
-          </button>
+          {!remoto && (
+            <button
+              type="button"
+              className="chip-panel"
+              onClick={() => {
+                setLista(SOLICITUDES_DEMO);
+                guardarSolicitudes(SOLICITUDES_DEMO);
+              }}
+            >
+              {t('cuenta.reiniciar')}
+            </button>
+          )}
         </div>
       </header>
+      {error && (
+        <p className="cuenta__nota" role="alert">
+          {error}
+        </p>
+      )}
       <ul className="casos">
         {visibles.map((s) => (
           <li key={s.id}>
@@ -234,7 +241,8 @@ function Caso({ s, rol, onAccion }: { s: SolicitudPanel; rol: Rol; onAccion: (id
   const { t } = useTranslation();
   const [historial, setHistorial] = useState(false);
   const [motivo, setMotivo] = useState('');
-  const acciones = accionesPara(rol, s.estado);
+  // Con servidor, las acciones las decide el backend para esta sesión.
+  const acciones = s.acciones ?? accionesPara(rol, s.estado);
   const idx = PASOS.indexOf(s.estado);
   return (
     <article className={`caso caso--${s.estado} vidrio`}>

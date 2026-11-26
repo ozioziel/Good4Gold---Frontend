@@ -51,6 +51,14 @@ export interface Publicacion {
   demo?: boolean;
   pendiente?: boolean;
   viaQr?: boolean;
+  /** Identificador de la operación de sincronización (idempotencia en el servidor). */
+  opId?: string;
+  /** Código QR v1 original, para reenviarlo tal cual al servidor (el transportista no es autor). */
+  codigoQr?: string;
+  /** Llegó con autoría declarada y espera moderación. */
+  porRevisar?: boolean;
+  /** El servidor la rechazó al sincronizar (motivo). */
+  rechazo?: string;
 }
 
 export const slug = (s: string) =>

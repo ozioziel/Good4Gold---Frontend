@@ -57,7 +57,7 @@ function Pub({ pub, onQr }: { pub: Publicacion; onQr: (p: Publicacion) => void }
         <span className="pub__tipo">{t(`mapa.tipos.${pub.tipo}`)}</span>
       </header>
       <p className="pub__texto">{pub.texto}</p>
-      {(pub.foto || pub.pendiente || pub.demo || pub.viaQr) && (
+      {(pub.foto || pub.pendiente || pub.demo || pub.viaQr || pub.porRevisar || pub.rechazo) && (
         <p className="pub__marcas">
           {pub.foto && (
             <span>
@@ -72,6 +72,12 @@ function Pub({ pub, onQr }: { pub: Publicacion; onQr: (p: Publicacion) => void }
             </span>
           )}
           {pub.viaQr && <span>QR</span>}
+          {pub.porRevisar && <span>{t('mapa.porRevisar')}</span>}
+          {pub.rechazo && (
+            <span className="pub__marca--pendiente" title={pub.rechazo}>
+              {t('mapa.rechazada')}: {pub.rechazo}
+            </span>
+          )}
           {pub.demo && <span className="etiqueta-demo">{t('mapa.demo')}</span>}
         </p>
       )}

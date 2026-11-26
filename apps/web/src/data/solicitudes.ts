@@ -43,6 +43,8 @@ export interface SolicitudPanel {
   organizacion?: string;
   campanaId?: string;
   historial: EventoSolicitud[];
+  /** Acciones que el servidor permite a la sesión actual (si hay API). */
+  acciones?: { a: EstadoSolicitud; clave: string }[];
 }
 
 const CLAVE = 'g2:solicitudes:v1';
