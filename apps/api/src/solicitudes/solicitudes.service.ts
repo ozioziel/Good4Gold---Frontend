@@ -47,12 +47,16 @@ export class SolicitudesService {
   constructor(private readonly db: Db) {}
 
   /** Vista pública: sin datos personales (solo nombre visible y rol de quien pidió). */
-  listar(f: { fuenteId?: string; estado?: EstadoSolicitud }) {
+  async listar(f: { fuenteId?: string; estado?: EstadoSolicitud }, u?: Usuario) {
     const cond: string[] = [];
     const p: unknown[] = [];
     if (f.fuenteId) cond.push(`s.fuente_id = $${p.push(f.fuenteId)}`);
     if (f.estado) cond.push(`s.estado = $${p.push(f.estado)}`);
-    return this.db.filas(`${this.select()} ${cond.length ? 'WHERE ' + cond.join(' AND ') : ''} ORDER BY s.creado_en DESC LIMIT 200`, p);
+    const filas = await this.db.filas<{ estado: EstadoSolicitud } & Record<string, unknown>>(
+      `${this.select(true)} ${cond.length ? 'WHERE ' + cond.join(' AND ') : ''} ORDER BY s.creado_en DESC LIMIT 200`,
+      p,
+    );
+    return filas.map((s) => ({ ...s, acciones: u ? accionesPara(u.rol, s.estado) : [] }));
   }
 
   async una(id: string, u?: Usuario) {
@@ -67,25 +71,29 @@ export class SolicitudesService {
     return { ...s, historial, acciones };
   }
 
-  private select() {
+  private select(conHistorial = false) {
+    const historial = conHistorial
+      ? `, COALESCE((SELECT json_agg(json_build_object('estado', e.estado, 'fecha', e.fecha::date, 'actor', e.actor, 'nota', e.nota) ORDER BY e.fecha, e.id)
+                    FROM solicitud_eventos e WHERE e.solicitud_id = s.id), '[]') AS historial`
+      : '';
     return `SELECT s.id, s.fuente_id AS "fuenteId", f.nombre AS lugar, f.ficticia, s.motivo, s.matriz, s.estado, s.origen, s.demo,
               s.familias_representadas AS "familiasRepresentadas", s.campana_id AS "campanaId", s.creado_en AS "creadaEn",
               s.organizacion_id, o.nombre AS organizacion,
               COALESCE(u.nombre, s.solicitante_declarado) AS solicitante, u.rol AS "rolSolicitante",
               (s.solicitante_id IS NULL) AS "autoriaDeclarada",
-              (SELECT count(*)::int FROM solicitud_apoyos a WHERE a.solicitud_id = s.id) AS apoyos
+              (SELECT count(*)::int FROM solicitud_apoyos a WHERE a.solicitud_id = s.id) AS apoyos${historial}
             FROM solicitudes s JOIN fuentes_agua f ON f.id = s.fuente_id
             LEFT JOIN usuarios u ON u.id = s.solicitante_id LEFT JOIN organizaciones o ON o.id = s.organizacion_id`;
   }
 
-  async crear(u: Usuario, b: z.infer<typeof nuevaSolicitud>) {
+  async crear(u: Usuario, b: z.infer<typeof nuevaSolicitud>, c?: Consulta) {
     if (!PUEDE_SOLICITAR.includes(u.rol)) throw new ForbiddenException(`Tu rol (${u.rol}) no puede pedir investigaciones.`);
     if (b.familiasRepresentadas !== undefined) {
       if (u.rol !== 'representante') throw new ForbiddenException('Solo un representante comunitario registra en nombre de familias.');
       if (!b.consentimiento) throw new BadRequestException('Registrar en nombre de familias exige su consentimiento.');
     }
-    if (!(await this.db.fila('SELECT 1 FROM fuentes_agua WHERE id = $1', [b.fuenteId]))) throw new NotFoundException('No existe ese lugar.');
-    return this.db.transaccion(async (t) => {
+    if (!(await this.db.fila('SELECT 1 FROM fuentes_agua WHERE id = $1', [b.fuenteId], c))) throw new NotFoundException('No existe ese lugar.');
+    const hacer = async (t: Consulta) => {
       const s = await this.db.fila<{ id: string }>(
         `INSERT INTO solicitudes (fuente_id, publicacion_id, motivo, matriz, solicitante_id, familias_representadas, consentimiento)
          VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id`,
@@ -101,8 +109,9 @@ export class SolicitudesService {
         nota,
       ]);
       await this.db.auditar(t, u.id, 'solicitar', `solicitud:${s!.id}`, { fuenteId: b.fuenteId });
-      return { id: s!.id, estado: 'solicitada' };
-    });
+      return { id: s!.id, estado: 'solicitada' as const };
+    };
+    return c ? hacer(c) : this.db.transaccion(hacer);
   }
 
   /** Solicitud llegada por QR: autoría declarada; quien la transporta no es el solicitante. */

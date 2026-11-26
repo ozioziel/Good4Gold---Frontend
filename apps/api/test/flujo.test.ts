@@ -206,6 +206,19 @@ describe('ciclo completo de una solicitud', () => {
     expect(detalle.historial[0].nota).toMatch(/12 familias/);
   });
 
+  it('«pedir análisis» en el mapa abre una solicitud; el panel ve historial y acciones', async () => {
+    const c = await ingresar('ciudadano');
+    const id = randomUUID();
+    const r = (await api().post('/posts').set(c.h).send({ id, fuenteId: 'rio:rio-coroico', tipo: 'analisis', texto: 'Queremos saber si hay mercurio.' }).expect(201)).body;
+    expect(r.solicitudId).toBeTruthy();
+    const mod = await ingresar('moderador');
+    const lista = (await api().get('/research-requests?fuenteId=rio:rio-coroico').set(mod.h).expect(200)).body;
+    const s = lista.find((x: { id: string }) => x.id === r.solicitudId);
+    expect(s.historial[0].estado).toBe('solicitada');
+    expect(s.acciones.map((a: { clave: string }) => a.clave)).toEqual(['revisar', 'rechazar']);
+    expect((await api().get('/water-sources/rio:rio-coroico').expect(200)).body.senales.oficial.nivel).toBe('solicitado');
+  });
+
   it('los apoyos no se duplican', async () => {
     const c = await ingresar('ciudadano');
     const s = '00000000-0000-4000-8000-0000000000f2';

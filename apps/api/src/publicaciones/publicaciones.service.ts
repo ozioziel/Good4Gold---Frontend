@@ -2,7 +2,8 @@ import { BadRequestException, ConflictException, ForbiddenException, Injectable,
 import type { z } from 'zod';
 import { punto } from '../comun/validar';
 import { type Consulta, Db } from '../db/db.service';
-import { tiposPermitidos } from '../dominio/roles';
+import { PUEDE_SOLICITAR, tiposPermitidos } from '../dominio/roles';
+import { SolicitudesService } from '../solicitudes/solicitudes.service';
 import type { Usuario } from '../auth/sesion';
 import type { NuevaPublicacion, respaldo } from './esquemas';
 
@@ -10,7 +11,10 @@ const hoy = () => new Date().toISOString().slice(0, 10);
 
 @Injectable()
 export class PublicacionesService {
-  constructor(private readonly db: Db) {}
+  constructor(
+    private readonly db: Db,
+    private readonly solicitudes: SolicitudesService,
+  ) {}
 
   /** Publicaciones de un lugar con autor (nombre y rol), respaldos y respuestas. */
   async deLugar(fuenteId: string) {
@@ -62,7 +66,11 @@ export class PublicacionesService {
         [b.id, fuenteId, b.tipo, b.texto, b.fecha ?? hoy(), punto(b.lat, b.lon), u.id, origen],
       );
       await this.db.auditar(t, u.id, 'publicar', `publicacion:${b.id}`, { tipo: b.tipo, fuenteId, origen });
-      return { id: b.id, creada: true };
+      // «Pedir análisis» en el mapa abre la solicitud de investigación vinculada (PROYECTO.md §4).
+      let solicitudId: string | undefined;
+      if (b.tipo === 'analisis' && PUEDE_SOLICITAR.includes(u.rol))
+        solicitudId = (await this.solicitudes.crear(u, { fuenteId, motivo: b.texto, publicacionId: b.id }, t)).id;
+      return { id: b.id, creada: true, ...(solicitudId ? { solicitudId } : {}) };
     };
     return c ? hacer(c) : this.db.transaccion(hacer);
   }

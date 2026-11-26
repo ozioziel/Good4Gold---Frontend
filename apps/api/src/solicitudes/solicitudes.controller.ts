@@ -12,8 +12,8 @@ export class SolicitudesController {
   constructor(private readonly solicitudes: SolicitudesService) {}
 
   @Get()
-  listar(@Query(new Validar(filtro)) f: z.infer<typeof filtro>) {
-    return this.solicitudes.listar(f);
+  listar(@Query(new Validar(filtro)) f: z.infer<typeof filtro>, @Yo() u?: Usuario) {
+    return this.solicitudes.listar(f, u);
   }
 
   @Get(':id')
