@@ -58,7 +58,11 @@ NestJS 12 + PostgreSQL 17/PostGIS 3.5 en Docker. Detalle, rutas y reglas en `app
 | Campañas y donaciones con escrow por hitos en **Stellar testnet** (contrato Soroban propio en `contracts/escrow`, USDC de prueba de Circle) | Hecho en API · Donaciones del frontend aún con datos locales |
 | Laboratorio (`/laboratory/*`), alertas por API, moderación, adjuntos | Pendiente |
 
-Escrow: contrato desplegado en testnet (`CBJEQGCIA24NJXIOIQPKIDUR4D3O5OPJGJMSNZJH3C3HP4FMQUZBGJCI`), 6 pruebas en Rust. Probado en vivo por la API: una campaña creada en el contrato y conciliada con su estado. Las donaciones en vivo esperan USDC de prueba en la cuenta del donante DEMO (faucet de Circle, con CAPTCHA). El flujo completo (donar → liberar hitos → cancelar → reembolsar) está probado con un escrow en memoria con las mismas reglas.
+Escrow: contrato desplegado en testnet (`CBJEQGCIA24NJXIOIQPKIDUR4D3O5OPJGJMSNZJH3C3HP4FMQUZBGJCI`), 6 pruebas en Rust. Probado en vivo por la API en testnet (2026-11-26, con 20 USDC de prueba del faucet de Circle en el donante DEMO):
+- Campaña A (meta 3): aporte DEMO de 1 → hito 1 liberado → hito 2 bloqueado por falta de fondos → aporte con billetera de 2 (preparado por la API, firmado fuera con `stellar tx sign`, enviado; el reenvío da 409) → hito 2 liberado → campaña completada.
+- Campaña B (meta 4): aporte de 2 → hito 1 liberado (1) → cancelada por moderación → reembolso de 1 al donante.
+- Saldos finales en la red: organización DEMO 4 USDC, donante DEMO 16 USDC. Las dos campañas quedaron conciliadas con el contrato.
+- Las mismas reglas también están cubiertas en las pruebas de la API con un escrow en memoria.
 
 Probado: `npm run api:typecheck`, `npm run api:build`, `npm run api:test` (38 pruebas: dominio e integración contra PostGIS real, incluido el ciclo completo de una solicitud y la deduplicación de QR entre dos transportistas).
 
