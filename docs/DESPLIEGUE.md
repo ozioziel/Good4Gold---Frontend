@@ -4,7 +4,7 @@ El stack tiene tres contenedores: **PostgreSQL/PostGIS**, la **API** (NestJS) y 
 
 ## Requisitos
 - Docker Engine con el plugin `docker compose` (v2).
-- **Un VPS amd64 (x86_64).** La imagen oficial `postgis/postgis` solo existe para amd64. En un VPS ARM, cambia la imagen de `db` por una con soporte arm64 (por ejemplo `imresamu/postgis:17-3.5`) o emúlala.
+- **Un VPS amd64 (x86_64).** La imagen oficial `postgis/postgis` solo existe para amd64. En un VPS ARM, pon `POSTGIS_IMAGE=imresamu/postgis:17-3.5` en `.env` (imagen con soporte arm64).
 - Para HTTPS: un dominio con un registro A apuntando al VPS y los puertos 80 y 443 abiertos.
 
 ## Primer despliegue
@@ -52,3 +52,9 @@ docker compose --profile laboratorio run --rm ciencia cargar   # si cambiaron lo
 - `.env` contiene claves; nunca se sube a git (`.gitignore`) ni entra a las imágenes (`.dockerignore`).
 - Las claves de Stellar son **solo de testnet**. La API rechaza otra red (`STELLAR_RED=testnet`).
 - `AUTH_MODE=demo` permite elegir un rol sin cuenta. Es para la demostración, no para producción con datos reales.
+
+## Detrás de un nginx del host (en vez de Caddy)
+Si el servidor ya tiene nginx con varios sitios, publica la web solo en local y deja el TLS al nginx del host:
+1. En `.env`: `PUERTO_WEB=127.0.0.1:8095` y `CORS_ORIGINS=https://tu-dominio`.
+2. `docker compose up -d --build` (sin el perfil `https`).
+3. Un `server` en `/etc/nginx/sites-available/` con `proxy_pass http://127.0.0.1:8095;` y los encabezados `Host`, `X-Forwarded-For` y `X-Forwarded-Proto`; luego `sudo certbot --nginx -d tu-dominio --redirect`.

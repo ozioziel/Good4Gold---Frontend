@@ -5,7 +5,7 @@ name: gold2
 
 services:
   db:
-    image: postgis/postgis:17-3.5          # solo existe para amd64 (en un VPS ARM, ver docs/DESPLIEGUE.md)
+    image: ${POSTGIS_IMAGE:-postgis/postgis:17-3.5}   # la oficial solo existe para amd64; en ARM: POSTGIS_IMAGE=imresamu/postgis:17-3.5
     restart: unless-stopped
     environment:
       POSTGRES_DB: gold2
