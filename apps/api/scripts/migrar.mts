@@ -24,6 +24,16 @@ for (let intento = 1; ; intento++) {
     await cliente.connect();
     break;
   } catch (e) {
+    // Contraseña o usuario incorrectos, o base inexistente: reintentar no sirve.
+    const codigo = (e as { code?: string }).code;
+    if (codigo === '28P01' || codigo === '28000' || codigo === '3D000') {
+      console.error(
+        `No se pudo entrar a la base (${codigo}): revisa POSTGRES_PASSWORD. Postgres guarda la contraseña la primera vez que crea el volumen; ` +
+          'si la cambiaste después, recrea el volumen (docker compose down -v) o cambia la contraseña dentro de Postgres. ' +
+          'Usa una contraseña sin / + = (p. ej. openssl rand -hex 24).',
+      );
+      throw e;
+    }
     if (intento >= 30) throw e;
     console.log(`base no disponible (intento ${intento}), reintentando…`);
     await new Promise((r) => setTimeout(r, 2000));

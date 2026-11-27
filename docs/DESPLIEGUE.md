@@ -11,7 +11,7 @@ El stack tiene tres contenedores: **PostgreSQL/PostGIS**, la **API** (NestJS) y 
 ```bash
 git clone https://github.com/ozioziel/Good4Gold---Frontend.git gold2 && cd gold2
 cp .env.example .env
-#   POSTGRES_PASSWORD=$(openssl rand -base64 24)
+#   POSTGRES_PASSWORD=$(openssl rand -hex 24)     # sin / + =: va dentro de la URL de conexión
 #   JWT_SECRET=$(openssl rand -base64 32)
 #   (opcional) variables STELLAR_* y ESCROW_CONTRACT_ID para las campañas en testnet
 nano .env
@@ -52,6 +52,10 @@ docker compose --profile laboratorio run --rm ciencia cargar   # si cambiaron lo
 - `.env` contiene claves; nunca se sube a git (`.gitignore`) ni entra a las imágenes (`.dockerignore`).
 - Las claves de Stellar son **solo de testnet**. La API rechaza otra red (`STELLAR_RED=testnet`).
 - `AUTH_MODE=demo` permite elegir un rol sin cuenta. Es para la demostración, no para producción con datos reales.
+
+## Problemas frecuentes
+- **`no matching manifest for linux/arm64`:** el VPS es ARM. Pon `POSTGIS_IMAGE=imresamu/postgis:17-3.5` en `.env`.
+- **La API queda «unhealthy» y el log dice `28P01` o `password authentication failed`:** la contraseña de la base no coincide. Postgres la guarda la primera vez que crea el volumen. Si no hay datos que conservar, recrea el volumen con `docker compose down -v` y `docker compose up -d --build`. Si los hay, cambia la contraseña dentro de Postgres (`ALTER USER gold2 PASSWORD '…'`). Usa contraseñas sin `/ + =`.
 
 ## Detrás de un nginx del host (en vez de Caddy)
 Si el servidor ya tiene nginx con varios sitios, publica la web solo en local y deja el TLS al nginx del host:
