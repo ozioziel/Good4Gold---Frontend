@@ -1,0 +1,5 @@
+# HTTPS automático para el dominio de .env (DOMINIO=gold2.ejemplo.org).
+{$DOMINIO} {
+  encode gzip
+  reverse_proxy web:80
+}

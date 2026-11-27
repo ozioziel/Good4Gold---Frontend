@@ -17,8 +17,19 @@ const sql = (carpeta: string) =>
     .sort()
     .map((f) => ({ nombre: f, texto: readFileSync(join(raiz, carpeta, f), 'utf8') }));
 
-const cliente = new pg.Client({ connectionString: url });
-await cliente.connect();
+// En el primer arranque, PostGIS reinicia el servidor tras inicializar: se reintenta unos segundos.
+let cliente = new pg.Client({ connectionString: url });
+for (let intento = 1; ; intento++) {
+  try {
+    await cliente.connect();
+    break;
+  } catch (e) {
+    if (intento >= 30) throw e;
+    console.log(`base no disponible (intento ${intento}), reintentando…`);
+    await new Promise((r) => setTimeout(r, 2000));
+    cliente = new pg.Client({ connectionString: url });
+  }
+}
 try {
   await cliente.query('CREATE TABLE IF NOT EXISTS migraciones (nombre text PRIMARY KEY, aplicada_en timestamptz NOT NULL DEFAULT now())');
   const hechas = new Set((await cliente.query<{ nombre: string }>('SELECT nombre FROM migraciones')).rows.map((r) => r.nombre));

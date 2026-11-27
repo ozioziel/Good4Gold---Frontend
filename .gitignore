@@ -10,10 +10,11 @@ test-results/
 playwright-report/
 .DS_Store
 Thumbs.db
-# Datos científicos crudos descargados (se regeneran con scripts; ver docs/FUENTES.md)
-science/data/raw/
+# Laboratorio virtual (science/): entorno y descargas crudas fuera; resultados derivados (~1,6 MB) dentro.
 science/.venv/
-science/datos/brutos/
+science/datos/brutos/*
+# Los ríos de OSM sí se suben (320 KB, ODbL): Overpass suele fallar y sin ellos no se rehacen los tramos.
+!science/datos/brutos/osm_rios.json
 science/datos/derivados/*.log
 .pytest_cache/
 __pycache__/

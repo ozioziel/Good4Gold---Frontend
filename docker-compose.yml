@@ -1,0 +1,86 @@
+# Despliegue de Gold2Life en un servidor: base de datos, API y web (nginx con proxy a /api).
+#   cp .env.example .env   (completa los valores)   →   docker compose up -d --build
+# HTTPS automático con Caddy (necesario para PWA, cámara del QR y Freighter):  docker compose --profile https up -d
+name: gold2
+
+services:
+  db:
+    image: postgis/postgis:17-3.5          # solo existe para amd64 (en un VPS ARM, ver docs/DESPLIEGUE.md)
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: gold2
+      POSTGRES_USER: gold2
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Falta POSTGRES_PASSWORD en .env}
+    volumes:
+      - db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gold2 -d gold2"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    # Sin puertos publicados: solo la API la ve. Para administrar: docker compose exec db psql -U gold2
+
+  api:
+    build: { context: ., dockerfile: apps/api/Dockerfile }
+    restart: unless-stopped
+    depends_on:
+      db: { condition: service_healthy }
+    environment:
+      DATABASE_URL: postgres://gold2:${POSTGRES_PASSWORD}@db:5432/gold2
+      PORT: 3000
+      JWT_SECRET: ${JWT_SECRET:?Falta JWT_SECRET en .env}
+      AUTH_MODE: ${AUTH_MODE:-demo}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost}
+      MARCA: ${MARCA:-Gold2Life}
+      SEMILLAS: ${SEMILLAS:-1}
+      STELLAR_RPC_URL: ${STELLAR_RPC_URL:-https://soroban-testnet.stellar.org}
+      STELLAR_RED: testnet
+      ESCROW_CONTRACT_ID: ${ESCROW_CONTRACT_ID:-}
+      USDC_CONTRACT_ID: ${USDC_CONTRACT_ID:-CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA}
+      STELLAR_ADMIN_SECRET: ${STELLAR_ADMIN_SECRET:-}
+      STELLAR_VERIFICADOR_SECRET: ${STELLAR_VERIFICADOR_SECRET:-}
+      STELLAR_ORG_DEMO_PUBLIC: ${STELLAR_ORG_DEMO_PUBLIC:-}
+      STELLAR_DONANTE_DEMO_SECRET: ${STELLAR_DONANTE_DEMO_SECRET:-}
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        VITE_API_URL: /api
+        VITE_BRAND_NAME: ${MARCA:-Gold2Life}
+    restart: unless-stopped
+    depends_on:
+      api: { condition: service_healthy }
+    ports:
+      - "${PUERTO_WEB:-80}:80"
+
+  # HTTPS con certificado automático (Let's Encrypt). Requiere DOMINIO apuntando al servidor y PUERTO_WEB distinto de 80.
+  caddy:
+    image: caddy:2-alpine
+    profiles: ["https"]
+    restart: unless-stopped
+    depends_on: [web]
+    environment:
+      DOMINIO: ${DOMINIO:-}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_datos:/data
+      - caddy_config:/config
+
+  # Carga en la base los resultados del laboratorio virtual que vienen en el repo (segundos).
+  ciencia:
+    build: ./science
+    profiles: ["laboratorio"]
+    depends_on:
+      db: { condition: service_healthy }
+    environment:
+      DATABASE_URL: postgresql://gold2:${POSTGRES_PASSWORD}@db:5432/gold2
+
+volumes:
+  db:
+  caddy_datos:
+  caddy_config:

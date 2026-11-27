@@ -105,7 +105,17 @@ Este resumen cubre una jornada de trabajo sobre Gold2Life (Gold4Good 2026): qué
 - Los umbrales de Gold2Risk son ilustrativos y necesitan revisión de un especialista.
 - Pendiente: autenticación real, alertas oficiales y moderación por API, revisión de Freighter en un navegador con la extensión y prueba en celulares reales.
 
-## 6. Cómo correr todo
+## 6. Despliegue con Docker
+`docker-compose.yml` en la raíz levanta tres servicios:
+- **db:** PostGIS.
+- **api:** al arrancar aplica las migraciones y las semillas, reintentando la conexión mientras la base termina de iniciar.
+- **web:** nginx sirve la PWA y hace de proxy a `/api`.
+
+Opcionales: el perfil `https` agrega Caddy con certificados automáticos, y el perfil `laboratorio` agrega el servicio que carga los resultados de `science/`.
+
+Probado localmente en el puerto 8088: build, servicios en estado *healthy*, rutas de la SPA, API por `/api`, carga del laboratorio, escrow de testnet configurado y el panel en el navegador sin errores. Guía completa en `docs/DESPLIEGUE.md`.
+
+## 7. Cómo correr todo
 ```bash
 npm run api:db && npm run api:dev                           # API en :3000
 VITE_API_URL=http://localhost:3000 npm run dev              # web en :5180

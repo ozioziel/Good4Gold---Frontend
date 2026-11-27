@@ -1,0 +1,14 @@
+# Contexto de build: solo lo necesario (nunca claves ni dependencias locales).
+**/node_modules
+**/dist
+**/.env
+**/.env.*
+!**/.env.example
+.git
+contracts/escrow/target
+science/.venv
+science/datos/brutos
+**/*.log
+**/.DS_Store
+docs/capturas
+gold2-contexto-claude.zip
