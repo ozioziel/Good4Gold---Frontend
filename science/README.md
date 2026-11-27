@@ -48,3 +48,10 @@ Cada paso queda registrado en `datos/derivados/manifiesto.json`: fecha, commit, 
 - **NDTI** es turbidez *relativa*: no son NTU ni sedimentos medidos, porque no hay calibración en campo. Los ríos estrechos (Tipuani, Coroico) tienen pocos píxeles de agua a 20 m.
 - **Aguas arriba** se aproxima con la red de OSM y una franja de 3 km; no es una cuenca hidrológica.
 - **Lluvia:** CHIRPS (0,05°) se toma en el punto medio de cada tramo.
+
+## Validación con datos de campo (pendiente)
+Todavía no hay mediciones de campo con coordenadas dentro de los tramos para medir el acierto. Lo que se encontró (2026-11-26):
+- **SO-HYBAM (IRD/SENAMHI):** mide sedimentos en suspensión en el Beni en Rurrenabaque / Angosto del Bala unas tres veces al mes (CC BY 4.0, según THEIA). Es la mejor opción para **validar NDTI contra sedimentos medidos**. El portal arma su catálogo con JavaScript, así que no hay descarga directa por script: hay que bajar la serie desde https://hybam.obs-mip.fr y guardarla en `datos/brutos/`.
+- **Maurice-Bourgoin et al. (IAHS 2002):** en el Beni, el Hg total va de 19 ng/L en época seca a 460 ng/L en crecida, con 59–98 % unido a partículas, y el Hg de los sedimentos se correlaciona con la arcilla (r² = 0,74). Respalda usar la turbidez como indicador para priorizar, pero sus núcleos están aguas abajo de Rurrenabaque.
+- **Maurice-Bourgoin et al. 1999 (Ambio) y 2000 (Sci. Total Environ.):** mercurio por río (Kaka, Mapiri, Tipuani, Beni). Están en el repositorio del IRD, que estaba en mantenimiento al consultarlo.
+- **La validación de verdad** es muestrear tramos de prioridad alta y baja: así se mide si la priorización acierta.
