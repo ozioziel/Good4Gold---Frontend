@@ -1,9 +1,9 @@
-"""Uso: uv run python -m g2 <paso>   (tramos | mineria | lluvia | espectral | riesgo | cargar | todo)"""
+"""Uso: uv run python -m g2 <paso>   (tramos | mineria | lluvia | espectral | riesgo | cargar | validacion | todo)"""
 import sys
 
 from .config import asegurar_carpetas
 
-PASOS = ["tramos", "mineria", "lluvia", "espectral", "riesgo", "cargar"]
+PASOS = ["tramos", "mineria", "lluvia", "espectral", "riesgo", "cargar", "validacion"]
 
 
 def main() -> None:

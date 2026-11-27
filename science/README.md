@@ -49,9 +49,17 @@ Cada paso queda registrado en `datos/derivados/manifiesto.json`: fecha, commit, 
 - **Aguas arriba** se aproxima con la red de OSM y una franja de 3 km; no es una cuenca hidrológica.
 - **Lluvia:** CHIRPS (0,05°) se toma en el punto medio de cada tramo.
 
+## Validación contra sedimentos de Dethier et al. (2023)
+`uv run python -m g2 validacion` compara nuestro NDTI con los sedimentos en suspensión (mg/L) publicados por Dethier et al. (2023, Nature; Zenodo 7699122, CC BY 4.0). Esos valores se estimaron con Landsat y se calibraron con más de 130 000 mediciones de campo, a lo largo de los perfiles mineros del Mapiri y del Tipuani hasta el Beni.
+- **Resultado (épocas secas 2019–2021):** 75 pares tramo-año, Pearson r = **0,49** (log de sedimentos contra NDTI) y Spearman ρ = 0,25. Es una relación positiva, de débil a moderada.
+- **Cómo leerlo:** NDTI sigue la dirección de los sedimentos, pero no sirve para estimar concentraciones. Tiende a saturarse con cientos de mg/L, y las dos series vienen de sensores, fechas y métodos distintos. Por eso Gold2Spectral usa anomalías respecto de otros años y no valores absolutos.
+- **No es validación con mediciones directas de campo.** Datos y detalle en `datos/externos/LEEME.md`.
+
 ## Validación con datos de campo (pendiente)
 Todavía no hay mediciones de campo con coordenadas dentro de los tramos para medir el acierto. Lo que se encontró (2026-11-26):
 - **SO-HYBAM (IRD/SENAMHI):** mide sedimentos en suspensión en el Beni en Rurrenabaque / Angosto del Bala unas tres veces al mes (CC BY 4.0, según THEIA). Es la mejor opción para **validar NDTI contra sedimentos medidos**. El portal arma su catálogo con JavaScript, así que no hay descarga directa por script: hay que bajar la serie desde https://hybam.obs-mip.fr y guardarla en `datos/brutos/`.
 - **Maurice-Bourgoin et al. (IAHS 2002):** en el Beni, el Hg total va de 19 ng/L en época seca a 460 ng/L en crecida, con 59–98 % unido a partículas, y el Hg de los sedimentos se correlaciona con la arcilla (r² = 0,74). Respalda usar la turbidez como indicador para priorizar, pero sus núcleos están aguas abajo de Rurrenabaque.
 - **Maurice-Bourgoin et al. 1999 (Ambio) y 2000 (Sci. Total Environ.):** mercurio por río (Kaka, Mapiri, Tipuani, Beni). Están en el repositorio del IRD, que estaba en mantenimiento al consultarlo.
+- **SO-HYBAM también publica la serie** de la estación Rurrenabaque (código 15275100, archivo `15275100_Q_IMsO_(mg/l).nc`, DOI 10.6096/1036, CC BY 4.0). Desde el 2026-11-26 su botón de descarga responde 404, así que hay que pedirla a su responsable (J.-M. Martinez, IRD).
+- **GloRiSe v1.1** (Zenodo 4485795) no tiene muestras en la cuenca del Beni.
 - **La validación de verdad** es muestrear tramos de prioridad alta y baja: así se mide si la priorización acierta.
