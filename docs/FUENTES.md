@@ -15,9 +15,25 @@ Registro de todo dato real usado en la interfaz. Lo que no está aquí no debe m
 | Laboratorio: biblioteca de estudios | Valdivieso 2025; Gerson et al. 2022 (Dryad D1DH6F); USGS SF Bay (2 datasets); Remote Sensing 14(13):2971; PNUMA GMA 2018; planetGOLD | Enlaces a las fuentes originales | 2026-11-26 (enlaces); contenido pendiente de auditoría |
 | Infórmate: fuentes de las 33 cartas | OPS «Mi comunidad se cuida del mercurio», OMS, PNUMA, planetGOLD, Convenio de Minamata, AAPS (NB 512) | Documentos públicos | Textos en revisión editorial |
 
+## Laboratorio virtual (`science/`)
+
+| Uso | Fuente | Licencia / estado | Verificado |
+|---|---|---|---|
+| Tramos de río de la zona piloto (Guanay–Mapiri–Kaka–Beni) | OpenStreetMap vía Overpass (espejo `maps.mail.ru`) | ODbL 1.0 — © colaboradores de OpenStreetMap | 2026-11-26 |
+| Gold2Mining: hectáreas de minería por tramo y año | Amazon Mining Watch, ráster de cicatrices mineras a 10 m (source.coop) | CC BY 4.0 | 2026-11-26. Cubre solo la cuenca amazónica según su propio límite; detectar minería no prueba uso de mercurio |
+| Gold2Spectral: índices de turbidez (NDTI) en épocas secas 2019–2025 | Copernicus Sentinel-2 L2A en Earth Search (STAC anónimo, AWS) | Datos Copernicus, uso libre con atribución | 2026-11-26 |
+| Lluvia previa a cada imagen | CHIRPS v3, pentadas (UCSB Climate Hazards Center) | Citar Funk et al. (ver `README-CHIRPSv3.0.txt`) | 2026-11-26 |
+| Validación de NDTI frente a sedimentos (75 pares, r = 0,49 en log, ρ = 0,25) | Dethier, E. N., Silman, M., Díaz Leiva, J., et al. (2023). *Nature* 620: 787–793. DOI 10.1038/s41586-023-06309-9. Datos: Zenodo 7699122 | CC BY 4.0 | 2026-11-26 (`uv run python -m g2 validacion`) |
+
+Las fuentes de cada corrida quedan registradas en el manifiesto de `science/`.
+
 ## Datos candidatos (aún no integrados)
 
-Ver `docs/contexto/ciencia-datos.md` §4.2. Confirmados como accesibles el 2026-11-25: Dryad D1DH6F (Gerson et al., 2022, Madre de Dios, Perú), Amazon Mining Watch (CC BY 4.0, source.coop), Sentinel-2 L2A en Earth Search (STAC anónimo). NB 512:2016 es la versión vigente; el valor de 0,001 mg/L para Hg aún no se verificó en la tabla oficial.
+Ver `docs/contexto/ciencia-datos.md` §4.2.
+- Dryad D1DH6F (Gerson et al., 2022, Madre de Dios, Perú): confirmado como accesible el 2026-11-25.
+- **SO-HYBAM, estación Rurrenabaque 15275100** (DOI 10.6096/1036, CC BY 4.0): sedimentos medidos en el Beni. Desde el 2026-11-26 la descarga responde 404; hay que pedir la serie a su responsable.
+- **GloRiSe v1.1** (Zenodo 4485795): no tiene muestras en la cuenca del Beni.
+- **NB 512:2016** es la versión vigente; el valor de 0,001 mg/L para Hg aún no se verificó en la tabla oficial.
 
 ## Escenas ilustrativas
 

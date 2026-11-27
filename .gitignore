@@ -22,3 +22,12 @@ __pycache__/
 # Compilación de contratos Soroban
 target/
 test_snapshots/
+
+# Material audiovisual pesado o con voces de entrevistas (se comparte por Drive, no en el repo público)
+outputs/video-demo/*.mp4
+outputs/video-demo/editable/
+outputs/pitch-deck/videos/
+outputs/pitch-deck/trabajo/
+outputs/pitch-deck/*.pptx
+outputs/pitch-deck/imagenes/poster-entrevistas.jpg
+outputs/entrevistas/

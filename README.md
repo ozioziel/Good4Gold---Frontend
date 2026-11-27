@@ -4,6 +4,17 @@
 
 Plataforma comunitaria, científica y de financiamiento frente al **mercurio de la minería aurífera** en la cuenca del río Beni (Bolivia). Proyecto para la hackathon **Gold4Good 2026**. «Gold2Life» es una marca provisional y configurable.
 
+**Prototipo en línea:** https://gold2life.bell7738.com (datos DEMO y red de prueba de Stellar; sin dinero real).
+
+## Reto
+
+| Desafío | Cómo responde Gold2Life |
+|---|---|
+| **ORO-3.1 · Información verificada, riesgos y prevención** (foco principal) | Infórmate: 33 cartas ilustradas con fuente, legibles sin conexión. Mapa comunitario con tres señales separadas: un reporte o un voto nunca confirman mercurio. Reportes que viajan por QR donde no hay señal. |
+| **ORO-3.3 · Mapa vivo de estudios y proyectos sobre mercurio** (complemento) | Laboratorio: biblioteca de estudios enlazada a sus fuentes, imágenes satelitales por año y prioridad de muestreo por tramo de río, para orientar dónde hace falta investigar. |
+
+Ambos pertenecen al Gran Desafío 03, «Conocimiento y acción frente a la exposición del mercurio».
+
 ![Inicio: el lado invisible del oro](docs/capturas/inicio/01-oro.jpg)
 
 ## Qué resuelve
@@ -87,6 +98,7 @@ HTTPS automático con Caddy, actualización y respaldos en [`docs/DESPLIEGUE.md`
 
 ## Documentación
 
+- [`docs/README.md`](docs/README.md): **índice de toda la documentación técnica** (arquitectura, módulos, API y datos, geoespacial, metodología, participación, seguridad, pruebas, limitaciones y hoja de ruta).
 - [`docs/PROYECTO.md`](docs/PROYECTO.md): el proyecto, sus actores y su flujo central.
 - [`docs/ESTADO.md`](docs/ESTADO.md): qué está hecho, qué es real y qué es DEMO, y qué se probó.
 - [`docs/TRABAJO-REALIZADO.md`](docs/TRABAJO-REALIZADO.md): resumen del trabajo de backend, escrow, laboratorio y despliegue.
@@ -95,7 +107,7 @@ HTTPS automático con Caddy, actualización y respaldos en [`docs/DESPLIEGUE.md`
 
 ## Datos y licencias
 
-OpenStreetMap (ODbL) · Copernicus Sentinel-2 (Earth Search) · EOX Sentinel-2 cloudless · NASA GIBS (MODIS) · Amazon Mining Watch (CC BY 4.0) · CHIRPS v3 (UCSB). Las cifras de salud y mercurio citan su fuente; los lugares, personas y resultados de ejemplo son **ficticios y están marcados DEMO**.
+OpenStreetMap (ODbL) · Copernicus Sentinel-2 L2A (Earth Search) · EOX Sentinel-2 cloudless · NASA GIBS (MODIS) · Amazon Mining Watch (CC BY 4.0) · CHIRPS v3 (UCSB) · Dethier et al. 2023 (Zenodo 7699122, CC BY 4.0). Las cifras de salud y mercurio citan su fuente; los lugares, personas y resultados de ejemplo son **ficticios y están marcados DEMO**.
 
 ## Estado
 
@@ -105,3 +117,59 @@ MVP funcional para la hackathon:
 - **Sin confirmar:** las alianzas institucionales; ninguna está confirmada.
 
 **Pendiente:** autenticación real, revisión de los umbrales por especialistas, validación con muestras de campo y pruebas en celulares de gama baja.
+
+## Resumen del informe técnico
+
+**Problema.** En la cuenca del río Beni, la minería aurífera usa mercurio. Las familias ribereñas e indígenas dependen del pescado, pero la información existente es técnica, está dispersa y casi nunca llega a ellas. Además:
+- Pedir un análisis depende de tener contactos.
+- Los estudios no se conectan con lo que la comunidad observa.
+- Las alertas comunitarias, las estimaciones satelitales y los resultados de laboratorio suelen mezclarse, como si valieran lo mismo.
+
+**Solución.** Una PWA ligera que conecta a comunidades, investigadores, laboratorios, autoridades sanitarias y donantes en cinco espacios: Inicio, Infórmate, Mapa comunitario, Laboratorio y Donaciones.
+- **Flujo central:** una persona reporta o pide un análisis desde el mapa, incluso sin conexión y por QR. Una organización acepta el caso. Un laboratorio carga el resultado de una muestra y otra persona lo revisa. Si hace falta financiamiento, una campaña con escrow por hitos deja cada movimiento trazable.
+
+**Tecnología.**
+- **Web:** React 19, Vite, MapLibre y three.js.
+- **API:** NestJS con PostgreSQL/PostGIS, que aplica las reglas de evidencia y los roles en el servidor.
+- **Escrow:** contrato Soroban propio en Stellar **testnet**.
+- **Laboratorio virtual:** pipeline en Python.
+- **Despliegue:** Docker Compose en un VPS.
+
+**Laboratorio virtual.** Prioriza dónde muestrear; **no mide mercurio**.
+- **Gold2Mining:** hectáreas mineras por tramo, a partir de Amazon Mining Watch.
+- **Gold2Spectral:** anomalías de turbidez (NDTI) con Sentinel-2, descontando la lluvia con CHIRPS.
+- **Gold2Risk v0:** reglas explicables con umbrales sin revisión de especialista.
+- **Resultado de la temporada seca 2025, en 48 tramos:** 2 de prioridad alta (Kaka-02 y Mapiri-04), 31 media, 14 baja y 1 con información insuficiente.
+- **Gold2Mercury:** en pausa, porque no hay muestras de Bolivia para validarlo.
+
+**Validación.**
+- **NDTI frente a sedimentos de Dethier et al. (2023):** 75 pares, r = 0,49 (log), ρ = 0,25. Es una relación de débil a moderada, que respalda usar anomalías y no valores absolutos; **no es una validación con mediciones directas de campo**.
+- **Pruebas automatizadas:** 41 del API, 6 del contrato y 6 del laboratorio.
+- **Pruebas en vivo:** dos campañas completas en testnet.
+- **Usuarios y especialistas:** la propuesta se contrastó con ellos durante la hackathon.
+
+**Qué es real y qué no.**
+- **Real:** el API y su base, los datos satelitales y de minería, el laboratorio virtual y el escrow en red de prueba.
+- **DEMO:** las cuentas (ingreso por rol, sin autenticación real), y los lugares, publicaciones y algunos resultados de ejemplo.
+- **Sin confirmar:** ninguna alianza institucional está confirmada.
+
+**Limitaciones principales.**
+- Los satélites ópticos no detectan mercurio disuelto.
+- Solo se analiza la época seca, por las nubes.
+- La prioridad «media» del Beni sale inflada porque la minería aguas arriba no se atenúa con la distancia.
+- Las cartas de Infórmate están pendientes de revisión con especialistas y con la autoridad sanitaria.
+- Detalle en [`docs/limitaciones.md`](docs/limitaciones.md).
+
+**Próximos pasos.**
+- Muestrear tramos de prioridad alta y baja con un laboratorio competente.
+- Gold2Risk v1, con atenuación por distancia y revisión de especialistas.
+- Autenticación real y pruebas en celulares de gama baja.
+- Catálogo de estudios con metadatos estándar (ORO-3.3).
+- Información por especie, río y persona, construida con las comunidades.
+- Detalle en [`docs/roadmap.md`](docs/roadmap.md).
+
+## Equipo
+
+- Luis Daniel Rojas Caceres
+- Oziel Rodman Ramos Torrez
+- Daniel Boris Rueda

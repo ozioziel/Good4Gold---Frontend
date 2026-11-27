@@ -1,0 +1,175 @@
+1
+00:00:00,600 --> 00:00:05,610
+Observa estos dos vasos de agua. ¿Podrías decirme cuál contiene mercurio?
+
+2
+00:00:05,650 --> 00:00:07,860
+Aunque se vean exactamente iguales,
+
+3
+00:00:07,900 --> 00:00:11,070
+no podrías saberlo simplemente mirándolos.
+
+4
+00:00:12,000 --> 00:00:12,680
+En Bolivia,
+
+5
+00:00:12,720 --> 00:00:16,920
+el uso de mercurio en la minería aurífera representa un riesgo para el
+
+6
+00:00:16,960 --> 00:00:18,640
+medio ambiente y la salud.
+
+7
+00:00:18,680 --> 00:00:22,480
+Pero acceder a información confiable, y saber cómo actuar,
+
+8
+00:00:22,520 --> 00:00:26,070
+sigue siendo un desafío para muchas comunidades.
+
+9
+00:00:26,800 --> 00:00:34,000
+Es bastante difícil porque el mercurio no se ve y viaja por los ríos y los peces hasta comunidades muy lejanas.
+
+10
+00:00:34,960 --> 00:00:36,780
+Por eso desarrollamos Gold2Life:
+
+11
+00:00:36,820 --> 00:00:39,980
+una plataforma que conecta información verificada,
+
+12
+00:00:40,020 --> 00:00:43,940
+participación comunitaria e investigación científica,
+
+13
+00:00:43,980 --> 00:00:48,120
+para prevenir los riesgos asociados al mercurio.
+
+14
+00:00:48,930 --> 00:00:52,180
+Cualquier persona puede aprender qué es el mercurio,
+
+15
+00:00:52,220 --> 00:00:54,120
+cómo llega a nuestro entorno,
+
+16
+00:00:54,160 --> 00:00:58,370
+cuáles son sus riesgos y qué medidas de prevención puede adoptar.
+
+17
+00:00:58,410 --> 00:01:00,270
+Todo con contenido ilustrado,
+
+18
+00:01:00,310 --> 00:01:03,530
+accesible y respaldado por fuentes reconocidas.
+
+19
+00:01:03,910 --> 00:01:04,470
+Ahora,
+
+20
+00:01:04,550 --> 00:01:10,110
+imaginemos que una comunidad identifica una actividad preocupante cerca de su río.
+
+21
+00:01:10,150 --> 00:01:14,080
+Desde nuestro mapa puede consultar la información disponible,
+
+22
+00:01:14,120 --> 00:01:17,850
+publicar una observación y solicitar una investigación.
+
+23
+00:01:18,100 --> 00:01:21,590
+La plataforma diferencia los reportes comunitarios,
+
+24
+00:01:21,630 --> 00:01:25,570
+los indicios de riesgo ambiental y los resultados de laboratorio,
+
+25
+00:01:25,610 --> 00:01:29,840
+para no confundir una sospecha con una contaminación confirmada.
+
+26
+00:01:30,400 --> 00:01:35,569
+Considero que las comunidades deben tener la posibilidad de comunicar sus necesidades directamente a los investigadores.
+
+27
+00:01:35,609 --> 00:01:38,300
+Eso permitiría realizar estudios donde realmente se necesitan.
+
+28
+00:01:38,900 --> 00:01:43,130
+Los investigadores pueden explorar imágenes satelitales reales,
+
+29
+00:01:43,170 --> 00:01:45,310
+comparar cambios a través del tiempo,
+
+30
+00:01:45,350 --> 00:01:49,710
+consultar estudios científicos y delimitar zonas de investigación.
+
+31
+00:01:49,910 --> 00:01:53,140
+No buscamos reemplazar los análisis químicos,
+
+32
+00:01:53,180 --> 00:01:57,650
+sino usar la tecnología para identificar dónde hace falta investigar.
+
+33
+00:01:58,100 --> 00:01:59,691
+Tenemos mucho que investigar.
+
+34
+00:01:59,731 --> 00:02:02,600
+En Bolivia no tenemos una cultura de investigación.
+
+35
+00:02:03,100 --> 00:02:07,250
+¿Y qué sucede con las comunidades que no tienen conexión a internet?
+
+36
+00:02:07,290 --> 00:02:12,290
+Los reportes se guardan sin conexión y viajan entre teléfonos mediante códigos QR,
+
+37
+00:02:12,330 --> 00:02:14,890
+hasta encontrar un punto con señal.
+
+38
+00:02:15,830 --> 00:02:18,960
+Cuando una investigación necesita recursos,
+
+39
+00:02:19,000 --> 00:02:22,450
+proponemos campañas de financiamiento trazables:
+
+40
+00:02:22,490 --> 00:02:25,860
+cada aporte está vinculado a objetivos concretos,
+
+41
+00:02:25,900 --> 00:02:31,130
+desde la toma de muestras hasta la publicación de resultados y las acciones de prevención.
+
+42
+00:02:32,800 --> 00:02:37,300
+El satélite nos dice dónde buscar. La ciencia nos dice qué encontramos.
+
+43
+00:02:37,340 --> 00:02:41,800
+Y la comunidad nos dice dónde hace falta actuar. Somos Gold2Life.
+
+44
+00:02:41,840 --> 00:02:45,380
+El oro tiene valor. La vida no tiene precio.

@@ -92,48 +92,127 @@
 }
 .app[data-tema='claro'] .tema:focus-visible,
 .app[data-tema='claro'] .flecha:focus-visible,
-.app[data-tema='claro'] .carrusel__pista:focus-visible {
+.app[data-tema='claro'] .visor:focus-visible {
   outline: 2px solid var(--foco);
   outline-offset: 3px;
 }
 
-/* Carrusel */
-.carrusel {
+/* Visor: una carta por pantalla */
+.visor {
   position: relative;
   z-index: 2;
-  margin-top: 22px;
+  width: min(1180px, calc(100vw - 2 * var(--margen)));
+  margin: 22px auto 0;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 56px;
+  grid-template-areas:
+    'izq marco der'
+    '. progreso .';
+  align-items: center;
+  column-gap: 18px;
+  row-gap: 16px;
+  outline: none;
+  touch-action: pan-y;
 }
-.carrusel__pista {
-  list-style: none;
-  margin: 0;
-  display: flex;
-  gap: 18px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 8px max(var(--margen), calc((100vw - 1240px) / 2)) 18px;
-  scroll-padding-inline: max(var(--margen), calc((100vw - 1240px) / 2));
-  scrollbar-width: none;
-  overscroll-behavior-x: contain;
+.visor:focus-visible .visor__marco {
+  outline: 2px solid var(--foco);
+  outline-offset: 6px;
+  border-radius: 30px;
 }
-.carrusel__pista::-webkit-scrollbar {
-  display: none;
+.visor__marco {
+  grid-area: marco;
+  display: grid;
+  min-height: clamp(380px, 52vh, 520px);
+}
+.flecha--izq {
+  grid-area: izq;
+}
+.flecha--der {
+  grid-area: der;
+}
+.visor__progreso {
+  grid-area: progreso;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px;
 }
 .carta {
-  flex: none;
-  width: min(82vw, 320px);
-  scroll-snap-align: start;
+  /* Las dos cartas (la que entra y la que sale) ocupan la misma celda. */
+  grid-area: 1 / 1;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  border-radius: 26px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  border-radius: 30px;
   background: var(--superficie-clara);
   box-shadow:
     0 1px 0 rgb(255 255 255 / 0.8) inset,
-    0 20px 40px -28px rgb(var(--crema-sombra-rgb) / 0.45),
+    0 30px 60px -36px rgb(var(--crema-sombra-rgb) / 0.5),
     0 2px 6px -2px rgb(var(--crema-sombra-rgb) / 0.12);
   overflow: hidden;
+  will-change: transform, opacity;
+}
+.carta--entra {
+  z-index: 2;
+}
+.carta--sale {
+  z-index: 1;
+  pointer-events: none;
+}
+.carta--entra.carta--dirDer {
+  animation: carta-entra-der 420ms var(--ease-rio) both;
+}
+.carta--entra.carta--dirIzq {
+  animation: carta-entra-izq 420ms var(--ease-rio) both;
+}
+.carta--sale.carta--dirDer {
+  animation: carta-sale-izq 420ms var(--ease-rio) both;
+}
+.carta--sale.carta--dirIzq {
+  animation: carta-sale-der 420ms var(--ease-rio) both;
+}
+/* La ilustración llega un instante después: el cambio se lee como una página que pasa. */
+.carta--entra .ilus {
+  animation: ilus-sube 520ms 80ms var(--ease-rio) both;
+}
+@keyframes carta-entra-der {
+  from {
+    opacity: 0;
+    transform: translateX(64px) scale(0.985);
+  }
+}
+@keyframes carta-entra-izq {
+  from {
+    opacity: 0;
+    transform: translateX(-64px) scale(0.985);
+  }
+}
+@keyframes carta-sale-izq {
+  to {
+    opacity: 0;
+    transform: translateX(-64px) scale(0.985);
+  }
+}
+@keyframes carta-sale-der {
+  to {
+    opacity: 0;
+    transform: translateX(64px) scale(0.985);
+  }
+}
+@keyframes ilus-sube {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+}
+.carta__contenido {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-width: 0;
 }
 .carta__ilus {
-  padding: 12px 18px 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(18px, 3vw, 40px);
   background: linear-gradient(to bottom, #f1ead7, var(--superficie-clara));
 }
 .carta__ilus--salud,
@@ -146,13 +225,14 @@
 }
 .ilus {
   width: 100%;
+  max-width: 420px;
   height: auto;
 }
 .carta__cuerpo {
   display: grid;
-  align-content: start;
-  gap: 8px;
-  padding: 8px 22px 10px;
+  align-content: center;
+  gap: 12px;
+  padding: clamp(22px, 3.4vw, 48px) clamp(22px, 3.4vw, 48px) 12px;
 }
 .carta__categoria {
   font-family: var(--f-mono);
@@ -162,19 +242,21 @@
   color: var(--crema-oro);
 }
 .carta h2 {
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  line-height: 1.15;
   font-weight: 500;
   color: var(--crema-titulo);
 }
 .carta__texto {
-  font-size: 1.0625rem;
-  line-height: 1.5;
+  font-size: clamp(1.0625rem, 1.35vw, 1.3rem);
+  line-height: 1.55;
+  max-width: 34ch;
   color: var(--crema-texto);
 }
 .carta__pie {
   display: grid;
   gap: 8px;
-  padding: 12px 22px 18px;
+  padding: 14px clamp(22px, 3.4vw, 48px) clamp(18px, 2.4vw, 28px);
   border-top: 1px solid rgb(var(--tinta-rgb) / 0.08);
 }
 .carta__fuente {
@@ -223,14 +305,6 @@
   color: var(--crema-oro);
 }
 
-.carrusel__controles {
-  width: var(--contenedor);
-  margin: 4px auto 0;
-  display: grid;
-  grid-template-columns: auto auto 1fr auto;
-  align-items: center;
-  gap: 14px;
-}
 .flecha {
   width: 48px;
   height: 48px;
@@ -252,8 +326,11 @@
   transform: scale(0.92);
 }
 .flecha:disabled {
-  opacity: 0.35;
+  opacity: 0.3;
   cursor: default;
+}
+.flecha {
+  box-shadow: 0 8px 20px -14px rgb(var(--crema-sombra-rgb) / 0.6);
 }
 .flecha svg {
   width: 20px;
@@ -324,17 +401,36 @@
   opacity: 1;
 }
 
-@media (min-width: 900px) {
-  .carta {
-    width: 340px;
-  }
-}
 @media (max-width: 899px) {
   .informate {
     padding-top: calc(var(--header-alto) + 28px);
   }
-  .carrusel__controles {
-    grid-template-columns: auto 1fr auto;
+  /* En celular la carta usa todo el ancho; flechas y progreso van debajo, al alcance del pulgar. */
+  .visor {
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
+    grid-template-areas:
+      'izq progreso der'
+      'marco marco marco';
+    column-gap: 12px;
+  }
+  .visor__marco {
+    min-height: 0;
+  }
+  .carta {
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
+  .carta__ilus {
+    padding: 16px 24px 0;
+  }
+  .ilus {
+    max-width: 300px;
+  }
+  .carta__texto {
+    max-width: none;
+  }
+  .visor__progreso {
+    grid-template-columns: 1fr;
   }
   .carrusel__barra {
     display: none;
@@ -348,10 +444,32 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  /* Sin desplazamientos: solo un fundido breve entre cartas. */
+  .carta--entra.carta--dirDer,
+  .carta--entra.carta--dirIzq {
+    animation: carta-funde-entra 200ms linear both;
+  }
+  .carta--sale.carta--dirDer,
+  .carta--sale.carta--dirIzq {
+    animation: carta-funde-sale 200ms linear both;
+  }
+  .carta--entra .ilus {
+    animation: none;
+  }
   .planta__tallo,
   .planta__hoja,
   .planta__flor,
   .carrusel__barra span {
     transition: none;
+  }
+}
+@keyframes carta-funde-entra {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes carta-funde-sale {
+  to {
+    opacity: 0;
   }
 }
