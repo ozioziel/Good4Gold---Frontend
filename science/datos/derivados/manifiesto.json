@@ -87,5 +87,13 @@
       "alta": 2,
       "insuficiente": 1
     }
+  },
+  "validacion": {
+    "fecha": "2026-11-27T01:54:02+00:00",
+    "commit": "37e0bd4",
+    "fuente": "Dethier et al. 2023 (Zenodo 7699122, CC BY 4.0)",
+    "n_pares": 75,
+    "pearson_log": 0.49,
+    "spearman": 0.25
   }
 }
